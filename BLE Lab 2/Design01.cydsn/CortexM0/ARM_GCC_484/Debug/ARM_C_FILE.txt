@@ -1,0 +1,1 @@
+'C:\Users\Enes Dullovi\Desktop\BLE Lab 2\Design01.cydsn\Generated_Source\PSoC4\cyfitter_cfg.c' -o .o -T ARM_C_FILE -I 'C:\Users\Enes Dullovi\Desktop\BLE Lab 2\Design01.cydsn' -I 'C:\Users\Enes Dullovi\Desktop\BLE Lab 2\Design01.cydsn\Generated_Source\PSoC4' -f 'C:\Users\Enes Dullovi\Desktop\BLE Lab 2\Design01.cydsn\CortexM0\ARM_GCC_484\Debug\.deps\ARM_C_FILE.d'

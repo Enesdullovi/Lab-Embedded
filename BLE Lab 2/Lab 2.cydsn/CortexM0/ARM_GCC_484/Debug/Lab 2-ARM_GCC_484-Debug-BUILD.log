@@ -1,0 +1,3 @@
+--------------- Build Started: 09/26/2016 21:36:18 Project: Lab 2, Configuration: ARM GCC 4.8.4 Debug ---------------
+Build process unable to delete contents of code gen dir.  Error: Failed to delete C:\Users\Enes Dullovi\Desktop\BLE Lab 2\Lab 2.cydsn\codegentemp\Lab 2.rpt: The process cannot access the file 'C:\Users\Enes Dullovi\Desktop\BLE Lab 2\Lab 2.cydsn\codegentemp\Lab 2.rpt' because it is being used by another process.
+--------------- Build Failed: 09/26/2016 21:36:18 ---------------

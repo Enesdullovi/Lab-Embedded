@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BLE Lab 2\BLE Lab 2">
+<ExpandedNodeIds>
+<v>BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2\TopDesign</v>
+<v>BLE Lab 2\BLE Lab 2\BLE Lab 2.cydwr</v>
+<v>BLE Lab 2\BLE Lab 2\Header Files</v>
+<v>BLE Lab 2\BLE Lab 2\Source Files</v>
+<v>BLE Lab 2\BLE Lab 2\Source Files\main.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_dis.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_dis.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_eventHandler.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_eventHandler.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_gatt.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_gatt.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_HAL_INT.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_HAL_PVT.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_HAL_PVT.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_ias.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_ias.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_Stack.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_STACK_PVT.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackGap.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackGatt.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackGattClient.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackGattDb.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackGattServer.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackHostMain.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackL2cap.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE_bless_isr</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE_bless_isr\BLE_bless_isr.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE_bless_isr\BLE_bless_isr.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\Clock</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\Clock\Clock.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\Clock\Clock.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\cypins.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\Pin_LED</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\Pin_LED\Pin_LED.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\Pin_LED\Pin_LED.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\Pin_LED\Pin_LED_aliases.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\PWM</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\PWM\PWM.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\PWM\PWM.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\PWM\PWM_PM.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cyfitter.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cyfitter_cfg.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cyfitter_cfg.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cyfittergnu.inc</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cyfitteriar.inc</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cyfitterrv.inc</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\cymetadata.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\project.h</v>
+<v>BLE Lab 2\Design01\TopDesign</v>
+<v>BLE Lab 2\Design01\Design01.cydwr</v>
+<v>BLE Lab 2\Design01\Header Files</v>
+<v>BLE Lab 2\Design01\Source Files</v>
+<v>BLE Lab 2\Design01\Source Files\main.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_eventHandler.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_eventHandler.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_gatt.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_gatt.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_HAL_INT.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_HAL_PVT.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_HAL_PVT.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_ias.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_ias.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_Stack.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_STACK_PVT.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_StackGap.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_StackGatt.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_StackGattClient.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_StackGattDb.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_StackGattServer.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_StackHostMain.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE\BLE_StackL2cap.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE_bless_isr</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE_bless_isr\BLE_bless_isr.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\BLE_bless_isr\BLE_bless_isr.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\Clock_3</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\Clock_3\Clock_3.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\Clock_3\Clock_3.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\cypins.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\Pin_LED</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\Pin_LED\Pin_LED.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\Pin_LED\Pin_LED.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\Pin_LED\Pin_LED_aliases.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\PWM</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\PWM\PWM.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\PWM\PWM.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\PWM\PWM_PM.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cyfitter.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cyfitter_cfg.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cyfitter_cfg.h</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cyfittergnu.inc</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cyfitteriar.inc</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cyfitterrv.inc</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\cymetadata.c</v>
+<v>BLE Lab 2\Design01\Generated_Source\PSoC4\project.h</v>
+<v>BLE Lab 2\Lab 2\TopDesign</v>
+<v>BLE Lab 2\Lab 2\Lab 2.cydwr</v>
+<v>BLE Lab 2\Lab 2\Header Files</v>
+<v>BLE Lab 2\Lab 2\Source Files</v>
+<v>BLE Lab 2\Lab 2\Source Files\main.c</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2\TopDesign</v>
+<v>BLE Lab 2\BLE Lab 2\BLE Lab 2.cydwr</v>
+<v>BLE Lab 2\BLE Lab 2\Header Files</v>
+<v>BLE Lab 2\BLE Lab 2\Source Files</v>
+<v>BLE Lab 2\BLE Lab 2\Source Files\main.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_dis.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_dis.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_eventHandler.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_eventHandler.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_gatt.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_gatt.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_HAL_INT.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_HAL_PVT.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_HAL_PVT.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_ias.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_ias.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_Stack.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_STACK_PVT.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackGap.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackGatt.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackGattClient.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackGattDb.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackGattServer.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackHostMain.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE\BLE_StackL2cap.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE_bless_isr</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE_bless_isr\BLE_bless_isr.c</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\BLE_bless_isr\BLE_bless_isr.h</v>
+<v>BLE Lab 2\BLE Lab 2\Generated_Source\PSoC4\Clock</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2\TopDesign</v>
+<v>BLE Lab 2\BLE Lab 2\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2\TopDesign</v>
+<v>BLE Lab 2\BLE Lab 2\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_bless_isr.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_dis.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_eventHandler.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_gatt.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_HAL_INT.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_HAL_PVT.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_ias.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\Clock.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\Cm0Start.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\CyFlash.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\CyLib.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\cymetadata.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\cyPm.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\cyutils.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\main.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\Pin_LED.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\PWM.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\PWM_PM.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\BLE Lab 2.elf</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\BLE Lab 2.hex</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\BLE Lab 2.map</v>
+<v>BLE Lab 2\BLE Lab 2\BLE Lab 2.rpt</v>
+<v>BLE Lab 2\BLE Lab 2\BLE Lab 2_timing.html</v>
+<v>BLE Lab 2\Design01</v>
+<v>BLE Lab 2\Design01\CortexM0</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_bless_isr.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_eventHandler.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_gatt.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_HAL_INT.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_HAL_PVT.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_ias.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\Clock_3.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\Cm0Start.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\CyFlash.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\CyLib.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\cymetadata.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\cyPm.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\cyutils.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\main.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\Pin_LED.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\PWM.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Listing Files\PWM_PM.lst</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Design01.elf</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Design01.hex</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug\Design01.map</v>
+<v>BLE Lab 2\Design01\Design01.rpt</v>
+<v>BLE Lab 2\Design01\Design01_timing.html</v>
+<v>BLE Lab 2\Lab 2</v>
+<v>BLE Lab 2\Lab 2\CortexM0</v>
+<v>BLE Lab 2\Lab 2\CortexM0\ARM_GCC_484</v>
+<v>BLE Lab 2\Lab 2\CortexM0\ARM_GCC_484\Debug</v>
+<v>BLE Lab 2\Lab 2\CortexM0\ARM_GCC_484\Debug\Lab 2.elf</v>
+<v>BLE Lab 2\Lab 2\CortexM0\ARM_GCC_484\Debug\Lab 2.hex</v>
+<v>BLE Lab 2\Lab 2\CortexM0\ARM_GCC_484\Debug\Lab 2.map</v>
+<v>BLE Lab 2\Lab 2\Lab 2.rpt</v>
+<v>BLE Lab 2\Lab 2\Lab 2_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_bless_isr.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_dis.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_eventHandler.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_gatt.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_HAL_INT.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_HAL_PVT.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\BLE_ias.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\Clock.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\Cm0Start.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\CyFlash.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\CyLib.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\cymetadata.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\cyPm.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\cyutils.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\main.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\Pin_LED.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\PWM.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\Listing Files\PWM_PM.lst</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\BLE Lab 2.elf</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\BLE Lab 2.hex</v>
+<v>BLE Lab 2\BLE Lab 2\CortexM0\ARM_GCC_484\Debug\BLE Lab 2.map</v>
+<v>BLE Lab 2\BLE Lab 2\BLE Lab 2.rpt</v>
+<v>BLE Lab 2\BLE Lab 2\BLE Lab 2_timing.html</v>
+<v>BLE Lab 2\Design01</v>
+<v>BLE Lab 2\Design01\CortexM0</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484</v>
+<v>BLE Lab 2\Design01\CortexM0\ARM_GCC_484\Debug</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2\PSoC 4 Architecture TRM</v>
+<v>BLE Lab 2\BLE Lab 2\PSoC 4200 BLE Family Datasheet</v>
+<v>BLE Lab 2\BLE Lab 2\System Reference Guide v4_20</v>
+<v>BLE Lab 2\BLE Lab 2\BLE_v1_10</v>
+<v>BLE Lab 2\BLE Lab 2\cy_clock_v2_20</v>
+<v>BLE Lab 2\BLE Lab 2\cy_pins_v2_10</v>
+<v>BLE Lab 2\BLE Lab 2\TCPWM_P4_v2_0</v>
+<v>BLE Lab 2\Design01</v>
+<v>BLE Lab 2\Design01\PSoC 4 Architecture TRM</v>
+<v>BLE Lab 2\Design01\PRoC BLE Family Datasheet</v>
+<v>BLE Lab 2\Design01\System Reference Guide v4_20</v>
+<v>BLE Lab 2\Design01\BLE_v1_10</v>
+<v>BLE Lab 2\Design01\cy_clock_v2_20</v>
+<v>BLE Lab 2\Design01\cy_pins_v2_10</v>
+<v>BLE Lab 2\Design01\TCPWM_P4_v2_0</v>
+<v>BLE Lab 2\Lab 2</v>
+<v>BLE Lab 2\Lab 2\PSoC 4 Architecture TRM</v>
+<v>BLE Lab 2\Lab 2\PRoC BLE Family Datasheet</v>
+<v>BLE Lab 2\Lab 2\System Reference Guide v4_20</v>
+<v>BLE Lab 2\Lab 2\BLE_v1_10</v>
+<v>BLE Lab 2\Lab 2\Capacitor_v1_0</v>
+<v>BLE Lab 2\Lab 2\cy_clock_v2_20</v>
+<v>BLE Lab 2\Lab 2\cy_pins_v2_10</v>
+<v>BLE Lab 2\Lab 2\Gnd_v1_0</v>
+<v>BLE Lab 2\Lab 2\Inductor_v1_0</v>
+<v>BLE Lab 2\Lab 2\TCPWM_P4_v2_0</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2</v>
+<v>BLE Lab 2\BLE Lab 2\PSoC 4 Architecture TRM</v>
+<v>BLE Lab 2\BLE Lab 2\PSoC 4200 BLE Family Datasheet</v>
+<v>BLE Lab 2\BLE Lab 2\System Reference Guide v4_20</v>
+<v>BLE Lab 2\BLE Lab 2\BLE_v1_10</v>
+<v>BLE Lab 2\BLE Lab 2\cy_clock_v2_20</v>
+<v>BLE Lab 2\BLE Lab 2\cy_pins_v2_10</v>
+<v>BLE Lab 2\BLE Lab 2\TCPWM_P4_v2_0</v>
+<v>BLE Lab 2\Design01</v>
+<v>BLE Lab 2\Design01\PSoC 4 Architecture TRM</v>
+<v>BLE Lab 2\Design01\PRoC BLE Family Datasheet</v>
+<v>BLE Lab 2\Design01\System Reference Guide v4_20</v>
+<v>BLE Lab 2\Design01\BLE_v1_10</v>
+<v>BLE Lab 2\Design01\cy_clock_v2_20</v>
+<v>BLE Lab 2\Design01\cy_pins_v2_10</v>
+<v>BLE Lab 2\Design01\TCPWM_P4_v2_0</v>
+<v>BLE Lab 2\Lab 2</v>
+<v>BLE Lab 2\Lab 2\PSoC 4 Architecture TRM</v>
+<v>BLE Lab 2\Lab 2\PRoC BLE Family Datasheet</v>
+<v>BLE Lab 2\Lab 2\System Reference Guide v4_20</v>
+<v>BLE Lab 2\Lab 2\BLE_v1_10</v>
+<v>BLE Lab 2\Lab 2\Capacitor_v1_0</v>
+<v>BLE Lab 2\Lab 2\cy_clock_v2_20</v>
+<v>BLE Lab 2\Lab 2\cy_pins_v2_10</v>
+<v>BLE Lab 2\Lab 2\Gnd_v1_0</v>
+<v>BLE Lab 2\Lab 2\Inductor_v1_0</v>
+<v>BLE Lab 2\Lab 2\TCPWM_P4_v2_0</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\BLE Lab 2.cydsn\BLE Lab 2.cydwr" />
+<name v=".\BLE Lab 2.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\BLE Lab 2.cydsn\main.c" />
+<name v=".\Design01.cydsn\main.c" />
+<name v=".\Design01.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Design01.cydsn\Design01.cydwr" />
+</OpenDocs>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
