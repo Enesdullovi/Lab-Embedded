@@ -1,8 +1,8 @@
-C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/CyBootAsmGnu.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfittergnu.inc C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s 
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/CyBootAsmGnu.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfittergnu.inc C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s 
 
-C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
 
-C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
 
-C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
 

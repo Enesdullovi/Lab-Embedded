@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
   30:.\Generated_Source\PSoC4/Led_Connected_Blue.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/Led_Connected_Blue.c **** *
   32:.\Generated_Source\PSoC4/Led_Connected_Blue.c **** * Summary:
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 2
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Led_Connected_Blue.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
   47:.\Generated_Source\PSoC4/Led_Connected_Blue.c **** }
   66              		.loc 1 47 0
   67 003c BD46     		mov	sp, r7
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 3
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 3
 
 
   68 003e 04B0     		add	sp, sp, #16
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
   95              		.cfi_def_cfa_register 7
   96 0006 021C     		mov	r2, r0
   97 0008 FB1D     		add	r3, r7, #7
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 4
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 4
 
 
   98 000a 1A70     		strb	r2, [r3]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
   96:.\Generated_Source\PSoC4/Led_Connected_Blue.c **** *******************************************************************************/
   97:.\Generated_Source\PSoC4/Led_Connected_Blue.c **** uint8 Led_Connected_Blue_Read(void) 
   98:.\Generated_Source\PSoC4/Led_Connected_Blue.c **** {
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 5
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 5
 
 
  131              		.loc 1 98 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  118:.\Generated_Source\PSoC4/Led_Connected_Blue.c **** {
  166              		.loc 1 118 0
  167              		.cfi_startproc
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 6
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 6
 
 
  168 0000 80B5     		push	{r7, lr}
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  140:.\Generated_Source\PSoC4/Led_Connected_Blue.c ****     *******************************************************************************/
  141:.\Generated_Source\PSoC4/Led_Connected_Blue.c ****     uint8 Led_Connected_Blue_ClearInterrupt(void) 
  142:.\Generated_Source\PSoC4/Led_Connected_Blue.c ****     {
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 7
 
 
  201              		.loc 1 142 0
@@ -416,48 +416,48 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  249 0006 00000000 		.4byte	.Ldebug_abbrev0
  250 000a 04       		.byte	0x4
  251 000b 01       		.uleb128 0x1
- 252 000c 07010000 		.4byte	.LASF24
+ 252 000c CF000000 		.4byte	.LASF24
  253 0010 01       		.byte	0x1
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 8
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 8
 
 
- 254 0011 0D020000 		.4byte	.LASF25
- 255 0015 1F000000 		.4byte	.LASF26
+ 254 0011 1D020000 		.4byte	.LASF25
+ 255 0015 BB010000 		.4byte	.LASF26
  256 0019 00000000 		.4byte	.Ldebug_ranges0+0
  257 001d 00000000 		.4byte	0
  258 0021 00000000 		.4byte	.Ldebug_line0
  259 0025 02       		.uleb128 0x2
  260 0026 01       		.byte	0x1
  261 0027 06       		.byte	0x6
- 262 0028 01020000 		.4byte	.LASF0
+ 262 0028 11020000 		.4byte	.LASF0
  263 002c 02       		.uleb128 0x2
  264 002d 01       		.byte	0x1
  265 002e 08       		.byte	0x8
- 266 002f 74000000 		.4byte	.LASF1
+ 266 002f 3C000000 		.4byte	.LASF1
  267 0033 02       		.uleb128 0x2
  268 0034 02       		.byte	0x2
  269 0035 05       		.byte	0x5
- 270 0036 D0010000 		.4byte	.LASF2
+ 270 0036 99010000 		.4byte	.LASF2
  271 003a 02       		.uleb128 0x2
  272 003b 02       		.byte	0x2
  273 003c 07       		.byte	0x7
- 274 003d 9A000000 		.4byte	.LASF3
+ 274 003d 62000000 		.4byte	.LASF3
  275 0041 02       		.uleb128 0x2
  276 0042 04       		.byte	0x4
  277 0043 05       		.byte	0x5
- 278 0044 F8010000 		.4byte	.LASF4
+ 278 0044 03020000 		.4byte	.LASF4
  279 0048 02       		.uleb128 0x2
  280 0049 04       		.byte	0x4
  281 004a 07       		.byte	0x7
- 282 004b 88000000 		.4byte	.LASF5
+ 282 004b 50000000 		.4byte	.LASF5
  283 004f 02       		.uleb128 0x2
  284 0050 08       		.byte	0x8
  285 0051 05       		.byte	0x5
- 286 0052 AA010000 		.4byte	.LASF6
+ 286 0052 72010000 		.4byte	.LASF6
  287 0056 02       		.uleb128 0x2
  288 0057 08       		.byte	0x8
  289 0058 07       		.byte	0x7
- 290 0059 5D000000 		.4byte	.LASF7
+ 290 0059 25000000 		.4byte	.LASF7
  291 005d 03       		.uleb128 0x3
  292 005e 04       		.byte	0x4
  293 005f 05       		.byte	0x5
@@ -465,32 +465,32 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  295 0064 02       		.uleb128 0x2
  296 0065 04       		.byte	0x4
  297 0066 07       		.byte	0x7
- 298 0067 DB000000 		.4byte	.LASF8
+ 298 0067 A3000000 		.4byte	.LASF8
  299 006b 04       		.uleb128 0x4
- 300 006c F2010000 		.4byte	.LASF9
+ 300 006c 8D010000 		.4byte	.LASF9
  301 0070 02       		.byte	0x2
  302 0071 A1       		.byte	0xa1
  303 0072 2C000000 		.4byte	0x2c
  304 0076 04       		.uleb128 0x4
- 305 0077 D4000000 		.4byte	.LASF10
+ 305 0077 9C000000 		.4byte	.LASF10
  306 007b 02       		.byte	0x2
  307 007c A3       		.byte	0xa3
  308 007d 48000000 		.4byte	0x48
  309 0081 02       		.uleb128 0x2
  310 0082 04       		.byte	0x4
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 9
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 9
 
 
  311 0083 04       		.byte	0x4
- 312 0084 57000000 		.4byte	.LASF11
+ 312 0084 1F000000 		.4byte	.LASF11
  313 0088 02       		.uleb128 0x2
  314 0089 08       		.byte	0x8
  315 008a 04       		.byte	0x4
- 316 008b CD000000 		.4byte	.LASF12
+ 316 008b 95000000 		.4byte	.LASF12
  317 008f 02       		.uleb128 0x2
  318 0090 01       		.byte	0x1
  319 0091 08       		.byte	0x8
- 320 0092 C5010000 		.4byte	.LASF13
+ 320 0092 0C020000 		.4byte	.LASF13
  321 0096 05       		.uleb128 0x5
  322 0097 00000000 		.4byte	.LASF14
  323 009b 02       		.byte	0x2
@@ -508,7 +508,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  335 00b7 9C       		.byte	0x9c
  336 00b8 D9000000 		.4byte	0xd9
  337 00bc 08       		.uleb128 0x8
- 338 00bd CA010000 		.4byte	.LASF17
+ 338 00bd 93010000 		.4byte	.LASF17
  339 00c1 01       		.byte	0x1
  340 00c2 2A       		.byte	0x2a
  341 00c3 6B000000 		.4byte	0x6b
@@ -516,7 +516,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  343 00c8 91       		.byte	0x91
  344 00c9 6F       		.sleb128 -17
  345 00ca 09       		.uleb128 0x9
- 346 00cb 82000000 		.4byte	.LASF22
+ 346 00cb 4A000000 		.4byte	.LASF22
  347 00cf 01       		.byte	0x1
  348 00d0 2C       		.byte	0x2c
  349 00d1 6B000000 		.4byte	0x6b
@@ -525,7 +525,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  352 00d7 77       		.sleb128 -9
  353 00d8 00       		.byte	0
  354 00d9 07       		.uleb128 0x7
- 355 00da AD000000 		.4byte	.LASF16
+ 355 00da 75000000 		.4byte	.LASF16
  356 00de 01       		.byte	0x1
  357 00df 49       		.byte	0x49
  358 00e0 00000000 		.4byte	.LFB1
@@ -534,11 +534,11 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  361 00e9 9C       		.byte	0x9c
  362 00ea FD000000 		.4byte	0xfd
  363 00ee 08       		.uleb128 0x8
- 364 00ef A5010000 		.4byte	.LASF18
+ 364 00ef 6D010000 		.4byte	.LASF18
  365 00f3 01       		.byte	0x1
  366 00f4 49       		.byte	0x49
  367 00f5 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 10
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 10
 
 
  368 00f9 02       		.uleb128 0x2
@@ -546,7 +546,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  370 00fb 77       		.sleb128 -9
  371 00fc 00       		.byte	0
  372 00fd 0A       		.uleb128 0xa
- 373 00fe DA010000 		.4byte	.LASF19
+ 373 00fe A3010000 		.4byte	.LASF19
  374 0102 01       		.byte	0x1
  375 0103 61       		.byte	0x61
  376 0104 6B000000 		.4byte	0x6b
@@ -555,7 +555,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  379 0110 01       		.uleb128 0x1
  380 0111 9C       		.byte	0x9c
  381 0112 0A       		.uleb128 0xa
- 382 0113 E8000000 		.4byte	.LASF20
+ 382 0113 B0000000 		.4byte	.LASF20
  383 0117 01       		.byte	0x1
  384 0118 75       		.byte	0x75
  385 0119 6B000000 		.4byte	0x6b
@@ -564,7 +564,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  388 0125 01       		.uleb128 0x1
  389 0126 9C       		.byte	0x9c
  390 0127 0B       		.uleb128 0xb
- 391 0128 83010000 		.4byte	.LASF21
+ 391 0128 4B010000 		.4byte	.LASF21
  392 012c 01       		.byte	0x1
  393 012d 8D       		.byte	0x8d
  394 012e 6B000000 		.4byte	0x6b
@@ -573,7 +573,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  397 013a 01       		.uleb128 0x1
  398 013b 9C       		.byte	0x9c
  399 013c 09       		.uleb128 0x9
- 400 013d B8010000 		.4byte	.LASF23
+ 400 013d 80010000 		.4byte	.LASF23
  401 0141 01       		.byte	0x1
  402 0142 8F       		.byte	0x8f
  403 0143 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  422 000b 55       		.uleb128 0x55
  423 000c 17       		.uleb128 0x17
  424 000d 11       		.uleb128 0x11
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 11
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 11
 
 
  425 000e 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  479 0044 35       		.uleb128 0x35
  480 0045 00       		.byte	0
  481 0046 49       		.uleb128 0x49
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 12
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 12
 
 
  482 0047 13       		.uleb128 0x13
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  536 007e 02       		.uleb128 0x2
  537 007f 18       		.uleb128 0x18
  538 0080 00       		.byte	0
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 13
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 13
 
 
  539 0081 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  593 0004 0200     		.2byte	0x2
  594 0006 00000000 		.4byte	.Ldebug_info0
  595 000a 04       		.byte	0x4
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 14
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 14
 
 
  596 000b 00       		.byte	0
@@ -826,141 +826,143 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 1
  631      65637465 
  631      645F426C 
  631      75655F57 
- 632              	.LASF26:
- 633 001f 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
- 633      73657273 
- 633      5C456E65 
- 633      73204475 
- 633      6C6C6F76 
- 634 004d 6220332E 		.ascii	"b 3.cydsn\000"
- 634      63796473 
- 634      6E00
- 635              	.LASF11:
- 636 0057 666C6F61 		.ascii	"float\000"
- 636      7400
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 15
+ 632              	.LASF11:
+ 633 001f 666C6F61 		.ascii	"float\000"
+ 633      7400
+ 634              	.LASF7:
+ 635 0025 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 635      206C6F6E 
+ 635      6720756E 
+ 635      7369676E 
+ 635      65642069 
+ 636              	.LASF1:
+ 637 003c 756E7369 		.ascii	"unsigned char\000"
+ 637      676E6564 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 15
 
 
- 637              	.LASF7:
- 638 005d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 638      206C6F6E 
- 638      6720756E 
- 638      7369676E 
- 638      65642069 
- 639              	.LASF1:
- 640 0074 756E7369 		.ascii	"unsigned char\000"
- 640      676E6564 
- 640      20636861 
- 640      7200
- 641              	.LASF22:
- 642 0082 64725661 		.ascii	"drVal\000"
- 642      6C00
- 643              	.LASF5:
- 644 0088 6C6F6E67 		.ascii	"long unsigned int\000"
- 644      20756E73 
- 644      69676E65 
- 644      6420696E 
- 644      7400
- 645              	.LASF3:
- 646 009a 73686F72 		.ascii	"short unsigned int\000"
- 646      7420756E 
- 646      7369676E 
- 646      65642069 
- 646      6E7400
- 647              	.LASF16:
- 648 00ad 4C65645F 		.ascii	"Led_Connected_Blue_SetDriveMode\000"
- 648      436F6E6E 
- 648      65637465 
- 648      645F426C 
- 648      75655F53 
- 649              	.LASF12:
- 650 00cd 646F7562 		.ascii	"double\000"
- 650      6C6500
- 651              	.LASF10:
- 652 00d4 75696E74 		.ascii	"uint32\000"
- 652      333200
- 653              	.LASF8:
- 654 00db 756E7369 		.ascii	"unsigned int\000"
- 654      676E6564 
- 654      20696E74 
- 654      00
- 655              	.LASF20:
- 656 00e8 4C65645F 		.ascii	"Led_Connected_Blue_ReadDataReg\000"
- 656      436F6E6E 
- 656      65637465 
- 656      645F426C 
- 656      75655F52 
- 657              	.LASF24:
- 658 0107 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 658      4320342E 
- 658      382E3420 
- 658      32303134 
- 658      30353236 
- 659 013a 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 659      20726576 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 16
+ 637      20636861 
+ 637      7200
+ 638              	.LASF22:
+ 639 004a 64725661 		.ascii	"drVal\000"
+ 639      6C00
+ 640              	.LASF5:
+ 641 0050 6C6F6E67 		.ascii	"long unsigned int\000"
+ 641      20756E73 
+ 641      69676E65 
+ 641      6420696E 
+ 641      7400
+ 642              	.LASF3:
+ 643 0062 73686F72 		.ascii	"short unsigned int\000"
+ 643      7420756E 
+ 643      7369676E 
+ 643      65642069 
+ 643      6E7400
+ 644              	.LASF16:
+ 645 0075 4C65645F 		.ascii	"Led_Connected_Blue_SetDriveMode\000"
+ 645      436F6E6E 
+ 645      65637465 
+ 645      645F426C 
+ 645      75655F53 
+ 646              	.LASF12:
+ 647 0095 646F7562 		.ascii	"double\000"
+ 647      6C6500
+ 648              	.LASF10:
+ 649 009c 75696E74 		.ascii	"uint32\000"
+ 649      333200
+ 650              	.LASF8:
+ 651 00a3 756E7369 		.ascii	"unsigned int\000"
+ 651      676E6564 
+ 651      20696E74 
+ 651      00
+ 652              	.LASF20:
+ 653 00b0 4C65645F 		.ascii	"Led_Connected_Blue_ReadDataReg\000"
+ 653      436F6E6E 
+ 653      65637465 
+ 653      645F426C 
+ 653      75655F52 
+ 654              	.LASF24:
+ 655 00cf 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 655      4320342E 
+ 655      382E3420 
+ 655      32303134 
+ 655      30353236 
+ 656 0102 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 656      20726576 
+ 656      6973696F 
+ 656      6E203231 
+ 656      31333538 
+ 657 0135 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 657      66756E63 
+ 657      74696F6E 
+ 657      2D736563 
+ 657      74696F6E 
+ 658              	.LASF21:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 16
 
 
- 659      6973696F 
- 659      6E203231 
- 659      31333538 
- 660 016d 30202D66 		.ascii	"0 -ffunction-sections\000"
- 660      66756E63 
- 660      74696F6E 
- 660      2D736563 
- 660      74696F6E 
- 661              	.LASF21:
- 662 0183 4C65645F 		.ascii	"Led_Connected_Blue_ClearInterrupt\000"
- 662      436F6E6E 
- 662      65637465 
- 662      645F426C 
- 662      75655F43 
- 663              	.LASF18:
- 664 01a5 6D6F6465 		.ascii	"mode\000"
- 664      00
- 665              	.LASF6:
- 666 01aa 6C6F6E67 		.ascii	"long long int\000"
- 666      206C6F6E 
- 666      6720696E 
- 666      7400
- 667              	.LASF23:
- 668 01b8 6D61736B 		.ascii	"maskedStatus\000"
- 668      65645374 
- 668      61747573 
- 668      00
- 669              	.LASF13:
- 670 01c5 63686172 		.ascii	"char\000"
- 670      00
- 671              	.LASF17:
- 672 01ca 76616C75 		.ascii	"value\000"
- 672      6500
- 673              	.LASF2:
- 674 01d0 73686F72 		.ascii	"short int\000"
- 674      7420696E 
- 674      7400
- 675              	.LASF19:
- 676 01da 4C65645F 		.ascii	"Led_Connected_Blue_Read\000"
- 676      436F6E6E 
- 676      65637465 
- 676      645F426C 
- 676      75655F52 
- 677              	.LASF9:
- 678 01f2 75696E74 		.ascii	"uint8\000"
- 678      3800
- 679              	.LASF4:
- 680 01f8 6C6F6E67 		.ascii	"long int\000"
- 680      20696E74 
+ 659 014b 4C65645F 		.ascii	"Led_Connected_Blue_ClearInterrupt\000"
+ 659      436F6E6E 
+ 659      65637465 
+ 659      645F426C 
+ 659      75655F43 
+ 660              	.LASF18:
+ 661 016d 6D6F6465 		.ascii	"mode\000"
+ 661      00
+ 662              	.LASF6:
+ 663 0172 6C6F6E67 		.ascii	"long long int\000"
+ 663      206C6F6E 
+ 663      6720696E 
+ 663      7400
+ 664              	.LASF23:
+ 665 0180 6D61736B 		.ascii	"maskedStatus\000"
+ 665      65645374 
+ 665      61747573 
+ 665      00
+ 666              	.LASF9:
+ 667 018d 75696E74 		.ascii	"uint8\000"
+ 667      3800
+ 668              	.LASF17:
+ 669 0193 76616C75 		.ascii	"value\000"
+ 669      6500
+ 670              	.LASF2:
+ 671 0199 73686F72 		.ascii	"short int\000"
+ 671      7420696E 
+ 671      7400
+ 672              	.LASF19:
+ 673 01a3 4C65645F 		.ascii	"Led_Connected_Blue_Read\000"
+ 673      436F6E6E 
+ 673      65637465 
+ 673      645F426C 
+ 673      75655F52 
+ 674              	.LASF26:
+ 675 01bb 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
+ 675      73657273 
+ 675      5C456E65 
+ 675      73204475 
+ 675      6C6C6F76 
+ 676 01e9 6220332E 		.ascii	"b 3.cydsn\\BLE Lab 3.cydsn\000"
+ 676      63796473 
+ 676      6E5C424C 
+ 676      45204C61 
+ 676      6220332E 
+ 677              	.LASF4:
+ 678 0203 6C6F6E67 		.ascii	"long int\000"
+ 678      20696E74 
+ 678      00
+ 679              	.LASF13:
+ 680 020c 63686172 		.ascii	"char\000"
  680      00
  681              	.LASF0:
- 682 0201 7369676E 		.ascii	"signed char\000"
+ 682 0211 7369676E 		.ascii	"signed char\000"
  682      65642063 
  682      68617200 
  683              	.LASF25:
- 684 020d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Led_Connected_Blue.c\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccbUYbUd.s 			page 17
+
+
+ 684 021d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Led_Connected_Blue.c\000"
  684      6E657261 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccYgHcIt.s 			page 17
-
-
  684      7465645F 
  684      536F7572 
  684      63655C50 

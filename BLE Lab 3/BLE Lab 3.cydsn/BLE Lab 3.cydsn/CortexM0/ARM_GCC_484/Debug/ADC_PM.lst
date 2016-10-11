@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
   26:.\Generated_Source\PSoC4/ADC_PM.c ****     ADC_DISABLED
   27:.\Generated_Source\PSoC4/ADC_PM.c **** };
   28:.\Generated_Source\PSoC4/ADC_PM.c **** 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 2
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 2
 
 
   29:.\Generated_Source\PSoC4/ADC_PM.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
   60:.\Generated_Source\PSoC4/ADC_PM.c **** * Return:
   61:.\Generated_Source\PSoC4/ADC_PM.c **** *  None.
   62:.\Generated_Source\PSoC4/ADC_PM.c **** *
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 3
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 3
 
 
   63:.\Generated_Source\PSoC4/ADC_PM.c **** *******************************************************************************/
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
   80              		.cfi_offset 7, -8
   81              		.cfi_offset 14, -4
   82 0002 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 4
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 4
 
 
   83              		.cfi_def_cfa_register 7
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  106:.\Generated_Source\PSoC4/ADC_PM.c ****     }
  107:.\Generated_Source\PSoC4/ADC_PM.c ****     else
  108:.\Generated_Source\PSoC4/ADC_PM.c ****     {
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 5
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 5
 
 
  109:.\Generated_Source\PSoC4/ADC_PM.c ****         ADC_backup.enableState = ADC_DISABLED;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  150 0000 80B5     		push	{r7, lr}
  151              		.cfi_def_cfa_offset 8
  152              		.cfi_offset 7, -8
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 6
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 6
 
 
  153              		.cfi_offset 14, -4
@@ -358,43 +358,43 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  197              	.Ldebug_info0:
  198 0000 20010000 		.4byte	0x120
  199 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 7
 
 
  200 0006 00000000 		.4byte	.Ldebug_abbrev0
  201 000a 04       		.byte	0x4
  202 000b 01       		.uleb128 0x1
- 203 000c E5000000 		.4byte	.LASF21
+ 203 000c AD000000 		.4byte	.LASF21
  204 0010 01       		.byte	0x1
  205 0011 2D000000 		.4byte	.LASF22
- 206 0015 4F000000 		.4byte	.LASF23
+ 206 0015 96010000 		.4byte	.LASF23
  207 0019 00000000 		.4byte	.Ldebug_ranges0+0
  208 001d 00000000 		.4byte	0
  209 0021 00000000 		.4byte	.Ldebug_line0
  210 0025 02       		.uleb128 0x2
  211 0026 01       		.byte	0x1
  212 0027 06       		.byte	0x6
- 213 0028 C2010000 		.4byte	.LASF0
+ 213 0028 8A010000 		.4byte	.LASF0
  214 002c 02       		.uleb128 0x2
  215 002d 01       		.byte	0x1
  216 002e 08       		.byte	0x8
- 217 002f 70010000 		.4byte	.LASF1
+ 217 002f 38010000 		.4byte	.LASF1
  218 0033 02       		.uleb128 0x2
  219 0034 02       		.byte	0x2
  220 0035 05       		.byte	0x5
- 221 0036 D4010000 		.4byte	.LASF2
+ 221 0036 E4010000 		.4byte	.LASF2
  222 003a 02       		.uleb128 0x2
  223 003b 02       		.byte	0x2
  224 003c 07       		.byte	0x7
- 225 003d AF010000 		.4byte	.LASF3
+ 225 003d 77010000 		.4byte	.LASF3
  226 0041 02       		.uleb128 0x2
  227 0042 04       		.byte	0x4
  228 0043 05       		.byte	0x5
- 229 0044 8D010000 		.4byte	.LASF4
+ 229 0044 55010000 		.4byte	.LASF4
  230 0048 02       		.uleb128 0x2
  231 0049 04       		.byte	0x4
  232 004a 07       		.byte	0x7
- 233 004b 8D000000 		.4byte	.LASF5
+ 233 004b 55000000 		.4byte	.LASF5
  234 004f 02       		.uleb128 0x2
  235 0050 08       		.byte	0x8
  236 0051 05       		.byte	0x5
@@ -402,7 +402,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  238 0056 02       		.uleb128 0x2
  239 0057 08       		.byte	0x8
  240 0058 07       		.byte	0x7
- 241 0059 9F000000 		.4byte	.LASF7
+ 241 0059 67000000 		.4byte	.LASF7
  242 005d 03       		.uleb128 0x3
  243 005e 04       		.byte	0x4
  244 005f 05       		.byte	0x5
@@ -412,13 +412,13 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  248 0066 07       		.byte	0x7
  249 0067 20000000 		.4byte	.LASF8
  250 006b 04       		.uleb128 0x4
- 251 006c 87000000 		.4byte	.LASF9
+ 251 006c 4F000000 		.4byte	.LASF9
  252 0070 02       		.byte	0x2
  253 0071 A1       		.byte	0xa1
  254 0072 2C000000 		.4byte	0x2c
  255 0076 04       		.uleb128 0x4
  256 0077 0E000000 		.4byte	.LASF10
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 8
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 8
 
 
  257 007b 02       		.byte	0x2
@@ -427,17 +427,17 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  260 0081 02       		.uleb128 0x2
  261 0082 04       		.byte	0x4
  262 0083 04       		.byte	0x4
- 263 0084 CE010000 		.4byte	.LASF11
+ 263 0084 DE010000 		.4byte	.LASF11
  264 0088 02       		.uleb128 0x2
  265 0089 08       		.byte	0x8
  266 008a 04       		.byte	0x4
- 267 008b A2010000 		.4byte	.LASF12
+ 267 008b 6A010000 		.4byte	.LASF12
  268 008f 02       		.uleb128 0x2
  269 0090 01       		.byte	0x1
  270 0091 08       		.byte	0x8
- 271 0092 7E010000 		.4byte	.LASF13
+ 271 0092 46010000 		.4byte	.LASF13
  272 0096 05       		.uleb128 0x5
- 273 0097 A9010000 		.4byte	.LASF14
+ 273 0097 71010000 		.4byte	.LASF14
  274 009b 02       		.byte	0x2
  275 009c 4D01     		.2byte	0x14d
  276 009e A2000000 		.4byte	0xa2
@@ -446,26 +446,26 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  279 00a7 02       		.uleb128 0x2
  280 00a8 04       		.byte	0x4
  281 00a9 07       		.byte	0x7
- 282 00aa DE010000 		.4byte	.LASF15
+ 282 00aa EE010000 		.4byte	.LASF15
  283 00ae 07       		.uleb128 0x7
  284 00af 01       		.byte	0x1
  285 00b0 03       		.byte	0x3
  286 00b1 1E       		.byte	0x1e
  287 00b2 C3000000 		.4byte	0xc3
  288 00b6 08       		.uleb128 0x8
- 289 00b7 96010000 		.4byte	.LASF24
+ 289 00b7 5E010000 		.4byte	.LASF24
  290 00bb 03       		.byte	0x3
  291 00bc 20       		.byte	0x20
  292 00bd 6B000000 		.4byte	0x6b
  293 00c1 00       		.byte	0
  294 00c2 00       		.byte	0
  295 00c3 04       		.uleb128 0x4
- 296 00c4 C8000000 		.4byte	.LASF16
+ 296 00c4 90000000 		.4byte	.LASF16
  297 00c8 03       		.byte	0x3
  298 00c9 21       		.byte	0x21
  299 00ca AE000000 		.4byte	0xae
  300 00ce 09       		.uleb128 0x9
- 301 00cf 61010000 		.4byte	.LASF17
+ 301 00cf 29010000 		.4byte	.LASF17
  302 00d3 01       		.byte	0x1
  303 00d4 2C       		.byte	0x2c
  304 00d5 00000000 		.4byte	.LFB2
@@ -473,18 +473,18 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  306 00dd 01       		.uleb128 0x1
  307 00de 9C       		.byte	0x9c
  308 00df 09       		.uleb128 0x9
- 309 00e0 B6000000 		.4byte	.LASF18
+ 309 00e0 7E000000 		.4byte	.LASF18
  310 00e4 01       		.byte	0x1
  311 00e5 40       		.byte	0x40
  312 00e6 00000000 		.4byte	.LFB3
  313 00ea 08000000 		.4byte	.LFE3-.LFB3
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 9
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 9
 
 
  314 00ee 01       		.uleb128 0x1
  315 00ef 9C       		.byte	0x9c
  316 00f0 0A       		.uleb128 0xa
- 317 00f1 83010000 		.4byte	.LASF19
+ 317 00f1 4B010000 		.4byte	.LASF19
  318 00f5 01       		.byte	0x1
  319 00f6 58       		.byte	0x58
  320 00f7 00000000 		.4byte	.LFB4
@@ -492,7 +492,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  322 00ff 01       		.uleb128 0x1
  323 0100 9C       		.byte	0x9c
  324 0101 0A       		.uleb128 0xa
- 325 0102 DA000000 		.4byte	.LASF20
+ 325 0102 A2000000 		.4byte	.LASF20
  326 0106 01       		.byte	0x1
  327 0107 84       		.byte	0x84
  328 0108 00000000 		.4byte	.LFB5
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  368 0019 0B       		.uleb128 0xb
  369 001a 03       		.uleb128 0x3
  370 001b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 10
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 10
 
 
  371 001c 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  425 0052 0B       		.uleb128 0xb
  426 0053 01       		.uleb128 0x1
  427 0054 13       		.uleb128 0x13
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 11
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 11
 
 
  428 0055 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  482 008c 01       		.uleb128 0x1
  483 008d 12       		.uleb128 0x12
  484 008e 06       		.uleb128 0x6
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 12
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 12
 
 
  485 008f 40       		.uleb128 0x40
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  539 0000 AC000000 		.section	.debug_str,"MS",%progbits,1
  539      02004E00 
  539      00000201 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 13
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 13
 
 
  539      FB0E0D00 
@@ -746,118 +746,120 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 1
  549      7465645F 
  549      536F7572 
  549      63655C50 
- 550              	.LASF23:
- 551 004f 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
- 551      73657273 
- 551      5C456E65 
- 551      73204475 
- 551      6C6C6F76 
- 552 007d 6220332E 		.ascii	"b 3.cydsn\000"
- 552      63796473 
- 552      6E00
- 553              	.LASF9:
- 554 0087 75696E74 		.ascii	"uint8\000"
- 554      3800
- 555              	.LASF5:
- 556 008d 6C6F6E67 		.ascii	"long unsigned int\000"
- 556      20756E73 
- 556      69676E65 
- 556      6420696E 
- 556      7400
- 557              	.LASF7:
- 558 009f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 558      206C6F6E 
- 558      6720756E 
- 558      7369676E 
- 558      65642069 
- 559              	.LASF18:
- 560 00b6 4144435F 		.ascii	"ADC_RestoreConfig\000"
- 560      52657374 
- 560      6F726543 
- 560      6F6E6669 
- 560      6700
- 561              	.LASF16:
- 562 00c8 4144435F 		.ascii	"ADC_BACKUP_STRUCT\000"
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 14
+ 550              	.LASF9:
+ 551 004f 75696E74 		.ascii	"uint8\000"
+ 551      3800
+ 552              	.LASF5:
+ 553 0055 6C6F6E67 		.ascii	"long unsigned int\000"
+ 553      20756E73 
+ 553      69676E65 
+ 553      6420696E 
+ 553      7400
+ 554              	.LASF7:
+ 555 0067 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 555      206C6F6E 
+ 555      6720756E 
+ 555      7369676E 
+ 555      65642069 
+ 556              	.LASF18:
+ 557 007e 4144435F 		.ascii	"ADC_RestoreConfig\000"
+ 557      52657374 
+ 557      6F726543 
+ 557      6F6E6669 
+ 557      6700
+ 558              	.LASF16:
+ 559 0090 4144435F 		.ascii	"ADC_BACKUP_STRUCT\000"
+ 559      4241434B 
+ 559      55505F53 
+ 559      54525543 
+ 559      5400
+ 560              	.LASF20:
+ 561 00a2 4144435F 		.ascii	"ADC_Wakeup\000"
+ 561      57616B65 
+ 561      757000
+ 562              	.LASF21:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 14
 
 
- 562      4241434B 
- 562      55505F53 
- 562      54525543 
- 562      5400
- 563              	.LASF20:
- 564 00da 4144435F 		.ascii	"ADC_Wakeup\000"
- 564      57616B65 
- 564      757000
- 565              	.LASF21:
- 566 00e5 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 566      4320342E 
- 566      382E3420 
- 566      32303134 
- 566      30353236 
- 567 0118 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 567      20726576 
- 567      6973696F 
- 567      6E203231 
- 567      31333538 
- 568 014b 30202D66 		.ascii	"0 -ffunction-sections\000"
- 568      66756E63 
- 568      74696F6E 
- 568      2D736563 
- 568      74696F6E 
- 569              	.LASF17:
- 570 0161 4144435F 		.ascii	"ADC_SaveConfig\000"
- 570      53617665 
- 570      436F6E66 
- 570      696700
- 571              	.LASF1:
- 572 0170 756E7369 		.ascii	"unsigned char\000"
- 572      676E6564 
- 572      20636861 
- 572      7200
- 573              	.LASF13:
- 574 017e 63686172 		.ascii	"char\000"
- 574      00
- 575              	.LASF19:
- 576 0183 4144435F 		.ascii	"ADC_Sleep\000"
- 576      536C6565 
- 576      7000
- 577              	.LASF4:
- 578 018d 6C6F6E67 		.ascii	"long int\000"
- 578      20696E74 
- 578      00
- 579              	.LASF24:
- 580 0196 656E6162 		.ascii	"enableState\000"
- 580      6C655374 
- 580      61746500 
- 581              	.LASF12:
- 582 01a2 646F7562 		.ascii	"double\000"
- 582      6C6500
- 583              	.LASF14:
- 584 01a9 72656733 		.ascii	"reg32\000"
- 584      3200
- 585              	.LASF3:
- 586 01af 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccKmqTW5.s 			page 15
+ 563 00ad 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 563      4320342E 
+ 563      382E3420 
+ 563      32303134 
+ 563      30353236 
+ 564 00e0 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 564      20726576 
+ 564      6973696F 
+ 564      6E203231 
+ 564      31333538 
+ 565 0113 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 565      66756E63 
+ 565      74696F6E 
+ 565      2D736563 
+ 565      74696F6E 
+ 566              	.LASF17:
+ 567 0129 4144435F 		.ascii	"ADC_SaveConfig\000"
+ 567      53617665 
+ 567      436F6E66 
+ 567      696700
+ 568              	.LASF1:
+ 569 0138 756E7369 		.ascii	"unsigned char\000"
+ 569      676E6564 
+ 569      20636861 
+ 569      7200
+ 570              	.LASF13:
+ 571 0146 63686172 		.ascii	"char\000"
+ 571      00
+ 572              	.LASF19:
+ 573 014b 4144435F 		.ascii	"ADC_Sleep\000"
+ 573      536C6565 
+ 573      7000
+ 574              	.LASF4:
+ 575 0155 6C6F6E67 		.ascii	"long int\000"
+ 575      20696E74 
+ 575      00
+ 576              	.LASF24:
+ 577 015e 656E6162 		.ascii	"enableState\000"
+ 577      6C655374 
+ 577      61746500 
+ 578              	.LASF12:
+ 579 016a 646F7562 		.ascii	"double\000"
+ 579      6C6500
+ 580              	.LASF14:
+ 581 0171 72656733 		.ascii	"reg32\000"
+ 581      3200
+ 582              	.LASF3:
+ 583 0177 73686F72 		.ascii	"short unsigned int\000"
+ 583      7420756E 
+ 583      7369676E 
+ 583      65642069 
+ 583      6E7400
+ 584              	.LASF0:
+ 585 018a 7369676E 		.ascii	"signed char\000"
+ 585      65642063 
+ 585      68617200 
+ 586              	.LASF23:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccya5P7m.s 			page 15
 
 
- 586      7420756E 
- 586      7369676E 
- 586      65642069 
- 586      6E7400
- 587              	.LASF0:
- 588 01c2 7369676E 		.ascii	"signed char\000"
- 588      65642063 
- 588      68617200 
+ 587 0196 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
+ 587      73657273 
+ 587      5C456E65 
+ 587      73204475 
+ 587      6C6C6F76 
+ 588 01c4 6220332E 		.ascii	"b 3.cydsn\\BLE Lab 3.cydsn\000"
+ 588      63796473 
+ 588      6E5C424C 
+ 588      45204C61 
+ 588      6220332E 
  589              	.LASF11:
- 590 01ce 666C6F61 		.ascii	"float\000"
+ 590 01de 666C6F61 		.ascii	"float\000"
  590      7400
  591              	.LASF2:
- 592 01d4 73686F72 		.ascii	"short int\000"
+ 592 01e4 73686F72 		.ascii	"short int\000"
  592      7420696E 
  592      7400
  593              	.LASF15:
- 594 01de 73697A65 		.ascii	"sizetype\000"
+ 594 01ee 73697A65 		.ascii	"sizetype\000"
  594      74797065 
  594      00
  595              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

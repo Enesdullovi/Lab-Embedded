@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
   30:.\Generated_Source\PSoC4/Wakeup_ISR.c **** /* `#END` */
   31:.\Generated_Source\PSoC4/Wakeup_ISR.c **** 
   32:.\Generated_Source\PSoC4/Wakeup_ISR.c **** extern cyisraddress CyRamVectors[CYINT_IRQ_BASE + CY_NUM_INTERRUPTS];
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 2
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Wakeup_ISR.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
   47              		@ sp needed
   48 001c 80BD     		pop	{r7, pc}
   49              	.L3:
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 3
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 3
 
 
   50 001e C046     		.align	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
   89:.\Generated_Source\PSoC4/Wakeup_ISR.c **** 
   90:.\Generated_Source\PSoC4/Wakeup_ISR.c ****     /* Set the priority. */
   91:.\Generated_Source\PSoC4/Wakeup_ISR.c ****     Wakeup_ISR_SetPriority((uint8)Wakeup_ISR_INTC_PRIOR_NUMBER);
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 4
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 4
 
 
   81              		.loc 1 91 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  115:.\Generated_Source\PSoC4/Wakeup_ISR.c **** 
  116:.\Generated_Source\PSoC4/Wakeup_ISR.c ****     /* Set the ISR to point to the passive one. */
  117:.\Generated_Source\PSoC4/Wakeup_ISR.c ****     Wakeup_ISR_SetVector(&IntDefaultHandler);
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 5
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 5
 
 
  112              		.loc 1 117 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  141:.\Generated_Source\PSoC4/Wakeup_ISR.c ****     /* `#START Wakeup_ISR_Interrupt` */
  142:.\Generated_Source\PSoC4/Wakeup_ISR.c **** 
  143:.\Generated_Source\PSoC4/Wakeup_ISR.c ****     /* `#END` */
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 6
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 6
 
 
  144:.\Generated_Source\PSoC4/Wakeup_ISR.c **** }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  174 000e BD46     		mov	sp, r7
  175 0010 02B0     		add	sp, sp, #8
  176              		@ sp needed
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 7
 
 
  177 0012 80BD     		pop	{r7, pc}
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  211              	.L14:
  212 0010 00000000 		.word	CyRamVectors
  213              		.cfi_endproc
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 8
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 8
 
 
  214              	.LFE7:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  242 0010 3C1C     		mov	r4, r7
  243 0012 0B34     		add	r4, r4, #11
  244 0014 FFF7FEFF 		bl	CyEnterCriticalSection
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 9
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 9
 
 
  245 0018 031C     		mov	r3, r0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  221:.\Generated_Source\PSoC4/Wakeup_ISR.c **** ********************************************************************************
  222:.\Generated_Source\PSoC4/Wakeup_ISR.c **** *
  223:.\Generated_Source\PSoC4/Wakeup_ISR.c **** * Summary:
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 10
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 10
 
 
  224:.\Generated_Source\PSoC4/Wakeup_ISR.c **** *   Gets the Priority of the Interrupt.
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  326 002c 00E400E0 		.word	-536812544
  327              		.cfi_endproc
  328              	.LFE9:
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 11
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 11
 
 
  329              		.size	Wakeup_ISR_GetPriority, .-Wakeup_ISR_GetPriority
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  362              		.align	2
  363              		.global	Wakeup_ISR_GetState
  364              		.code	16
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 12
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 12
 
 
  365              		.thumb_func
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  398 001c 00E100E0 		.word	-536813312
  399              		.cfi_endproc
  400              	.LFE11:
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 13
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 13
 
 
  401              		.size	Wakeup_ISR_GetState, .-Wakeup_ISR_GetState
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  434              		.align	2
  435              		.global	Wakeup_ISR_SetPending
  436              		.code	16
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 14
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 14
 
 
  437              		.thumb_func
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  470              	Wakeup_ISR_ClearPending:
  471              	.LFB14:
  326:.\Generated_Source\PSoC4/Wakeup_ISR.c **** 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 15
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 15
 
 
  327:.\Generated_Source\PSoC4/Wakeup_ISR.c **** 
@@ -893,12 +893,12 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  502 0006 00000000 		.4byte	.Ldebug_abbrev0
  503 000a 04       		.byte	0x4
  504 000b 01       		.uleb128 0x1
- 505 000c 93000000 		.4byte	.LASF33
+ 505 000c 6B000000 		.4byte	.LASF33
  506 0010 01       		.byte	0x1
- 507 0011 44010000 		.4byte	.LASF34
- 508 0015 42000000 		.4byte	.LASF35
+ 507 0011 1C010000 		.4byte	.LASF34
+ 508 0015 44020000 		.4byte	.LASF35
  509 0019 00000000 		.4byte	.Ldebug_ranges0+0
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 16
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 16
 
 
  510 001d 00000000 		.4byte	0
@@ -906,35 +906,35 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  512 0025 02       		.uleb128 0x2
  513 0026 01       		.byte	0x1
  514 0027 06       		.byte	0x6
- 515 0028 BE020000 		.4byte	.LASF0
+ 515 0028 CE020000 		.4byte	.LASF0
  516 002c 02       		.uleb128 0x2
  517 002d 01       		.byte	0x1
  518 002e 08       		.byte	0x8
- 519 002f 0F010000 		.4byte	.LASF1
+ 519 002f E7000000 		.4byte	.LASF1
  520 0033 02       		.uleb128 0x2
  521 0034 02       		.byte	0x2
  522 0035 05       		.byte	0x5
- 523 0036 4E020000 		.4byte	.LASF2
+ 523 0036 26020000 		.4byte	.LASF2
  524 003a 02       		.uleb128 0x2
  525 003b 02       		.byte	0x2
  526 003c 07       		.byte	0x7
- 527 003d 7A000000 		.4byte	.LASF3
+ 527 003d 52000000 		.4byte	.LASF3
  528 0041 02       		.uleb128 0x2
  529 0042 04       		.byte	0x4
  530 0043 05       		.byte	0x5
- 531 0044 90020000 		.4byte	.LASF4
+ 531 0044 B0020000 		.4byte	.LASF4
  532 0048 02       		.uleb128 0x2
  533 0049 04       		.byte	0x4
  534 004a 07       		.byte	0x7
- 535 004b 2C010000 		.4byte	.LASF5
+ 535 004b 04010000 		.4byte	.LASF5
  536 004f 02       		.uleb128 0x2
  537 0050 08       		.byte	0x8
  538 0051 05       		.byte	0x5
- 539 0052 FF010000 		.4byte	.LASF6
+ 539 0052 D7010000 		.4byte	.LASF6
  540 0056 02       		.uleb128 0x2
  541 0057 08       		.byte	0x8
  542 0058 07       		.byte	0x7
- 543 0059 C1010000 		.4byte	.LASF7
+ 543 0059 99010000 		.4byte	.LASF7
  544 005d 03       		.uleb128 0x3
  545 005e 04       		.byte	0x4
  546 005f 05       		.byte	0x5
@@ -942,32 +942,32 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  548 0064 02       		.uleb128 0x2
  549 0065 04       		.byte	0x4
  550 0066 07       		.byte	0x7
- 551 0067 AC010000 		.4byte	.LASF8
+ 551 0067 84010000 		.4byte	.LASF8
  552 006b 04       		.uleb128 0x4
- 553 006c 3E010000 		.4byte	.LASF9
+ 553 006c 16010000 		.4byte	.LASF9
  554 0070 02       		.byte	0x2
  555 0071 A1       		.byte	0xa1
  556 0072 2C000000 		.4byte	0x2c
  557 0076 04       		.uleb128 0x4
- 558 0077 A5010000 		.4byte	.LASF10
+ 558 0077 7D010000 		.4byte	.LASF10
  559 007b 02       		.byte	0x2
  560 007c A3       		.byte	0xa3
  561 007d 48000000 		.4byte	0x48
  562 0081 02       		.uleb128 0x2
  563 0082 04       		.byte	0x4
  564 0083 04       		.byte	0x4
- 565 0084 8D000000 		.4byte	.LASF11
+ 565 0084 65000000 		.4byte	.LASF11
  566 0088 02       		.uleb128 0x2
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 17
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 17
 
 
  567 0089 08       		.byte	0x8
  568 008a 04       		.byte	0x4
- 569 008b 73010000 		.4byte	.LASF12
+ 569 008b 4B010000 		.4byte	.LASF12
  570 008f 02       		.uleb128 0x2
  571 0090 01       		.byte	0x1
  572 0091 08       		.byte	0x8
- 573 0092 37020000 		.4byte	.LASF13
+ 573 0092 0F020000 		.4byte	.LASF13
  574 0096 05       		.uleb128 0x5
  575 0097 18000000 		.4byte	.LASF14
  576 009b 02       		.byte	0x2
@@ -976,7 +976,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  579 00a2 06       		.uleb128 0x6
  580 00a3 76000000 		.4byte	0x76
  581 00a7 05       		.uleb128 0x5
- 582 00a8 E9010000 		.4byte	.LASF15
+ 582 00a8 C1010000 		.4byte	.LASF15
  583 00ac 02       		.byte	0x2
  584 00ad 5D01     		.2byte	0x15d
  585 00af B3000000 		.4byte	0xb3
@@ -987,9 +987,9 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  590 00ba 02       		.uleb128 0x2
  591 00bb 04       		.byte	0x4
  592 00bc 07       		.byte	0x7
- 593 00bd F6010000 		.4byte	.LASF16
+ 593 00bd CE010000 		.4byte	.LASF16
  594 00c1 09       		.uleb128 0x9
- 595 00c2 D8010000 		.4byte	.LASF17
+ 595 00c2 B0010000 		.4byte	.LASF17
  596 00c6 01       		.byte	0x1
  597 00c7 34       		.byte	0x34
  598 00c8 00000000 		.4byte	.LFB2
@@ -997,7 +997,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  600 00d0 01       		.uleb128 0x1
  601 00d1 9C       		.byte	0x9c
  602 00d2 0A       		.uleb128 0xa
- 603 00d3 CA020000 		.4byte	.LASF20
+ 603 00d3 DA020000 		.4byte	.LASF20
  604 00d7 01       		.byte	0x1
  605 00d8 52       		.byte	0x52
  606 00d9 00000000 		.4byte	.LFB3
@@ -1006,7 +1006,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  609 00e2 9C       		.byte	0x9c
  610 00e3 F6000000 		.4byte	0xf6
  611 00e7 0B       		.uleb128 0xb
- 612 00e8 B9010000 		.4byte	.LASF22
+ 612 00e8 91010000 		.4byte	.LASF22
  613 00ec 01       		.byte	0x1
  614 00ed 52       		.byte	0x52
  615 00ee A7000000 		.4byte	0xa7
@@ -1015,10 +1015,10 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  618 00f4 74       		.sleb128 -12
  619 00f5 00       		.byte	0
  620 00f6 09       		.uleb128 0x9
- 621 00f7 AE020000 		.4byte	.LASF18
+ 621 00f7 42000000 		.4byte	.LASF18
  622 00fb 01       		.byte	0x1
  623 00fc 6F       		.byte	0x6f
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 18
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 18
 
 
  624 00fd 00000000 		.4byte	.LFB4
@@ -1026,7 +1026,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  626 0105 01       		.uleb128 0x1
  627 0106 9C       		.byte	0x9c
  628 0107 0C       		.uleb128 0xc
- 629 0108 99020000 		.4byte	.LASF19
+ 629 0108 B9020000 		.4byte	.LASF19
  630 010c 01       		.byte	0x1
  631 010d 8A       		.byte	0x8a
  632 010e 00000000 		.4byte	.LFB5
@@ -1034,7 +1034,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  634 0116 01       		.uleb128 0x1
  635 0117 9C       		.byte	0x9c
  636 0118 0D       		.uleb128 0xd
- 637 0119 7A010000 		.4byte	.LASF21
+ 637 0119 52010000 		.4byte	.LASF21
  638 011d 01       		.byte	0x1
  639 011e A3       		.byte	0xa3
  640 011f 00000000 		.4byte	.LFB6
@@ -1043,7 +1043,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  643 0128 9C       		.byte	0x9c
  644 0129 3C010000 		.4byte	0x13c
  645 012d 0B       		.uleb128 0xb
- 646 012e B9010000 		.4byte	.LASF22
+ 646 012e 91010000 		.4byte	.LASF22
  647 0132 01       		.byte	0x1
  648 0133 A3       		.byte	0xa3
  649 0134 A7000000 		.4byte	0xa7
@@ -1052,7 +1052,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  652 013a 74       		.sleb128 -12
  653 013b 00       		.byte	0
  654 013c 0E       		.uleb128 0xe
- 655 013d 7B020000 		.4byte	.LASF28
+ 655 013d 9B020000 		.4byte	.LASF28
  656 0141 01       		.byte	0x1
  657 0142 B7       		.byte	0xb7
  658 0143 A7000000 		.4byte	0xa7
@@ -1070,7 +1070,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  670 0161 9C       		.byte	0x9c
  671 0162 91010000 		.4byte	0x191
  672 0166 0B       		.uleb128 0xb
- 673 0167 6A010000 		.4byte	.LASF24
+ 673 0167 42010000 		.4byte	.LASF24
  674 016b 01       		.byte	0x1
  675 016c CF       		.byte	0xcf
  676 016d 6B000000 		.4byte	0x6b
@@ -1078,10 +1078,10 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  678 0172 91       		.byte	0x91
  679 0173 67       		.sleb128 -25
  680 0174 0F       		.uleb128 0xf
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 19
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 19
 
 
- 681 0175 1D010000 		.4byte	.LASF25
+ 681 0175 F5000000 		.4byte	.LASF25
  682 0179 01       		.byte	0x1
  683 017a D1       		.byte	0xd1
  684 017b 6B000000 		.4byte	0x6b
@@ -1089,7 +1089,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  686 0180 91       		.byte	0x91
  687 0181 6B       		.sleb128 -21
  688 0182 0F       		.uleb128 0xf
- 689 0183 6C020000 		.4byte	.LASF26
+ 689 0183 8C020000 		.4byte	.LASF26
  690 0187 01       		.byte	0x1
  691 0188 D2       		.byte	0xd2
  692 0189 76000000 		.4byte	0x76
@@ -1098,7 +1098,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  695 018f 6C       		.sleb128 -20
  696 0190 00       		.byte	0
  697 0191 10       		.uleb128 0x10
- 698 0192 20020000 		.4byte	.LASF36
+ 698 0192 F8010000 		.4byte	.LASF36
  699 0196 01       		.byte	0x1
  700 0197 E9       		.byte	0xe9
  701 0198 6B000000 		.4byte	0x6b
@@ -1108,7 +1108,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  705 01a5 9C       		.byte	0x9c
  706 01a6 C7010000 		.4byte	0x1c7
  707 01aa 0F       		.uleb128 0xf
- 708 01ab 6A010000 		.4byte	.LASF24
+ 708 01ab 42010000 		.4byte	.LASF24
  709 01af 01       		.byte	0x1
  710 01b0 EB       		.byte	0xeb
  711 01b1 76000000 		.4byte	0x76
@@ -1116,7 +1116,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  713 01b6 91       		.byte	0x91
  714 01b7 70       		.sleb128 -16
  715 01b8 0F       		.uleb128 0xf
- 716 01b9 6C020000 		.4byte	.LASF26
+ 716 01b9 8C020000 		.4byte	.LASF26
  717 01bd 01       		.byte	0x1
  718 01be EC       		.byte	0xec
  719 01bf 76000000 		.4byte	0x76
@@ -1125,7 +1125,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  722 01c5 74       		.sleb128 -12
  723 01c6 00       		.byte	0
  724 01c7 11       		.uleb128 0x11
- 725 01c8 3C020000 		.4byte	.LASF27
+ 725 01c8 14020000 		.4byte	.LASF27
  726 01cc 01       		.byte	0x1
  727 01cd 0201     		.2byte	0x102
  728 01cf 00000000 		.4byte	.LFB10
@@ -1133,19 +1133,19 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  730 01d7 01       		.uleb128 0x1
  731 01d8 9C       		.byte	0x9c
  732 01d9 12       		.uleb128 0x12
- 733 01da 58020000 		.4byte	.LASF29
+ 733 01da 30020000 		.4byte	.LASF29
  734 01de 01       		.byte	0x1
  735 01df 1701     		.2byte	0x117
  736 01e1 6B000000 		.4byte	0x6b
  737 01e5 00000000 		.4byte	.LFB11
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 20
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 20
 
 
  738 01e9 20000000 		.4byte	.LFE11-.LFB11
  739 01ed 01       		.uleb128 0x1
  740 01ee 9C       		.byte	0x9c
  741 01ef 11       		.uleb128 0x11
- 742 01f0 0D020000 		.4byte	.LASF30
+ 742 01f0 E5010000 		.4byte	.LASF30
  743 01f4 01       		.byte	0x1
  744 01f5 2C01     		.2byte	0x12c
  745 01f7 00000000 		.4byte	.LFB12
@@ -1153,7 +1153,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  747 01ff 01       		.uleb128 0x1
  748 0200 9C       		.byte	0x9c
  749 0201 11       		.uleb128 0x11
- 750 0202 8F010000 		.4byte	.LASF31
+ 750 0202 67010000 		.4byte	.LASF31
  751 0206 01       		.byte	0x1
  752 0207 4201     		.2byte	0x142
  753 0209 00000000 		.4byte	.LFB13
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  792 000c 17       		.uleb128 0x17
  793 000d 11       		.uleb128 0x11
  794 000e 01       		.uleb128 0x1
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 21
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 21
 
 
  795 000f 10       		.uleb128 0x10
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  849 0045 00       		.byte	0
  850 0046 49       		.uleb128 0x49
  851 0047 13       		.uleb128 0x13
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 22
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 22
 
 
  852 0048 00       		.byte	0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  906 007f 11       		.uleb128 0x11
  907 0080 01       		.uleb128 0x1
  908 0081 12       		.uleb128 0x12
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 23
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 23
 
 
  909 0082 06       		.uleb128 0x6
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  963 00ba 3A       		.uleb128 0x3a
  964 00bb 0B       		.uleb128 0xb
  965 00bc 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 24
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 24
 
 
  966 00bd 0B       		.uleb128 0xb
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  1020 00f5 00       		.byte	0
  1021 00f6 10       		.uleb128 0x10
  1022 00f7 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 25
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 25
 
 
  1023 00f8 01       		.byte	0x1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  1077 0130 0E       		.uleb128 0xe
  1078 0131 3A       		.uleb128 0x3a
  1079 0132 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 26
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 26
 
 
  1080 0133 3B       		.uleb128 0x3b
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  1134 0004 0200     		.2byte	0x2
  1135 0006 00000000 		.4byte	.Ldebug_info0
  1136 000a 04       		.byte	0x4
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 27
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 27
 
 
  1137 000b 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  1191 0054 14000000 		.4byte	.LFE12
  1192 0058 00000000 		.4byte	.LFB13
  1193 005c 14000000 		.4byte	.LFE13
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 28
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 28
 
 
  1194 0060 00000000 		.4byte	.LFB14
@@ -1652,193 +1652,195 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 1
  1208      6D566563 
  1208      746F7273 
  1208      00
- 1209              	.LASF35:
- 1210 0042 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
- 1210      73657273 
- 1210      5C456E65 
- 1210      73204475 
- 1210      6C6C6F76 
- 1211 0070 6220332E 		.ascii	"b 3.cydsn\000"
- 1211      63796473 
- 1211      6E00
- 1212              	.LASF3:
- 1213 007a 73686F72 		.ascii	"short unsigned int\000"
- 1213      7420756E 
- 1213      7369676E 
- 1213      65642069 
- 1213      6E7400
- 1214              	.LASF11:
- 1215 008d 666C6F61 		.ascii	"float\000"
- 1215      7400
- 1216              	.LASF33:
- 1217 0093 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 1217      4320342E 
- 1217      382E3420 
- 1217      32303134 
- 1217      30353236 
- 1218 00c6 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 1218      20726576 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 29
+ 1209              	.LASF18:
+ 1210 0042 57616B65 		.ascii	"Wakeup_ISR_Stop\000"
+ 1210      75705F49 
+ 1210      53525F53 
+ 1210      746F7000 
+ 1211              	.LASF3:
+ 1212 0052 73686F72 		.ascii	"short unsigned int\000"
+ 1212      7420756E 
+ 1212      7369676E 
+ 1212      65642069 
+ 1212      6E7400
+ 1213              	.LASF11:
+ 1214 0065 666C6F61 		.ascii	"float\000"
+ 1214      7400
+ 1215              	.LASF33:
+ 1216 006b 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1216      4320342E 
+ 1216      382E3420 
+ 1216      32303134 
+ 1216      30353236 
+ 1217 009e 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1217      20726576 
+ 1217      6973696F 
+ 1217      6E203231 
+ 1217      31333538 
+ 1218 00d1 30202D66 		.ascii	"0 -ffunction-sections\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 29
 
 
- 1218      6973696F 
- 1218      6E203231 
- 1218      31333538 
- 1219 00f9 30202D66 		.ascii	"0 -ffunction-sections\000"
- 1219      66756E63 
- 1219      74696F6E 
- 1219      2D736563 
- 1219      74696F6E 
- 1220              	.LASF1:
- 1221 010f 756E7369 		.ascii	"unsigned char\000"
- 1221      676E6564 
- 1221      20636861 
- 1221      7200
- 1222              	.LASF25:
- 1223 011d 696E7465 		.ascii	"interruptState\000"
- 1223      72727570 
- 1223      74537461 
- 1223      746500
- 1224              	.LASF5:
- 1225 012c 6C6F6E67 		.ascii	"long unsigned int\000"
- 1225      20756E73 
- 1225      69676E65 
- 1225      6420696E 
- 1225      7400
- 1226              	.LASF9:
- 1227 013e 75696E74 		.ascii	"uint8\000"
- 1227      3800
- 1228              	.LASF34:
- 1229 0144 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Wakeup_ISR.c\000"
- 1229      6E657261 
- 1229      7465645F 
- 1229      536F7572 
- 1229      63655C50 
- 1230              	.LASF24:
- 1231 016a 7072696F 		.ascii	"priority\000"
- 1231      72697479 
- 1231      00
- 1232              	.LASF12:
- 1233 0173 646F7562 		.ascii	"double\000"
- 1233      6C6500
- 1234              	.LASF21:
- 1235 017a 57616B65 		.ascii	"Wakeup_ISR_SetVector\000"
- 1235      75705F49 
- 1235      53525F53 
- 1235      65745665 
- 1235      63746F72 
- 1236              	.LASF31:
- 1237 018f 57616B65 		.ascii	"Wakeup_ISR_SetPending\000"
- 1237      75705F49 
- 1237      53525F53 
- 1237      65745065 
- 1237      6E64696E 
- 1238              	.LASF10:
- 1239 01a5 75696E74 		.ascii	"uint32\000"
- 1239      333200
- 1240              	.LASF8:
- 1241 01ac 756E7369 		.ascii	"unsigned int\000"
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 30
+ 1218      66756E63 
+ 1218      74696F6E 
+ 1218      2D736563 
+ 1218      74696F6E 
+ 1219              	.LASF1:
+ 1220 00e7 756E7369 		.ascii	"unsigned char\000"
+ 1220      676E6564 
+ 1220      20636861 
+ 1220      7200
+ 1221              	.LASF25:
+ 1222 00f5 696E7465 		.ascii	"interruptState\000"
+ 1222      72727570 
+ 1222      74537461 
+ 1222      746500
+ 1223              	.LASF5:
+ 1224 0104 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1224      20756E73 
+ 1224      69676E65 
+ 1224      6420696E 
+ 1224      7400
+ 1225              	.LASF9:
+ 1226 0116 75696E74 		.ascii	"uint8\000"
+ 1226      3800
+ 1227              	.LASF34:
+ 1228 011c 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Wakeup_ISR.c\000"
+ 1228      6E657261 
+ 1228      7465645F 
+ 1228      536F7572 
+ 1228      63655C50 
+ 1229              	.LASF24:
+ 1230 0142 7072696F 		.ascii	"priority\000"
+ 1230      72697479 
+ 1230      00
+ 1231              	.LASF12:
+ 1232 014b 646F7562 		.ascii	"double\000"
+ 1232      6C6500
+ 1233              	.LASF21:
+ 1234 0152 57616B65 		.ascii	"Wakeup_ISR_SetVector\000"
+ 1234      75705F49 
+ 1234      53525F53 
+ 1234      65745665 
+ 1234      63746F72 
+ 1235              	.LASF31:
+ 1236 0167 57616B65 		.ascii	"Wakeup_ISR_SetPending\000"
+ 1236      75705F49 
+ 1236      53525F53 
+ 1236      65745065 
+ 1236      6E64696E 
+ 1237              	.LASF10:
+ 1238 017d 75696E74 		.ascii	"uint32\000"
+ 1238      333200
+ 1239              	.LASF8:
+ 1240 0184 756E7369 		.ascii	"unsigned int\000"
+ 1240      676E6564 
+ 1240      20696E74 
+ 1240      00
+ 1241              	.LASF22:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 30
 
 
- 1241      676E6564 
- 1241      20696E74 
- 1241      00
- 1242              	.LASF22:
- 1243 01b9 61646472 		.ascii	"address\000"
- 1243      65737300 
- 1244              	.LASF7:
- 1245 01c1 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1245      206C6F6E 
- 1245      6720756E 
- 1245      7369676E 
- 1245      65642069 
- 1246              	.LASF17:
- 1247 01d8 57616B65 		.ascii	"Wakeup_ISR_Start\000"
- 1247      75705F49 
- 1247      53525F53 
- 1247      74617274 
- 1247      00
- 1248              	.LASF15:
- 1249 01e9 63796973 		.ascii	"cyisraddress\000"
- 1249      72616464 
- 1249      72657373 
- 1249      00
- 1250              	.LASF16:
- 1251 01f6 73697A65 		.ascii	"sizetype\000"
- 1251      74797065 
- 1251      00
- 1252              	.LASF6:
- 1253 01ff 6C6F6E67 		.ascii	"long long int\000"
- 1253      206C6F6E 
- 1253      6720696E 
- 1253      7400
- 1254              	.LASF30:
- 1255 020d 57616B65 		.ascii	"Wakeup_ISR_Disable\000"
- 1255      75705F49 
- 1255      53525F44 
- 1255      69736162 
- 1255      6C6500
- 1256              	.LASF36:
- 1257 0220 57616B65 		.ascii	"Wakeup_ISR_GetPriority\000"
- 1257      75705F49 
- 1257      53525F47 
- 1257      65745072 
- 1257      696F7269 
- 1258              	.LASF13:
- 1259 0237 63686172 		.ascii	"char\000"
- 1259      00
- 1260              	.LASF27:
- 1261 023c 57616B65 		.ascii	"Wakeup_ISR_Enable\000"
- 1261      75705F49 
- 1261      53525F45 
- 1261      6E61626C 
- 1261      6500
- 1262              	.LASF2:
- 1263 024e 73686F72 		.ascii	"short int\000"
- 1263      7420696E 
- 1263      7400
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc7lI8T8.s 			page 31
+ 1242 0191 61646472 		.ascii	"address\000"
+ 1242      65737300 
+ 1243              	.LASF7:
+ 1244 0199 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1244      206C6F6E 
+ 1244      6720756E 
+ 1244      7369676E 
+ 1244      65642069 
+ 1245              	.LASF17:
+ 1246 01b0 57616B65 		.ascii	"Wakeup_ISR_Start\000"
+ 1246      75705F49 
+ 1246      53525F53 
+ 1246      74617274 
+ 1246      00
+ 1247              	.LASF15:
+ 1248 01c1 63796973 		.ascii	"cyisraddress\000"
+ 1248      72616464 
+ 1248      72657373 
+ 1248      00
+ 1249              	.LASF16:
+ 1250 01ce 73697A65 		.ascii	"sizetype\000"
+ 1250      74797065 
+ 1250      00
+ 1251              	.LASF6:
+ 1252 01d7 6C6F6E67 		.ascii	"long long int\000"
+ 1252      206C6F6E 
+ 1252      6720696E 
+ 1252      7400
+ 1253              	.LASF30:
+ 1254 01e5 57616B65 		.ascii	"Wakeup_ISR_Disable\000"
+ 1254      75705F49 
+ 1254      53525F44 
+ 1254      69736162 
+ 1254      6C6500
+ 1255              	.LASF36:
+ 1256 01f8 57616B65 		.ascii	"Wakeup_ISR_GetPriority\000"
+ 1256      75705F49 
+ 1256      53525F47 
+ 1256      65745072 
+ 1256      696F7269 
+ 1257              	.LASF13:
+ 1258 020f 63686172 		.ascii	"char\000"
+ 1258      00
+ 1259              	.LASF27:
+ 1260 0214 57616B65 		.ascii	"Wakeup_ISR_Enable\000"
+ 1260      75705F49 
+ 1260      53525F45 
+ 1260      6E61626C 
+ 1260      6500
+ 1261              	.LASF2:
+ 1262 0226 73686F72 		.ascii	"short int\000"
+ 1262      7420696E 
+ 1262      7400
+ 1263              	.LASF29:
+ 1264 0230 57616B65 		.ascii	"Wakeup_ISR_GetState\000"
+ 1264      75705F49 
+ 1264      53525F47 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccX2TuAS.s 			page 31
 
 
- 1264              	.LASF29:
- 1265 0258 57616B65 		.ascii	"Wakeup_ISR_GetState\000"
- 1265      75705F49 
- 1265      53525F47 
- 1265      65745374 
- 1265      61746500 
- 1266              	.LASF26:
- 1267 026c 7072696F 		.ascii	"priorityOffset\000"
- 1267      72697479 
- 1267      4F666673 
- 1267      657400
- 1268              	.LASF28:
- 1269 027b 57616B65 		.ascii	"Wakeup_ISR_GetVector\000"
- 1269      75705F49 
- 1269      53525F47 
- 1269      65745665 
- 1269      63746F72 
- 1270              	.LASF4:
- 1271 0290 6C6F6E67 		.ascii	"long int\000"
- 1271      20696E74 
- 1271      00
- 1272              	.LASF19:
- 1273 0299 57616B65 		.ascii	"Wakeup_ISR_Interrupt\000"
- 1273      75705F49 
- 1273      53525F49 
- 1273      6E746572 
- 1273      72757074 
- 1274              	.LASF18:
- 1275 02ae 57616B65 		.ascii	"Wakeup_ISR_Stop\000"
+ 1264      65745374 
+ 1264      61746500 
+ 1265              	.LASF35:
+ 1266 0244 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
+ 1266      73657273 
+ 1266      5C456E65 
+ 1266      73204475 
+ 1266      6C6C6F76 
+ 1267 0272 6220332E 		.ascii	"b 3.cydsn\\BLE Lab 3.cydsn\000"
+ 1267      63796473 
+ 1267      6E5C424C 
+ 1267      45204C61 
+ 1267      6220332E 
+ 1268              	.LASF26:
+ 1269 028c 7072696F 		.ascii	"priorityOffset\000"
+ 1269      72697479 
+ 1269      4F666673 
+ 1269      657400
+ 1270              	.LASF28:
+ 1271 029b 57616B65 		.ascii	"Wakeup_ISR_GetVector\000"
+ 1271      75705F49 
+ 1271      53525F47 
+ 1271      65745665 
+ 1271      63746F72 
+ 1272              	.LASF4:
+ 1273 02b0 6C6F6E67 		.ascii	"long int\000"
+ 1273      20696E74 
+ 1273      00
+ 1274              	.LASF19:
+ 1275 02b9 57616B65 		.ascii	"Wakeup_ISR_Interrupt\000"
  1275      75705F49 
- 1275      53525F53 
- 1275      746F7000 
+ 1275      53525F49 
+ 1275      6E746572 
+ 1275      72757074 
  1276              	.LASF0:
- 1277 02be 7369676E 		.ascii	"signed char\000"
+ 1277 02ce 7369676E 		.ascii	"signed char\000"
  1277      65642063 
  1277      68617200 
  1278              	.LASF20:
- 1279 02ca 57616B65 		.ascii	"Wakeup_ISR_StartEx\000"
+ 1279 02da 57616B65 		.ascii	"Wakeup_ISR_StartEx\000"
  1279      75705F49 
  1279      53525F53 
  1279      74617274 

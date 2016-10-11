@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
   30:.\Generated_Source\PSoC4/Button_output.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/Button_output.c **** *
   32:.\Generated_Source\PSoC4/Button_output.c **** * Summary:
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 2
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Button_output.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
   66 003c 1A60     		str	r2, [r3]
   47:.\Generated_Source\PSoC4/Button_output.c **** }
   67              		.loc 1 47 0
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 3
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 3
 
 
   68 003e BD46     		mov	sp, r7
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
   95 0004 00AF     		add	r7, sp, #0
   96              		.cfi_def_cfa_register 7
   97 0006 021C     		mov	r2, r0
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 4
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 4
 
 
   98 0008 FB1D     		add	r3, r7, #7
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
   95:.\Generated_Source\PSoC4/Button_output.c **** *  
   96:.\Generated_Source\PSoC4/Button_output.c **** *******************************************************************************/
   97:.\Generated_Source\PSoC4/Button_output.c **** uint8 Button_output_Read(void) 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 5
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 5
 
 
   98:.\Generated_Source\PSoC4/Button_output.c **** {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  117:.\Generated_Source\PSoC4/Button_output.c **** uint8 Button_output_ReadDataReg(void) 
  118:.\Generated_Source\PSoC4/Button_output.c **** {
  167              		.loc 1 118 0
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 6
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 6
 
 
  168              		.cfi_startproc
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  139:.\Generated_Source\PSoC4/Button_output.c ****     *  
  140:.\Generated_Source\PSoC4/Button_output.c ****     *******************************************************************************/
  141:.\Generated_Source\PSoC4/Button_output.c ****     uint8 Button_output_ClearInterrupt(void) 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 7
 
 
  142:.\Generated_Source\PSoC4/Button_output.c ****     {
@@ -415,48 +415,48 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  248 0006 00000000 		.4byte	.Ldebug_abbrev0
  249 000a 04       		.byte	0x4
  250 000b 01       		.uleb128 0x1
- 251 000c 05010000 		.4byte	.LASF24
+ 251 000c CD000000 		.4byte	.LASF24
  252 0010 01       		.byte	0x1
- 253 0011 B4000000 		.4byte	.LASF25
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 8
+ 253 0011 7C000000 		.4byte	.LASF25
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 8
 
 
- 254 0015 0C000000 		.4byte	.LASF26
+ 254 0015 B0010000 		.4byte	.LASF26
  255 0019 00000000 		.4byte	.Ldebug_ranges0+0
  256 001d 00000000 		.4byte	0
  257 0021 00000000 		.4byte	.Ldebug_line0
  258 0025 02       		.uleb128 0x2
  259 0026 01       		.byte	0x1
  260 0027 06       		.byte	0x6
- 261 0028 F6010000 		.4byte	.LASF0
+ 261 0028 06020000 		.4byte	.LASF0
  262 002c 02       		.uleb128 0x2
  263 002d 01       		.byte	0x1
  264 002e 08       		.byte	0x8
- 265 002f 61000000 		.4byte	.LASF1
+ 265 002f 29000000 		.4byte	.LASF1
  266 0033 02       		.uleb128 0x2
  267 0034 02       		.byte	0x2
  268 0035 05       		.byte	0x5
- 269 0036 DD010000 		.4byte	.LASF2
+ 269 0036 A6010000 		.4byte	.LASF2
  270 003a 02       		.uleb128 0x2
  271 003b 02       		.byte	0x2
  272 003c 07       		.byte	0x7
- 273 003d 87000000 		.4byte	.LASF3
+ 273 003d 4F000000 		.4byte	.LASF3
  274 0041 02       		.uleb128 0x2
  275 0042 04       		.byte	0x4
  276 0043 05       		.byte	0x5
- 277 0044 ED010000 		.4byte	.LASF4
+ 277 0044 F8010000 		.4byte	.LASF4
  278 0048 02       		.uleb128 0x2
  279 0049 04       		.byte	0x4
  280 004a 07       		.byte	0x7
- 281 004b 75000000 		.4byte	.LASF5
+ 281 004b 3D000000 		.4byte	.LASF5
  282 004f 02       		.uleb128 0x2
  283 0050 08       		.byte	0x8
  284 0051 05       		.byte	0x5
- 285 0052 BD010000 		.4byte	.LASF6
+ 285 0052 85010000 		.4byte	.LASF6
  286 0056 02       		.uleb128 0x2
  287 0057 08       		.byte	0x8
  288 0058 07       		.byte	0x7
- 289 0059 4A000000 		.4byte	.LASF7
+ 289 0059 12000000 		.4byte	.LASF7
  290 005d 03       		.uleb128 0x3
  291 005e 04       		.byte	0x4
  292 005f 05       		.byte	0x5
@@ -464,32 +464,32 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  294 0064 02       		.uleb128 0x2
  295 0065 04       		.byte	0x4
  296 0066 07       		.byte	0x7
- 297 0067 E4000000 		.4byte	.LASF8
+ 297 0067 AC000000 		.4byte	.LASF8
  298 006b 04       		.uleb128 0x4
- 299 006c E7010000 		.4byte	.LASF9
+ 299 006c A0010000 		.4byte	.LASF9
  300 0070 02       		.byte	0x2
  301 0071 A1       		.byte	0xa1
  302 0072 2C000000 		.4byte	0x2c
  303 0076 04       		.uleb128 0x4
- 304 0077 DD000000 		.4byte	.LASF10
+ 304 0077 A5000000 		.4byte	.LASF10
  305 007b 02       		.byte	0x2
  306 007c A3       		.byte	0xa3
  307 007d 48000000 		.4byte	0x48
  308 0081 02       		.uleb128 0x2
  309 0082 04       		.byte	0x4
  310 0083 04       		.byte	0x4
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 9
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 9
 
 
- 311 0084 44000000 		.4byte	.LASF11
+ 311 0084 0C000000 		.4byte	.LASF11
  312 0088 02       		.uleb128 0x2
  313 0089 08       		.byte	0x8
  314 008a 04       		.byte	0x4
- 315 008b 9A000000 		.4byte	.LASF12
+ 315 008b 62000000 		.4byte	.LASF12
  316 008f 02       		.uleb128 0x2
  317 0090 01       		.byte	0x1
  318 0091 08       		.byte	0x8
- 319 0092 D8010000 		.4byte	.LASF13
+ 319 0092 01020000 		.4byte	.LASF13
  320 0096 05       		.uleb128 0x5
  321 0097 00000000 		.4byte	.LASF14
  322 009b 02       		.byte	0x2
@@ -498,7 +498,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  325 00a2 06       		.uleb128 0x6
  326 00a3 76000000 		.4byte	0x76
  327 00a7 07       		.uleb128 0x7
- 328 00a8 F1000000 		.4byte	.LASF15
+ 328 00a8 B9000000 		.4byte	.LASF15
  329 00ac 01       		.byte	0x1
  330 00ad 2A       		.byte	0x2a
  331 00ae 00000000 		.4byte	.LFB0
@@ -515,7 +515,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  342 00c8 91       		.byte	0x91
  343 00c9 6F       		.sleb128 -17
  344 00ca 09       		.uleb128 0x9
- 345 00cb 6F000000 		.4byte	.LASF22
+ 345 00cb 37000000 		.4byte	.LASF22
  346 00cf 01       		.byte	0x1
  347 00d0 2C       		.byte	0x2c
  348 00d1 6B000000 		.4byte	0x6b
@@ -524,7 +524,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  351 00d7 77       		.sleb128 -9
  352 00d8 00       		.byte	0
  353 00d9 07       		.uleb128 0x7
- 354 00da 02020000 		.4byte	.LASF16
+ 354 00da 12020000 		.4byte	.LASF16
  355 00de 01       		.byte	0x1
  356 00df 49       		.byte	0x49
  357 00e0 00000000 		.4byte	.LFB1
@@ -533,19 +533,19 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  360 00e9 9C       		.byte	0x9c
  361 00ea FD000000 		.4byte	0xfd
  362 00ee 08       		.uleb128 0x8
- 363 00ef 81010000 		.4byte	.LASF18
+ 363 00ef 49010000 		.4byte	.LASF18
  364 00f3 01       		.byte	0x1
  365 00f4 49       		.byte	0x49
  366 00f5 6B000000 		.4byte	0x6b
  367 00f9 02       		.uleb128 0x2
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 10
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 10
 
 
  368 00fa 91       		.byte	0x91
  369 00fb 77       		.sleb128 -9
  370 00fc 00       		.byte	0
  371 00fd 0A       		.uleb128 0xa
- 372 00fe A1000000 		.4byte	.LASF19
+ 372 00fe 69000000 		.4byte	.LASF19
  373 0102 01       		.byte	0x1
  374 0103 61       		.byte	0x61
  375 0104 6B000000 		.4byte	0x6b
@@ -554,7 +554,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  378 0110 01       		.uleb128 0x1
  379 0111 9C       		.byte	0x9c
  380 0112 0A       		.uleb128 0xa
- 381 0113 A3010000 		.4byte	.LASF20
+ 381 0113 6B010000 		.4byte	.LASF20
  382 0117 01       		.byte	0x1
  383 0118 75       		.byte	0x75
  384 0119 6B000000 		.4byte	0x6b
@@ -563,7 +563,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  387 0125 01       		.uleb128 0x1
  388 0126 9C       		.byte	0x9c
  389 0127 0B       		.uleb128 0xb
- 390 0128 86010000 		.4byte	.LASF21
+ 390 0128 4E010000 		.4byte	.LASF21
  391 012c 01       		.byte	0x1
  392 012d 8D       		.byte	0x8d
  393 012e 6B000000 		.4byte	0x6b
@@ -572,7 +572,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  396 013a 01       		.uleb128 0x1
  397 013b 9C       		.byte	0x9c
  398 013c 09       		.uleb128 0x9
- 399 013d CB010000 		.4byte	.LASF23
+ 399 013d 93010000 		.4byte	.LASF23
  400 0141 01       		.byte	0x1
  401 0142 8F       		.byte	0x8f
  402 0143 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  422 000c 17       		.uleb128 0x17
  423 000d 11       		.uleb128 0x11
  424 000e 01       		.uleb128 0x1
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 11
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 11
 
 
  425 000f 10       		.uleb128 0x10
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  479 0045 00       		.byte	0
  480 0046 49       		.uleb128 0x49
  481 0047 13       		.uleb128 0x13
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 12
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 12
 
 
  482 0048 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  536 007f 18       		.uleb128 0x18
  537 0080 00       		.byte	0
  538 0081 00       		.byte	0
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 13
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 13
 
 
  539 0082 0A       		.uleb128 0xa
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  593 0006 00000000 		.4byte	.Ldebug_info0
  594 000a 04       		.byte	0x4
  595 000b 00       		.byte	0
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 14
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 14
 
 
  596 000c 0000     		.2byte	0
@@ -822,145 +822,147 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 1
  629              	.LASF17:
  630 0006 76616C75 		.ascii	"value\000"
  630      6500
- 631              	.LASF26:
- 632 000c 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
- 632      73657273 
- 632      5C456E65 
- 632      73204475 
- 632      6C6C6F76 
- 633 003a 6220332E 		.ascii	"b 3.cydsn\000"
- 633      63796473 
- 633      6E00
- 634              	.LASF11:
- 635 0044 666C6F61 		.ascii	"float\000"
- 635      7400
- 636              	.LASF7:
- 637 004a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 637      206C6F6E 
- 637      6720756E 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 15
+ 631              	.LASF11:
+ 632 000c 666C6F61 		.ascii	"float\000"
+ 632      7400
+ 633              	.LASF7:
+ 634 0012 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 634      206C6F6E 
+ 634      6720756E 
+ 634      7369676E 
+ 634      65642069 
+ 635              	.LASF1:
+ 636 0029 756E7369 		.ascii	"unsigned char\000"
+ 636      676E6564 
+ 636      20636861 
+ 636      7200
+ 637              	.LASF22:
+ 638 0037 64725661 		.ascii	"drVal\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 15
 
 
- 637      7369676E 
- 637      65642069 
- 638              	.LASF1:
- 639 0061 756E7369 		.ascii	"unsigned char\000"
- 639      676E6564 
- 639      20636861 
- 639      7200
- 640              	.LASF22:
- 641 006f 64725661 		.ascii	"drVal\000"
- 641      6C00
- 642              	.LASF5:
- 643 0075 6C6F6E67 		.ascii	"long unsigned int\000"
- 643      20756E73 
- 643      69676E65 
- 643      6420696E 
- 643      7400
- 644              	.LASF3:
- 645 0087 73686F72 		.ascii	"short unsigned int\000"
- 645      7420756E 
- 645      7369676E 
- 645      65642069 
- 645      6E7400
- 646              	.LASF12:
- 647 009a 646F7562 		.ascii	"double\000"
- 647      6C6500
- 648              	.LASF19:
- 649 00a1 42757474 		.ascii	"Button_output_Read\000"
- 649      6F6E5F6F 
- 649      75747075 
- 649      745F5265 
- 649      616400
- 650              	.LASF25:
- 651 00b4 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Button_output.c\000"
- 651      6E657261 
- 651      7465645F 
- 651      536F7572 
- 651      63655C50 
- 652              	.LASF10:
- 653 00dd 75696E74 		.ascii	"uint32\000"
- 653      333200
- 654              	.LASF8:
- 655 00e4 756E7369 		.ascii	"unsigned int\000"
- 655      676E6564 
- 655      20696E74 
- 655      00
- 656              	.LASF15:
- 657 00f1 42757474 		.ascii	"Button_output_Write\000"
- 657      6F6E5F6F 
- 657      75747075 
- 657      745F5772 
- 657      69746500 
- 658              	.LASF24:
- 659 0105 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 659      4320342E 
- 659      382E3420 
- 659      32303134 
- 659      30353236 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 16
+ 638      6C00
+ 639              	.LASF5:
+ 640 003d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 640      20756E73 
+ 640      69676E65 
+ 640      6420696E 
+ 640      7400
+ 641              	.LASF3:
+ 642 004f 73686F72 		.ascii	"short unsigned int\000"
+ 642      7420756E 
+ 642      7369676E 
+ 642      65642069 
+ 642      6E7400
+ 643              	.LASF12:
+ 644 0062 646F7562 		.ascii	"double\000"
+ 644      6C6500
+ 645              	.LASF19:
+ 646 0069 42757474 		.ascii	"Button_output_Read\000"
+ 646      6F6E5F6F 
+ 646      75747075 
+ 646      745F5265 
+ 646      616400
+ 647              	.LASF25:
+ 648 007c 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Button_output.c\000"
+ 648      6E657261 
+ 648      7465645F 
+ 648      536F7572 
+ 648      63655C50 
+ 649              	.LASF10:
+ 650 00a5 75696E74 		.ascii	"uint32\000"
+ 650      333200
+ 651              	.LASF8:
+ 652 00ac 756E7369 		.ascii	"unsigned int\000"
+ 652      676E6564 
+ 652      20696E74 
+ 652      00
+ 653              	.LASF15:
+ 654 00b9 42757474 		.ascii	"Button_output_Write\000"
+ 654      6F6E5F6F 
+ 654      75747075 
+ 654      745F5772 
+ 654      69746500 
+ 655              	.LASF24:
+ 656 00cd 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 656      4320342E 
+ 656      382E3420 
+ 656      32303134 
+ 656      30353236 
+ 657 0100 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 657      20726576 
+ 657      6973696F 
+ 657      6E203231 
+ 657      31333538 
+ 658 0133 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 658      66756E63 
+ 658      74696F6E 
+ 658      2D736563 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 16
 
 
- 660 0138 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 660      20726576 
- 660      6973696F 
- 660      6E203231 
- 660      31333538 
- 661 016b 30202D66 		.ascii	"0 -ffunction-sections\000"
- 661      66756E63 
- 661      74696F6E 
- 661      2D736563 
- 661      74696F6E 
- 662              	.LASF18:
- 663 0181 6D6F6465 		.ascii	"mode\000"
- 663      00
- 664              	.LASF21:
- 665 0186 42757474 		.ascii	"Button_output_ClearInterrupt\000"
- 665      6F6E5F6F 
- 665      75747075 
- 665      745F436C 
- 665      65617249 
- 666              	.LASF20:
- 667 01a3 42757474 		.ascii	"Button_output_ReadDataReg\000"
- 667      6F6E5F6F 
- 667      75747075 
- 667      745F5265 
- 667      61644461 
- 668              	.LASF6:
- 669 01bd 6C6F6E67 		.ascii	"long long int\000"
- 669      206C6F6E 
- 669      6720696E 
- 669      7400
- 670              	.LASF23:
- 671 01cb 6D61736B 		.ascii	"maskedStatus\000"
- 671      65645374 
- 671      61747573 
- 671      00
- 672              	.LASF13:
- 673 01d8 63686172 		.ascii	"char\000"
- 673      00
- 674              	.LASF2:
- 675 01dd 73686F72 		.ascii	"short int\000"
- 675      7420696E 
- 675      7400
- 676              	.LASF9:
- 677 01e7 75696E74 		.ascii	"uint8\000"
- 677      3800
- 678              	.LASF4:
- 679 01ed 6C6F6E67 		.ascii	"long int\000"
- 679      20696E74 
+ 658      74696F6E 
+ 659              	.LASF18:
+ 660 0149 6D6F6465 		.ascii	"mode\000"
+ 660      00
+ 661              	.LASF21:
+ 662 014e 42757474 		.ascii	"Button_output_ClearInterrupt\000"
+ 662      6F6E5F6F 
+ 662      75747075 
+ 662      745F436C 
+ 662      65617249 
+ 663              	.LASF20:
+ 664 016b 42757474 		.ascii	"Button_output_ReadDataReg\000"
+ 664      6F6E5F6F 
+ 664      75747075 
+ 664      745F5265 
+ 664      61644461 
+ 665              	.LASF6:
+ 666 0185 6C6F6E67 		.ascii	"long long int\000"
+ 666      206C6F6E 
+ 666      6720696E 
+ 666      7400
+ 667              	.LASF23:
+ 668 0193 6D61736B 		.ascii	"maskedStatus\000"
+ 668      65645374 
+ 668      61747573 
+ 668      00
+ 669              	.LASF9:
+ 670 01a0 75696E74 		.ascii	"uint8\000"
+ 670      3800
+ 671              	.LASF2:
+ 672 01a6 73686F72 		.ascii	"short int\000"
+ 672      7420696E 
+ 672      7400
+ 673              	.LASF26:
+ 674 01b0 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
+ 674      73657273 
+ 674      5C456E65 
+ 674      73204475 
+ 674      6C6C6F76 
+ 675 01de 6220332E 		.ascii	"b 3.cydsn\\BLE Lab 3.cydsn\000"
+ 675      63796473 
+ 675      6E5C424C 
+ 675      45204C61 
+ 675      6220332E 
+ 676              	.LASF4:
+ 677 01f8 6C6F6E67 		.ascii	"long int\000"
+ 677      20696E74 
+ 677      00
+ 678              	.LASF13:
+ 679 0201 63686172 		.ascii	"char\000"
  679      00
  680              	.LASF0:
- 681 01f6 7369676E 		.ascii	"signed char\000"
+ 681 0206 7369676E 		.ascii	"signed char\000"
  681      65642063 
  681      68617200 
  682              	.LASF16:
- 683 0202 42757474 		.ascii	"Button_output_SetDriveMode\000"
+ 683 0212 42757474 		.ascii	"Button_output_SetDriveMode\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cchHhzsF.s 			page 17
+
+
  683      6F6E5F6F 
  683      75747075 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccb2BagO.s 			page 17
-
-
  683      745F5365 
  683      74447269 
  684              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

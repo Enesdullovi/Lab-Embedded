@@ -59,13 +59,13 @@
 /*****************************************************************************
 * Global variables
 *****************************************************************************/
-//static CYBLE_GAP_CONN_UPDATE_PARAM_T hrmConnectionParam =
-//{
-//    16,         /* Minimum connection interval of 20 ms */
-//    16,         /* Maximum connection interval of 20 ms */
-//    49,         /* Slave latency of 49 */
-//    500         /* Supervision timeout of 5 seconds */
-//};
+static CYBLE_GAP_CONN_UPDATE_PARAM_T hrmConnectionParam =
+{
+    1000,         /* Minimum connection interval of 20 ms */
+    1000,         /* Maximum connection interval of 20 ms */
+    49,         /* Slave latency of 49 */
+    500         /* Supervision timeout of 5 seconds */
+};
 
 
 /*****************************************************************************
@@ -155,9 +155,10 @@ static void InitializeSystem(void)
 *****************************************************************************/
 int main()
 {
+    PWM_1_Start();
     static uint32 previousTimestamp = 0;
     static uint32 currentTimestamp = 0;
-    CYBLE_LP_MODE_T bleMode;
+  //  CYBLE_LP_MODE_T bleMode;
     uint8 interruptStatus;
     
     /* Initialize all blocks of the system */
@@ -186,7 +187,7 @@ int main()
         {
             if((currentTimestamp - timestampWhenConnected) > TIME_SINCE_CONNECTED_MS)
             {
-            //    CyBle_L2capLeConnectionParamUpdateRequest(cyBle_connHandle.bdHandle, &hrmConnectionParam);
+               CyBle_L2capLeConnectionParamUpdateRequest(cyBle_connHandle.bdHandle, &hrmConnectionParam);
                 connParamRequestState = CONN_PARAM_REQUEST_SENT;
            }
        }
@@ -225,7 +226,7 @@ int main()
 
             
             /* Request the BLE block to enter Deep Sleep */
-            bleMode = CyBle_EnterLPM(CYBLE_BLESS_DEEPSLEEP);
+           // bleMode = CyBle_EnterLPM(CYBLE_BLESS_DEEPSLEEP);
 
             
             /* Check if the BLE block entered Deep Sleep and if so, then the 
@@ -238,7 +239,7 @@ int main()
             interruptStatus = CyEnterCriticalSection();
             
             /* Check if the BLE block entered Deep Sleep */
-            if(CYBLE_BLESS_DEEPSLEEP == bleMode)
+            // if(CYBLE_BLESS_DEEPSLEEP == bleMode)
             {
                 /* Check the current state of BLE - System can enter Deep Sleep
                  * only when the BLE block is starting the ECO (during 
@@ -254,7 +255,7 @@ int main()
             /* The else condition signifies that the BLE block cannot enter 
              * Deep Sleep and is in Active mode.  
              */
-            else
+            //else
             {
                 /* At this point, the CPU can enter Sleep, but Deep Sleep is not
                  * allowed. 

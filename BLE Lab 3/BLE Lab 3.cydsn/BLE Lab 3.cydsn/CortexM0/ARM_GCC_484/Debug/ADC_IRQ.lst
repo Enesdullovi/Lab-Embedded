@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
   30:.\Generated_Source\PSoC4/ADC_IRQ.c **** /* `#END` */
   31:.\Generated_Source\PSoC4/ADC_IRQ.c **** 
   32:.\Generated_Source\PSoC4/ADC_IRQ.c **** extern cyisraddress CyRamVectors[CYINT_IRQ_BASE + CY_NUM_INTERRUPTS];
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 2
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/ADC_IRQ.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
   47              		@ sp needed
   48 001c 80BD     		pop	{r7, pc}
   49              	.L3:
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 3
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 3
 
 
   50 001e C046     		.align	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
   89:.\Generated_Source\PSoC4/ADC_IRQ.c **** 
   90:.\Generated_Source\PSoC4/ADC_IRQ.c ****     /* Set the priority. */
   91:.\Generated_Source\PSoC4/ADC_IRQ.c ****     ADC_IRQ_SetPriority((uint8)ADC_IRQ_INTC_PRIOR_NUMBER);
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 4
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 4
 
 
   81              		.loc 1 91 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  115:.\Generated_Source\PSoC4/ADC_IRQ.c **** 
  116:.\Generated_Source\PSoC4/ADC_IRQ.c ****     /* Set the ISR to point to the passive one. */
  117:.\Generated_Source\PSoC4/ADC_IRQ.c ****     ADC_IRQ_SetVector(&IntDefaultHandler);
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 5
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 5
 
 
  112              		.loc 1 117 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  141:.\Generated_Source\PSoC4/ADC_IRQ.c ****     /* `#START ADC_IRQ_Interrupt` */
  142:.\Generated_Source\PSoC4/ADC_IRQ.c **** 
  143:.\Generated_Source\PSoC4/ADC_IRQ.c ****     /* `#END` */
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 6
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 6
 
 
  144:.\Generated_Source\PSoC4/ADC_IRQ.c **** }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  174 000e BD46     		mov	sp, r7
  175 0010 02B0     		add	sp, sp, #8
  176              		@ sp needed
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 7
 
 
  177 0012 80BD     		pop	{r7, pc}
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  211              	.L14:
  212 0010 00000000 		.word	CyRamVectors
  213              		.cfi_endproc
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 8
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 8
 
 
  214              	.LFE7:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  242 0010 3C1C     		mov	r4, r7
  243 0012 0B34     		add	r4, r4, #11
  244 0014 FFF7FEFF 		bl	CyEnterCriticalSection
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 9
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 9
 
 
  245 0018 031C     		mov	r3, r0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  222:.\Generated_Source\PSoC4/ADC_IRQ.c **** *
  223:.\Generated_Source\PSoC4/ADC_IRQ.c **** * Summary:
  224:.\Generated_Source\PSoC4/ADC_IRQ.c **** *   Gets the Priority of the Interrupt.
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 10
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 10
 
 
  225:.\Generated_Source\PSoC4/ADC_IRQ.c **** *
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  326              	.LFE9:
  327              		.size	ADC_IRQ_GetPriority, .-ADC_IRQ_GetPriority
  328              		.section	.text.ADC_IRQ_Enable,"ax",%progbits
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 11
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 11
 
 
  329              		.align	2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  362              		.global	ADC_IRQ_GetState
  363              		.code	16
  364              		.thumb_func
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 12
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 12
 
 
  365              		.type	ADC_IRQ_GetState, %function
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  398 001c 00E100E0 		.word	-536813312
  399              		.cfi_endproc
  400              	.LFE11:
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 13
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 13
 
 
  401              		.size	ADC_IRQ_GetState, .-ADC_IRQ_GetState
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  434              		.section	.text.ADC_IRQ_SetPending,"ax",%progbits
  435              		.align	2
  436              		.global	ADC_IRQ_SetPending
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 14
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 14
 
 
  437              		.code	16
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  470              		.thumb_func
  471              		.type	ADC_IRQ_ClearPending, %function
  472              	ADC_IRQ_ClearPending:
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 15
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 15
 
 
  473              	.LFB14:
@@ -896,48 +896,48 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  505 0006 00000000 		.4byte	.Ldebug_abbrev0
  506 000a 04       		.byte	0x4
  507 000b 01       		.uleb128 0x1
- 508 000c DB000000 		.4byte	.LASF33
+ 508 000c A3000000 		.4byte	.LASF33
  509 0010 01       		.byte	0x1
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 16
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 16
 
 
- 510 0011 8E000000 		.4byte	.LASF34
- 511 0015 32000000 		.4byte	.LASF35
+ 510 0011 56000000 		.4byte	.LASF34
+ 511 0015 24020000 		.4byte	.LASF35
  512 0019 00000000 		.4byte	.Ldebug_ranges0+0
  513 001d 00000000 		.4byte	0
  514 0021 00000000 		.4byte	.Ldebug_line0
  515 0025 02       		.uleb128 0x2
  516 0026 01       		.byte	0x1
  517 0027 06       		.byte	0x6
- 518 0028 84020000 		.4byte	.LASF0
+ 518 0028 94020000 		.4byte	.LASF0
  519 002c 02       		.uleb128 0x2
  520 002d 01       		.byte	0x1
  521 002e 08       		.byte	0x8
- 522 002f 57010000 		.4byte	.LASF1
+ 522 002f 1F010000 		.4byte	.LASF1
  523 0033 02       		.uleb128 0x2
  524 0034 02       		.byte	0x2
  525 0035 05       		.byte	0x5
- 526 0036 52020000 		.4byte	.LASF2
+ 526 0036 1A020000 		.4byte	.LASF2
  527 003a 02       		.uleb128 0x2
  528 003b 02       		.byte	0x2
  529 003c 07       		.byte	0x7
- 530 003d 6A000000 		.4byte	.LASF3
+ 530 003d 32000000 		.4byte	.LASF3
  531 0041 02       		.uleb128 0x2
  532 0042 04       		.byte	0x4
  533 0043 05       		.byte	0x5
- 534 0044 7B020000 		.4byte	.LASF4
+ 534 0044 8B020000 		.4byte	.LASF4
  535 0048 02       		.uleb128 0x2
  536 0049 04       		.byte	0x4
  537 004a 07       		.byte	0x7
- 538 004b 74010000 		.4byte	.LASF5
+ 538 004b 3C010000 		.4byte	.LASF5
  539 004f 02       		.uleb128 0x2
  540 0050 08       		.byte	0x8
  541 0051 05       		.byte	0x5
- 542 0052 3F020000 		.4byte	.LASF6
+ 542 0052 07020000 		.4byte	.LASF6
  543 0056 02       		.uleb128 0x2
  544 0057 08       		.byte	0x8
  545 0058 07       		.byte	0x7
- 546 0059 02020000 		.4byte	.LASF7
+ 546 0059 CA010000 		.4byte	.LASF7
  547 005d 03       		.uleb128 0x3
  548 005e 04       		.byte	0x4
  549 005f 05       		.byte	0x5
@@ -945,32 +945,32 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  551 0064 02       		.uleb128 0x2
  552 0065 04       		.byte	0x4
  553 0066 07       		.byte	0x7
- 554 0067 ED010000 		.4byte	.LASF8
+ 554 0067 B5010000 		.4byte	.LASF8
  555 006b 04       		.uleb128 0x4
- 556 006c 86010000 		.4byte	.LASF9
+ 556 006c 4E010000 		.4byte	.LASF9
  557 0070 02       		.byte	0x2
  558 0071 A1       		.byte	0xa1
  559 0072 2C000000 		.4byte	0x2c
  560 0076 04       		.uleb128 0x4
- 561 0077 E6010000 		.4byte	.LASF10
+ 561 0077 AE010000 		.4byte	.LASF10
  562 007b 02       		.byte	0x2
  563 007c A3       		.byte	0xa3
  564 007d 48000000 		.4byte	0x48
  565 0081 02       		.uleb128 0x2
  566 0082 04       		.byte	0x4
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 17
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 17
 
 
  567 0083 04       		.byte	0x4
- 568 0084 D5000000 		.4byte	.LASF11
+ 568 0084 9D000000 		.4byte	.LASF11
  569 0088 02       		.uleb128 0x2
  570 0089 08       		.byte	0x8
  571 008a 04       		.byte	0x4
- 572 008b BD010000 		.4byte	.LASF12
+ 572 008b 85010000 		.4byte	.LASF12
  573 008f 02       		.uleb128 0x2
  574 0090 01       		.byte	0x1
  575 0091 08       		.byte	0x8
- 576 0092 4D020000 		.4byte	.LASF13
+ 576 0092 15020000 		.4byte	.LASF13
  577 0096 05       		.uleb128 0x5
  578 0097 00000000 		.4byte	.LASF14
  579 009b 02       		.byte	0x2
@@ -979,7 +979,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  582 00a2 06       		.uleb128 0x6
  583 00a3 76000000 		.4byte	0x76
  584 00a7 05       		.uleb128 0x5
- 585 00a8 19020000 		.4byte	.LASF15
+ 585 00a8 E1010000 		.4byte	.LASF15
  586 00ac 02       		.byte	0x2
  587 00ad 5D01     		.2byte	0x15d
  588 00af B3000000 		.4byte	0xb3
@@ -990,9 +990,9 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  593 00ba 02       		.uleb128 0x2
  594 00bb 04       		.byte	0x4
  595 00bc 07       		.byte	0x7
- 596 00bd 36020000 		.4byte	.LASF16
+ 596 00bd FE010000 		.4byte	.LASF16
  597 00c1 09       		.uleb128 0x9
- 598 00c2 C4010000 		.4byte	.LASF17
+ 598 00c2 8C010000 		.4byte	.LASF17
  599 00c6 01       		.byte	0x1
  600 00c7 34       		.byte	0x34
  601 00c8 00000000 		.4byte	.LFB2
@@ -1000,7 +1000,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  603 00d0 01       		.uleb128 0x1
  604 00d1 9C       		.byte	0x9c
  605 00d2 0A       		.uleb128 0xa
- 606 00d3 26020000 		.4byte	.LASF20
+ 606 00d3 EE010000 		.4byte	.LASF20
  607 00d7 01       		.byte	0x1
  608 00d8 52       		.byte	0x52
  609 00d9 00000000 		.4byte	.LFB3
@@ -1009,7 +1009,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  612 00e2 9C       		.byte	0x9c
  613 00e3 F6000000 		.4byte	0xf6
  614 00e7 0B       		.uleb128 0xb
- 615 00e8 FA010000 		.4byte	.LASF22
+ 615 00e8 C2010000 		.4byte	.LASF22
  616 00ec 01       		.byte	0x1
  617 00ed 52       		.byte	0x52
  618 00ee A7000000 		.4byte	0xa7
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  621 00f4 74       		.sleb128 -12
  622 00f5 00       		.byte	0
  623 00f6 09       		.uleb128 0x9
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 18
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 18
 
 
  624 00f7 13000000 		.4byte	.LASF18
@@ -1029,7 +1029,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  629 0105 01       		.uleb128 0x1
  630 0106 9C       		.byte	0x9c
  631 0107 0C       		.uleb128 0xc
- 632 0108 C3000000 		.4byte	.LASF19
+ 632 0108 8B000000 		.4byte	.LASF19
  633 010c 01       		.byte	0x1
  634 010d 8A       		.byte	0x8a
  635 010e 00000000 		.4byte	.LFB5
@@ -1046,7 +1046,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  646 0128 9C       		.byte	0x9c
  647 0129 3C010000 		.4byte	0x13c
  648 012d 0B       		.uleb128 0xb
- 649 012e FA010000 		.4byte	.LASF22
+ 649 012e C2010000 		.4byte	.LASF22
  650 0132 01       		.byte	0x1
  651 0133 A3       		.byte	0xa3
  652 0134 A7000000 		.4byte	0xa7
@@ -1055,7 +1055,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  655 013a 74       		.sleb128 -12
  656 013b 00       		.byte	0
  657 013c 0E       		.uleb128 0xe
- 658 013d B1000000 		.4byte	.LASF28
+ 658 013d 79000000 		.4byte	.LASF28
  659 0141 01       		.byte	0x1
  660 0142 B7       		.byte	0xb7
  661 0143 A7000000 		.4byte	0xa7
@@ -1064,7 +1064,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  664 014f 01       		.uleb128 0x1
  665 0150 9C       		.byte	0x9c
  666 0151 0A       		.uleb128 0xa
- 667 0152 90020000 		.4byte	.LASF23
+ 667 0152 A0020000 		.4byte	.LASF23
  668 0156 01       		.byte	0x1
  669 0157 CF       		.byte	0xcf
  670 0158 00000000 		.4byte	.LFB8
@@ -1073,18 +1073,18 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  673 0161 9C       		.byte	0x9c
  674 0162 91010000 		.4byte	0x191
  675 0166 0B       		.uleb128 0xb
- 676 0167 8C010000 		.4byte	.LASF24
+ 676 0167 54010000 		.4byte	.LASF24
  677 016b 01       		.byte	0x1
  678 016c CF       		.byte	0xcf
  679 016d 6B000000 		.4byte	0x6b
  680 0171 02       		.uleb128 0x2
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 19
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 19
 
 
  681 0172 91       		.byte	0x91
  682 0173 67       		.sleb128 -25
  683 0174 0F       		.uleb128 0xf
- 684 0175 65010000 		.4byte	.LASF25
+ 684 0175 2D010000 		.4byte	.LASF25
  685 0179 01       		.byte	0x1
  686 017a D1       		.byte	0xd1
  687 017b 6B000000 		.4byte	0x6b
@@ -1092,7 +1092,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  689 0180 91       		.byte	0x91
  690 0181 6B       		.sleb128 -21
  691 0182 0F       		.uleb128 0xf
- 692 0183 6C020000 		.4byte	.LASF26
+ 692 0183 7C020000 		.4byte	.LASF26
  693 0187 01       		.byte	0x1
  694 0188 D2       		.byte	0xd2
  695 0189 76000000 		.4byte	0x76
@@ -1101,7 +1101,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  698 018f 6C       		.sleb128 -20
  699 0190 00       		.byte	0
  700 0191 10       		.uleb128 0x10
- 701 0192 D2010000 		.4byte	.LASF36
+ 701 0192 9A010000 		.4byte	.LASF36
  702 0196 01       		.byte	0x1
  703 0197 E9       		.byte	0xe9
  704 0198 6B000000 		.4byte	0x6b
@@ -1111,7 +1111,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  708 01a5 9C       		.byte	0x9c
  709 01a6 C7010000 		.4byte	0x1c7
  710 01aa 0F       		.uleb128 0xf
- 711 01ab 8C010000 		.4byte	.LASF24
+ 711 01ab 54010000 		.4byte	.LASF24
  712 01af 01       		.byte	0x1
  713 01b0 EB       		.byte	0xeb
  714 01b1 76000000 		.4byte	0x76
@@ -1119,7 +1119,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  716 01b6 91       		.byte	0x91
  717 01b7 70       		.sleb128 -16
  718 01b8 0F       		.uleb128 0xf
- 719 01b9 6C020000 		.4byte	.LASF26
+ 719 01b9 7C020000 		.4byte	.LASF26
  720 01bd 01       		.byte	0x1
  721 01be EC       		.byte	0xec
  722 01bf 76000000 		.4byte	0x76
@@ -1128,7 +1128,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  725 01c5 74       		.sleb128 -12
  726 01c6 00       		.byte	0
  727 01c7 11       		.uleb128 0x11
- 728 01c8 A4020000 		.4byte	.LASF27
+ 728 01c8 B4020000 		.4byte	.LASF27
  729 01cc 01       		.byte	0x1
  730 01cd 0201     		.2byte	0x102
  731 01cf 00000000 		.4byte	.LFB10
@@ -1136,9 +1136,9 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  733 01d7 01       		.uleb128 0x1
  734 01d8 9C       		.byte	0x9c
  735 01d9 12       		.uleb128 0x12
- 736 01da 7D000000 		.4byte	.LASF29
+ 736 01da 45000000 		.4byte	.LASF29
  737 01de 01       		.byte	0x1
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 20
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 20
 
 
  738 01df 1701     		.2byte	0x117
@@ -1148,7 +1148,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  742 01ed 01       		.uleb128 0x1
  743 01ee 9C       		.byte	0x9c
  744 01ef 11       		.uleb128 0x11
- 745 01f0 5C020000 		.4byte	.LASF30
+ 745 01f0 6C020000 		.4byte	.LASF30
  746 01f4 01       		.byte	0x1
  747 01f5 2C01     		.2byte	0x12c
  748 01f7 00000000 		.4byte	.LFB12
@@ -1156,7 +1156,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  750 01ff 01       		.uleb128 0x1
  751 0200 9C       		.byte	0x9c
  752 0201 11       		.uleb128 0x11
- 753 0202 95010000 		.4byte	.LASF31
+ 753 0202 5D010000 		.4byte	.LASF31
  754 0206 01       		.byte	0x1
  755 0207 4201     		.2byte	0x142
  756 0209 00000000 		.4byte	.LFB13
@@ -1164,7 +1164,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  758 0211 01       		.uleb128 0x1
  759 0212 9C       		.byte	0x9c
  760 0213 11       		.uleb128 0x11
- 761 0214 A8010000 		.4byte	.LASF32
+ 761 0214 70010000 		.4byte	.LASF32
  762 0218 01       		.byte	0x1
  763 0219 5601     		.2byte	0x156
  764 021b 00000000 		.4byte	.LFB14
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  792 0009 1B       		.uleb128 0x1b
  793 000a 0E       		.uleb128 0xe
  794 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 21
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 21
 
 
  795 000c 17       		.uleb128 0x17
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  849 0042 00       		.byte	0
  850 0043 06       		.uleb128 0x6
  851 0044 35       		.uleb128 0x35
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 22
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 22
 
 
  852 0045 00       		.byte	0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  906 007c 0B       		.uleb128 0xb
  907 007d 27       		.uleb128 0x27
  908 007e 19       		.uleb128 0x19
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 23
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 23
 
 
  909 007f 11       		.uleb128 0x11
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  963 00b7 19       		.uleb128 0x19
  964 00b8 03       		.uleb128 0x3
  965 00b9 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 24
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 24
 
 
  966 00ba 3A       		.uleb128 0x3a
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  1020 00f2 02       		.uleb128 0x2
  1021 00f3 18       		.uleb128 0x18
  1022 00f4 00       		.byte	0
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 25
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 25
 
 
  1023 00f5 00       		.byte	0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  1077 012d 3F       		.uleb128 0x3f
  1078 012e 19       		.uleb128 0x19
  1079 012f 03       		.uleb128 0x3
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 26
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 26
 
 
  1080 0130 0E       		.uleb128 0xe
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  1134 0167 00       		.byte	0
  1135              		.section	.debug_aranges,"",%progbits
  1136 0000 7C000000 		.4byte	0x7c
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 27
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 27
 
 
  1137 0004 0200     		.2byte	0x2
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  1191 0048 00000000 		.4byte	.LFB11
  1192 004c 20000000 		.4byte	.LFE11
  1193 0050 00000000 		.4byte	.LFB12
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 28
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 28
 
 
  1194 0054 14000000 		.4byte	.LFE12
@@ -1654,191 +1654,193 @@ ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 1
  1211      53657456 
  1211      6563746F 
  1211      7200
- 1212              	.LASF35:
- 1213 0032 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
- 1213      73657273 
- 1213      5C456E65 
- 1213      73204475 
- 1213      6C6C6F76 
- 1214 0060 6220332E 		.ascii	"b 3.cydsn\000"
- 1214      63796473 
- 1214      6E00
- 1215              	.LASF3:
- 1216 006a 73686F72 		.ascii	"short unsigned int\000"
- 1216      7420756E 
- 1216      7369676E 
- 1216      65642069 
- 1216      6E7400
- 1217              	.LASF29:
- 1218 007d 4144435F 		.ascii	"ADC_IRQ_GetState\000"
- 1218      4952515F 
- 1218      47657453 
- 1218      74617465 
- 1218      00
- 1219              	.LASF34:
- 1220 008e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\ADC_IRQ.c\000"
- 1220      6E657261 
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 29
+ 1212              	.LASF3:
+ 1213 0032 73686F72 		.ascii	"short unsigned int\000"
+ 1213      7420756E 
+ 1213      7369676E 
+ 1213      65642069 
+ 1213      6E7400
+ 1214              	.LASF29:
+ 1215 0045 4144435F 		.ascii	"ADC_IRQ_GetState\000"
+ 1215      4952515F 
+ 1215      47657453 
+ 1215      74617465 
+ 1215      00
+ 1216              	.LASF34:
+ 1217 0056 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\ADC_IRQ.c\000"
+ 1217      6E657261 
+ 1217      7465645F 
+ 1217      536F7572 
+ 1217      63655C50 
+ 1218              	.LASF28:
+ 1219 0079 4144435F 		.ascii	"ADC_IRQ_GetVector\000"
+ 1219      4952515F 
+ 1219      47657456 
+ 1219      6563746F 
+ 1219      7200
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 29
 
 
- 1220      7465645F 
- 1220      536F7572 
- 1220      63655C50 
- 1221              	.LASF28:
- 1222 00b1 4144435F 		.ascii	"ADC_IRQ_GetVector\000"
- 1222      4952515F 
- 1222      47657456 
- 1222      6563746F 
- 1222      7200
- 1223              	.LASF19:
- 1224 00c3 4144435F 		.ascii	"ADC_IRQ_Interrupt\000"
- 1224      4952515F 
- 1224      496E7465 
- 1224      72727570 
- 1224      7400
- 1225              	.LASF11:
- 1226 00d5 666C6F61 		.ascii	"float\000"
- 1226      7400
- 1227              	.LASF33:
- 1228 00db 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 1228      4320342E 
- 1228      382E3420 
- 1228      32303134 
- 1228      30353236 
- 1229 010e 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 1229      20726576 
- 1229      6973696F 
- 1229      6E203231 
- 1229      31333538 
- 1230 0141 30202D66 		.ascii	"0 -ffunction-sections\000"
- 1230      66756E63 
- 1230      74696F6E 
- 1230      2D736563 
- 1230      74696F6E 
- 1231              	.LASF1:
- 1232 0157 756E7369 		.ascii	"unsigned char\000"
- 1232      676E6564 
- 1232      20636861 
- 1232      7200
- 1233              	.LASF25:
- 1234 0165 696E7465 		.ascii	"interruptState\000"
- 1234      72727570 
- 1234      74537461 
- 1234      746500
- 1235              	.LASF5:
- 1236 0174 6C6F6E67 		.ascii	"long unsigned int\000"
- 1236      20756E73 
- 1236      69676E65 
- 1236      6420696E 
- 1236      7400
- 1237              	.LASF9:
- 1238 0186 75696E74 		.ascii	"uint8\000"
- 1238      3800
- 1239              	.LASF24:
- 1240 018c 7072696F 		.ascii	"priority\000"
- 1240      72697479 
- 1240      00
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 30
+ 1220              	.LASF19:
+ 1221 008b 4144435F 		.ascii	"ADC_IRQ_Interrupt\000"
+ 1221      4952515F 
+ 1221      496E7465 
+ 1221      72727570 
+ 1221      7400
+ 1222              	.LASF11:
+ 1223 009d 666C6F61 		.ascii	"float\000"
+ 1223      7400
+ 1224              	.LASF33:
+ 1225 00a3 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1225      4320342E 
+ 1225      382E3420 
+ 1225      32303134 
+ 1225      30353236 
+ 1226 00d6 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1226      20726576 
+ 1226      6973696F 
+ 1226      6E203231 
+ 1226      31333538 
+ 1227 0109 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 1227      66756E63 
+ 1227      74696F6E 
+ 1227      2D736563 
+ 1227      74696F6E 
+ 1228              	.LASF1:
+ 1229 011f 756E7369 		.ascii	"unsigned char\000"
+ 1229      676E6564 
+ 1229      20636861 
+ 1229      7200
+ 1230              	.LASF25:
+ 1231 012d 696E7465 		.ascii	"interruptState\000"
+ 1231      72727570 
+ 1231      74537461 
+ 1231      746500
+ 1232              	.LASF5:
+ 1233 013c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1233      20756E73 
+ 1233      69676E65 
+ 1233      6420696E 
+ 1233      7400
+ 1234              	.LASF9:
+ 1235 014e 75696E74 		.ascii	"uint8\000"
+ 1235      3800
+ 1236              	.LASF24:
+ 1237 0154 7072696F 		.ascii	"priority\000"
+ 1237      72697479 
+ 1237      00
+ 1238              	.LASF31:
+ 1239 015d 4144435F 		.ascii	"ADC_IRQ_SetPending\000"
+ 1239      4952515F 
+ 1239      53657450 
+ 1239      656E6469 
+ 1239      6E6700
+ 1240              	.LASF32:
+ 1241 0170 4144435F 		.ascii	"ADC_IRQ_ClearPending\000"
+ 1241      4952515F 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 30
 
 
- 1241              	.LASF31:
- 1242 0195 4144435F 		.ascii	"ADC_IRQ_SetPending\000"
- 1242      4952515F 
- 1242      53657450 
- 1242      656E6469 
- 1242      6E6700
- 1243              	.LASF32:
- 1244 01a8 4144435F 		.ascii	"ADC_IRQ_ClearPending\000"
- 1244      4952515F 
- 1244      436C6561 
- 1244      7250656E 
- 1244      64696E67 
- 1245              	.LASF12:
- 1246 01bd 646F7562 		.ascii	"double\000"
- 1246      6C6500
- 1247              	.LASF17:
- 1248 01c4 4144435F 		.ascii	"ADC_IRQ_Start\000"
- 1248      4952515F 
- 1248      53746172 
- 1248      7400
- 1249              	.LASF36:
- 1250 01d2 4144435F 		.ascii	"ADC_IRQ_GetPriority\000"
- 1250      4952515F 
- 1250      47657450 
- 1250      72696F72 
- 1250      69747900 
- 1251              	.LASF10:
- 1252 01e6 75696E74 		.ascii	"uint32\000"
- 1252      333200
- 1253              	.LASF8:
- 1254 01ed 756E7369 		.ascii	"unsigned int\000"
- 1254      676E6564 
- 1254      20696E74 
- 1254      00
- 1255              	.LASF22:
- 1256 01fa 61646472 		.ascii	"address\000"
- 1256      65737300 
- 1257              	.LASF7:
- 1258 0202 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1258      206C6F6E 
- 1258      6720756E 
- 1258      7369676E 
- 1258      65642069 
- 1259              	.LASF15:
- 1260 0219 63796973 		.ascii	"cyisraddress\000"
- 1260      72616464 
- 1260      72657373 
- 1260      00
- 1261              	.LASF20:
- 1262 0226 4144435F 		.ascii	"ADC_IRQ_StartEx\000"
- 1262      4952515F 
- 1262      53746172 
- 1262      74457800 
- 1263              	.LASF16:
- 1264 0236 73697A65 		.ascii	"sizetype\000"
- 1264      74797065 
- 1264      00
-ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccfkgSWy.s 			page 31
+ 1241      436C6561 
+ 1241      7250656E 
+ 1241      64696E67 
+ 1242              	.LASF12:
+ 1243 0185 646F7562 		.ascii	"double\000"
+ 1243      6C6500
+ 1244              	.LASF17:
+ 1245 018c 4144435F 		.ascii	"ADC_IRQ_Start\000"
+ 1245      4952515F 
+ 1245      53746172 
+ 1245      7400
+ 1246              	.LASF36:
+ 1247 019a 4144435F 		.ascii	"ADC_IRQ_GetPriority\000"
+ 1247      4952515F 
+ 1247      47657450 
+ 1247      72696F72 
+ 1247      69747900 
+ 1248              	.LASF10:
+ 1249 01ae 75696E74 		.ascii	"uint32\000"
+ 1249      333200
+ 1250              	.LASF8:
+ 1251 01b5 756E7369 		.ascii	"unsigned int\000"
+ 1251      676E6564 
+ 1251      20696E74 
+ 1251      00
+ 1252              	.LASF22:
+ 1253 01c2 61646472 		.ascii	"address\000"
+ 1253      65737300 
+ 1254              	.LASF7:
+ 1255 01ca 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1255      206C6F6E 
+ 1255      6720756E 
+ 1255      7369676E 
+ 1255      65642069 
+ 1256              	.LASF15:
+ 1257 01e1 63796973 		.ascii	"cyisraddress\000"
+ 1257      72616464 
+ 1257      72657373 
+ 1257      00
+ 1258              	.LASF20:
+ 1259 01ee 4144435F 		.ascii	"ADC_IRQ_StartEx\000"
+ 1259      4952515F 
+ 1259      53746172 
+ 1259      74457800 
+ 1260              	.LASF16:
+ 1261 01fe 73697A65 		.ascii	"sizetype\000"
+ 1261      74797065 
+ 1261      00
+ 1262              	.LASF6:
+ 1263 0207 6C6F6E67 		.ascii	"long long int\000"
+ 1263      206C6F6E 
+ 1263      6720696E 
+ 1263      7400
+ 1264              	.LASF13:
+ 1265 0215 63686172 		.ascii	"char\000"
+ 1265      00
+ 1266              	.LASF2:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccCiEgOW.s 			page 31
 
 
- 1265              	.LASF6:
- 1266 023f 6C6F6E67 		.ascii	"long long int\000"
- 1266      206C6F6E 
- 1266      6720696E 
- 1266      7400
- 1267              	.LASF13:
- 1268 024d 63686172 		.ascii	"char\000"
- 1268      00
- 1269              	.LASF2:
- 1270 0252 73686F72 		.ascii	"short int\000"
- 1270      7420696E 
- 1270      7400
+ 1267 021a 73686F72 		.ascii	"short int\000"
+ 1267      7420696E 
+ 1267      7400
+ 1268              	.LASF35:
+ 1269 0224 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
+ 1269      73657273 
+ 1269      5C456E65 
+ 1269      73204475 
+ 1269      6C6C6F76 
+ 1270 0252 6220332E 		.ascii	"b 3.cydsn\\BLE Lab 3.cydsn\000"
+ 1270      63796473 
+ 1270      6E5C424C 
+ 1270      45204C61 
+ 1270      6220332E 
  1271              	.LASF30:
- 1272 025c 4144435F 		.ascii	"ADC_IRQ_Disable\000"
+ 1272 026c 4144435F 		.ascii	"ADC_IRQ_Disable\000"
  1272      4952515F 
  1272      44697361 
  1272      626C6500 
  1273              	.LASF26:
- 1274 026c 7072696F 		.ascii	"priorityOffset\000"
+ 1274 027c 7072696F 		.ascii	"priorityOffset\000"
  1274      72697479 
  1274      4F666673 
  1274      657400
  1275              	.LASF4:
- 1276 027b 6C6F6E67 		.ascii	"long int\000"
+ 1276 028b 6C6F6E67 		.ascii	"long int\000"
  1276      20696E74 
  1276      00
  1277              	.LASF0:
- 1278 0284 7369676E 		.ascii	"signed char\000"
+ 1278 0294 7369676E 		.ascii	"signed char\000"
  1278      65642063 
  1278      68617200 
  1279              	.LASF23:
- 1280 0290 4144435F 		.ascii	"ADC_IRQ_SetPriority\000"
+ 1280 02a0 4144435F 		.ascii	"ADC_IRQ_SetPriority\000"
  1280      4952515F 
  1280      53657450 
  1280      72696F72 
  1280      69747900 
  1281              	.LASF27:
- 1282 02a4 4144435F 		.ascii	"ADC_IRQ_Enable\000"
+ 1282 02b4 4144435F 		.ascii	"ADC_IRQ_Enable\000"
  1282      4952515F 
  1282      456E6162 
  1282      6C6500
