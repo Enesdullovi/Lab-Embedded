@@ -1,0 +1,3817 @@
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"BleProcessing.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.bss
+  18              	hrsNotification:
+  19 0000 00       		.space	1
+  20              		.global	enterHibernateFlag
+  21              		.type	enterHibernateFlag, %object
+  22              		.size	enterHibernateFlag, 1
+  23              	enterHibernateFlag:
+  24 0001 00       		.space	1
+  25              		.global	timestampWhenConnected
+  26 0002 0000     		.align	2
+  27              		.type	timestampWhenConnected, %object
+  28              		.size	timestampWhenConnected, 4
+  29              	timestampWhenConnected:
+  30 0004 00000000 		.space	4
+  31              		.global	connParamRequestState
+  32              		.type	connParamRequestState, %object
+  33              		.size	connParamRequestState, 1
+  34              	connParamRequestState:
+  35 0008 00       		.space	1
+  36 0009 000000   		.section	.text.SendHeartRateOverBLE,"ax",%progbits
+  37              		.align	2
+  38              		.global	SendHeartRateOverBLE
+  39              		.code	16
+  40              		.thumb_func
+  41              		.type	SendHeartRateOverBLE, %function
+  42              	SendHeartRateOverBLE:
+  43              	.LFB35:
+  44              		.file 1 ".\\BleProcessing.c"
+   1:.\BleProcessing.c **** /*****************************************************************************
+   2:.\BleProcessing.c **** * File Name: BleProcessing.c
+   3:.\BleProcessing.c **** *
+   4:.\BleProcessing.c **** * Version: 1.0
+   5:.\BleProcessing.c **** *
+   6:.\BleProcessing.c **** * Description:
+   7:.\BleProcessing.c **** * This file implements the BLE capability in the PSoC 4 BLE Lab 3.
+   8:.\BleProcessing.c **** *
+   9:.\BleProcessing.c **** * Hardware Dependency:
+  10:.\BleProcessing.c **** * CY8CKIT-042 BLE Pioneer Kit
+  11:.\BleProcessing.c **** *
+  12:.\BleProcessing.c **** ******************************************************************************
+  13:.\BleProcessing.c **** * Copyright (2014), Cypress Semiconductor Corporation.
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 2
+
+
+  14:.\BleProcessing.c **** ******************************************************************************
+  15:.\BleProcessing.c **** * This software is owned by Cypress Semiconductor Corporation (Cypress) and is
+  16:.\BleProcessing.c **** * protected by and subject to worldwide patent protection (United States and
+  17:.\BleProcessing.c **** * foreign), United States copyright laws and international treaty provisions.
+  18:.\BleProcessing.c **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
+  19:.\BleProcessing.c **** * license to copy, use, modify, create derivative works of, and compile the
+  20:.\BleProcessing.c **** * Cypress Source Code and derivative works for the sole purpose of creating
+  21:.\BleProcessing.c **** * custom software in support of licensee product to be used only in conjunction
+  22:.\BleProcessing.c **** * with a Cypress integrated circuit as specified in the applicable agreement.
+  23:.\BleProcessing.c **** * Any reproduction, modification, translation, compilation, or representation of
+  24:.\BleProcessing.c **** * this software except as specified above is prohibited without the express
+  25:.\BleProcessing.c **** * written permission of Cypress.
+  26:.\BleProcessing.c **** *
+  27:.\BleProcessing.c **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH
+  28:.\BleProcessing.c **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  29:.\BleProcessing.c **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  30:.\BleProcessing.c **** * Cypress reserves the right to make changes without further notice to the
+  31:.\BleProcessing.c **** * materials described herein. Cypress does not assume any liability arising out
+  32:.\BleProcessing.c **** * of the application or use of any product or circuit described herein. Cypress
+  33:.\BleProcessing.c **** * does not authorize its products for use as critical components in life-support
+  34:.\BleProcessing.c **** * systems where a malfunction or failure may reasonably be expected to result in
+  35:.\BleProcessing.c **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  36:.\BleProcessing.c **** * support systems application implies that the manufacturer assumes all risk of
+  37:.\BleProcessing.c **** * such use and in doing so indemnifies Cypress against all charges. Use may be
+  38:.\BleProcessing.c **** * limited by and subject to the applicable Cypress software license agreement.
+  39:.\BleProcessing.c **** *****************************************************************************/
+  40:.\BleProcessing.c **** 
+  41:.\BleProcessing.c **** 
+  42:.\BleProcessing.c **** /*****************************************************************************
+  43:.\BleProcessing.c **** * Included headers
+  44:.\BleProcessing.c **** *****************************************************************************/
+  45:.\BleProcessing.c **** #include <project.h>
+  46:.\BleProcessing.c **** #include <stdbool.h>
+  47:.\BleProcessing.c **** #include "main.h"
+  48:.\BleProcessing.c **** #include "HeartRateProcessing.h"
+  49:.\BleProcessing.c **** #include "BleProcessing.h"
+  50:.\BleProcessing.c **** #include "WatchdogTimer.h"
+  51:.\BleProcessing.c **** 
+  52:.\BleProcessing.c **** /*****************************************************************************
+  53:.\BleProcessing.c **** * Macros 
+  54:.\BleProcessing.c **** *****************************************************************************/
+  55:.\BleProcessing.c **** #define HEART_RATE_DATA_LEN					(2)
+  56:.\BleProcessing.c **** #define HRM_FLAG                            (0)
+  57:.\BleProcessing.c **** 
+  58:.\BleProcessing.c **** 
+  59:.\BleProcessing.c **** /*****************************************************************************
+  60:.\BleProcessing.c **** * Static variables 
+  61:.\BleProcessing.c **** *****************************************************************************/
+  62:.\BleProcessing.c **** static uint8 hrsNotification = false;
+  63:.\BleProcessing.c **** 
+  64:.\BleProcessing.c **** 
+  65:.\BleProcessing.c **** /*****************************************************************************
+  66:.\BleProcessing.c **** * Public variables 
+  67:.\BleProcessing.c **** *****************************************************************************/
+  68:.\BleProcessing.c **** bool enterHibernateFlag = false;
+  69:.\BleProcessing.c **** uint32 timestampWhenConnected = 0;
+  70:.\BleProcessing.c **** CONN_PARAM_REQUEST_STATE connParamRequestState = CONN_PARAM_REQUEST_NOT_SENT;
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 3
+
+
+  71:.\BleProcessing.c **** 
+  72:.\BleProcessing.c **** 
+  73:.\BleProcessing.c **** /*****************************************************************************
+  74:.\BleProcessing.c **** * Public function definitions
+  75:.\BleProcessing.c **** *****************************************************************************/
+  76:.\BleProcessing.c **** 
+  77:.\BleProcessing.c **** /*****************************************************************************
+  78:.\BleProcessing.c **** * Function Name: SendHeartRateOverBLE
+  79:.\BleProcessing.c **** ******************************************************************************
+  80:.\BleProcessing.c **** * Summary:
+  81:.\BleProcessing.c **** * Creates and sends the Heart Rate Measurement characteristic notification 
+  82:.\BleProcessing.c **** * packet.
+  83:.\BleProcessing.c **** *
+  84:.\BleProcessing.c **** * Parameters:
+  85:.\BleProcessing.c **** * None
+  86:.\BleProcessing.c **** *
+  87:.\BleProcessing.c **** * Return:
+  88:.\BleProcessing.c **** * None
+  89:.\BleProcessing.c **** *
+  90:.\BleProcessing.c **** * Theory:
+  91:.\BleProcessing.c **** * The function caches the value of the Heart Rate Measurement characteristic 
+  92:.\BleProcessing.c **** * and updates the heart rate value in it. It then calls the BLE HRS service 
+  93:.\BleProcessing.c **** * API to send this data via notification.
+  94:.\BleProcessing.c **** *
+  95:.\BleProcessing.c **** * Side Effects:
+  96:.\BleProcessing.c **** * None
+  97:.\BleProcessing.c **** *
+  98:.\BleProcessing.c **** *****************************************************************************/
+  99:.\BleProcessing.c **** void SendHeartRateOverBLE(void)
+ 100:.\BleProcessing.c **** {
+  45              		.loc 1 100 0
+  46              		.cfi_startproc
+  47 0000 90B5     		push	{r4, r7, lr}
+  48              		.cfi_def_cfa_offset 12
+  49              		.cfi_offset 4, -12
+  50              		.cfi_offset 7, -8
+  51              		.cfi_offset 14, -4
+  52 0002 83B0     		sub	sp, sp, #12
+  53              		.cfi_def_cfa_offset 24
+  54 0004 00AF     		add	r7, sp, #0
+  55              		.cfi_def_cfa_register 7
+ 101:.\BleProcessing.c ****     /* Two byte packet for heart rate notification since the heart rate 
+ 102:.\BleProcessing.c ****      * measurement value is 8-bit (this is sufficient since our heart rate
+ 103:.\BleProcessing.c ****      * does not cross 255) and we are not using the Energy Expended 
+ 104:.\BleProcessing.c ****      * and RR-interval fields.
+ 105:.\BleProcessing.c ****      */
+ 106:.\BleProcessing.c **** 	uint8 heartRatePacket[2];
+ 107:.\BleProcessing.c **** 	
+ 108:.\BleProcessing.c **** 	if(hrsNotification)
+  56              		.loc 1 108 0
+  57 0006 114B     		ldr	r3, .L3
+  58 0008 1B78     		ldrb	r3, [r3]
+  59 000a 002B     		cmp	r3, #0
+  60 000c 1BD0     		beq	.L1
+ 109:.\BleProcessing.c **** 	{
+ 110:.\BleProcessing.c ****         /* Read the existing characteristic value into a 
+ 111:.\BleProcessing.c ****          * two-byte array, by using CyBle_HrssGetCharacteristicValue(). 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 4
+
+
+ 112:.\BleProcessing.c ****          */
+ 113:.\BleProcessing.c ****         CyBle_HrssGetCharacteristicValue(CYBLE_HRS_HRM, HEART_RATE_DATA_LEN, heartRatePacket);
+  61              		.loc 1 113 0
+  62 000e 3B1D     		add	r3, r7, #4
+  63 0010 0020     		mov	r0, #0
+  64 0012 0221     		mov	r1, #2
+  65 0014 1A1C     		mov	r2, r3
+  66 0016 FFF7FEFF 		bl	CyBle_HrssGetCharacteristicValue
+ 114:.\BleProcessing.c **** 
+ 115:.\BleProcessing.c ****         
+ 116:.\BleProcessing.c ****         /* Update the second byte with the actual heart rate value. */
+ 117:.\BleProcessing.c ****         heartRatePacket[1] = heartRate;
+  67              		.loc 1 117 0
+  68 001a 0D4B     		ldr	r3, .L3+4
+  69 001c 1A78     		ldrb	r2, [r3]
+  70 001e 3B1D     		add	r3, r7, #4
+  71 0020 5A70     		strb	r2, [r3, #1]
+ 118:.\BleProcessing.c **** 		
+ 119:.\BleProcessing.c ****         
+ 120:.\BleProcessing.c ****         /* Call the BLE component API to send notification */
+ 121:.\BleProcessing.c **** 		CyBle_HrssSendNotification(cyBle_connHandle, CYBLE_HRS_HRM, HEART_RATE_DATA_LEN, heartRatePacket)
+  72              		.loc 1 121 0
+  73 0022 0C4B     		ldr	r3, .L3+8
+  74 0024 3C1D     		add	r4, r7, #4
+  75 0026 1A78     		ldrb	r2, [r3]
+  76 0028 5B78     		ldrb	r3, [r3, #1]
+  77 002a 1B02     		lsl	r3, r3, #8
+  78 002c 1A43     		orr	r2, r3
+  79 002e 0023     		mov	r3, #0
+  80 0030 1204     		lsl	r2, r2, #16
+  81 0032 120C     		lsr	r2, r2, #16
+  82 0034 1B0C     		lsr	r3, r3, #16
+  83 0036 1B04     		lsl	r3, r3, #16
+  84 0038 1343     		orr	r3, r2
+  85 003a 181C     		mov	r0, r3
+  86 003c 0021     		mov	r1, #0
+  87 003e 0222     		mov	r2, #2
+  88 0040 231C     		mov	r3, r4
+  89 0042 FFF7FEFF 		bl	CyBle_HrssSendNotification
+  90              	.L1:
+ 122:.\BleProcessing.c ****     }
+ 123:.\BleProcessing.c **** }
+  91              		.loc 1 123 0
+  92 0046 BD46     		mov	sp, r7
+  93 0048 03B0     		add	sp, sp, #12
+  94              		@ sp needed
+  95 004a 90BD     		pop	{r4, r7, pc}
+  96              	.L4:
+  97              		.align	2
+  98              	.L3:
+  99 004c 00000000 		.word	hrsNotification
+ 100 0050 00000000 		.word	heartRate
+ 101 0054 00000000 		.word	cyBle_connHandle
+ 102              		.cfi_endproc
+ 103              	.LFE35:
+ 104              		.size	SendHeartRateOverBLE, .-SendHeartRateOverBLE
+ 105              		.section	.text.HrsEventHandler,"ax",%progbits
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 5
+
+
+ 106              		.align	2
+ 107              		.global	HrsEventHandler
+ 108              		.code	16
+ 109              		.thumb_func
+ 110              		.type	HrsEventHandler, %function
+ 111              	HrsEventHandler:
+ 112              	.LFB36:
+ 124:.\BleProcessing.c **** 
+ 125:.\BleProcessing.c **** 
+ 126:.\BleProcessing.c **** /*****************************************************************************
+ 127:.\BleProcessing.c **** * Function Name: HrsEventHandler
+ 128:.\BleProcessing.c **** ******************************************************************************
+ 129:.\BleProcessing.c **** * Summary:
+ 130:.\BleProcessing.c **** * Event handler for the Heart Rate Service specific events.
+ 131:.\BleProcessing.c **** *
+ 132:.\BleProcessing.c **** * Parameters:
+ 133:.\BleProcessing.c **** * event: An enumerated value to be checked and accordingly some action to 
+ 134:.\BleProcessing.c **** *        be taken. The list of events is defined in the CYBLE_EVT_T enum.
+ 135:.\BleProcessing.c **** *
+ 136:.\BleProcessing.c **** * eventParam: The parameter associated with the event. The type of parameter
+ 137:.\BleProcessing.c **** *             can vary depending on the event. For more details refer the 
+ 138:.\BleProcessing.c **** *             BLE component datasheet.
+ 139:.\BleProcessing.c **** *
+ 140:.\BleProcessing.c **** * Return:
+ 141:.\BleProcessing.c **** * None
+ 142:.\BleProcessing.c **** *
+ 143:.\BleProcessing.c **** * Theory:
+ 144:.\BleProcessing.c **** * The function implements a switch statement to handle the notification
+ 145:.\BleProcessing.c **** * enable and notification disable events for the Heart Rate Service.
+ 146:.\BleProcessing.c **** *
+ 147:.\BleProcessing.c **** * Side Effects:
+ 148:.\BleProcessing.c **** * None
+ 149:.\BleProcessing.c **** *
+ 150:.\BleProcessing.c **** *****************************************************************************/
+ 151:.\BleProcessing.c **** void HrsEventHandler(uint32 event, void *eventParam)
+ 152:.\BleProcessing.c **** {
+ 113              		.loc 1 152 0
+ 114              		.cfi_startproc
+ 115 0000 80B5     		push	{r7, lr}
+ 116              		.cfi_def_cfa_offset 8
+ 117              		.cfi_offset 7, -8
+ 118              		.cfi_offset 14, -4
+ 119 0002 82B0     		sub	sp, sp, #8
+ 120              		.cfi_def_cfa_offset 16
+ 121 0004 00AF     		add	r7, sp, #0
+ 122              		.cfi_def_cfa_register 7
+ 123 0006 7860     		str	r0, [r7, #4]
+ 124 0008 3960     		str	r1, [r7]
+ 153:.\BleProcessing.c ****     /* Event handler switch statement for the HRS service specific events. */
+ 154:.\BleProcessing.c ****      
+ 155:.\BleProcessing.c ****     
+ 156:.\BleProcessing.c ****     /* Set the hrsNotification variable on the notification 
+ 157:.\BleProcessing.c ****      * enabled event, and clear it on the disabled event.
+ 158:.\BleProcessing.c ****      */
+ 159:.\BleProcessing.c ****     switch(event)
+ 125              		.loc 1 159 0
+ 126 000a 7B68     		ldr	r3, [r7, #4]
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 6
+
+
+ 127 000c 6622     		mov	r2, #102
+ 128 000e FF32     		add	r2, r2, #255
+ 129 0010 9342     		cmp	r3, r2
+ 130 0012 04D0     		beq	.L7
+ 131 0014 B322     		mov	r2, #179
+ 132 0016 5200     		lsl	r2, r2, #1
+ 133 0018 9342     		cmp	r3, r2
+ 134 001a 04D0     		beq	.L8
+ 160:.\BleProcessing.c **** 	{
+ 161:.\BleProcessing.c **** 		case CYBLE_EVT_HRSS_NOTIFICATION_ENABLED:
+ 162:.\BleProcessing.c **** 			hrsNotification = true;	
+ 163:.\BleProcessing.c **** 		    break;
+ 164:.\BleProcessing.c **** 		
+ 165:.\BleProcessing.c **** 		case CYBLE_EVT_HRSS_NOTIFICATION_DISABLED:
+ 166:.\BleProcessing.c **** 			hrsNotification = false;
+ 167:.\BleProcessing.c **** 	    	break;
+ 168:.\BleProcessing.c **** 		
+ 169:.\BleProcessing.c **** 		default:
+ 170:.\BleProcessing.c ****     		break;
+ 135              		.loc 1 170 0
+ 136 001c 07E0     		b	.L5
+ 137              	.L7:
+ 162:.\BleProcessing.c **** 			hrsNotification = true;	
+ 138              		.loc 1 162 0
+ 139 001e 054B     		ldr	r3, .L10
+ 140 0020 0122     		mov	r2, #1
+ 141 0022 1A70     		strb	r2, [r3]
+ 163:.\BleProcessing.c **** 		    break;
+ 142              		.loc 1 163 0
+ 143 0024 03E0     		b	.L5
+ 144              	.L8:
+ 166:.\BleProcessing.c **** 			hrsNotification = false;
+ 145              		.loc 1 166 0
+ 146 0026 034B     		ldr	r3, .L10
+ 147 0028 0022     		mov	r2, #0
+ 148 002a 1A70     		strb	r2, [r3]
+ 167:.\BleProcessing.c **** 	    	break;
+ 149              		.loc 1 167 0
+ 150 002c C046     		mov	r8, r8
+ 151              	.L5:
+ 171:.\BleProcessing.c **** 	}
+ 172:.\BleProcessing.c **** }
+ 152              		.loc 1 172 0
+ 153 002e BD46     		mov	sp, r7
+ 154 0030 02B0     		add	sp, sp, #8
+ 155              		@ sp needed
+ 156 0032 80BD     		pop	{r7, pc}
+ 157              	.L11:
+ 158              		.align	2
+ 159              	.L10:
+ 160 0034 00000000 		.word	hrsNotification
+ 161              		.cfi_endproc
+ 162              	.LFE36:
+ 163              		.size	HrsEventHandler, .-HrsEventHandler
+ 164              		.section	.text.GeneralEventHandler,"ax",%progbits
+ 165              		.align	2
+ 166              		.global	GeneralEventHandler
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 7
+
+
+ 167              		.code	16
+ 168              		.thumb_func
+ 169              		.type	GeneralEventHandler, %function
+ 170              	GeneralEventHandler:
+ 171              	.LFB37:
+ 173:.\BleProcessing.c **** 
+ 174:.\BleProcessing.c **** 
+ 175:.\BleProcessing.c **** /*****************************************************************************
+ 176:.\BleProcessing.c **** * Function Name: GeneralEventHandler
+ 177:.\BleProcessing.c **** ******************************************************************************
+ 178:.\BleProcessing.c **** * Summary:
+ 179:.\BleProcessing.c **** * Event handler for generic BLE events.
+ 180:.\BleProcessing.c **** *
+ 181:.\BleProcessing.c **** * Parameters:
+ 182:.\BleProcessing.c **** * event: An enumerated value to be checked and accordingly some action to 
+ 183:.\BleProcessing.c **** *        be taken. The list of events is defined in the CYBLE_EVENT_T enum.
+ 184:.\BleProcessing.c **** *
+ 185:.\BleProcessing.c **** * eventParam: The parameter associated with the event. The type of parameter
+ 186:.\BleProcessing.c **** *             can vary depending on the event. For more details refer the 
+ 187:.\BleProcessing.c **** *             BLE component datasheet.
+ 188:.\BleProcessing.c **** *
+ 189:.\BleProcessing.c **** * Return:
+ 190:.\BleProcessing.c **** * None
+ 191:.\BleProcessing.c **** *
+ 192:.\BleProcessing.c **** * Theory:
+ 193:.\BleProcessing.c **** * The function implements a switch case to handle different events for BLE
+ 194:.\BleProcessing.c **** * advertisement, connection and disconnection.
+ 195:.\BleProcessing.c **** *
+ 196:.\BleProcessing.c **** * Side Effects:
+ 197:.\BleProcessing.c **** * None
+ 198:.\BleProcessing.c **** *
+ 199:.\BleProcessing.c **** *****************************************************************************/
+ 200:.\BleProcessing.c **** void GeneralEventHandler(uint32 event, void *eventParam)
+ 201:.\BleProcessing.c **** {
+ 172              		.loc 1 201 0
+ 173              		.cfi_startproc
+ 174 0000 80B5     		push	{r7, lr}
+ 175              		.cfi_def_cfa_offset 8
+ 176              		.cfi_offset 7, -8
+ 177              		.cfi_offset 14, -4
+ 178 0002 82B0     		sub	sp, sp, #8
+ 179              		.cfi_def_cfa_offset 16
+ 180 0004 00AF     		add	r7, sp, #0
+ 181              		.cfi_def_cfa_register 7
+ 182 0006 7860     		str	r0, [r7, #4]
+ 183 0008 3960     		str	r1, [r7]
+ 202:.\BleProcessing.c ****     /* Handle various events for a general BLE connection */
+ 203:.\BleProcessing.c **** 	switch(event)
+ 184              		.loc 1 203 0
+ 185 000a 7B68     		ldr	r3, [r7, #4]
+ 186 000c 282B     		cmp	r3, #40
+ 187 000e 1CD0     		beq	.L14
+ 188 0010 04D8     		bhi	.L15
+ 189 0012 012B     		cmp	r3, #1
+ 190 0014 09D0     		beq	.L16
+ 191 0016 262B     		cmp	r3, #38
+ 192 0018 0ED0     		beq	.L17
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 8
+
+
+ 204:.\BleProcessing.c **** 	{
+ 205:.\BleProcessing.c **** 		case CYBLE_EVT_STACK_ON:
+ 206:.\BleProcessing.c **** 			/* Start the fast advertisement upon BLE initialization. */
+ 207:.\BleProcessing.c ****             CyBle_GappStartAdvertisement(CYBLE_ADVERTISING_FAST);
+ 208:.\BleProcessing.c **** 
+ 209:.\BleProcessing.c ****             #if (RGB_LED_IN_PROJECT)
+ 210:.\BleProcessing.c ****                 /* Turn ON Green LED to indicate advertisement state */
+ 211:.\BleProcessing.c ****                 Led_Advertising_Green_Write(0);
+ 212:.\BleProcessing.c ****             #endif  /* #if (RGB_LED_IN_PROJECT) */
+ 213:.\BleProcessing.c ****     		break;
+ 214:.\BleProcessing.c ****             
+ 215:.\BleProcessing.c ****         case CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP:
+ 216:.\BleProcessing.c ****             /* If advertisement finished, then enter Hibernate mode. */
+ 217:.\BleProcessing.c ****             if(CYBLE_STATE_DISCONNECTED == CyBle_GetState())
+ 218:.\BleProcessing.c ****             {
+ 219:.\BleProcessing.c ****                 enterHibernateFlag = true;
+ 220:.\BleProcessing.c ****             }
+ 221:.\BleProcessing.c ****             break;
+ 222:.\BleProcessing.c ****             
+ 223:.\BleProcessing.c ****         case CYBLE_EVT_GAP_DEVICE_DISCONNECTED:
+ 224:.\BleProcessing.c ****             /* Enter hibernate mode upon disconnect */
+ 225:.\BleProcessing.c **** 			enterHibernateFlag = true;
+ 226:.\BleProcessing.c ****             
+ 227:.\BleProcessing.c ****             /* Reset the connection parameter update request status */
+ 228:.\BleProcessing.c ****             connParamRequestState = CONN_PARAM_REQUEST_NOT_SENT;
+ 229:.\BleProcessing.c ****             break;
+ 230:.\BleProcessing.c **** 			
+ 231:.\BleProcessing.c **** 		case CYBLE_EVT_GATT_CONNECT_IND:
+ 232:.\BleProcessing.c ****             /* Note the time when connected */
+ 233:.\BleProcessing.c ****             timestampWhenConnected = WatchdogTimer_GetTimestamp();
+ 234:.\BleProcessing.c **** 
+ 235:.\BleProcessing.c ****             #if (RGB_LED_IN_PROJECT)
+ 236:.\BleProcessing.c ****                 /* Turn OFF Green LED; Turn ON Blue LED to indicate Connection */
+ 237:.\BleProcessing.c ****                 Led_Advertising_Green_Write(1);
+ 238:.\BleProcessing.c ****                 Led_Connected_Blue_Write(0);
+ 239:.\BleProcessing.c ****             #endif  /* #if (RGB_LED_IN_PROJECT) */
+ 240:.\BleProcessing.c **** 			break;
+ 241:.\BleProcessing.c **** 			
+ 242:.\BleProcessing.c **** 		case CYBLE_EVT_GATT_DISCONNECT_IND:
+ 243:.\BleProcessing.c ****             /* Clear the HRS notification flag and the device connected flag */
+ 244:.\BleProcessing.c **** 			hrsNotification = false;
+ 245:.\BleProcessing.c **** 			break;
+ 246:.\BleProcessing.c **** 		
+ 247:.\BleProcessing.c ****         case CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP:
+ 248:.\BleProcessing.c ****             /* Got a response for the connection parameter update request */
+ 249:.\BleProcessing.c ****             if(*(uint16 *)eventParam == CYBLE_L2CAP_CONN_PARAM_ACCEPTED)
+ 250:.\BleProcessing.c ****             {
+ 251:.\BleProcessing.c ****                 connParamRequestState = CONN_PARAM_REQUEST_ACCEPTED;
+ 252:.\BleProcessing.c ****             }
+ 253:.\BleProcessing.c ****             else
+ 254:.\BleProcessing.c ****             {
+ 255:.\BleProcessing.c ****                 connParamRequestState = CONN_PARAM_REQUEST_REJECTED;
+ 256:.\BleProcessing.c ****             }
+ 257:.\BleProcessing.c ****             
+ 258:.\BleProcessing.c **** 		default:
+ 259:.\BleProcessing.c ****     		break;
+ 193              		.loc 1 259 0
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 9
+
+
+ 194 001a 39E0     		b	.L12
+ 195              	.L15:
+ 203:.\BleProcessing.c **** 	switch(event)
+ 196              		.loc 1 203 0
+ 197 001c 422B     		cmp	r3, #66
+ 198 001e 27D0     		beq	.L18
+ 199 0020 712B     		cmp	r3, #113
+ 200 0022 29D0     		beq	.L19
+ 201 0024 412B     		cmp	r3, #65
+ 202 0026 17D0     		beq	.L20
+ 203              		.loc 1 259 0
+ 204 0028 32E0     		b	.L12
+ 205              	.L16:
+ 207:.\BleProcessing.c ****             CyBle_GappStartAdvertisement(CYBLE_ADVERTISING_FAST);
+ 206              		.loc 1 207 0
+ 207 002a 0020     		mov	r0, #0
+ 208 002c FFF7FEFF 		bl	CyBle_GappStartAdvertisement
+ 211:.\BleProcessing.c ****                 Led_Advertising_Green_Write(0);
+ 209              		.loc 1 211 0
+ 210 0030 0020     		mov	r0, #0
+ 211 0032 FFF7FEFF 		bl	Led_Advertising_Green_Write
+ 213:.\BleProcessing.c ****     		break;
+ 212              		.loc 1 213 0
+ 213 0036 2BE0     		b	.L12
+ 214              	.L17:
+ 217:.\BleProcessing.c ****             if(CYBLE_STATE_DISCONNECTED == CyBle_GetState())
+ 215              		.loc 1 217 0
+ 216 0038 174B     		ldr	r3, .L24
+ 217 003a 1B78     		ldrb	r3, [r3]
+ 218 003c 042B     		cmp	r3, #4
+ 219 003e 03D1     		bne	.L22
+ 219:.\BleProcessing.c ****                 enterHibernateFlag = true;
+ 220              		.loc 1 219 0
+ 221 0040 164B     		ldr	r3, .L24+4
+ 222 0042 0122     		mov	r2, #1
+ 223 0044 1A70     		strb	r2, [r3]
+ 221:.\BleProcessing.c ****             break;
+ 224              		.loc 1 221 0
+ 225 0046 23E0     		b	.L12
+ 226              	.L22:
+ 227 0048 22E0     		b	.L12
+ 228              	.L14:
+ 225:.\BleProcessing.c **** 			enterHibernateFlag = true;
+ 229              		.loc 1 225 0
+ 230 004a 144B     		ldr	r3, .L24+4
+ 231 004c 0122     		mov	r2, #1
+ 232 004e 1A70     		strb	r2, [r3]
+ 228:.\BleProcessing.c ****             connParamRequestState = CONN_PARAM_REQUEST_NOT_SENT;
+ 233              		.loc 1 228 0
+ 234 0050 134B     		ldr	r3, .L24+8
+ 235 0052 0022     		mov	r2, #0
+ 236 0054 1A70     		strb	r2, [r3]
+ 229:.\BleProcessing.c ****             break;
+ 237              		.loc 1 229 0
+ 238 0056 1BE0     		b	.L12
+ 239              	.L20:
+ 233:.\BleProcessing.c ****             timestampWhenConnected = WatchdogTimer_GetTimestamp();
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 10
+
+
+ 240              		.loc 1 233 0
+ 241 0058 FFF7FEFF 		bl	WatchdogTimer_GetTimestamp
+ 242 005c 021C     		mov	r2, r0
+ 243 005e 114B     		ldr	r3, .L24+12
+ 244 0060 1A60     		str	r2, [r3]
+ 237:.\BleProcessing.c ****                 Led_Advertising_Green_Write(1);
+ 245              		.loc 1 237 0
+ 246 0062 0120     		mov	r0, #1
+ 247 0064 FFF7FEFF 		bl	Led_Advertising_Green_Write
+ 238:.\BleProcessing.c ****                 Led_Connected_Blue_Write(0);
+ 248              		.loc 1 238 0
+ 249 0068 0020     		mov	r0, #0
+ 250 006a FFF7FEFF 		bl	Led_Connected_Blue_Write
+ 240:.\BleProcessing.c **** 			break;
+ 251              		.loc 1 240 0
+ 252 006e 0FE0     		b	.L12
+ 253              	.L18:
+ 244:.\BleProcessing.c **** 			hrsNotification = false;
+ 254              		.loc 1 244 0
+ 255 0070 0D4B     		ldr	r3, .L24+16
+ 256 0072 0022     		mov	r2, #0
+ 257 0074 1A70     		strb	r2, [r3]
+ 245:.\BleProcessing.c **** 			break;
+ 258              		.loc 1 245 0
+ 259 0076 0BE0     		b	.L12
+ 260              	.L19:
+ 249:.\BleProcessing.c ****             if(*(uint16 *)eventParam == CYBLE_L2CAP_CONN_PARAM_ACCEPTED)
+ 261              		.loc 1 249 0
+ 262 0078 3B68     		ldr	r3, [r7]
+ 263 007a 1B88     		ldrh	r3, [r3]
+ 264 007c 002B     		cmp	r3, #0
+ 265 007e 03D1     		bne	.L23
+ 251:.\BleProcessing.c ****                 connParamRequestState = CONN_PARAM_REQUEST_ACCEPTED;
+ 266              		.loc 1 251 0
+ 267 0080 074B     		ldr	r3, .L24+8
+ 268 0082 0222     		mov	r2, #2
+ 269 0084 1A70     		strb	r2, [r3]
+ 270 0086 02E0     		b	.L13
+ 271              	.L23:
+ 255:.\BleProcessing.c ****                 connParamRequestState = CONN_PARAM_REQUEST_REJECTED;
+ 272              		.loc 1 255 0
+ 273 0088 054B     		ldr	r3, .L24+8
+ 274 008a 0322     		mov	r2, #3
+ 275 008c 1A70     		strb	r2, [r3]
+ 276              	.L13:
+ 277              		.loc 1 259 0
+ 278 008e C046     		mov	r8, r8
+ 279              	.L12:
+ 260:.\BleProcessing.c **** 	}
+ 261:.\BleProcessing.c **** }
+ 280              		.loc 1 261 0
+ 281 0090 BD46     		mov	sp, r7
+ 282 0092 02B0     		add	sp, sp, #8
+ 283              		@ sp needed
+ 284 0094 80BD     		pop	{r7, pc}
+ 285              	.L25:
+ 286 0096 C046     		.align	2
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 11
+
+
+ 287              	.L24:
+ 288 0098 00000000 		.word	cyBle_state
+ 289 009c 00000000 		.word	enterHibernateFlag
+ 290 00a0 00000000 		.word	connParamRequestState
+ 291 00a4 00000000 		.word	timestampWhenConnected
+ 292 00a8 00000000 		.word	hrsNotification
+ 293              		.cfi_endproc
+ 294              	.LFE37:
+ 295              		.size	GeneralEventHandler, .-GeneralEventHandler
+ 296              		.text
+ 297              	.Letext0:
+ 298              		.file 2 ".\\Generated_Source\\PSoC4/cytypes.h"
+ 299              		.file 3 ".\\Generated_Source\\PSoC4/BLE_1_StackGatt.h"
+ 300              		.file 4 ".\\Generated_Source\\PSoC4/BLE_1_Stack.h"
+ 301              		.file 5 ".\\Generated_Source\\PSoC4/BLE_1_hrs.h"
+ 302              		.file 6 ".\\Generated_Source\\PSoC4/BLE_1_dis.h"
+ 303              		.file 7 ".\\Generated_Source\\PSoC4/BLE_1_eventHandler.h"
+ 304              		.file 8 ".\\BleProcessing.h"
+ 305              		.file 9 ".\\HeartRateProcessing.h"
+ 306              		.section	.debug_info,"",%progbits
+ 307              	.Ldebug_info0:
+ 308 0000 D1080000 		.4byte	0x8d1
+ 309 0004 0400     		.2byte	0x4
+ 310 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 311 000a 04       		.byte	0x4
+ 312 000b 01       		.uleb128 0x1
+ 313 000c 6D120000 		.4byte	.LASF284
+ 314 0010 01       		.byte	0x1
+ 315 0011 05070000 		.4byte	.LASF285
+ 316 0015 BA070000 		.4byte	.LASF286
+ 317 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 318 001d 00000000 		.4byte	0
+ 319 0021 00000000 		.4byte	.Ldebug_line0
+ 320 0025 02       		.uleb128 0x2
+ 321 0026 01       		.byte	0x1
+ 322 0027 06       		.byte	0x6
+ 323 0028 D6060000 		.4byte	.LASF0
+ 324 002c 02       		.uleb128 0x2
+ 325 002d 01       		.byte	0x1
+ 326 002e 08       		.byte	0x8
+ 327 002f 8E070000 		.4byte	.LASF1
+ 328 0033 02       		.uleb128 0x2
+ 329 0034 02       		.byte	0x2
+ 330 0035 05       		.byte	0x5
+ 331 0036 171B0000 		.4byte	.LASF2
+ 332 003a 02       		.uleb128 0x2
+ 333 003b 02       		.byte	0x2
+ 334 003c 07       		.byte	0x7
+ 335 003d CA1E0000 		.4byte	.LASF3
+ 336 0041 02       		.uleb128 0x2
+ 337 0042 04       		.byte	0x4
+ 338 0043 05       		.byte	0x5
+ 339 0044 98050000 		.4byte	.LASF4
+ 340 0048 02       		.uleb128 0x2
+ 341 0049 04       		.byte	0x4
+ 342 004a 07       		.byte	0x7
+ 343 004b AA0D0000 		.4byte	.LASF5
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 12
+
+
+ 344 004f 02       		.uleb128 0x2
+ 345 0050 08       		.byte	0x8
+ 346 0051 05       		.byte	0x5
+ 347 0052 09100000 		.4byte	.LASF6
+ 348 0056 02       		.uleb128 0x2
+ 349 0057 08       		.byte	0x8
+ 350 0058 07       		.byte	0x7
+ 351 0059 DC160000 		.4byte	.LASF7
+ 352 005d 03       		.uleb128 0x3
+ 353 005e 04       		.byte	0x4
+ 354 005f 05       		.byte	0x5
+ 355 0060 696E7400 		.ascii	"int\000"
+ 356 0064 02       		.uleb128 0x2
+ 357 0065 04       		.byte	0x4
+ 358 0066 07       		.byte	0x7
+ 359 0067 BB110000 		.4byte	.LASF8
+ 360 006b 04       		.uleb128 0x4
+ 361 006c B91A0000 		.4byte	.LASF9
+ 362 0070 02       		.byte	0x2
+ 363 0071 A1       		.byte	0xa1
+ 364 0072 2C000000 		.4byte	0x2c
+ 365 0076 04       		.uleb128 0x4
+ 366 0077 F6200000 		.4byte	.LASF10
+ 367 007b 02       		.byte	0x2
+ 368 007c A2       		.byte	0xa2
+ 369 007d 3A000000 		.4byte	0x3a
+ 370 0081 04       		.uleb128 0x4
+ 371 0082 57010000 		.4byte	.LASF11
+ 372 0086 02       		.byte	0x2
+ 373 0087 A3       		.byte	0xa3
+ 374 0088 48000000 		.4byte	0x48
+ 375 008c 02       		.uleb128 0x2
+ 376 008d 04       		.byte	0x4
+ 377 008e 04       		.byte	0x4
+ 378 008f 4A110000 		.4byte	.LASF12
+ 379 0093 02       		.uleb128 0x2
+ 380 0094 08       		.byte	0x8
+ 381 0095 04       		.byte	0x4
+ 382 0096 8F100000 		.4byte	.LASF13
+ 383 009a 02       		.uleb128 0x2
+ 384 009b 01       		.byte	0x1
+ 385 009c 08       		.byte	0x8
+ 386 009d FA080000 		.4byte	.LASF14
+ 387 00a1 02       		.uleb128 0x2
+ 388 00a2 04       		.byte	0x4
+ 389 00a3 07       		.byte	0x7
+ 390 00a4 3A000000 		.4byte	.LASF15
+ 391 00a8 05       		.uleb128 0x5
+ 392 00a9 04       		.byte	0x4
+ 393 00aa 06       		.uleb128 0x6
+ 394 00ab 01       		.byte	0x1
+ 395 00ac 04       		.byte	0x4
+ 396 00ad 52       		.byte	0x52
+ 397 00ae 1A020000 		.4byte	0x21a
+ 398 00b2 07       		.uleb128 0x7
+ 399 00b3 3A090000 		.4byte	.LASF16
+ 400 00b7 00       		.sleb128 0
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 13
+
+
+ 401 00b8 07       		.uleb128 0x7
+ 402 00b9 0B060000 		.4byte	.LASF17
+ 403 00bd 01       		.sleb128 1
+ 404 00be 07       		.uleb128 0x7
+ 405 00bf F3160000 		.4byte	.LASF18
+ 406 00c3 02       		.sleb128 2
+ 407 00c4 07       		.uleb128 0x7
+ 408 00c5 17070000 		.4byte	.LASF19
+ 409 00c9 03       		.sleb128 3
+ 410 00ca 07       		.uleb128 0x7
+ 411 00cb 911F0000 		.4byte	.LASF20
+ 412 00cf 04       		.sleb128 4
+ 413 00d0 07       		.uleb128 0x7
+ 414 00d1 1A1E0000 		.4byte	.LASF21
+ 415 00d5 05       		.sleb128 5
+ 416 00d6 07       		.uleb128 0x7
+ 417 00d7 531C0000 		.4byte	.LASF22
+ 418 00db 20       		.sleb128 32
+ 419 00dc 07       		.uleb128 0x7
+ 420 00dd 16040000 		.4byte	.LASF23
+ 421 00e1 21       		.sleb128 33
+ 422 00e2 07       		.uleb128 0x7
+ 423 00e3 750F0000 		.4byte	.LASF24
+ 424 00e7 22       		.sleb128 34
+ 425 00e8 07       		.uleb128 0x7
+ 426 00e9 CD130000 		.4byte	.LASF25
+ 427 00ed 23       		.sleb128 35
+ 428 00ee 07       		.uleb128 0x7
+ 429 00ef C50C0000 		.4byte	.LASF26
+ 430 00f3 24       		.sleb128 36
+ 431 00f4 07       		.uleb128 0x7
+ 432 00f5 050D0000 		.4byte	.LASF27
+ 433 00f9 25       		.sleb128 37
+ 434 00fa 07       		.uleb128 0x7
+ 435 00fb 6D1A0000 		.4byte	.LASF28
+ 436 00ff 26       		.sleb128 38
+ 437 0100 07       		.uleb128 0x7
+ 438 0101 FA000000 		.4byte	.LASF29
+ 439 0105 27       		.sleb128 39
+ 440 0106 07       		.uleb128 0x7
+ 441 0107 6F200000 		.4byte	.LASF30
+ 442 010b 28       		.sleb128 40
+ 443 010c 07       		.uleb128 0x7
+ 444 010d 80150000 		.4byte	.LASF31
+ 445 0111 29       		.sleb128 41
+ 446 0112 07       		.uleb128 0x7
+ 447 0113 D30E0000 		.4byte	.LASF32
+ 448 0117 2A       		.sleb128 42
+ 449 0118 07       		.uleb128 0x7
+ 450 0119 70130000 		.4byte	.LASF33
+ 451 011d 2B       		.sleb128 43
+ 452 011e 07       		.uleb128 0x7
+ 453 011f 5A1E0000 		.4byte	.LASF34
+ 454 0123 2C       		.sleb128 44
+ 455 0124 07       		.uleb128 0x7
+ 456 0125 5A1B0000 		.4byte	.LASF35
+ 457 0129 C000     		.sleb128 64
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 14
+
+
+ 458 012b 07       		.uleb128 0x7
+ 459 012c 19010000 		.4byte	.LASF36
+ 460 0130 C100     		.sleb128 65
+ 461 0132 07       		.uleb128 0x7
+ 462 0133 A61F0000 		.4byte	.LASF37
+ 463 0137 C200     		.sleb128 66
+ 464 0139 07       		.uleb128 0x7
+ 465 013a E2150000 		.4byte	.LASF38
+ 466 013e C300     		.sleb128 67
+ 467 0140 07       		.uleb128 0x7
+ 468 0141 9C070000 		.4byte	.LASF39
+ 469 0145 C400     		.sleb128 68
+ 470 0147 07       		.uleb128 0x7
+ 471 0148 30070000 		.4byte	.LASF40
+ 472 014c C500     		.sleb128 69
+ 473 014e 07       		.uleb128 0x7
+ 474 014f E4180000 		.4byte	.LASF41
+ 475 0153 C600     		.sleb128 70
+ 476 0155 07       		.uleb128 0x7
+ 477 0156 C6180000 		.4byte	.LASF42
+ 478 015a C700     		.sleb128 71
+ 479 015c 07       		.uleb128 0x7
+ 480 015d D3080000 		.4byte	.LASF43
+ 481 0161 C800     		.sleb128 72
+ 482 0163 07       		.uleb128 0x7
+ 483 0164 F3130000 		.4byte	.LASF44
+ 484 0168 C900     		.sleb128 73
+ 485 016a 07       		.uleb128 0x7
+ 486 016b 74090000 		.4byte	.LASF45
+ 487 016f CA00     		.sleb128 74
+ 488 0171 07       		.uleb128 0x7
+ 489 0172 1B090000 		.4byte	.LASF46
+ 490 0176 CB00     		.sleb128 75
+ 491 0178 07       		.uleb128 0x7
+ 492 0179 B3130000 		.4byte	.LASF47
+ 493 017d CC00     		.sleb128 76
+ 494 017f 07       		.uleb128 0x7
+ 495 0180 FB190000 		.4byte	.LASF48
+ 496 0184 CD00     		.sleb128 77
+ 497 0186 07       		.uleb128 0x7
+ 498 0187 56050000 		.4byte	.LASF49
+ 499 018b CE00     		.sleb128 78
+ 500 018d 07       		.uleb128 0x7
+ 501 018e C8110000 		.4byte	.LASF50
+ 502 0192 CF00     		.sleb128 79
+ 503 0194 07       		.uleb128 0x7
+ 504 0195 341C0000 		.4byte	.LASF51
+ 505 0199 D000     		.sleb128 80
+ 506 019b 07       		.uleb128 0x7
+ 507 019c EB090000 		.4byte	.LASF52
+ 508 01a0 D100     		.sleb128 81
+ 509 01a2 07       		.uleb128 0x7
+ 510 01a3 F5030000 		.4byte	.LASF53
+ 511 01a7 D200     		.sleb128 82
+ 512 01a9 07       		.uleb128 0x7
+ 513 01aa B11D0000 		.4byte	.LASF54
+ 514 01ae D300     		.sleb128 83
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 15
+
+
+ 515 01b0 07       		.uleb128 0x7
+ 516 01b1 B1200000 		.4byte	.LASF55
+ 517 01b5 D400     		.sleb128 84
+ 518 01b7 07       		.uleb128 0x7
+ 519 01b8 BC020000 		.4byte	.LASF56
+ 520 01bc D500     		.sleb128 85
+ 521 01be 07       		.uleb128 0x7
+ 522 01bf 7E1E0000 		.4byte	.LASF57
+ 523 01c3 F000     		.sleb128 112
+ 524 01c5 07       		.uleb128 0x7
+ 525 01c6 2C0C0000 		.4byte	.LASF58
+ 526 01ca F100     		.sleb128 113
+ 527 01cc 07       		.uleb128 0x7
+ 528 01cd 7C060000 		.4byte	.LASF59
+ 529 01d1 F200     		.sleb128 114
+ 530 01d3 07       		.uleb128 0x7
+ 531 01d4 161C0000 		.4byte	.LASF60
+ 532 01d8 F300     		.sleb128 115
+ 533 01da 07       		.uleb128 0x7
+ 534 01db 48140000 		.4byte	.LASF61
+ 535 01df F400     		.sleb128 116
+ 536 01e1 07       		.uleb128 0x7
+ 537 01e2 390F0000 		.4byte	.LASF62
+ 538 01e6 F500     		.sleb128 117
+ 539 01e8 07       		.uleb128 0x7
+ 540 01e9 B2080000 		.4byte	.LASF63
+ 541 01ed F600     		.sleb128 118
+ 542 01ef 07       		.uleb128 0x7
+ 543 01f0 28170000 		.4byte	.LASF64
+ 544 01f4 F700     		.sleb128 119
+ 545 01f6 07       		.uleb128 0x7
+ 546 01f7 E0020000 		.4byte	.LASF65
+ 547 01fb F800     		.sleb128 120
+ 548 01fd 07       		.uleb128 0x7
+ 549 01fe 49080000 		.4byte	.LASF66
+ 550 0202 F900     		.sleb128 121
+ 551 0204 07       		.uleb128 0x7
+ 552 0205 EA1F0000 		.4byte	.LASF67
+ 553 0209 FA00     		.sleb128 122
+ 554 020b 07       		.uleb128 0x7
+ 555 020c 96100000 		.4byte	.LASF68
+ 556 0210 FA01     		.sleb128 250
+ 557 0212 07       		.uleb128 0x7
+ 558 0213 62130000 		.4byte	.LASF69
+ 559 0217 FF01     		.sleb128 255
+ 560 0219 00       		.byte	0
+ 561 021a 08       		.uleb128 0x8
+ 562 021b 02       		.byte	0x2
+ 563 021c 03       		.byte	0x3
+ 564 021d 4D01     		.2byte	0x14d
+ 565 021f 3E020000 		.4byte	0x23e
+ 566 0223 09       		.uleb128 0x9
+ 567 0224 C1040000 		.4byte	.LASF70
+ 568 0228 03       		.byte	0x3
+ 569 0229 5001     		.2byte	0x150
+ 570 022b 6B000000 		.4byte	0x6b
+ 571 022f 00       		.byte	0
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 16
+
+
+ 572 0230 09       		.uleb128 0x9
+ 573 0231 8B1F0000 		.4byte	.LASF71
+ 574 0235 03       		.byte	0x3
+ 575 0236 5301     		.2byte	0x153
+ 576 0238 6B000000 		.4byte	0x6b
+ 577 023c 01       		.byte	0x1
+ 578 023d 00       		.byte	0
+ 579 023e 0A       		.uleb128 0xa
+ 580 023f 55040000 		.4byte	.LASF72
+ 581 0243 03       		.byte	0x3
+ 582 0244 5501     		.2byte	0x155
+ 583 0246 1A020000 		.4byte	0x21a
+ 584 024a 06       		.uleb128 0x6
+ 585 024b 01       		.byte	0x1
+ 586 024c 05       		.byte	0x5
+ 587 024d 22       		.byte	0x22
+ 588 024e 6B020000 		.4byte	0x26b
+ 589 0252 07       		.uleb128 0x7
+ 590 0253 00160000 		.4byte	.LASF73
+ 591 0257 00       		.sleb128 0
+ 592 0258 07       		.uleb128 0x7
+ 593 0259 DF0F0000 		.4byte	.LASF74
+ 594 025d 01       		.sleb128 1
+ 595 025e 07       		.uleb128 0x7
+ 596 025f 31130000 		.4byte	.LASF75
+ 597 0263 02       		.sleb128 2
+ 598 0264 07       		.uleb128 0x7
+ 599 0265 451B0000 		.4byte	.LASF76
+ 600 0269 03       		.sleb128 3
+ 601 026a 00       		.byte	0
+ 602 026b 06       		.uleb128 0x6
+ 603 026c 01       		.byte	0x1
+ 604 026d 06       		.byte	0x6
+ 605 026e 1D       		.byte	0x1d
+ 606 026f B0020000 		.4byte	0x2b0
+ 607 0273 07       		.uleb128 0x7
+ 608 0274 79160000 		.4byte	.LASF77
+ 609 0278 00       		.sleb128 0
+ 610 0279 07       		.uleb128 0x7
+ 611 027a 460A0000 		.4byte	.LASF78
+ 612 027e 01       		.sleb128 1
+ 613 027f 07       		.uleb128 0x7
+ 614 0280 BB0E0000 		.4byte	.LASF79
+ 615 0284 02       		.sleb128 2
+ 616 0285 07       		.uleb128 0x7
+ 617 0286 1E060000 		.4byte	.LASF80
+ 618 028a 03       		.sleb128 3
+ 619 028b 07       		.uleb128 0x7
+ 620 028c DE030000 		.4byte	.LASF81
+ 621 0290 04       		.sleb128 4
+ 622 0291 07       		.uleb128 0x7
+ 623 0292 0A0A0000 		.4byte	.LASF82
+ 624 0296 05       		.sleb128 5
+ 625 0297 07       		.uleb128 0x7
+ 626 0298 810A0000 		.4byte	.LASF83
+ 627 029c 06       		.sleb128 6
+ 628 029d 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 17
+
+
+ 629 029e 2F120000 		.4byte	.LASF84
+ 630 02a2 07       		.sleb128 7
+ 631 02a3 07       		.uleb128 0x7
+ 632 02a4 39100000 		.4byte	.LASF85
+ 633 02a8 08       		.sleb128 8
+ 634 02a9 07       		.uleb128 0x7
+ 635 02aa 25000000 		.4byte	.LASF86
+ 636 02ae 09       		.sleb128 9
+ 637 02af 00       		.byte	0
+ 638 02b0 06       		.uleb128 0x6
+ 639 02b1 02       		.byte	0x2
+ 640 02b2 07       		.byte	0x7
+ 641 02b3 7A       		.byte	0x7a
+ 642 02b4 6E070000 		.4byte	0x76e
+ 643 02b8 07       		.uleb128 0x7
+ 644 02b9 E9120000 		.4byte	.LASF87
+ 645 02bd 8002     		.sleb128 256
+ 646 02bf 07       		.uleb128 0x7
+ 647 02c0 18200000 		.4byte	.LASF88
+ 648 02c4 8102     		.sleb128 257
+ 649 02c6 07       		.uleb128 0x7
+ 650 02c7 E9050000 		.4byte	.LASF89
+ 651 02cb 8202     		.sleb128 258
+ 652 02cd 07       		.uleb128 0x7
+ 653 02ce C41F0000 		.4byte	.LASF90
+ 654 02d2 8302     		.sleb128 259
+ 655 02d4 07       		.uleb128 0x7
+ 656 02d5 B9160000 		.4byte	.LASF91
+ 657 02d9 8402     		.sleb128 260
+ 658 02db 07       		.uleb128 0x7
+ 659 02dc 211B0000 		.4byte	.LASF92
+ 660 02e0 8502     		.sleb128 261
+ 661 02e2 07       		.uleb128 0x7
+ 662 02e3 6C080000 		.4byte	.LASF93
+ 663 02e7 8602     		.sleb128 262
+ 664 02e9 07       		.uleb128 0x7
+ 665 02ea 98060000 		.4byte	.LASF94
+ 666 02ee 8702     		.sleb128 263
+ 667 02f0 07       		.uleb128 0x7
+ 668 02f1 A41E0000 		.4byte	.LASF95
+ 669 02f5 8802     		.sleb128 264
+ 670 02f7 07       		.uleb128 0x7
+ 671 02f8 96020000 		.4byte	.LASF96
+ 672 02fc 8902     		.sleb128 265
+ 673 02fe 07       		.uleb128 0x7
+ 674 02ff 5E010000 		.4byte	.LASF97
+ 675 0303 8A02     		.sleb128 266
+ 676 0305 07       		.uleb128 0x7
+ 677 0306 F2170000 		.4byte	.LASF98
+ 678 030a 8B02     		.sleb128 267
+ 679 030c 07       		.uleb128 0x7
+ 680 030d 4A100000 		.4byte	.LASF99
+ 681 0311 8C02     		.sleb128 268
+ 682 0313 07       		.uleb128 0x7
+ 683 0314 C0150000 		.4byte	.LASF100
+ 684 0318 8D02     		.sleb128 269
+ 685 031a 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 18
+
+
+ 686 031b EF010000 		.4byte	.LASF101
+ 687 031f 8E02     		.sleb128 270
+ 688 0321 07       		.uleb128 0x7
+ 689 0322 B4100000 		.4byte	.LASF102
+ 690 0326 8F02     		.sleb128 271
+ 691 0328 07       		.uleb128 0x7
+ 692 0329 2D040000 		.4byte	.LASF103
+ 693 032d 9002     		.sleb128 272
+ 694 032f 07       		.uleb128 0x7
+ 695 0330 6A1D0000 		.4byte	.LASF104
+ 696 0334 9102     		.sleb128 273
+ 697 0336 07       		.uleb128 0x7
+ 698 0337 8F130000 		.4byte	.LASF105
+ 699 033b 9202     		.sleb128 274
+ 700 033d 07       		.uleb128 0x7
+ 701 033e 3F210000 		.4byte	.LASF106
+ 702 0342 9302     		.sleb128 275
+ 703 0344 07       		.uleb128 0x7
+ 704 0345 FC1B0000 		.4byte	.LASF107
+ 705 0349 9402     		.sleb128 276
+ 706 034b 07       		.uleb128 0x7
+ 707 034c 53200000 		.4byte	.LASF108
+ 708 0350 9502     		.sleb128 277
+ 709 0352 07       		.uleb128 0x7
+ 710 0353 1C0E0000 		.4byte	.LASF109
+ 711 0357 9602     		.sleb128 278
+ 712 0359 07       		.uleb128 0x7
+ 713 035a 520C0000 		.4byte	.LASF110
+ 714 035e 9702     		.sleb128 279
+ 715 0360 07       		.uleb128 0x7
+ 716 0361 57020000 		.4byte	.LASF111
+ 717 0365 9802     		.sleb128 280
+ 718 0367 07       		.uleb128 0x7
+ 719 0368 32160000 		.4byte	.LASF112
+ 720 036c 9902     		.sleb128 281
+ 721 036e 07       		.uleb128 0x7
+ 722 036f 580E0000 		.4byte	.LASF113
+ 723 0373 9A02     		.sleb128 282
+ 724 0375 07       		.uleb128 0x7
+ 725 0376 5A180000 		.4byte	.LASF114
+ 726 037a 9B02     		.sleb128 283
+ 727 037c 07       		.uleb128 0x7
+ 728 037d 9A1B0000 		.4byte	.LASF115
+ 729 0381 9C02     		.sleb128 284
+ 730 0383 07       		.uleb128 0x7
+ 731 0384 A91C0000 		.4byte	.LASF116
+ 732 0388 9D02     		.sleb128 285
+ 733 038a 07       		.uleb128 0x7
+ 734 038b E2060000 		.4byte	.LASF117
+ 735 038f 9E02     		.sleb128 286
+ 736 0391 07       		.uleb128 0x7
+ 737 0392 B61B0000 		.4byte	.LASF118
+ 738 0396 9F02     		.sleb128 287
+ 739 0398 07       		.uleb128 0x7
+ 740 0399 85030000 		.4byte	.LASF119
+ 741 039d A002     		.sleb128 288
+ 742 039f 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 19
+
+
+ 743 03a0 0C120000 		.4byte	.LASF120
+ 744 03a4 A102     		.sleb128 289
+ 745 03a6 07       		.uleb128 0x7
+ 746 03a7 951A0000 		.4byte	.LASF121
+ 747 03ab A202     		.sleb128 290
+ 748 03ad 07       		.uleb128 0x7
+ 749 03ae 5D0A0000 		.4byte	.LASF122
+ 750 03b2 A302     		.sleb128 291
+ 751 03b4 07       		.uleb128 0x7
+ 752 03b5 0C130000 		.4byte	.LASF123
+ 753 03b9 A402     		.sleb128 292
+ 754 03bb 07       		.uleb128 0x7
+ 755 03bc CD0B0000 		.4byte	.LASF124
+ 756 03c0 A502     		.sleb128 293
+ 757 03c2 07       		.uleb128 0x7
+ 758 03c3 A7030000 		.4byte	.LASF125
+ 759 03c7 A602     		.sleb128 294
+ 760 03c9 07       		.uleb128 0x7
+ 761 03ca D8000000 		.4byte	.LASF126
+ 762 03ce A702     		.sleb128 295
+ 763 03d0 07       		.uleb128 0x7
+ 764 03d1 CA040000 		.4byte	.LASF127
+ 765 03d5 A802     		.sleb128 296
+ 766 03d7 07       		.uleb128 0x7
+ 767 03d8 73170000 		.4byte	.LASF128
+ 768 03dc A902     		.sleb128 297
+ 769 03de 07       		.uleb128 0x7
+ 770 03df 7F180000 		.4byte	.LASF129
+ 771 03e3 AA02     		.sleb128 298
+ 772 03e5 07       		.uleb128 0x7
+ 773 03e6 09080000 		.4byte	.LASF130
+ 774 03ea AB02     		.sleb128 299
+ 775 03ec 07       		.uleb128 0x7
+ 776 03ed 10050000 		.4byte	.LASF131
+ 777 03f1 AC02     		.sleb128 300
+ 778 03f3 07       		.uleb128 0x7
+ 779 03f4 ED040000 		.4byte	.LASF132
+ 780 03f8 AD02     		.sleb128 301
+ 781 03fa 07       		.uleb128 0x7
+ 782 03fb 970E0000 		.4byte	.LASF133
+ 783 03ff AE02     		.sleb128 302
+ 784 0401 07       		.uleb128 0x7
+ 785 0402 BE0F0000 		.4byte	.LASF134
+ 786 0406 AF02     		.sleb128 303
+ 787 0408 07       		.uleb128 0x7
+ 788 0409 691F0000 		.4byte	.LASF135
+ 789 040d B002     		.sleb128 304
+ 790 040f 07       		.uleb128 0x7
+ 791 0410 2B190000 		.4byte	.LASF136
+ 792 0414 B102     		.sleb128 305
+ 793 0416 07       		.uleb128 0x7
+ 794 0417 57170000 		.4byte	.LASF137
+ 795 041b B202     		.sleb128 306
+ 796 041d 07       		.uleb128 0x7
+ 797 041e 0C140000 		.4byte	.LASF138
+ 798 0422 B302     		.sleb128 307
+ 799 0424 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 20
+
+
+ 800 0425 03030000 		.4byte	.LASF139
+ 801 0429 B402     		.sleb128 308
+ 802 042b 07       		.uleb128 0x7
+ 803 042c 56160000 		.4byte	.LASF140
+ 804 0430 B502     		.sleb128 309
+ 805 0432 07       		.uleb128 0x7
+ 806 0433 43000000 		.4byte	.LASF141
+ 807 0437 B602     		.sleb128 310
+ 808 0439 07       		.uleb128 0x7
+ 809 043a 74050000 		.4byte	.LASF142
+ 810 043e B702     		.sleb128 311
+ 811 0440 07       		.uleb128 0x7
+ 812 0441 D21D0000 		.4byte	.LASF143
+ 813 0445 B802     		.sleb128 312
+ 814 0447 07       		.uleb128 0x7
+ 815 0448 A80B0000 		.4byte	.LASF144
+ 816 044c B902     		.sleb128 313
+ 817 044e 07       		.uleb128 0x7
+ 818 044f F90A0000 		.4byte	.LASF145
+ 819 0453 BA02     		.sleb128 314
+ 820 0455 07       		.uleb128 0x7
+ 821 0456 25030000 		.4byte	.LASF146
+ 822 045a BB02     		.sleb128 315
+ 823 045c 07       		.uleb128 0x7
+ 824 045d A1050000 		.4byte	.LASF147
+ 825 0461 BC02     		.sleb128 316
+ 826 0463 07       		.uleb128 0x7
+ 827 0464 22110000 		.4byte	.LASF148
+ 828 0468 BD02     		.sleb128 317
+ 829 046a 07       		.uleb128 0x7
+ 830 046b 5A0F0000 		.4byte	.LASF149
+ 831 046f BE02     		.sleb128 318
+ 832 0471 07       		.uleb128 0x7
+ 833 0472 8C040000 		.4byte	.LASF150
+ 834 0476 BF02     		.sleb128 319
+ 835 0478 07       		.uleb128 0x7
+ 836 0479 C3030000 		.4byte	.LASF151
+ 837 047d C002     		.sleb128 320
+ 838 047f 07       		.uleb128 0x7
+ 839 0480 85000000 		.4byte	.LASF152
+ 840 0484 C102     		.sleb128 321
+ 841 0486 07       		.uleb128 0x7
+ 842 0487 150F0000 		.4byte	.LASF153
+ 843 048b C202     		.sleb128 322
+ 844 048d 07       		.uleb128 0x7
+ 845 048e D2200000 		.4byte	.LASF154
+ 846 0492 C302     		.sleb128 323
+ 847 0494 07       		.uleb128 0x7
+ 848 0495 35180000 		.4byte	.LASF155
+ 849 0499 C402     		.sleb128 324
+ 850 049b 07       		.uleb128 0x7
+ 851 049c 1F0B0000 		.4byte	.LASF156
+ 852 04a0 C502     		.sleb128 325
+ 853 04a2 07       		.uleb128 0x7
+ 854 04a3 E7110000 		.4byte	.LASF157
+ 855 04a7 C602     		.sleb128 326
+ 856 04a9 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 21
+
+
+ 857 04aa B3170000 		.4byte	.LASF158
+ 858 04ae C702     		.sleb128 327
+ 859 04b0 07       		.uleb128 0x7
+ 860 04b1 CD010000 		.4byte	.LASF159
+ 861 04b5 C802     		.sleb128 328
+ 862 04b7 07       		.uleb128 0x7
+ 863 04b8 05170000 		.4byte	.LASF160
+ 864 04bc C902     		.sleb128 329
+ 865 04be 07       		.uleb128 0x7
+ 866 04bf 3C0D0000 		.4byte	.LASF161
+ 867 04c3 CA02     		.sleb128 330
+ 868 04c5 07       		.uleb128 0x7
+ 869 04c6 26140000 		.4byte	.LASF162
+ 870 04ca CB02     		.sleb128 331
+ 871 04cc 07       		.uleb128 0x7
+ 872 04cd DA1B0000 		.4byte	.LASF163
+ 873 04d1 CC02     		.sleb128 332
+ 874 04d3 07       		.uleb128 0x7
+ 875 04d4 CF170000 		.4byte	.LASF164
+ 876 04d8 CD02     		.sleb128 333
+ 877 04da 07       		.uleb128 0x7
+ 878 04db 95160000 		.4byte	.LASF165
+ 879 04df CE02     		.sleb128 334
+ 880 04e1 07       		.uleb128 0x7
+ 881 04e2 6B100000 		.4byte	.LASF166
+ 882 04e6 CF02     		.sleb128 335
+ 883 04e8 07       		.uleb128 0x7
+ 884 04e9 A8000000 		.4byte	.LASF167
+ 885 04ed D002     		.sleb128 336
+ 886 04ef 07       		.uleb128 0x7
+ 887 04f0 A3140000 		.4byte	.LASF168
+ 888 04f4 D102     		.sleb128 337
+ 889 04f6 07       		.uleb128 0x7
+ 890 04f7 4F1F0000 		.4byte	.LASF169
+ 891 04fb D202     		.sleb128 338
+ 892 04fd 07       		.uleb128 0x7
+ 893 04fe CB1C0000 		.4byte	.LASF170
+ 894 0502 D302     		.sleb128 339
+ 895 0504 07       		.uleb128 0x7
+ 896 0505 2E1A0000 		.4byte	.LASF171
+ 897 0509 D402     		.sleb128 340
+ 898 050b 07       		.uleb128 0x7
+ 899 050c 34010000 		.4byte	.LASF172
+ 900 0510 D502     		.sleb128 341
+ 901 0512 07       		.uleb128 0x7
+ 902 0513 51090000 		.4byte	.LASF173
+ 903 0517 D602     		.sleb128 342
+ 904 0519 07       		.uleb128 0x7
+ 905 051a 8D1D0000 		.4byte	.LASF174
+ 906 051e D702     		.sleb128 343
+ 907 0520 07       		.uleb128 0x7
+ 908 0521 7E210000 		.4byte	.LASF175
+ 909 0525 D802     		.sleb128 344
+ 910 0527 07       		.uleb128 0x7
+ 911 0528 8F110000 		.4byte	.LASF176
+ 912 052c D902     		.sleb128 345
+ 913 052e 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 22
+
+
+ 914 052f 91200000 		.4byte	.LASF177
+ 915 0533 DA02     		.sleb128 346
+ 916 0535 07       		.uleb128 0x7
+ 917 0536 6D110000 		.4byte	.LASF178
+ 918 053a DB02     		.sleb128 347
+ 919 053c 07       		.uleb128 0x7
+ 920 053d BE060000 		.4byte	.LASF179
+ 921 0541 DC02     		.sleb128 348
+ 922 0543 07       		.uleb128 0x7
+ 923 0544 1F0D0000 		.4byte	.LASF180
+ 924 0548 DD02     		.sleb128 349
+ 925 054a 07       		.uleb128 0x7
+ 926 054b E70B0000 		.4byte	.LASF181
+ 927 054f DE02     		.sleb128 350
+ 928 0551 07       		.uleb128 0x7
+ 929 0552 FD200000 		.4byte	.LASF182
+ 930 0556 DF02     		.sleb128 351
+ 931 0558 07       		.uleb128 0x7
+ 932 0559 45190000 		.4byte	.LASF183
+ 933 055d E002     		.sleb128 352
+ 934 055f 07       		.uleb128 0x7
+ 935 0560 860D0000 		.4byte	.LASF184
+ 936 0564 E102     		.sleb128 353
+ 937 0566 07       		.uleb128 0x7
+ 938 0567 26150000 		.4byte	.LASF185
+ 939 056b E202     		.sleb128 354
+ 940 056d 07       		.uleb128 0x7
+ 941 056e 32020000 		.4byte	.LASF186
+ 942 0572 E302     		.sleb128 355
+ 943 0574 07       		.uleb128 0x7
+ 944 0575 210A0000 		.4byte	.LASF187
+ 945 0579 E402     		.sleb128 356
+ 946 057b 07       		.uleb128 0x7
+ 947 057c A10C0000 		.4byte	.LASF188
+ 948 0580 E502     		.sleb128 357
+ 949 0582 07       		.uleb128 0x7
+ 950 0583 C7210000 		.4byte	.LASF189
+ 951 0587 E602     		.sleb128 358
+ 952 0589 07       		.uleb128 0x7
+ 953 058a E2140000 		.4byte	.LASF190
+ 954 058e E702     		.sleb128 359
+ 955 0590 07       		.uleb128 0x7
+ 956 0591 5E150000 		.4byte	.LASF191
+ 957 0595 E802     		.sleb128 360
+ 958 0597 07       		.uleb128 0x7
+ 959 0598 69040000 		.4byte	.LASF192
+ 960 059c E902     		.sleb128 361
+ 961 059e 07       		.uleb128 0x7
+ 962 059f 850B0000 		.4byte	.LASF193
+ 963 05a3 EA02     		.sleb128 362
+ 964 05a5 07       		.uleb128 0x7
+ 965 05a6 BD190000 		.4byte	.LASF194
+ 966 05aa EB02     		.sleb128 363
+ 967 05ac 07       		.uleb128 0x7
+ 968 05ad 58060000 		.4byte	.LASF195
+ 969 05b1 EC02     		.sleb128 364
+ 970 05b3 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 23
+
+
+ 971 05b4 00000000 		.4byte	.LASF196
+ 972 05b8 ED02     		.sleb128 365
+ 973 05ba 07       		.uleb128 0x7
+ 974 05bb 871C0000 		.4byte	.LASF197
+ 975 05bf EE02     		.sleb128 366
+ 976 05c1 07       		.uleb128 0x7
+ 977 05c2 92090000 		.4byte	.LASF198
+ 978 05c6 EF02     		.sleb128 367
+ 979 05c8 07       		.uleb128 0x7
+ 980 05c9 A3210000 		.4byte	.LASF199
+ 981 05cd F002     		.sleb128 368
+ 982 05cf 07       		.uleb128 0x7
+ 983 05d0 3E0E0000 		.4byte	.LASF200
+ 984 05d4 F102     		.sleb128 369
+ 985 05d6 07       		.uleb128 0x7
+ 986 05d7 ED0F0000 		.4byte	.LASF201
+ 987 05db F202     		.sleb128 370
+ 988 05dd 07       		.uleb128 0x7
+ 989 05de 64210000 		.4byte	.LASF202
+ 990 05e2 F302     		.sleb128 371
+ 991 05e4 07       		.uleb128 0x7
+ 992 05e5 BF1A0000 		.4byte	.LASF203
+ 993 05e9 F402     		.sleb128 372
+ 994 05eb 07       		.uleb128 0x7
+ 995 05ec 3F130000 		.4byte	.LASF204
+ 996 05f0 F502     		.sleb128 373
+ 997 05f2 07       		.uleb128 0x7
+ 998 05f3 66140000 		.4byte	.LASF205
+ 999 05f7 F602     		.sleb128 374
+ 1000 05f9 07       		.uleb128 0x7
+ 1001 05fa 361E0000 		.4byte	.LASF206
+ 1002 05fe F702     		.sleb128 375
+ 1003 0600 07       		.uleb128 0x7
+ 1004 0601 BC0D0000 		.4byte	.LASF207
+ 1005 0605 F802     		.sleb128 376
+ 1006 0607 07       		.uleb128 0x7
+ 1007 0608 670B0000 		.4byte	.LASF208
+ 1008 060c F902     		.sleb128 377
+ 1009 060e 07       		.uleb128 0x7
+ 1010 060f 00110000 		.4byte	.LASF209
+ 1011 0613 FA02     		.sleb128 378
+ 1012 0615 07       		.uleb128 0x7
+ 1013 0616 311D0000 		.4byte	.LASF210
+ 1014 061a FB02     		.sleb128 379
+ 1015 061c 07       		.uleb128 0x7
+ 1016 061d 13180000 		.4byte	.LASF211
+ 1017 0621 FC02     		.sleb128 380
+ 1018 0623 07       		.uleb128 0x7
+ 1019 0624 AA010000 		.4byte	.LASF212
+ 1020 0628 FD02     		.sleb128 381
+ 1021 062a 07       		.uleb128 0x7
+ 1022 062b 0E160000 		.4byte	.LASF213
+ 1023 062f FE02     		.sleb128 382
+ 1024 0631 07       		.uleb128 0x7
+ 1025 0632 32050000 		.4byte	.LASF214
+ 1026 0636 FF02     		.sleb128 383
+ 1027 0638 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 24
+
+
+ 1028 0639 990F0000 		.4byte	.LASF215
+ 1029 063d 8003     		.sleb128 384
+ 1030 063f 07       		.uleb128 0x7
+ 1031 0640 E1190000 		.4byte	.LASF216
+ 1032 0644 8103     		.sleb128 385
+ 1033 0646 07       		.uleb128 0x7
+ 1034 0647 48030000 		.4byte	.LASF217
+ 1035 064b 8203     		.sleb128 386
+ 1036 064d 07       		.uleb128 0x7
+ 1037 064e 97170000 		.4byte	.LASF218
+ 1038 0652 8303     		.sleb128 387
+ 1039 0654 07       		.uleb128 0x7
+ 1040 0655 E71C0000 		.4byte	.LASF219
+ 1041 0659 8403     		.sleb128 388
+ 1042 065b 07       		.uleb128 0x7
+ 1043 065c 090C0000 		.4byte	.LASF220
+ 1044 0660 8503     		.sleb128 389
+ 1045 0662 07       		.uleb128 0x7
+ 1046 0663 DD1E0000 		.4byte	.LASF221
+ 1047 0667 8603     		.sleb128 390
+ 1048 0669 07       		.uleb128 0x7
+ 1049 066a DC100000 		.4byte	.LASF222
+ 1050 066e 8703     		.sleb128 391
+ 1051 0670 07       		.uleb128 0x7
+ 1052 0671 9D150000 		.4byte	.LASF223
+ 1053 0675 8803     		.sleb128 392
+ 1054 0677 07       		.uleb128 0x7
+ 1055 0678 DA0D0000 		.4byte	.LASF224
+ 1056 067c 8903     		.sleb128 393
+ 1057 067e 07       		.uleb128 0x7
+ 1058 067f 05190000 		.4byte	.LASF225
+ 1059 0683 8A03     		.sleb128 394
+ 1060 0685 07       		.uleb128 0x7
+ 1061 0686 7C0E0000 		.4byte	.LASF226
+ 1062 068a 8B03     		.sleb128 395
+ 1063 068c 07       		.uleb128 0x7
+ 1064 068d FF0D0000 		.4byte	.LASF227
+ 1065 0691 8C03     		.sleb128 396
+ 1066 0693 07       		.uleb128 0x7
+ 1067 0694 62030000 		.4byte	.LASF228
+ 1068 0698 8D03     		.sleb128 397
+ 1069 069a 07       		.uleb128 0x7
+ 1070 069b C5050000 		.4byte	.LASF229
+ 1071 069f 8E03     		.sleb128 398
+ 1072 06a1 07       		.uleb128 0x7
+ 1073 06a2 E10C0000 		.4byte	.LASF230
+ 1074 06a6 8F03     		.sleb128 399
+ 1075 06a8 07       		.uleb128 0x7
+ 1076 06a9 E11A0000 		.4byte	.LASF231
+ 1077 06ad 9003     		.sleb128 400
+ 1078 06af 07       		.uleb128 0x7
+ 1079 06b0 1A210000 		.4byte	.LASF232
+ 1080 06b4 9103     		.sleb128 401
+ 1081 06b6 07       		.uleb128 0x7
+ 1082 06b7 600D0000 		.4byte	.LASF233
+ 1083 06bb 9203     		.sleb128 402
+ 1084 06bd 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 25
+
+
+ 1085 06be 6B070000 		.4byte	.LASF234
+ 1086 06c2 9303     		.sleb128 403
+ 1087 06c4 07       		.uleb128 0x7
+ 1088 06c5 430B0000 		.4byte	.LASF235
+ 1089 06c9 9403     		.sleb128 404
+ 1090 06cb 07       		.uleb128 0x7
+ 1091 06cc FE140000 		.4byte	.LASF236
+ 1092 06d0 9503     		.sleb128 405
+ 1093 06d2 07       		.uleb128 0x7
+ 1094 06d3 17020000 		.4byte	.LASF237
+ 1095 06d7 9603     		.sleb128 406
+ 1096 06d9 07       		.uleb128 0x7
+ 1097 06da 501A0000 		.4byte	.LASF238
+ 1098 06de 9703     		.sleb128 407
+ 1099 06e0 07       		.uleb128 0x7
+ 1100 06e1 2E080000 		.4byte	.LASF239
+ 1101 06e5 9803     		.sleb128 408
+ 1102 06e7 07       		.uleb128 0x7
+ 1103 06e8 35060000 		.4byte	.LASF240
+ 1104 06ec 9903     		.sleb128 409
+ 1105 06ee 07       		.uleb128 0x7
+ 1106 06ef 950A0000 		.4byte	.LASF241
+ 1107 06f3 9A03     		.sleb128 410
+ 1108 06f5 07       		.uleb128 0x7
+ 1109 06f6 F61D0000 		.4byte	.LASF242
+ 1110 06fa 9B03     		.sleb128 411
+ 1111 06fc 07       		.uleb128 0x7
+ 1112 06fd 85010000 		.4byte	.LASF243
+ 1113 0701 9C03     		.sleb128 412
+ 1114 0703 07       		.uleb128 0x7
+ 1115 0704 66000000 		.4byte	.LASF244
+ 1116 0708 9D03     		.sleb128 413
+ 1117 070a 07       		.uleb128 0x7
+ 1118 070b B5090000 		.4byte	.LASF245
+ 1119 070f 9E03     		.sleb128 414
+ 1120 0711 07       		.uleb128 0x7
+ 1121 0712 8D080000 		.4byte	.LASF246
+ 1122 0716 9F03     		.sleb128 415
+ 1123 0718 07       		.uleb128 0x7
+ 1124 0719 47120000 		.4byte	.LASF247
+ 1125 071d A003     		.sleb128 416
+ 1126 071f 07       		.uleb128 0x7
+ 1127 0720 091D0000 		.4byte	.LASF248
+ 1128 0724 A103     		.sleb128 417
+ 1129 0726 07       		.uleb128 0x7
+ 1130 0727 50110000 		.4byte	.LASF249
+ 1131 072b A203     		.sleb128 418
+ 1132 072d 07       		.uleb128 0x7
+ 1133 072e 99190000 		.4byte	.LASF250
+ 1134 0732 A303     		.sleb128 419
+ 1135 0734 07       		.uleb128 0x7
+ 1136 0735 BD140000 		.4byte	.LASF251
+ 1137 0739 A403     		.sleb128 420
+ 1138 073b 07       		.uleb128 0x7
+ 1139 073c 2B1F0000 		.4byte	.LASF252
+ 1140 0740 A503     		.sleb128 421
+ 1141 0742 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 26
+
+
+ 1142 0743 74190000 		.4byte	.LASF253
+ 1143 0747 A603     		.sleb128 422
+ 1144 0749 07       		.uleb128 0x7
+ 1145 074a FF080000 		.4byte	.LASF254
+ 1146 074e A703     		.sleb128 423
+ 1147 0750 07       		.uleb128 0x7
+ 1148 0751 17100000 		.4byte	.LASF255
+ 1149 0755 A803     		.sleb128 424
+ 1150 0757 07       		.uleb128 0x7
+ 1151 0758 A3180000 		.4byte	.LASF256
+ 1152 075c A903     		.sleb128 425
+ 1153 075e 07       		.uleb128 0x7
+ 1154 075f B90A0000 		.4byte	.LASF257
+ 1155 0763 AA03     		.sleb128 426
+ 1156 0765 07       		.uleb128 0x7
+ 1157 0766 89140000 		.4byte	.LASF258
+ 1158 076a 80C003   		.sleb128 57344
+ 1159 076d 00       		.byte	0
+ 1160 076e 0B       		.uleb128 0xb
+ 1161 076f 01       		.byte	0x1
+ 1162 0770 07       		.byte	0x7
+ 1163 0771 F004     		.2byte	0x4f0
+ 1164 0773 96070000 		.4byte	0x796
+ 1165 0777 07       		.uleb128 0x7
+ 1166 0778 57070000 		.4byte	.LASF259
+ 1167 077c 00       		.sleb128 0
+ 1168 077d 07       		.uleb128 0x7
+ 1169 077e FC0E0000 		.4byte	.LASF260
+ 1170 0782 01       		.sleb128 1
+ 1171 0783 07       		.uleb128 0x7
+ 1172 0784 001F0000 		.4byte	.LASF261
+ 1173 0788 02       		.sleb128 2
+ 1174 0789 07       		.uleb128 0x7
+ 1175 078a A9040000 		.4byte	.LASF262
+ 1176 078e 03       		.sleb128 3
+ 1177 078f 07       		.uleb128 0x7
+ 1178 0790 151A0000 		.4byte	.LASF263
+ 1179 0794 04       		.sleb128 4
+ 1180 0795 00       		.byte	0
+ 1181 0796 0A       		.uleb128 0xa
+ 1182 0797 8C1B0000 		.4byte	.LASF264
+ 1183 079b 07       		.byte	0x7
+ 1184 079c FE04     		.2byte	0x4fe
+ 1185 079e 6E070000 		.4byte	0x76e
+ 1186 07a2 06       		.uleb128 0x6
+ 1187 07a3 01       		.byte	0x1
+ 1188 07a4 08       		.byte	0x8
+ 1189 07a5 38       		.byte	0x38
+ 1190 07a6 C3070000 		.4byte	0x7c3
+ 1191 07aa 07       		.uleb128 0x7
+ 1192 07ab 7A020000 		.4byte	.LASF265
+ 1193 07af 00       		.sleb128 0
+ 1194 07b0 07       		.uleb128 0x7
+ 1195 07b1 741B0000 		.4byte	.LASF266
+ 1196 07b5 01       		.sleb128 1
+ 1197 07b6 07       		.uleb128 0x7
+ 1198 07b7 750C0000 		.4byte	.LASF267
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 27
+
+
+ 1199 07bb 02       		.sleb128 2
+ 1200 07bc 07       		.uleb128 0x7
+ 1201 07bd DD0A0000 		.4byte	.LASF268
+ 1202 07c1 03       		.sleb128 3
+ 1203 07c2 00       		.byte	0
+ 1204 07c3 04       		.uleb128 0x4
+ 1205 07c4 3A200000 		.4byte	.LASF269
+ 1206 07c8 08       		.byte	0x8
+ 1207 07c9 3D       		.byte	0x3d
+ 1208 07ca A2070000 		.4byte	0x7a2
+ 1209 07ce 0C       		.uleb128 0xc
+ 1210 07cf 161F0000 		.4byte	.LASF270
+ 1211 07d3 01       		.byte	0x1
+ 1212 07d4 63       		.byte	0x63
+ 1213 07d5 00000000 		.4byte	.LFB35
+ 1214 07d9 58000000 		.4byte	.LFE35-.LFB35
+ 1215 07dd 01       		.uleb128 0x1
+ 1216 07de 9C       		.byte	0x9c
+ 1217 07df F2070000 		.4byte	0x7f2
+ 1218 07e3 0D       		.uleb128 0xd
+ 1219 07e4 47170000 		.4byte	.LASF275
+ 1220 07e8 01       		.byte	0x1
+ 1221 07e9 6A       		.byte	0x6a
+ 1222 07ea F2070000 		.4byte	0x7f2
+ 1223 07ee 02       		.uleb128 0x2
+ 1224 07ef 91       		.byte	0x91
+ 1225 07f0 6C       		.sleb128 -20
+ 1226 07f1 00       		.byte	0
+ 1227 07f2 0E       		.uleb128 0xe
+ 1228 07f3 6B000000 		.4byte	0x6b
+ 1229 07f7 02080000 		.4byte	0x802
+ 1230 07fb 0F       		.uleb128 0xf
+ 1231 07fc A1000000 		.4byte	0xa1
+ 1232 0800 01       		.byte	0x1
+ 1233 0801 00       		.byte	0
+ 1234 0802 10       		.uleb128 0x10
+ 1235 0803 771C0000 		.4byte	.LASF271
+ 1236 0807 01       		.byte	0x1
+ 1237 0808 97       		.byte	0x97
+ 1238 0809 00000000 		.4byte	.LFB36
+ 1239 080d 38000000 		.4byte	.LFE36-.LFB36
+ 1240 0811 01       		.uleb128 0x1
+ 1241 0812 9C       		.byte	0x9c
+ 1242 0813 34080000 		.4byte	0x834
+ 1243 0817 11       		.uleb128 0x11
+ 1244 0818 B5110000 		.4byte	.LASF272
+ 1245 081c 01       		.byte	0x1
+ 1246 081d 97       		.byte	0x97
+ 1247 081e 81000000 		.4byte	0x81
+ 1248 0822 02       		.uleb128 0x2
+ 1249 0823 91       		.byte	0x91
+ 1250 0824 74       		.sleb128 -12
+ 1251 0825 11       		.uleb128 0x11
+ 1252 0826 CD000000 		.4byte	.LASF273
+ 1253 082a 01       		.byte	0x1
+ 1254 082b 97       		.byte	0x97
+ 1255 082c A8000000 		.4byte	0xa8
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 28
+
+
+ 1256 0830 02       		.uleb128 0x2
+ 1257 0831 91       		.byte	0x91
+ 1258 0832 70       		.sleb128 -16
+ 1259 0833 00       		.byte	0
+ 1260 0834 0C       		.uleb128 0xc
+ 1261 0835 4A150000 		.4byte	.LASF274
+ 1262 0839 01       		.byte	0x1
+ 1263 083a C8       		.byte	0xc8
+ 1264 083b 00000000 		.4byte	.LFB37
+ 1265 083f AC000000 		.4byte	.LFE37-.LFB37
+ 1266 0843 01       		.uleb128 0x1
+ 1267 0844 9C       		.byte	0x9c
+ 1268 0845 66080000 		.4byte	0x866
+ 1269 0849 11       		.uleb128 0x11
+ 1270 084a B5110000 		.4byte	.LASF272
+ 1271 084e 01       		.byte	0x1
+ 1272 084f C8       		.byte	0xc8
+ 1273 0850 81000000 		.4byte	0x81
+ 1274 0854 02       		.uleb128 0x2
+ 1275 0855 91       		.byte	0x91
+ 1276 0856 74       		.sleb128 -12
+ 1277 0857 11       		.uleb128 0x11
+ 1278 0858 CD000000 		.4byte	.LASF273
+ 1279 085c 01       		.byte	0x1
+ 1280 085d C8       		.byte	0xc8
+ 1281 085e A8000000 		.4byte	0xa8
+ 1282 0862 02       		.uleb128 0x2
+ 1283 0863 91       		.byte	0x91
+ 1284 0864 70       		.sleb128 -16
+ 1285 0865 00       		.byte	0
+ 1286 0866 0D       		.uleb128 0xd
+ 1287 0867 910C0000 		.4byte	.LASF276
+ 1288 086b 01       		.byte	0x1
+ 1289 086c 3E       		.byte	0x3e
+ 1290 086d 6B000000 		.4byte	0x6b
+ 1291 0871 05       		.uleb128 0x5
+ 1292 0872 03       		.byte	0x3
+ 1293 0873 00000000 		.4byte	hrsNotification
+ 1294 0877 12       		.uleb128 0x12
+ 1295 0878 68190000 		.4byte	.LASF277
+ 1296 087c 07       		.byte	0x7
+ 1297 087d 6406     		.2byte	0x664
+ 1298 087f 96070000 		.4byte	0x796
+ 1299 0883 12       		.uleb128 0x12
+ 1300 0884 061B0000 		.4byte	.LASF278
+ 1301 0888 07       		.byte	0x7
+ 1302 0889 6506     		.2byte	0x665
+ 1303 088b 3E020000 		.4byte	0x23e
+ 1304 088f 13       		.uleb128 0x13
+ 1305 0890 0E200000 		.4byte	.LASF279
+ 1306 0894 09       		.byte	0x9
+ 1307 0895 36       		.byte	0x36
+ 1308 0896 6B000000 		.4byte	0x6b
+ 1309 089a 14       		.uleb128 0x14
+ 1310 089b D8090000 		.4byte	.LASF280
+ 1311 089f 01       		.byte	0x1
+ 1312 08a0 44       		.byte	0x44
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 29
+
+
+ 1313 08a1 AB080000 		.4byte	0x8ab
+ 1314 08a5 05       		.uleb128 0x5
+ 1315 08a6 03       		.byte	0x3
+ 1316 08a7 00000000 		.4byte	enterHibernateFlag
+ 1317 08ab 02       		.uleb128 0x2
+ 1318 08ac 01       		.byte	0x1
+ 1319 08ad 02       		.byte	0x2
+ 1320 08ae 87080000 		.4byte	.LASF281
+ 1321 08b2 14       		.uleb128 0x14
+ 1322 08b3 F2070000 		.4byte	.LASF282
+ 1323 08b7 01       		.byte	0x1
+ 1324 08b8 45       		.byte	0x45
+ 1325 08b9 81000000 		.4byte	0x81
+ 1326 08bd 05       		.uleb128 0x5
+ 1327 08be 03       		.byte	0x3
+ 1328 08bf 00000000 		.4byte	timestampWhenConnected
+ 1329 08c3 14       		.uleb128 0x14
+ 1330 08c4 541D0000 		.4byte	.LASF283
+ 1331 08c8 01       		.byte	0x1
+ 1332 08c9 46       		.byte	0x46
+ 1333 08ca C3070000 		.4byte	0x7c3
+ 1334 08ce 05       		.uleb128 0x5
+ 1335 08cf 03       		.byte	0x3
+ 1336 08d0 00000000 		.4byte	connParamRequestState
+ 1337 08d4 00       		.byte	0
+ 1338              		.section	.debug_abbrev,"",%progbits
+ 1339              	.Ldebug_abbrev0:
+ 1340 0000 01       		.uleb128 0x1
+ 1341 0001 11       		.uleb128 0x11
+ 1342 0002 01       		.byte	0x1
+ 1343 0003 25       		.uleb128 0x25
+ 1344 0004 0E       		.uleb128 0xe
+ 1345 0005 13       		.uleb128 0x13
+ 1346 0006 0B       		.uleb128 0xb
+ 1347 0007 03       		.uleb128 0x3
+ 1348 0008 0E       		.uleb128 0xe
+ 1349 0009 1B       		.uleb128 0x1b
+ 1350 000a 0E       		.uleb128 0xe
+ 1351 000b 55       		.uleb128 0x55
+ 1352 000c 17       		.uleb128 0x17
+ 1353 000d 11       		.uleb128 0x11
+ 1354 000e 01       		.uleb128 0x1
+ 1355 000f 10       		.uleb128 0x10
+ 1356 0010 17       		.uleb128 0x17
+ 1357 0011 00       		.byte	0
+ 1358 0012 00       		.byte	0
+ 1359 0013 02       		.uleb128 0x2
+ 1360 0014 24       		.uleb128 0x24
+ 1361 0015 00       		.byte	0
+ 1362 0016 0B       		.uleb128 0xb
+ 1363 0017 0B       		.uleb128 0xb
+ 1364 0018 3E       		.uleb128 0x3e
+ 1365 0019 0B       		.uleb128 0xb
+ 1366 001a 03       		.uleb128 0x3
+ 1367 001b 0E       		.uleb128 0xe
+ 1368 001c 00       		.byte	0
+ 1369 001d 00       		.byte	0
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 30
+
+
+ 1370 001e 03       		.uleb128 0x3
+ 1371 001f 24       		.uleb128 0x24
+ 1372 0020 00       		.byte	0
+ 1373 0021 0B       		.uleb128 0xb
+ 1374 0022 0B       		.uleb128 0xb
+ 1375 0023 3E       		.uleb128 0x3e
+ 1376 0024 0B       		.uleb128 0xb
+ 1377 0025 03       		.uleb128 0x3
+ 1378 0026 08       		.uleb128 0x8
+ 1379 0027 00       		.byte	0
+ 1380 0028 00       		.byte	0
+ 1381 0029 04       		.uleb128 0x4
+ 1382 002a 16       		.uleb128 0x16
+ 1383 002b 00       		.byte	0
+ 1384 002c 03       		.uleb128 0x3
+ 1385 002d 0E       		.uleb128 0xe
+ 1386 002e 3A       		.uleb128 0x3a
+ 1387 002f 0B       		.uleb128 0xb
+ 1388 0030 3B       		.uleb128 0x3b
+ 1389 0031 0B       		.uleb128 0xb
+ 1390 0032 49       		.uleb128 0x49
+ 1391 0033 13       		.uleb128 0x13
+ 1392 0034 00       		.byte	0
+ 1393 0035 00       		.byte	0
+ 1394 0036 05       		.uleb128 0x5
+ 1395 0037 0F       		.uleb128 0xf
+ 1396 0038 00       		.byte	0
+ 1397 0039 0B       		.uleb128 0xb
+ 1398 003a 0B       		.uleb128 0xb
+ 1399 003b 00       		.byte	0
+ 1400 003c 00       		.byte	0
+ 1401 003d 06       		.uleb128 0x6
+ 1402 003e 04       		.uleb128 0x4
+ 1403 003f 01       		.byte	0x1
+ 1404 0040 0B       		.uleb128 0xb
+ 1405 0041 0B       		.uleb128 0xb
+ 1406 0042 3A       		.uleb128 0x3a
+ 1407 0043 0B       		.uleb128 0xb
+ 1408 0044 3B       		.uleb128 0x3b
+ 1409 0045 0B       		.uleb128 0xb
+ 1410 0046 01       		.uleb128 0x1
+ 1411 0047 13       		.uleb128 0x13
+ 1412 0048 00       		.byte	0
+ 1413 0049 00       		.byte	0
+ 1414 004a 07       		.uleb128 0x7
+ 1415 004b 28       		.uleb128 0x28
+ 1416 004c 00       		.byte	0
+ 1417 004d 03       		.uleb128 0x3
+ 1418 004e 0E       		.uleb128 0xe
+ 1419 004f 1C       		.uleb128 0x1c
+ 1420 0050 0D       		.uleb128 0xd
+ 1421 0051 00       		.byte	0
+ 1422 0052 00       		.byte	0
+ 1423 0053 08       		.uleb128 0x8
+ 1424 0054 13       		.uleb128 0x13
+ 1425 0055 01       		.byte	0x1
+ 1426 0056 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 31
+
+
+ 1427 0057 0B       		.uleb128 0xb
+ 1428 0058 3A       		.uleb128 0x3a
+ 1429 0059 0B       		.uleb128 0xb
+ 1430 005a 3B       		.uleb128 0x3b
+ 1431 005b 05       		.uleb128 0x5
+ 1432 005c 01       		.uleb128 0x1
+ 1433 005d 13       		.uleb128 0x13
+ 1434 005e 00       		.byte	0
+ 1435 005f 00       		.byte	0
+ 1436 0060 09       		.uleb128 0x9
+ 1437 0061 0D       		.uleb128 0xd
+ 1438 0062 00       		.byte	0
+ 1439 0063 03       		.uleb128 0x3
+ 1440 0064 0E       		.uleb128 0xe
+ 1441 0065 3A       		.uleb128 0x3a
+ 1442 0066 0B       		.uleb128 0xb
+ 1443 0067 3B       		.uleb128 0x3b
+ 1444 0068 05       		.uleb128 0x5
+ 1445 0069 49       		.uleb128 0x49
+ 1446 006a 13       		.uleb128 0x13
+ 1447 006b 38       		.uleb128 0x38
+ 1448 006c 0B       		.uleb128 0xb
+ 1449 006d 00       		.byte	0
+ 1450 006e 00       		.byte	0
+ 1451 006f 0A       		.uleb128 0xa
+ 1452 0070 16       		.uleb128 0x16
+ 1453 0071 00       		.byte	0
+ 1454 0072 03       		.uleb128 0x3
+ 1455 0073 0E       		.uleb128 0xe
+ 1456 0074 3A       		.uleb128 0x3a
+ 1457 0075 0B       		.uleb128 0xb
+ 1458 0076 3B       		.uleb128 0x3b
+ 1459 0077 05       		.uleb128 0x5
+ 1460 0078 49       		.uleb128 0x49
+ 1461 0079 13       		.uleb128 0x13
+ 1462 007a 00       		.byte	0
+ 1463 007b 00       		.byte	0
+ 1464 007c 0B       		.uleb128 0xb
+ 1465 007d 04       		.uleb128 0x4
+ 1466 007e 01       		.byte	0x1
+ 1467 007f 0B       		.uleb128 0xb
+ 1468 0080 0B       		.uleb128 0xb
+ 1469 0081 3A       		.uleb128 0x3a
+ 1470 0082 0B       		.uleb128 0xb
+ 1471 0083 3B       		.uleb128 0x3b
+ 1472 0084 05       		.uleb128 0x5
+ 1473 0085 01       		.uleb128 0x1
+ 1474 0086 13       		.uleb128 0x13
+ 1475 0087 00       		.byte	0
+ 1476 0088 00       		.byte	0
+ 1477 0089 0C       		.uleb128 0xc
+ 1478 008a 2E       		.uleb128 0x2e
+ 1479 008b 01       		.byte	0x1
+ 1480 008c 3F       		.uleb128 0x3f
+ 1481 008d 19       		.uleb128 0x19
+ 1482 008e 03       		.uleb128 0x3
+ 1483 008f 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 32
+
+
+ 1484 0090 3A       		.uleb128 0x3a
+ 1485 0091 0B       		.uleb128 0xb
+ 1486 0092 3B       		.uleb128 0x3b
+ 1487 0093 0B       		.uleb128 0xb
+ 1488 0094 27       		.uleb128 0x27
+ 1489 0095 19       		.uleb128 0x19
+ 1490 0096 11       		.uleb128 0x11
+ 1491 0097 01       		.uleb128 0x1
+ 1492 0098 12       		.uleb128 0x12
+ 1493 0099 06       		.uleb128 0x6
+ 1494 009a 40       		.uleb128 0x40
+ 1495 009b 18       		.uleb128 0x18
+ 1496 009c 9642     		.uleb128 0x2116
+ 1497 009e 19       		.uleb128 0x19
+ 1498 009f 01       		.uleb128 0x1
+ 1499 00a0 13       		.uleb128 0x13
+ 1500 00a1 00       		.byte	0
+ 1501 00a2 00       		.byte	0
+ 1502 00a3 0D       		.uleb128 0xd
+ 1503 00a4 34       		.uleb128 0x34
+ 1504 00a5 00       		.byte	0
+ 1505 00a6 03       		.uleb128 0x3
+ 1506 00a7 0E       		.uleb128 0xe
+ 1507 00a8 3A       		.uleb128 0x3a
+ 1508 00a9 0B       		.uleb128 0xb
+ 1509 00aa 3B       		.uleb128 0x3b
+ 1510 00ab 0B       		.uleb128 0xb
+ 1511 00ac 49       		.uleb128 0x49
+ 1512 00ad 13       		.uleb128 0x13
+ 1513 00ae 02       		.uleb128 0x2
+ 1514 00af 18       		.uleb128 0x18
+ 1515 00b0 00       		.byte	0
+ 1516 00b1 00       		.byte	0
+ 1517 00b2 0E       		.uleb128 0xe
+ 1518 00b3 01       		.uleb128 0x1
+ 1519 00b4 01       		.byte	0x1
+ 1520 00b5 49       		.uleb128 0x49
+ 1521 00b6 13       		.uleb128 0x13
+ 1522 00b7 01       		.uleb128 0x1
+ 1523 00b8 13       		.uleb128 0x13
+ 1524 00b9 00       		.byte	0
+ 1525 00ba 00       		.byte	0
+ 1526 00bb 0F       		.uleb128 0xf
+ 1527 00bc 21       		.uleb128 0x21
+ 1528 00bd 00       		.byte	0
+ 1529 00be 49       		.uleb128 0x49
+ 1530 00bf 13       		.uleb128 0x13
+ 1531 00c0 2F       		.uleb128 0x2f
+ 1532 00c1 0B       		.uleb128 0xb
+ 1533 00c2 00       		.byte	0
+ 1534 00c3 00       		.byte	0
+ 1535 00c4 10       		.uleb128 0x10
+ 1536 00c5 2E       		.uleb128 0x2e
+ 1537 00c6 01       		.byte	0x1
+ 1538 00c7 3F       		.uleb128 0x3f
+ 1539 00c8 19       		.uleb128 0x19
+ 1540 00c9 03       		.uleb128 0x3
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 33
+
+
+ 1541 00ca 0E       		.uleb128 0xe
+ 1542 00cb 3A       		.uleb128 0x3a
+ 1543 00cc 0B       		.uleb128 0xb
+ 1544 00cd 3B       		.uleb128 0x3b
+ 1545 00ce 0B       		.uleb128 0xb
+ 1546 00cf 27       		.uleb128 0x27
+ 1547 00d0 19       		.uleb128 0x19
+ 1548 00d1 11       		.uleb128 0x11
+ 1549 00d2 01       		.uleb128 0x1
+ 1550 00d3 12       		.uleb128 0x12
+ 1551 00d4 06       		.uleb128 0x6
+ 1552 00d5 40       		.uleb128 0x40
+ 1553 00d6 18       		.uleb128 0x18
+ 1554 00d7 9742     		.uleb128 0x2117
+ 1555 00d9 19       		.uleb128 0x19
+ 1556 00da 01       		.uleb128 0x1
+ 1557 00db 13       		.uleb128 0x13
+ 1558 00dc 00       		.byte	0
+ 1559 00dd 00       		.byte	0
+ 1560 00de 11       		.uleb128 0x11
+ 1561 00df 05       		.uleb128 0x5
+ 1562 00e0 00       		.byte	0
+ 1563 00e1 03       		.uleb128 0x3
+ 1564 00e2 0E       		.uleb128 0xe
+ 1565 00e3 3A       		.uleb128 0x3a
+ 1566 00e4 0B       		.uleb128 0xb
+ 1567 00e5 3B       		.uleb128 0x3b
+ 1568 00e6 0B       		.uleb128 0xb
+ 1569 00e7 49       		.uleb128 0x49
+ 1570 00e8 13       		.uleb128 0x13
+ 1571 00e9 02       		.uleb128 0x2
+ 1572 00ea 18       		.uleb128 0x18
+ 1573 00eb 00       		.byte	0
+ 1574 00ec 00       		.byte	0
+ 1575 00ed 12       		.uleb128 0x12
+ 1576 00ee 34       		.uleb128 0x34
+ 1577 00ef 00       		.byte	0
+ 1578 00f0 03       		.uleb128 0x3
+ 1579 00f1 0E       		.uleb128 0xe
+ 1580 00f2 3A       		.uleb128 0x3a
+ 1581 00f3 0B       		.uleb128 0xb
+ 1582 00f4 3B       		.uleb128 0x3b
+ 1583 00f5 05       		.uleb128 0x5
+ 1584 00f6 49       		.uleb128 0x49
+ 1585 00f7 13       		.uleb128 0x13
+ 1586 00f8 3F       		.uleb128 0x3f
+ 1587 00f9 19       		.uleb128 0x19
+ 1588 00fa 3C       		.uleb128 0x3c
+ 1589 00fb 19       		.uleb128 0x19
+ 1590 00fc 00       		.byte	0
+ 1591 00fd 00       		.byte	0
+ 1592 00fe 13       		.uleb128 0x13
+ 1593 00ff 34       		.uleb128 0x34
+ 1594 0100 00       		.byte	0
+ 1595 0101 03       		.uleb128 0x3
+ 1596 0102 0E       		.uleb128 0xe
+ 1597 0103 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 34
+
+
+ 1598 0104 0B       		.uleb128 0xb
+ 1599 0105 3B       		.uleb128 0x3b
+ 1600 0106 0B       		.uleb128 0xb
+ 1601 0107 49       		.uleb128 0x49
+ 1602 0108 13       		.uleb128 0x13
+ 1603 0109 3F       		.uleb128 0x3f
+ 1604 010a 19       		.uleb128 0x19
+ 1605 010b 3C       		.uleb128 0x3c
+ 1606 010c 19       		.uleb128 0x19
+ 1607 010d 00       		.byte	0
+ 1608 010e 00       		.byte	0
+ 1609 010f 14       		.uleb128 0x14
+ 1610 0110 34       		.uleb128 0x34
+ 1611 0111 00       		.byte	0
+ 1612 0112 03       		.uleb128 0x3
+ 1613 0113 0E       		.uleb128 0xe
+ 1614 0114 3A       		.uleb128 0x3a
+ 1615 0115 0B       		.uleb128 0xb
+ 1616 0116 3B       		.uleb128 0x3b
+ 1617 0117 0B       		.uleb128 0xb
+ 1618 0118 49       		.uleb128 0x49
+ 1619 0119 13       		.uleb128 0x13
+ 1620 011a 3F       		.uleb128 0x3f
+ 1621 011b 19       		.uleb128 0x19
+ 1622 011c 02       		.uleb128 0x2
+ 1623 011d 18       		.uleb128 0x18
+ 1624 011e 00       		.byte	0
+ 1625 011f 00       		.byte	0
+ 1626 0120 00       		.byte	0
+ 1627              		.section	.debug_aranges,"",%progbits
+ 1628 0000 2C000000 		.4byte	0x2c
+ 1629 0004 0200     		.2byte	0x2
+ 1630 0006 00000000 		.4byte	.Ldebug_info0
+ 1631 000a 04       		.byte	0x4
+ 1632 000b 00       		.byte	0
+ 1633 000c 0000     		.2byte	0
+ 1634 000e 0000     		.2byte	0
+ 1635 0010 00000000 		.4byte	.LFB35
+ 1636 0014 58000000 		.4byte	.LFE35-.LFB35
+ 1637 0018 00000000 		.4byte	.LFB36
+ 1638 001c 38000000 		.4byte	.LFE36-.LFB36
+ 1639 0020 00000000 		.4byte	.LFB37
+ 1640 0024 AC000000 		.4byte	.LFE37-.LFB37
+ 1641 0028 00000000 		.4byte	0
+ 1642 002c 00000000 		.4byte	0
+ 1643              		.section	.debug_ranges,"",%progbits
+ 1644              	.Ldebug_ranges0:
+ 1645 0000 00000000 		.4byte	.LFB35
+ 1646 0004 58000000 		.4byte	.LFE35
+ 1647 0008 00000000 		.4byte	.LFB36
+ 1648 000c 38000000 		.4byte	.LFE36
+ 1649 0010 00000000 		.4byte	.LFB37
+ 1650 0014 AC000000 		.4byte	.LFE37
+ 1651 0018 00000000 		.4byte	0
+ 1652 001c 00000000 		.4byte	0
+ 1653              		.section	.debug_line,"",%progbits
+ 1654              	.Ldebug_line0:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 35
+
+
+ 1655 0000 41010000 		.section	.debug_str,"MS",%progbits,1
+ 1655      0200DA00 
+ 1655      00000201 
+ 1655      FB0E0D00 
+ 1655      01010101 
+ 1656              	.LASF196:
+ 1657 0000 4359424C 		.ascii	"CYBLE_EVT_HTSS_NOTIFICATION_DISABLED\000"
+ 1657      455F4556 
+ 1657      545F4854 
+ 1657      53535F4E 
+ 1657      4F544946 
+ 1658              	.LASF86:
+ 1659 0025 4359424C 		.ascii	"CYBLE_DIS_CHAR_COUNT\000"
+ 1659      455F4449 
+ 1659      535F4348 
+ 1659      41525F43 
+ 1659      4F554E54 
+ 1660              	.LASF15:
+ 1661 003a 73697A65 		.ascii	"sizetype\000"
+ 1661      74797065 
+ 1661      00
+ 1662              	.LASF141:
+ 1663 0043 4359424C 		.ascii	"CYBLE_EVT_CPSC_READ_DESCR_RESPONSE\000"
+ 1663      455F4556 
+ 1663      545F4350 
+ 1663      53435F52 
+ 1663      4541445F 
+ 1664              	.LASF244:
+ 1665 0066 4359424C 		.ascii	"CYBLE_EVT_RTUSS_WRITE_CHAR_CMD\000"
+ 1665      455F4556 
+ 1665      545F5254 
+ 1665      5553535F 
+ 1665      57524954 
+ 1666              	.LASF152:
+ 1667 0085 4359424C 		.ascii	"CYBLE_EVT_CSCSC_READ_CHAR_RESPONSE\000"
+ 1667      455F4556 
+ 1667      545F4353 
+ 1667      4353435F 
+ 1667      52454144 
+ 1668              	.LASF167:
+ 1669 00a8 4359424C 		.ascii	"CYBLE_EVT_GLSS_NOTIFICATION_DISABLED\000"
+ 1669      455F4556 
+ 1669      545F474C 
+ 1669      53535F4E 
+ 1669      4F544946 
+ 1670              	.LASF273:
+ 1671 00cd 6576656E 		.ascii	"eventParam\000"
+ 1671      74506172 
+ 1671      616D00
+ 1672              	.LASF126:
+ 1673 00d8 4359424C 		.ascii	"CYBLE_EVT_BLSC_READ_CHAR_RESPONSE\000"
+ 1673      455F4556 
+ 1673      545F424C 
+ 1673      53435F52 
+ 1673      4541445F 
+ 1674              	.LASF29:
+ 1675 00fa 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 36
+
+
+ 1675      455F4556 
+ 1675      545F4741 
+ 1675      505F4445 
+ 1675      56494345 
+ 1676              	.LASF36:
+ 1677 0119 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
+ 1677      455F4556 
+ 1677      545F4741 
+ 1677      54545F43 
+ 1677      4F4E4E45 
+ 1678              	.LASF172:
+ 1679 0134 4359424C 		.ascii	"CYBLE_EVT_GLSC_WRITE_CHAR_RESPONSE\000"
+ 1679      455F4556 
+ 1679      545F474C 
+ 1679      53435F57 
+ 1679      52495445 
+ 1680              	.LASF11:
+ 1681 0157 75696E74 		.ascii	"uint32\000"
+ 1681      333200
+ 1682              	.LASF97:
+ 1683 015e 4359424C 		.ascii	"CYBLE_EVT_GATTC_DESCR_DISCOVERY_FAILED\000"
+ 1683      455F4556 
+ 1683      545F4741 
+ 1683      5454435F 
+ 1683      44455343 
+ 1684              	.LASF243:
+ 1685 0185 4359424C 		.ascii	"CYBLE_EVT_RSCSC_WRITE_DESCR_RESPONSE\000"
+ 1685      455F4556 
+ 1685      545F5253 
+ 1685      4353435F 
+ 1685      57524954 
+ 1686              	.LASF212:
+ 1687 01aa 4359424C 		.ascii	"CYBLE_EVT_LNSS_INDICATION_DISABLED\000"
+ 1687      455F4556 
+ 1687      545F4C4E 
+ 1687      53535F49 
+ 1687      4E444943 
+ 1688              	.LASF159:
+ 1689 01cd 4359424C 		.ascii	"CYBLE_EVT_CTSC_READ_CHAR_RESPONSE\000"
+ 1689      455F4556 
+ 1689      545F4354 
+ 1689      53435F52 
+ 1689      4541445F 
+ 1690              	.LASF101:
+ 1691 01ef 4359424C 		.ascii	"CYBLE_EVT_GATTC_SRVC_DISCOVERY_COMPLETE\000"
+ 1691      455F4556 
+ 1691      545F4741 
+ 1691      5454435F 
+ 1691      53525643 
+ 1692              	.LASF237:
+ 1693 0217 4359424C 		.ascii	"CYBLE_EVT_RSCSS_CHAR_WRITE\000"
+ 1693      455F4556 
+ 1693      545F5253 
+ 1693      4353535F 
+ 1693      43484152 
+ 1694              	.LASF186:
+ 1695 0232 4359424C 		.ascii	"CYBLE_EVT_HIDSC_WRITE_DESCR_RESPONSE\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 37
+
+
+ 1695      455F4556 
+ 1695      545F4849 
+ 1695      4453435F 
+ 1695      57524954 
+ 1696              	.LASF111:
+ 1697 0257 4359424C 		.ascii	"CYBLE_EVT_ANSC_READ_DESCR_RESPONSE\000"
+ 1697      455F4556 
+ 1697      545F414E 
+ 1697      53435F52 
+ 1697      4541445F 
+ 1698              	.LASF265:
+ 1699 027a 434F4E4E 		.ascii	"CONN_PARAM_REQUEST_NOT_SENT\000"
+ 1699      5F504152 
+ 1699      414D5F52 
+ 1699      45515545 
+ 1699      53545F4E 
+ 1700              	.LASF96:
+ 1701 0296 4359424C 		.ascii	"CYBLE_EVT_GATTC_CHAR_DISCOVERY_FAILED\000"
+ 1701      455F4556 
+ 1701      545F4741 
+ 1701      5454435F 
+ 1701      43484152 
+ 1702              	.LASF56:
+ 1703 02bc 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ 1703      455F4556 
+ 1703      545F4741 
+ 1703      5454535F 
+ 1703      44415441 
+ 1704              	.LASF65:
+ 1705 02e0 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
+ 1705      455F4556 
+ 1705      545F4C32 
+ 1705      4341505F 
+ 1705      43424643 
+ 1706              	.LASF139:
+ 1707 0303 4359424C 		.ascii	"CYBLE_EVT_CPSC_READ_CHAR_RESPONSE\000"
+ 1707      455F4556 
+ 1707      545F4350 
+ 1707      53435F52 
+ 1707      4541445F 
+ 1708              	.LASF146:
+ 1709 0325 4359424C 		.ascii	"CYBLE_EVT_CSCSS_INDICATION_ENABLED\000"
+ 1709      455F4556 
+ 1709      545F4353 
+ 1709      4353535F 
+ 1709      494E4449 
+ 1710              	.LASF217:
+ 1711 0348 4359424C 		.ascii	"CYBLE_EVT_LNSC_INDICATION\000"
+ 1711      455F4556 
+ 1711      545F4C4E 
+ 1711      53435F49 
+ 1711      4E444943 
+ 1712              	.LASF228:
+ 1713 0362 4359424C 		.ascii	"CYBLE_EVT_PASSC_READ_CHAR_RESPONSE\000"
+ 1713      455F4556 
+ 1713      545F5041 
+ 1713      5353435F 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 38
+
+
+ 1713      52454144 
+ 1714              	.LASF119:
+ 1715 0385 4359424C 		.ascii	"CYBLE_EVT_BLSS_INDICATION_ENABLED\000"
+ 1715      455F4556 
+ 1715      545F424C 
+ 1715      53535F49 
+ 1715      4E444943 
+ 1716              	.LASF125:
+ 1717 03a7 4359424C 		.ascii	"CYBLE_EVT_BLSC_NOTIFICATION\000"
+ 1717      455F4556 
+ 1717      545F424C 
+ 1717      53435F4E 
+ 1717      4F544946 
+ 1718              	.LASF151:
+ 1719 03c3 4359424C 		.ascii	"CYBLE_EVT_CSCSC_INDICATION\000"
+ 1719      455F4556 
+ 1719      545F4353 
+ 1719      4353435F 
+ 1719      494E4449 
+ 1720              	.LASF81:
+ 1721 03de 4359424C 		.ascii	"CYBLE_DIS_FIRMWARE_REV\000"
+ 1721      455F4449 
+ 1721      535F4649 
+ 1721      524D5741 
+ 1721      52455F52 
+ 1722              	.LASF53:
+ 1723 03f5 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
+ 1723      455F4556 
+ 1723      545F4741 
+ 1723      5454435F 
+ 1723      48414E44 
+ 1724              	.LASF23:
+ 1725 0416 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
+ 1725      455F4556 
+ 1725      545F4741 
+ 1725      505F4155 
+ 1725      54485F52 
+ 1726              	.LASF103:
+ 1727 042d 4359424C 		.ascii	"CYBLE_EVT_GATTC_CHAR_DISCOVERY_COMPLETE\000"
+ 1727      455F4556 
+ 1727      545F4741 
+ 1727      5454435F 
+ 1727      43484152 
+ 1728              	.LASF72:
+ 1729 0455 4359424C 		.ascii	"CYBLE_CONN_HANDLE_T\000"
+ 1729      455F434F 
+ 1729      4E4E5F48 
+ 1729      414E444C 
+ 1729      455F5400 
+ 1730              	.LASF192:
+ 1731 0469 4359424C 		.ascii	"CYBLE_EVT_HRSC_WRITE_CHAR_RESPONSE\000"
+ 1731      455F4556 
+ 1731      545F4852 
+ 1731      53435F57 
+ 1731      52495445 
+ 1732              	.LASF150:
+ 1733 048c 4359424C 		.ascii	"CYBLE_EVT_CSCSC_NOTIFICATION\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 39
+
+
+ 1733      455F4556 
+ 1733      545F4353 
+ 1733      4353435F 
+ 1733      4E4F5449 
+ 1734              	.LASF262:
+ 1735 04a9 4359424C 		.ascii	"CYBLE_STATE_ADVERTISING\000"
+ 1735      455F5354 
+ 1735      4154455F 
+ 1735      41445645 
+ 1735      52544953 
+ 1736              	.LASF70:
+ 1737 04c1 62644861 		.ascii	"bdHandle\000"
+ 1737      6E646C65 
+ 1737      00
+ 1738              	.LASF127:
+ 1739 04ca 4359424C 		.ascii	"CYBLE_EVT_BLSC_READ_DESCR_RESPONSE\000"
+ 1739      455F4556 
+ 1739      545F424C 
+ 1739      53435F52 
+ 1739      4541445F 
+ 1740              	.LASF132:
+ 1741 04ed 4359424C 		.ascii	"CYBLE_EVT_CPSS_INDICATION_DISABLED\000"
+ 1741      455F4556 
+ 1741      545F4350 
+ 1741      53535F49 
+ 1741      4E444943 
+ 1742              	.LASF131:
+ 1743 0510 4359424C 		.ascii	"CYBLE_EVT_CPSS_INDICATION_ENABLED\000"
+ 1743      455F4556 
+ 1743      545F4350 
+ 1743      53535F49 
+ 1743      4E444943 
+ 1744              	.LASF214:
+ 1745 0532 4359424C 		.ascii	"CYBLE_EVT_LNSS_NOTIFICATION_ENABLED\000"
+ 1745      455F4556 
+ 1745      545F4C4E 
+ 1745      53535F4E 
+ 1745      4F544946 
+ 1746              	.LASF49:
+ 1747 0556 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 1747      455F4556 
+ 1747      545F4741 
+ 1747      5454535F 
+ 1747      57524954 
+ 1748              	.LASF142:
+ 1749 0574 4359424C 		.ascii	"CYBLE_EVT_CPSC_WRITE_DESCR_RESPONSE\000"
+ 1749      455F4556 
+ 1749      545F4350 
+ 1749      53435F57 
+ 1749      52495445 
+ 1750              	.LASF4:
+ 1751 0598 6C6F6E67 		.ascii	"long int\000"
+ 1751      20696E74 
+ 1751      00
+ 1752              	.LASF147:
+ 1753 05a1 4359424C 		.ascii	"CYBLE_EVT_CSCSS_INDICATION_DISABLED\000"
+ 1753      455F4556 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 40
+
+
+ 1753      545F4353 
+ 1753      4353535F 
+ 1753      494E4449 
+ 1754              	.LASF229:
+ 1755 05c5 4359424C 		.ascii	"CYBLE_EVT_PASSC_WRITE_CHAR_RESPONSE\000"
+ 1755      455F4556 
+ 1755      545F5041 
+ 1755      5353435F 
+ 1755      57524954 
+ 1756              	.LASF89:
+ 1757 05e9 4359424C 		.ascii	"CYBLE_LONG_TERM_KEY_REQUEST_REPLY\000"
+ 1757      455F4C4F 
+ 1757      4E475F54 
+ 1757      45524D5F 
+ 1757      4B45595F 
+ 1758              	.LASF17:
+ 1759 060b 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
+ 1759      455F4556 
+ 1759      545F5354 
+ 1759      41434B5F 
+ 1759      4F4E00
+ 1760              	.LASF80:
+ 1761 061e 4359424C 		.ascii	"CYBLE_DIS_HARDWARE_REV\000"
+ 1761      455F4449 
+ 1761      535F4841 
+ 1761      52445741 
+ 1761      52455F52 
+ 1762              	.LASF240:
+ 1763 0635 4359424C 		.ascii	"CYBLE_EVT_RSCSC_READ_CHAR_RESPONSE\000"
+ 1763      455F4556 
+ 1763      545F5253 
+ 1763      4353435F 
+ 1763      52454144 
+ 1764              	.LASF195:
+ 1765 0658 4359424C 		.ascii	"CYBLE_EVT_HTSS_NOTIFICATION_ENABLED\000"
+ 1765      455F4556 
+ 1765      545F4854 
+ 1765      53535F4E 
+ 1765      4F544946 
+ 1766              	.LASF59:
+ 1767 067c 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
+ 1767      455F4556 
+ 1767      545F4C32 
+ 1767      4341505F 
+ 1767      434F4D4D 
+ 1768              	.LASF94:
+ 1769 0698 4359424C 		.ascii	"CYBLE_EVT_GATTC_SRVC_DISCOVERY_FAILED\000"
+ 1769      455F4556 
+ 1769      545F4741 
+ 1769      5454435F 
+ 1769      53525643 
+ 1770              	.LASF179:
+ 1771 06be 4359424C 		.ascii	"CYBLE_EVT_HIDSS_SUSPEND\000"
+ 1771      455F4556 
+ 1771      545F4849 
+ 1771      4453535F 
+ 1771      53555350 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 41
+
+
+ 1772              	.LASF0:
+ 1773 06d6 7369676E 		.ascii	"signed char\000"
+ 1773      65642063 
+ 1773      68617200 
+ 1774              	.LASF117:
+ 1775 06e2 4359424C 		.ascii	"CYBLE_EVT_BASC_READ_DESCR_RESPONSE\000"
+ 1775      455F4556 
+ 1775      545F4241 
+ 1775      53435F52 
+ 1775      4541445F 
+ 1776              	.LASF285:
+ 1777 0705 2E5C426C 		.ascii	".\\BleProcessing.c\000"
+ 1777      6550726F 
+ 1777      63657373 
+ 1777      696E672E 
+ 1777      6300
+ 1778              	.LASF19:
+ 1779 0717 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
+ 1779      455F4556 
+ 1779      545F4841 
+ 1779      52445741 
+ 1779      52455F45 
+ 1780              	.LASF40:
+ 1781 0730 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 1781      455F4556 
+ 1781      545F4741 
+ 1781      5454435F 
+ 1781      52454144 
+ 1782              	.LASF259:
+ 1783 0757 4359424C 		.ascii	"CYBLE_STATE_STOPPED\000"
+ 1783      455F5354 
+ 1783      4154455F 
+ 1783      53544F50 
+ 1783      50454400 
+ 1784              	.LASF234:
+ 1785 076b 4359424C 		.ascii	"CYBLE_EVT_RSCSS_INDICATION_ENABLED\000"
+ 1785      455F4556 
+ 1785      545F5253 
+ 1785      4353535F 
+ 1785      494E4449 
+ 1786              	.LASF1:
+ 1787 078e 756E7369 		.ascii	"unsigned char\000"
+ 1787      676E6564 
+ 1787      20636861 
+ 1787      7200
+ 1788              	.LASF39:
+ 1789 079c 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 1789      455F4556 
+ 1789      545F4741 
+ 1789      5454435F 
+ 1789      5843484E 
+ 1790              	.LASF286:
+ 1791 07ba 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
+ 1791      73657273 
+ 1791      5C456E65 
+ 1791      73204475 
+ 1791      6C6C6F76 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 42
+
+
+ 1792 07e8 6220332E 		.ascii	"b 3.cydsn\000"
+ 1792      63796473 
+ 1792      6E00
+ 1793              	.LASF282:
+ 1794 07f2 74696D65 		.ascii	"timestampWhenConnected\000"
+ 1794      7374616D 
+ 1794      70576865 
+ 1794      6E436F6E 
+ 1794      6E656374 
+ 1795              	.LASF130:
+ 1796 0809 4359424C 		.ascii	"CYBLE_EVT_CPSS_NOTIFICATION_DISABLED\000"
+ 1796      455F4556 
+ 1796      545F4350 
+ 1796      53535F4E 
+ 1796      4F544946 
+ 1797              	.LASF239:
+ 1798 082e 4359424C 		.ascii	"CYBLE_EVT_RSCSC_INDICATION\000"
+ 1798      455F4556 
+ 1798      545F5253 
+ 1798      4353435F 
+ 1798      494E4449 
+ 1799              	.LASF66:
+ 1800 0849 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
+ 1800      455F4556 
+ 1800      545F4C32 
+ 1800      4341505F 
+ 1800      43424643 
+ 1801              	.LASF93:
+ 1802 086c 4359424C 		.ascii	"CYBLE_EVT_GATTC_INDICATION\000"
+ 1802      455F4556 
+ 1802      545F4741 
+ 1802      5454435F 
+ 1802      494E4449 
+ 1803              	.LASF281:
+ 1804 0887 5F426F6F 		.ascii	"_Bool\000"
+ 1804      6C00
+ 1805              	.LASF246:
+ 1806 088d 4359424C 		.ascii	"CYBLE_EVT_SCPSS_NOTIFICATION_ENABLED\000"
+ 1806      455F4556 
+ 1806      545F5343 
+ 1806      5053535F 
+ 1806      4E4F5449 
+ 1807              	.LASF63:
+ 1808 08b2 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
+ 1808      455F4556 
+ 1808      545F4C32 
+ 1808      4341505F 
+ 1808      43424643 
+ 1809              	.LASF43:
+ 1810 08d3 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
+ 1810      455F4556 
+ 1810      545F4741 
+ 1810      5454435F 
+ 1810      46494E44 
+ 1811              	.LASF14:
+ 1812 08fa 63686172 		.ascii	"char\000"
+ 1812      00
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 43
+
+
+ 1813              	.LASF254:
+ 1814 08ff 4359424C 		.ascii	"CYBLE_EVT_TPSC_NOTIFICATION\000"
+ 1814      455F4556 
+ 1814      545F5450 
+ 1814      53435F4E 
+ 1814      4F544946 
+ 1815              	.LASF46:
+ 1816 091b 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_MULTI_RSP\000"
+ 1816      455F4556 
+ 1816      545F4741 
+ 1816      5454435F 
+ 1816      52454144 
+ 1817              	.LASF16:
+ 1818 093a 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
+ 1818      455F4556 
+ 1818      545F484F 
+ 1818      53545F49 
+ 1818      4E56414C 
+ 1819              	.LASF173:
+ 1820 0951 4359424C 		.ascii	"CYBLE_EVT_GLSC_READ_DESCR_RESPONSE\000"
+ 1820      455F4556 
+ 1820      545F474C 
+ 1820      53435F52 
+ 1820      4541445F 
+ 1821              	.LASF45:
+ 1822 0974 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 1822      455F4556 
+ 1822      545F4741 
+ 1822      5454435F 
+ 1822      52454144 
+ 1823              	.LASF198:
+ 1824 0992 4359424C 		.ascii	"CYBLE_EVT_HTSS_INDICATION_DISABLED\000"
+ 1824      455F4556 
+ 1824      545F4854 
+ 1824      53535F49 
+ 1824      4E444943 
+ 1825              	.LASF245:
+ 1826 09b5 4359424C 		.ascii	"CYBLE_EVT_RTUSC_READ_CHAR_RESPONSE\000"
+ 1826      455F4556 
+ 1826      545F5254 
+ 1826      5553435F 
+ 1826      52454144 
+ 1827              	.LASF280:
+ 1828 09d8 656E7465 		.ascii	"enterHibernateFlag\000"
+ 1828      72486962 
+ 1828      65726E61 
+ 1828      7465466C 
+ 1828      616700
+ 1829              	.LASF52:
+ 1830 09eb 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
+ 1830      455F4556 
+ 1830      545F4741 
+ 1830      5454435F 
+ 1830      45584543 
+ 1831              	.LASF82:
+ 1832 0a0a 4359424C 		.ascii	"CYBLE_DIS_SOFTWARE_REV\000"
+ 1832      455F4449 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 44
+
+
+ 1832      535F534F 
+ 1832      46545741 
+ 1832      52455F52 
+ 1833              	.LASF187:
+ 1834 0a21 4359424C 		.ascii	"CYBLE_EVT_HRSS_ENERGY_EXPENDED_RESET\000"
+ 1834      455F4556 
+ 1834      545F4852 
+ 1834      53535F45 
+ 1834      4E455247 
+ 1835              	.LASF78:
+ 1836 0a46 4359424C 		.ascii	"CYBLE_DIS_MODEL_NUMBER\000"
+ 1836      455F4449 
+ 1836      535F4D4F 
+ 1836      44454C5F 
+ 1836      4E554D42 
+ 1837              	.LASF122:
+ 1838 0a5d 4359424C 		.ascii	"CYBLE_EVT_BLSS_NOTIFICATION_ENABLED\000"
+ 1838      455F4556 
+ 1838      545F424C 
+ 1838      53535F4E 
+ 1838      4F544946 
+ 1839              	.LASF83:
+ 1840 0a81 4359424C 		.ascii	"CYBLE_DIS_SYSTEM_ID\000"
+ 1840      455F4449 
+ 1840      535F5359 
+ 1840      5354454D 
+ 1840      5F494400 
+ 1841              	.LASF241:
+ 1842 0a95 4359424C 		.ascii	"CYBLE_EVT_RSCSC_WRITE_CHAR_RESPONSE\000"
+ 1842      455F4556 
+ 1842      545F5253 
+ 1842      4353435F 
+ 1842      57524954 
+ 1843              	.LASF257:
+ 1844 0ab9 4359424C 		.ascii	"CYBLE_EVT_TPSC_WRITE_DESCR_RESPONSE\000"
+ 1844      455F4556 
+ 1844      545F5450 
+ 1844      53435F57 
+ 1844      52495445 
+ 1845              	.LASF268:
+ 1846 0add 434F4E4E 		.ascii	"CONN_PARAM_REQUEST_REJECTED\000"
+ 1846      5F504152 
+ 1846      414D5F52 
+ 1846      45515545 
+ 1846      53545F52 
+ 1847              	.LASF145:
+ 1848 0af9 4359424C 		.ascii	"CYBLE_EVT_CSCSS_NOTIFICATION_DISABLED\000"
+ 1848      455F4556 
+ 1848      545F4353 
+ 1848      4353535F 
+ 1848      4E4F5449 
+ 1849              	.LASF156:
+ 1850 0b1f 4359424C 		.ascii	"CYBLE_EVT_CTSS_NOTIFICATION_ENABLED\000"
+ 1850      455F4556 
+ 1850      545F4354 
+ 1850      53535F4E 
+ 1850      4F544946 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 45
+
+
+ 1851              	.LASF235:
+ 1852 0b43 4359424C 		.ascii	"CYBLE_EVT_RSCSS_INDICATION_DISABLED\000"
+ 1852      455F4556 
+ 1852      545F5253 
+ 1852      4353535F 
+ 1852      494E4449 
+ 1853              	.LASF208:
+ 1854 0b67 4359424C 		.ascii	"CYBLE_EVT_LLSS_WRITE_CHAR_REQ\000"
+ 1854      455F4556 
+ 1854      545F4C4C 
+ 1854      53535F57 
+ 1854      52495445 
+ 1855              	.LASF193:
+ 1856 0b85 4359424C 		.ascii	"CYBLE_EVT_HRSC_READ_DESCR_RESPONSE\000"
+ 1856      455F4556 
+ 1856      545F4852 
+ 1856      53435F52 
+ 1856      4541445F 
+ 1857              	.LASF144:
+ 1858 0ba8 4359424C 		.ascii	"CYBLE_EVT_CSCSS_NOTIFICATION_ENABLED\000"
+ 1858      455F4556 
+ 1858      545F4353 
+ 1858      4353535F 
+ 1858      4E4F5449 
+ 1859              	.LASF124:
+ 1860 0bcd 4359424C 		.ascii	"CYBLE_EVT_BLSC_INDICATION\000"
+ 1860      455F4556 
+ 1860      545F424C 
+ 1860      53435F49 
+ 1860      4E444943 
+ 1861              	.LASF181:
+ 1862 0be7 4359424C 		.ascii	"CYBLE_EVT_HIDSS_REPORT_CHAR_WRITE\000"
+ 1862      455F4556 
+ 1862      545F4849 
+ 1862      4453535F 
+ 1862      5245504F 
+ 1863              	.LASF220:
+ 1864 0c09 4359424C 		.ascii	"CYBLE_EVT_LNSC_WRITE_CHAR_RESPONSE\000"
+ 1864      455F4556 
+ 1864      545F4C4E 
+ 1864      53435F57 
+ 1864      52495445 
+ 1865              	.LASF58:
+ 1866 0c2c 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ 1866      455F4556 
+ 1866      545F4C32 
+ 1866      4341505F 
+ 1866      434F4E4E 
+ 1867              	.LASF110:
+ 1868 0c52 4359424C 		.ascii	"CYBLE_EVT_ANSC_WRITE_CHAR_RESPONSE\000"
+ 1868      455F4556 
+ 1868      545F414E 
+ 1868      53435F57 
+ 1868      52495445 
+ 1869              	.LASF267:
+ 1870 0c75 434F4E4E 		.ascii	"CONN_PARAM_REQUEST_ACCEPTED\000"
+ 1870      5F504152 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 46
+
+
+ 1870      414D5F52 
+ 1870      45515545 
+ 1870      53545F41 
+ 1871              	.LASF276:
+ 1872 0c91 6872734E 		.ascii	"hrsNotification\000"
+ 1872      6F746966 
+ 1872      69636174 
+ 1872      696F6E00 
+ 1873              	.LASF188:
+ 1874 0ca1 4359424C 		.ascii	"CYBLE_EVT_HRSS_NOTIFICATION_ENABLED\000"
+ 1874      455F4556 
+ 1874      545F4852 
+ 1874      53535F4E 
+ 1874      4F544946 
+ 1875              	.LASF26:
+ 1876 0cc5 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
+ 1876      455F4556 
+ 1876      545F4741 
+ 1876      505F4155 
+ 1876      54485F43 
+ 1877              	.LASF230:
+ 1878 0ce1 4359424C 		.ascii	"CYBLE_EVT_PASSC_READ_DESCR_RESPONSE\000"
+ 1878      455F4556 
+ 1878      545F5041 
+ 1878      5353435F 
+ 1878      52454144 
+ 1879              	.LASF27:
+ 1880 0d05 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
+ 1880      455F4556 
+ 1880      545F4741 
+ 1880      505F4155 
+ 1880      54485F46 
+ 1881              	.LASF180:
+ 1882 0d1f 4359424C 		.ascii	"CYBLE_EVT_HIDSS_EXIT_SUSPEND\000"
+ 1882      455F4556 
+ 1882      545F4849 
+ 1882      4453535F 
+ 1882      45584954 
+ 1883              	.LASF161:
+ 1884 0d3c 4359424C 		.ascii	"CYBLE_EVT_CTSC_WRITE_DESCR_RESPONSE\000"
+ 1884      455F4556 
+ 1884      545F4354 
+ 1884      53435F57 
+ 1884      52495445 
+ 1885              	.LASF233:
+ 1886 0d60 4359424C 		.ascii	"CYBLE_EVT_RSCSS_NOTIFICATION_DISABLED\000"
+ 1886      455F4556 
+ 1886      545F5253 
+ 1886      4353535F 
+ 1886      4E4F5449 
+ 1887              	.LASF184:
+ 1888 0d86 4359424C 		.ascii	"CYBLE_EVT_HIDSC_WRITE_CHAR_RESPONSE\000"
+ 1888      455F4556 
+ 1888      545F4849 
+ 1888      4453435F 
+ 1888      57524954 
+ 1889              	.LASF5:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 47
+
+
+ 1890 0daa 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1890      20756E73 
+ 1890      69676E65 
+ 1890      6420696E 
+ 1890      7400
+ 1891              	.LASF207:
+ 1892 0dbc 4359424C 		.ascii	"CYBLE_EVT_IASS_WRITE_CHAR_CMD\000"
+ 1892      455F4556 
+ 1892      545F4941 
+ 1892      53535F57 
+ 1892      52495445 
+ 1893              	.LASF224:
+ 1894 0dda 4359424C 		.ascii	"CYBLE_EVT_PASSS_NOTIFICATION_ENABLED\000"
+ 1894      455F4556 
+ 1894      545F5041 
+ 1894      5353535F 
+ 1894      4E4F5449 
+ 1895              	.LASF227:
+ 1896 0dff 4359424C 		.ascii	"CYBLE_EVT_PASSC_NOTIFICATION\000"
+ 1896      455F4556 
+ 1896      545F5041 
+ 1896      5353435F 
+ 1896      4E4F5449 
+ 1897              	.LASF109:
+ 1898 0e1c 4359424C 		.ascii	"CYBLE_EVT_ANSC_READ_CHAR_RESPONSE\000"
+ 1898      455F4556 
+ 1898      545F414E 
+ 1898      53435F52 
+ 1898      4541445F 
+ 1899              	.LASF200:
+ 1900 0e3e 4359424C 		.ascii	"CYBLE_EVT_HTSS_CHAR_WRITE\000"
+ 1900      455F4556 
+ 1900      545F4854 
+ 1900      53535F43 
+ 1900      4841525F 
+ 1901              	.LASF113:
+ 1902 0e58 4359424C 		.ascii	"CYBLE_EVT_BASS_NOTIFICATION_ENABLED\000"
+ 1902      455F4556 
+ 1902      545F4241 
+ 1902      53535F4E 
+ 1902      4F544946 
+ 1903              	.LASF226:
+ 1904 0e7c 4359424C 		.ascii	"CYBLE_EVT_PASSS_WRITE_CHAR\000"
+ 1904      455F4556 
+ 1904      545F5041 
+ 1904      5353535F 
+ 1904      57524954 
+ 1905              	.LASF133:
+ 1906 0e97 4359424C 		.ascii	"CYBLE_EVT_CPSS_INDICATION_CONFIRMED\000"
+ 1906      455F4556 
+ 1906      545F4350 
+ 1906      53535F49 
+ 1906      4E444943 
+ 1907              	.LASF79:
+ 1908 0ebb 4359424C 		.ascii	"CYBLE_DIS_SERIAL_NUMBER\000"
+ 1908      455F4449 
+ 1908      535F5345 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 48
+
+
+ 1908      5249414C 
+ 1908      5F4E554D 
+ 1909              	.LASF32:
+ 1910 0ed3 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 1910      455F4556 
+ 1910      545F4741 
+ 1910      505F434F 
+ 1910      4E4E4543 
+ 1911              	.LASF260:
+ 1912 0efc 4359424C 		.ascii	"CYBLE_STATE_INITIALIZING\000"
+ 1912      455F5354 
+ 1912      4154455F 
+ 1912      494E4954 
+ 1912      49414C49 
+ 1913              	.LASF153:
+ 1914 0f15 4359424C 		.ascii	"CYBLE_EVT_CSCSC_WRITE_CHAR_RESPONSE\000"
+ 1914      455F4556 
+ 1914      545F4353 
+ 1914      4353435F 
+ 1914      57524954 
+ 1915              	.LASF62:
+ 1916 0f39 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 1916      455F4556 
+ 1916      545F4C32 
+ 1916      4341505F 
+ 1916      43424643 
+ 1917              	.LASF149:
+ 1918 0f5a 4359424C 		.ascii	"CYBLE_EVT_CSCSS_CHAR_WRITE\000"
+ 1918      455F4556 
+ 1918      545F4353 
+ 1918      4353535F 
+ 1918      43484152 
+ 1919              	.LASF24:
+ 1920 0f75 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ 1920      455F4556 
+ 1920      545F4741 
+ 1920      505F5041 
+ 1920      53534B45 
+ 1921              	.LASF215:
+ 1922 0f99 4359424C 		.ascii	"CYBLE_EVT_LNSS_NOTIFICATION_DISABLED\000"
+ 1922      455F4556 
+ 1922      545F4C4E 
+ 1922      53535F4E 
+ 1922      4F544946 
+ 1923              	.LASF134:
+ 1924 0fbe 4359424C 		.ascii	"CYBLE_EVT_CPSS_BROADCAST_ENABLED\000"
+ 1924      455F4556 
+ 1924      545F4350 
+ 1924      53535F42 
+ 1924      524F4144 
+ 1925              	.LASF74:
+ 1926 0fdf 4359424C 		.ascii	"CYBLE_HRS_BSL\000"
+ 1926      455F4852 
+ 1926      535F4253 
+ 1926      4C00
+ 1927              	.LASF201:
+ 1928 0fed 4359424C 		.ascii	"CYBLE_EVT_HTSC_NOTIFICATION\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 49
+
+
+ 1928      455F4556 
+ 1928      545F4854 
+ 1928      53435F4E 
+ 1928      4F544946 
+ 1929              	.LASF6:
+ 1930 1009 6C6F6E67 		.ascii	"long long int\000"
+ 1930      206C6F6E 
+ 1930      6720696E 
+ 1930      7400
+ 1931              	.LASF255:
+ 1932 1017 4359424C 		.ascii	"CYBLE_EVT_TPSC_READ_CHAR_RESPONSE\000"
+ 1932      455F4556 
+ 1932      545F5450 
+ 1932      53435F52 
+ 1932      4541445F 
+ 1933              	.LASF85:
+ 1934 1039 4359424C 		.ascii	"CYBLE_DIS_PNP_ID\000"
+ 1934      455F4449 
+ 1934      535F504E 
+ 1934      505F4944 
+ 1934      00
+ 1935              	.LASF99:
+ 1936 104a 4359424C 		.ascii	"CYBLE_EVT_GATTC_CHAR_DUPLICATION\000"
+ 1936      455F4556 
+ 1936      545F4741 
+ 1936      5454435F 
+ 1936      43484152 
+ 1937              	.LASF166:
+ 1938 106b 4359424C 		.ascii	"CYBLE_EVT_GLSS_NOTIFICATION_ENABLED\000"
+ 1938      455F4556 
+ 1938      545F474C 
+ 1938      53535F4E 
+ 1938      4F544946 
+ 1939              	.LASF13:
+ 1940 108f 646F7562 		.ascii	"double\000"
+ 1940      6C6500
+ 1941              	.LASF68:
+ 1942 1096 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
+ 1942      455F4556 
+ 1942      545F5045 
+ 1942      4E44494E 
+ 1942      475F464C 
+ 1943              	.LASF102:
+ 1944 10b4 4359424C 		.ascii	"CYBLE_EVT_GATTC_INCL_DISCOVERY_COMPLETE\000"
+ 1944      455F4556 
+ 1944      545F4741 
+ 1944      5454435F 
+ 1944      494E434C 
+ 1945              	.LASF222:
+ 1946 10dc 4359424C 		.ascii	"CYBLE_EVT_LNSC_WRITE_DESCR_RESPONSE\000"
+ 1946      455F4556 
+ 1946      545F4C4E 
+ 1946      53435F57 
+ 1946      52495445 
+ 1947              	.LASF209:
+ 1948 1100 4359424C 		.ascii	"CYBLE_EVT_LLSC_READ_CHAR_RESPONSE\000"
+ 1948      455F4556 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 50
+
+
+ 1948      545F4C4C 
+ 1948      53435F52 
+ 1948      4541445F 
+ 1949              	.LASF148:
+ 1950 1122 4359424C 		.ascii	"CYBLE_EVT_CSCSS_INDICATION_CONFIRMATION\000"
+ 1950      455F4556 
+ 1950      545F4353 
+ 1950      4353535F 
+ 1950      494E4449 
+ 1951              	.LASF12:
+ 1952 114a 666C6F61 		.ascii	"float\000"
+ 1952      7400
+ 1953              	.LASF249:
+ 1954 1150 4359424C 		.ascii	"CYBLE_EVT_SCPSC_NOTIFICATION\000"
+ 1954      455F4556 
+ 1954      545F5343 
+ 1954      5053435F 
+ 1954      4E4F5449 
+ 1955              	.LASF178:
+ 1956 116d 4359424C 		.ascii	"CYBLE_EVT_HIDSS_REPORT_MODE_ENTER\000"
+ 1956      455F4556 
+ 1956      545F4849 
+ 1956      4453535F 
+ 1956      5245504F 
+ 1957              	.LASF176:
+ 1958 118f 4359424C 		.ascii	"CYBLE_EVT_HIDSS_NOTIFICATION_DISABLED\000"
+ 1958      455F4556 
+ 1958      545F4849 
+ 1958      4453535F 
+ 1958      4E4F5449 
+ 1959              	.LASF272:
+ 1960 11b5 6576656E 		.ascii	"event\000"
+ 1960      7400
+ 1961              	.LASF8:
+ 1962 11bb 756E7369 		.ascii	"unsigned int\000"
+ 1962      676E6564 
+ 1962      20696E74 
+ 1962      00
+ 1963              	.LASF50:
+ 1964 11c8 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
+ 1964      455F4556 
+ 1964      545F4741 
+ 1964      5454535F 
+ 1964      50524550 
+ 1965              	.LASF157:
+ 1966 11e7 4359424C 		.ascii	"CYBLE_EVT_CTSS_NOTIFICATION_DISABLED\000"
+ 1966      455F4556 
+ 1966      545F4354 
+ 1966      53535F4E 
+ 1966      4F544946 
+ 1967              	.LASF120:
+ 1968 120c 4359424C 		.ascii	"CYBLE_EVT_BLSS_INDICATION_DISABLED\000"
+ 1968      455F4556 
+ 1968      545F424C 
+ 1968      53535F49 
+ 1968      4E444943 
+ 1969              	.LASF84:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 51
+
+
+ 1970 122f 4359424C 		.ascii	"CYBLE_DIS_REG_CERT_DATA\000"
+ 1970      455F4449 
+ 1970      535F5245 
+ 1970      475F4345 
+ 1970      52545F44 
+ 1971              	.LASF247:
+ 1972 1247 4359424C 		.ascii	"CYBLE_EVT_SCPSS_NOTIFICATION_DISABLED\000"
+ 1972      455F4556 
+ 1972      545F5343 
+ 1972      5053535F 
+ 1972      4E4F5449 
+ 1973              	.LASF284:
+ 1974 126d 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1974      4320342E 
+ 1974      382E3420 
+ 1974      32303134 
+ 1974      30353236 
+ 1975 12a0 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1975      20726576 
+ 1975      6973696F 
+ 1975      6E203231 
+ 1975      31333538 
+ 1976 12d3 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 1976      66756E63 
+ 1976      74696F6E 
+ 1976      2D736563 
+ 1976      74696F6E 
+ 1977              	.LASF87:
+ 1978 12e9 4359424C 		.ascii	"CYBLE_AUTHENTICATION_REQUEST_REPLY\000"
+ 1978      455F4155 
+ 1978      5448454E 
+ 1978      54494341 
+ 1978      54494F4E 
+ 1979              	.LASF123:
+ 1980 130c 4359424C 		.ascii	"CYBLE_EVT_BLSS_NOTIFICATION_DISABLED\000"
+ 1980      455F4556 
+ 1980      545F424C 
+ 1980      53535F4E 
+ 1980      4F544946 
+ 1981              	.LASF75:
+ 1982 1331 4359424C 		.ascii	"CYBLE_HRS_CPT\000"
+ 1982      455F4852 
+ 1982      535F4350 
+ 1982      5400
+ 1983              	.LASF204:
+ 1984 133f 4359424C 		.ascii	"CYBLE_EVT_HTSC_WRITE_CHAR_RESPONSE\000"
+ 1984      455F4556 
+ 1984      545F4854 
+ 1984      53435F57 
+ 1984      52495445 
+ 1985              	.LASF69:
+ 1986 1362 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
+ 1986      455F4556 
+ 1986      545F4D41 
+ 1986      5800
+ 1987              	.LASF33:
+ 1988 1370 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 52
+
+
+ 1988      455F4556 
+ 1988      545F4741 
+ 1988      50435F53 
+ 1988      43414E5F 
+ 1989              	.LASF105:
+ 1990 138f 4359424C 		.ascii	"CYBLE_EVT_ANSS_NOTIFICATION_ENABLED\000"
+ 1990      455F4556 
+ 1990      545F414E 
+ 1990      53535F4E 
+ 1990      4F544946 
+ 1991              	.LASF47:
+ 1992 13b3 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 1992      455F4556 
+ 1992      545F4741 
+ 1992      5454535F 
+ 1992      57524954 
+ 1993              	.LASF25:
+ 1994 13cd 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 1994      455F4556 
+ 1994      545F4741 
+ 1994      505F5041 
+ 1994      53534B45 
+ 1995              	.LASF44:
+ 1996 13f3 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_RSP\000"
+ 1996      455F4556 
+ 1996      545F4741 
+ 1996      5454435F 
+ 1996      52454144 
+ 1997              	.LASF138:
+ 1998 140c 4359424C 		.ascii	"CYBLE_EVT_CPSC_INDICATION\000"
+ 1998      455F4556 
+ 1998      545F4350 
+ 1998      53435F49 
+ 1998      4E444943 
+ 1999              	.LASF162:
+ 2000 1426 4359424C 		.ascii	"CYBLE_EVT_DISC_READ_CHAR_RESPONSE\000"
+ 2000      455F4556 
+ 2000      545F4449 
+ 2000      53435F52 
+ 2000      4541445F 
+ 2001              	.LASF61:
+ 2002 1448 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
+ 2002      455F4556 
+ 2002      545F4C32 
+ 2002      4341505F 
+ 2002      43424643 
+ 2003              	.LASF205:
+ 2004 1466 4359424C 		.ascii	"CYBLE_EVT_HTSC_READ_DESCR_RESPONSE\000"
+ 2004      455F4556 
+ 2004      545F4854 
+ 2004      53435F52 
+ 2004      4541445F 
+ 2005              	.LASF258:
+ 2006 1489 4359424C 		.ascii	"CYBLE_DEBUG_EVT_BLESS_INT\000"
+ 2006      455F4445 
+ 2006      4255475F 
+ 2006      4556545F 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 53
+
+
+ 2006      424C4553 
+ 2007              	.LASF168:
+ 2008 14a3 4359424C 		.ascii	"CYBLE_EVT_GLSS_WRITE_CHAR\000"
+ 2008      455F4556 
+ 2008      545F474C 
+ 2008      53535F57 
+ 2008      52495445 
+ 2009              	.LASF251:
+ 2010 14bd 4359424C 		.ascii	"CYBLE_EVT_SCPSC_WRITE_DESCR_RESPONSE\000"
+ 2010      455F4556 
+ 2010      545F5343 
+ 2010      5053435F 
+ 2010      57524954 
+ 2011              	.LASF190:
+ 2012 14e2 4359424C 		.ascii	"CYBLE_EVT_HRSC_NOTIFICATION\000"
+ 2012      455F4556 
+ 2012      545F4852 
+ 2012      53435F4E 
+ 2012      4F544946 
+ 2013              	.LASF236:
+ 2014 14fe 4359424C 		.ascii	"CYBLE_EVT_RSCSS_INDICATION_CONFIRMATION\000"
+ 2014      455F4556 
+ 2014      545F5253 
+ 2014      4353535F 
+ 2014      494E4449 
+ 2015              	.LASF185:
+ 2016 1526 4359424C 		.ascii	"CYBLE_EVT_HIDSC_READ_DESCR_RESPONSE\000"
+ 2016      455F4556 
+ 2016      545F4849 
+ 2016      4453435F 
+ 2016      52454144 
+ 2017              	.LASF274:
+ 2018 154a 47656E65 		.ascii	"GeneralEventHandler\000"
+ 2018      72616C45 
+ 2018      76656E74 
+ 2018      48616E64 
+ 2018      6C657200 
+ 2019              	.LASF191:
+ 2020 155e 4359424C 		.ascii	"CYBLE_EVT_HRSC_READ_CHAR_RESPONSE\000"
+ 2020      455F4556 
+ 2020      545F4852 
+ 2020      53435F52 
+ 2020      4541445F 
+ 2021              	.LASF31:
+ 2022 1580 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 2022      455F4556 
+ 2022      545F4741 
+ 2022      505F454E 
+ 2022      43525950 
+ 2023              	.LASF223:
+ 2024 159d 4359424C 		.ascii	"CYBLE_EVT_NDCSC_READ_CHAR_RESPONSE\000"
+ 2024      455F4556 
+ 2024      545F4E44 
+ 2024      4353435F 
+ 2024      52454144 
+ 2025              	.LASF100:
+ 2026 15c0 4359424C 		.ascii	"CYBLE_EVT_GATTC_DESCR_DUPLICATION\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 54
+
+
+ 2026      455F4556 
+ 2026      545F4741 
+ 2026      5454435F 
+ 2026      44455343 
+ 2027              	.LASF38:
+ 2028 15e2 4359424C 		.ascii	"CYBLE_EVT_GATTS_XCNHG_MTU_REQ\000"
+ 2028      455F4556 
+ 2028      545F4741 
+ 2028      5454535F 
+ 2028      58434E48 
+ 2029              	.LASF73:
+ 2030 1600 4359424C 		.ascii	"CYBLE_HRS_HRM\000"
+ 2030      455F4852 
+ 2030      535F4852 
+ 2030      4D00
+ 2031              	.LASF213:
+ 2032 160e 4359424C 		.ascii	"CYBLE_EVT_LNSS_INDICATION_CONFIRMED\000"
+ 2032      455F4556 
+ 2032      545F4C4E 
+ 2032      53535F49 
+ 2032      4E444943 
+ 2033              	.LASF112:
+ 2034 1632 4359424C 		.ascii	"CYBLE_EVT_ANSC_WRITE_DESCR_RESPONSE\000"
+ 2034      455F4556 
+ 2034      545F414E 
+ 2034      53435F57 
+ 2034      52495445 
+ 2035              	.LASF140:
+ 2036 1656 4359424C 		.ascii	"CYBLE_EVT_CPSC_WRITE_CHAR_RESPONSE\000"
+ 2036      455F4556 
+ 2036      545F4350 
+ 2036      53435F57 
+ 2036      52495445 
+ 2037              	.LASF77:
+ 2038 1679 4359424C 		.ascii	"CYBLE_DIS_MANUFACTURER_NAME\000"
+ 2038      455F4449 
+ 2038      535F4D41 
+ 2038      4E554641 
+ 2038      43545552 
+ 2039              	.LASF165:
+ 2040 1695 4359424C 		.ascii	"CYBLE_EVT_GLSS_INDICATION_CONFIRMED\000"
+ 2040      455F4556 
+ 2040      545F474C 
+ 2040      53535F49 
+ 2040      4E444943 
+ 2041              	.LASF91:
+ 2042 16b9 4359424C 		.ascii	"CYBLE_EVT_GATTS_INDICATION_ENABLED\000"
+ 2042      455F4556 
+ 2042      545F4741 
+ 2042      5454535F 
+ 2042      494E4449 
+ 2043              	.LASF7:
+ 2044 16dc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2044      206C6F6E 
+ 2044      6720756E 
+ 2044      7369676E 
+ 2044      65642069 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 55
+
+
+ 2045              	.LASF18:
+ 2046 16f3 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
+ 2046      455F4556 
+ 2046      545F5449 
+ 2046      4D454F55 
+ 2046      5400
+ 2047              	.LASF160:
+ 2048 1705 4359424C 		.ascii	"CYBLE_EVT_CTSC_READ_DESCR_RESPONSE\000"
+ 2048      455F4556 
+ 2048      545F4354 
+ 2048      53435F52 
+ 2048      4541445F 
+ 2049              	.LASF64:
+ 2050 1728 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 2050      455F4556 
+ 2050      545F4C32 
+ 2050      4341505F 
+ 2050      43424643 
+ 2051              	.LASF275:
+ 2052 1747 68656172 		.ascii	"heartRatePacket\000"
+ 2052      74526174 
+ 2052      65506163 
+ 2052      6B657400 
+ 2053              	.LASF137:
+ 2054 1757 4359424C 		.ascii	"CYBLE_EVT_CPSC_NOTIFICATION\000"
+ 2054      455F4556 
+ 2054      545F4350 
+ 2054      53435F4E 
+ 2054      4F544946 
+ 2055              	.LASF128:
+ 2056 1773 4359424C 		.ascii	"CYBLE_EVT_BLSC_WRITE_DESCR_RESPONSE\000"
+ 2056      455F4556 
+ 2056      545F424C 
+ 2056      53435F57 
+ 2056      52495445 
+ 2057              	.LASF218:
+ 2058 1797 4359424C 		.ascii	"CYBLE_EVT_LNSC_NOTIFICATION\000"
+ 2058      455F4556 
+ 2058      545F4C4E 
+ 2058      53435F4E 
+ 2058      4F544946 
+ 2059              	.LASF158:
+ 2060 17b3 4359424C 		.ascii	"CYBLE_EVT_CTSC_NOTIFICATION\000"
+ 2060      455F4556 
+ 2060      545F4354 
+ 2060      53435F4E 
+ 2060      4F544946 
+ 2061              	.LASF164:
+ 2062 17cf 4359424C 		.ascii	"CYBLE_EVT_GLSS_INDICATION_DISABLED\000"
+ 2062      455F4556 
+ 2062      545F474C 
+ 2062      53535F49 
+ 2062      4E444943 
+ 2063              	.LASF98:
+ 2064 17f2 4359424C 		.ascii	"CYBLE_EVT_GATTC_SRVC_DUPLICATION\000"
+ 2064      455F4556 
+ 2064      545F4741 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 56
+
+
+ 2064      5454435F 
+ 2064      53525643 
+ 2065              	.LASF211:
+ 2066 1813 4359424C 		.ascii	"CYBLE_EVT_LNSS_INDICATION_ENABLED\000"
+ 2066      455F4556 
+ 2066      545F4C4E 
+ 2066      53535F49 
+ 2066      4E444943 
+ 2067              	.LASF155:
+ 2068 1835 4359424C 		.ascii	"CYBLE_EVT_CSCSC_WRITE_DESCR_RESPONSE\000"
+ 2068      455F4556 
+ 2068      545F4353 
+ 2068      4353435F 
+ 2068      57524954 
+ 2069              	.LASF114:
+ 2070 185a 4359424C 		.ascii	"CYBLE_EVT_BASS_NOTIFICATION_DISABLED\000"
+ 2070      455F4556 
+ 2070      545F4241 
+ 2070      53535F4E 
+ 2070      4F544946 
+ 2071              	.LASF129:
+ 2072 187f 4359424C 		.ascii	"CYBLE_EVT_CPSS_NOTIFICATION_ENABLED\000"
+ 2072      455F4556 
+ 2072      545F4350 
+ 2072      53535F4E 
+ 2072      4F544946 
+ 2073              	.LASF256:
+ 2074 18a3 4359424C 		.ascii	"CYBLE_EVT_TPSC_READ_DESCR_RESPONSE\000"
+ 2074      455F4556 
+ 2074      545F5450 
+ 2074      53435F52 
+ 2074      4541445F 
+ 2075              	.LASF42:
+ 2076 18c6 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 2076      455F4556 
+ 2076      545F4741 
+ 2076      5454435F 
+ 2076      46494E44 
+ 2077              	.LASF41:
+ 2078 18e4 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
+ 2078      455F4556 
+ 2078      545F4741 
+ 2078      5454435F 
+ 2078      52454144 
+ 2079              	.LASF225:
+ 2080 1905 4359424C 		.ascii	"CYBLE_EVT_PASSS_NOTIFICATION_DISABLED\000"
+ 2080      455F4556 
+ 2080      545F5041 
+ 2080      5353535F 
+ 2080      4E4F5449 
+ 2081              	.LASF136:
+ 2082 192b 4359424C 		.ascii	"CYBLE_EVT_CPSS_CHAR_WRITE\000"
+ 2082      455F4556 
+ 2082      545F4350 
+ 2082      53535F43 
+ 2082      4841525F 
+ 2083              	.LASF183:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 57
+
+
+ 2084 1945 4359424C 		.ascii	"CYBLE_EVT_HIDSC_READ_CHAR_RESPONSE\000"
+ 2084      455F4556 
+ 2084      545F4849 
+ 2084      4453435F 
+ 2084      52454144 
+ 2085              	.LASF277:
+ 2086 1968 6379426C 		.ascii	"cyBle_state\000"
+ 2086      655F7374 
+ 2086      61746500 
+ 2087              	.LASF253:
+ 2088 1974 4359424C 		.ascii	"CYBLE_EVT_TPSS_NOTIFICATION_DISABLED\000"
+ 2088      455F4556 
+ 2088      545F5450 
+ 2088      53535F4E 
+ 2088      4F544946 
+ 2089              	.LASF250:
+ 2090 1999 4359424C 		.ascii	"CYBLE_EVT_SCPSC_READ_DESCR_RESPONSE\000"
+ 2090      455F4556 
+ 2090      545F5343 
+ 2090      5053435F 
+ 2090      52454144 
+ 2091              	.LASF194:
+ 2092 19bd 4359424C 		.ascii	"CYBLE_EVT_HRSC_WRITE_DESCR_RESPONSE\000"
+ 2092      455F4556 
+ 2092      545F4852 
+ 2092      53435F57 
+ 2092      52495445 
+ 2093              	.LASF216:
+ 2094 19e1 4359424C 		.ascii	"CYBLE_EVT_LNSS_WRITE_CHAR\000"
+ 2094      455F4556 
+ 2094      545F4C4E 
+ 2094      53535F57 
+ 2094      52495445 
+ 2095              	.LASF48:
+ 2096 19fb 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
+ 2096      455F4556 
+ 2096      545F4741 
+ 2096      5454435F 
+ 2096      57524954 
+ 2097              	.LASF263:
+ 2098 1a15 4359424C 		.ascii	"CYBLE_STATE_DISCONNECTED\000"
+ 2098      455F5354 
+ 2098      4154455F 
+ 2098      44495343 
+ 2098      4F4E4E45 
+ 2099              	.LASF171:
+ 2100 1a2e 4359424C 		.ascii	"CYBLE_EVT_GLSC_READ_CHAR_RESPONSE\000"
+ 2100      455F4556 
+ 2100      545F474C 
+ 2100      53435F52 
+ 2100      4541445F 
+ 2101              	.LASF238:
+ 2102 1a50 4359424C 		.ascii	"CYBLE_EVT_RSCSC_NOTIFICATION\000"
+ 2102      455F4556 
+ 2102      545F5253 
+ 2102      4353435F 
+ 2102      4E4F5449 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 58
+
+
+ 2103              	.LASF28:
+ 2104 1a6d 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
+ 2104      455F4556 
+ 2104      545F4741 
+ 2104      50505F41 
+ 2104      44564552 
+ 2105              	.LASF121:
+ 2106 1a95 4359424C 		.ascii	"CYBLE_EVT_BLSS_INDICATION_CONFIRMED\000"
+ 2106      455F4556 
+ 2106      545F424C 
+ 2106      53535F49 
+ 2106      4E444943 
+ 2107              	.LASF9:
+ 2108 1ab9 75696E74 		.ascii	"uint8\000"
+ 2108      3800
+ 2109              	.LASF203:
+ 2110 1abf 4359424C 		.ascii	"CYBLE_EVT_HTSC_READ_CHAR_RESPONSE\000"
+ 2110      455F4556 
+ 2110      545F4854 
+ 2110      53435F52 
+ 2110      4541445F 
+ 2111              	.LASF231:
+ 2112 1ae1 4359424C 		.ascii	"CYBLE_EVT_PASSC_WRITE_DESCR_RESPONSE\000"
+ 2112      455F4556 
+ 2112      545F5041 
+ 2112      5353435F 
+ 2112      57524954 
+ 2113              	.LASF278:
+ 2114 1b06 6379426C 		.ascii	"cyBle_connHandle\000"
+ 2114      655F636F 
+ 2114      6E6E4861 
+ 2114      6E646C65 
+ 2114      00
+ 2115              	.LASF2:
+ 2116 1b17 73686F72 		.ascii	"short int\000"
+ 2116      7420696E 
+ 2116      7400
+ 2117              	.LASF92:
+ 2118 1b21 4359424C 		.ascii	"CYBLE_EVT_GATTS_INDICATION_DISABLED\000"
+ 2118      455F4556 
+ 2118      545F4741 
+ 2118      5454535F 
+ 2118      494E4449 
+ 2119              	.LASF76:
+ 2120 1b45 4359424C 		.ascii	"CYBLE_HRS_CHAR_COUNT\000"
+ 2120      455F4852 
+ 2120      535F4348 
+ 2120      41525F43 
+ 2120      4F554E54 
+ 2121              	.LASF35:
+ 2122 1b5a 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
+ 2122      455F4556 
+ 2122      545F4741 
+ 2122      5454435F 
+ 2122      4552524F 
+ 2123              	.LASF266:
+ 2124 1b74 434F4E4E 		.ascii	"CONN_PARAM_REQUEST_SENT\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 59
+
+
+ 2124      5F504152 
+ 2124      414D5F52 
+ 2124      45515545 
+ 2124      53545F53 
+ 2125              	.LASF264:
+ 2126 1b8c 4359424C 		.ascii	"CYBLE_STATE_T\000"
+ 2126      455F5354 
+ 2126      4154455F 
+ 2126      5400
+ 2127              	.LASF115:
+ 2128 1b9a 4359424C 		.ascii	"CYBLE_EVT_BASC_NOTIFICATION\000"
+ 2128      455F4556 
+ 2128      545F4241 
+ 2128      53435F4E 
+ 2128      4F544946 
+ 2129              	.LASF118:
+ 2130 1bb6 4359424C 		.ascii	"CYBLE_EVT_BASC_WRITE_DESCR_RESPONSE\000"
+ 2130      455F4556 
+ 2130      545F4241 
+ 2130      53435F57 
+ 2130      52495445 
+ 2131              	.LASF163:
+ 2132 1bda 4359424C 		.ascii	"CYBLE_EVT_GLSS_INDICATION_ENABLED\000"
+ 2132      455F4556 
+ 2132      545F474C 
+ 2132      53535F49 
+ 2132      4E444943 
+ 2133              	.LASF107:
+ 2134 1bfc 4359424C 		.ascii	"CYBLE_EVT_ANSS_CHAR_WRITE\000"
+ 2134      455F4556 
+ 2134      545F414E 
+ 2134      53535F43 
+ 2134      4841525F 
+ 2135              	.LASF60:
+ 2136 1c16 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
+ 2136      455F4556 
+ 2136      545F4C32 
+ 2136      4341505F 
+ 2136      43424643 
+ 2137              	.LASF51:
+ 2138 1c34 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ 2138      455F4556 
+ 2138      545F4741 
+ 2138      5454535F 
+ 2138      45584543 
+ 2139              	.LASF22:
+ 2140 1c53 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
+ 2140      455F4556 
+ 2140      545F4741 
+ 2140      50435F53 
+ 2140      43414E5F 
+ 2141              	.LASF271:
+ 2142 1c77 48727345 		.ascii	"HrsEventHandler\000"
+ 2142      76656E74 
+ 2142      48616E64 
+ 2142      6C657200 
+ 2143              	.LASF197:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 60
+
+
+ 2144 1c87 4359424C 		.ascii	"CYBLE_EVT_HTSS_INDICATION_ENABLED\000"
+ 2144      455F4556 
+ 2144      545F4854 
+ 2144      53535F49 
+ 2144      4E444943 
+ 2145              	.LASF116:
+ 2146 1ca9 4359424C 		.ascii	"CYBLE_EVT_BASC_READ_CHAR_RESPONSE\000"
+ 2146      455F4556 
+ 2146      545F4241 
+ 2146      53435F52 
+ 2146      4541445F 
+ 2147              	.LASF170:
+ 2148 1ccb 4359424C 		.ascii	"CYBLE_EVT_GLSC_NOTIFICATION\000"
+ 2148      455F4556 
+ 2148      545F474C 
+ 2148      53435F4E 
+ 2148      4F544946 
+ 2149              	.LASF219:
+ 2150 1ce7 4359424C 		.ascii	"CYBLE_EVT_LNSC_READ_CHAR_RESPONSE\000"
+ 2150      455F4556 
+ 2150      545F4C4E 
+ 2150      53435F52 
+ 2150      4541445F 
+ 2151              	.LASF248:
+ 2152 1d09 4359424C 		.ascii	"CYBLE_EVT_SCPSS_SCAN_INT_WIN_CHAR_WRITE\000"
+ 2152      455F4556 
+ 2152      545F5343 
+ 2152      5053535F 
+ 2152      5343414E 
+ 2153              	.LASF210:
+ 2154 1d31 4359424C 		.ascii	"CYBLE_EVT_LLSC_WRITE_CHAR_RESPONSE\000"
+ 2154      455F4556 
+ 2154      545F4C4C 
+ 2154      53435F57 
+ 2154      52495445 
+ 2155              	.LASF283:
+ 2156 1d54 636F6E6E 		.ascii	"connParamRequestState\000"
+ 2156      50617261 
+ 2156      6D526571 
+ 2156      75657374 
+ 2156      53746174 
+ 2157              	.LASF104:
+ 2158 1d6a 4359424C 		.ascii	"CYBLE_EVT_GATTC_DISCOVERY_COMPLETE\000"
+ 2158      455F4556 
+ 2158      545F4741 
+ 2158      5454435F 
+ 2158      44495343 
+ 2159              	.LASF174:
+ 2160 1d8d 4359424C 		.ascii	"CYBLE_EVT_GLSC_WRITE_DESCR_RESPONSE\000"
+ 2160      455F4556 
+ 2160      545F474C 
+ 2160      53435F57 
+ 2160      52495445 
+ 2161              	.LASF54:
+ 2162 1db1 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 2162      455F4556 
+ 2162      545F4741 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 61
+
+
+ 2162      5454435F 
+ 2162      48414E44 
+ 2163              	.LASF143:
+ 2164 1dd2 4359424C 		.ascii	"CYBLE_EVT_CPSC_SCAN_PROGRESS_RESULT\000"
+ 2164      455F4556 
+ 2164      545F4350 
+ 2164      53435F53 
+ 2164      43414E5F 
+ 2165              	.LASF242:
+ 2166 1df6 4359424C 		.ascii	"CYBLE_EVT_RSCSC_READ_DESCR_RESPONSE\000"
+ 2166      455F4556 
+ 2166      545F5253 
+ 2166      4353435F 
+ 2166      52454144 
+ 2167              	.LASF21:
+ 2168 1e1a 4359424C 		.ascii	"CYBLE_EVT_STACK_BUSY_STATUS\000"
+ 2168      455F4556 
+ 2168      545F5354 
+ 2168      41434B5F 
+ 2168      42555359 
+ 2169              	.LASF206:
+ 2170 1e36 4359424C 		.ascii	"CYBLE_EVT_HTSC_WRITE_DESCR_RESPONSE\000"
+ 2170      455F4556 
+ 2170      545F4854 
+ 2170      53435F57 
+ 2170      52495445 
+ 2171              	.LASF34:
+ 2172 1e5a 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
+ 2172      455F4556 
+ 2172      545F4741 
+ 2172      505F4B45 
+ 2172      59494E46 
+ 2173              	.LASF57:
+ 2174 1e7e 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
+ 2174      455F4556 
+ 2174      545F4C32 
+ 2174      4341505F 
+ 2174      434F4E4E 
+ 2175              	.LASF95:
+ 2176 1ea4 4359424C 		.ascii	"CYBLE_EVT_GATTC_INCL_DISCOVERY_FAILED\000"
+ 2176      455F4556 
+ 2176      545F4741 
+ 2176      5454435F 
+ 2176      494E434C 
+ 2177              	.LASF3:
+ 2178 1eca 73686F72 		.ascii	"short unsigned int\000"
+ 2178      7420756E 
+ 2178      7369676E 
+ 2178      65642069 
+ 2178      6E7400
+ 2179              	.LASF221:
+ 2180 1edd 4359424C 		.ascii	"CYBLE_EVT_LNSC_READ_DESCR_RESPONSE\000"
+ 2180      455F4556 
+ 2180      545F4C4E 
+ 2180      53435F52 
+ 2180      4541445F 
+ 2181              	.LASF261:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 62
+
+
+ 2182 1f00 4359424C 		.ascii	"CYBLE_STATE_CONNECTED\000"
+ 2182      455F5354 
+ 2182      4154455F 
+ 2182      434F4E4E 
+ 2182      45435445 
+ 2183              	.LASF270:
+ 2184 1f16 53656E64 		.ascii	"SendHeartRateOverBLE\000"
+ 2184      48656172 
+ 2184      74526174 
+ 2184      654F7665 
+ 2184      72424C45 
+ 2185              	.LASF252:
+ 2186 1f2b 4359424C 		.ascii	"CYBLE_EVT_TPSS_NOTIFICATION_ENABLED\000"
+ 2186      455F4556 
+ 2186      545F5450 
+ 2186      53535F4E 
+ 2186      4F544946 
+ 2187              	.LASF169:
+ 2188 1f4f 4359424C 		.ascii	"CYBLE_EVT_GLSC_INDICATION\000"
+ 2188      455F4556 
+ 2188      545F474C 
+ 2188      53435F49 
+ 2188      4E444943 
+ 2189              	.LASF135:
+ 2190 1f69 4359424C 		.ascii	"CYBLE_EVT_CPSS_BROADCAST_DISABLED\000"
+ 2190      455F4556 
+ 2190      545F4350 
+ 2190      53535F42 
+ 2190      524F4144 
+ 2191              	.LASF71:
+ 2192 1f8b 61747449 		.ascii	"attId\000"
+ 2192      6400
+ 2193              	.LASF20:
+ 2194 1f91 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
+ 2194      455F4556 
+ 2194      545F4843 
+ 2194      495F5354 
+ 2194      41545553 
+ 2195              	.LASF37:
+ 2196 1fa6 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
+ 2196      455F4556 
+ 2196      545F4741 
+ 2196      54545F44 
+ 2196      4953434F 
+ 2197              	.LASF90:
+ 2198 1fc4 4359424C 		.ascii	"CYBLE_KEY_EXCHANGE_INFO_REQUEST_REPLY\000"
+ 2198      455F4B45 
+ 2198      595F4558 
+ 2198      4348414E 
+ 2198      47455F49 
+ 2199              	.LASF67:
+ 2200 1fea 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 2200      455F4556 
+ 2200      545F4C32 
+ 2200      4341505F 
+ 2200      43424643 
+ 2201              	.LASF279:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 63
+
+
+ 2202 200e 68656172 		.ascii	"heartRate\000"
+ 2202      74526174 
+ 2202      6500
+ 2203              	.LASF88:
+ 2204 2018 4359424C 		.ascii	"CYBLE_PASSKEY_ENTRY_REQUEST_REPLY\000"
+ 2204      455F5041 
+ 2204      53534B45 
+ 2204      595F454E 
+ 2204      5452595F 
+ 2205              	.LASF269:
+ 2206 203a 434F4E4E 		.ascii	"CONN_PARAM_REQUEST_STATE\000"
+ 2206      5F504152 
+ 2206      414D5F52 
+ 2206      45515545 
+ 2206      53545F53 
+ 2207              	.LASF108:
+ 2208 2053 4359424C 		.ascii	"CYBLE_EVT_ANSC_NOTIFICATION\000"
+ 2208      455F4556 
+ 2208      545F414E 
+ 2208      53435F4E 
+ 2208      4F544946 
+ 2209              	.LASF30:
+ 2210 206f 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
+ 2210      455F4556 
+ 2210      545F4741 
+ 2210      505F4445 
+ 2210      56494345 
+ 2211              	.LASF177:
+ 2212 2091 4359424C 		.ascii	"CYBLE_EVT_HIDSS_BOOT_MODE_ENTER\000"
+ 2212      455F4556 
+ 2212      545F4849 
+ 2212      4453535F 
+ 2212      424F4F54 
+ 2213              	.LASF55:
+ 2214 20b1 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
+ 2214      455F4556 
+ 2214      545F4741 
+ 2214      5454535F 
+ 2214      48414E44 
+ 2215              	.LASF154:
+ 2216 20d2 4359424C 		.ascii	"CYBLE_EVT_CSCSC_READ_DESCR_RESPONSE\000"
+ 2216      455F4556 
+ 2216      545F4353 
+ 2216      4353435F 
+ 2216      52454144 
+ 2217              	.LASF10:
+ 2218 20f6 75696E74 		.ascii	"uint16\000"
+ 2218      313600
+ 2219              	.LASF182:
+ 2220 20fd 4359424C 		.ascii	"CYBLE_EVT_HIDSC_NOTIFICATION\000"
+ 2220      455F4556 
+ 2220      545F4849 
+ 2220      4453435F 
+ 2220      4E4F5449 
+ 2221              	.LASF232:
+ 2222 211a 4359424C 		.ascii	"CYBLE_EVT_RSCSS_NOTIFICATION_ENABLED\000"
+ 2222      455F4556 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\ccwhEYUG.s 			page 64
+
+
+ 2222      545F5253 
+ 2222      4353535F 
+ 2222      4E4F5449 
+ 2223              	.LASF106:
+ 2224 213f 4359424C 		.ascii	"CYBLE_EVT_ANSS_NOTIFICATION_DISABLED\000"
+ 2224      455F4556 
+ 2224      545F414E 
+ 2224      53535F4E 
+ 2224      4F544946 
+ 2225              	.LASF202:
+ 2226 2164 4359424C 		.ascii	"CYBLE_EVT_HTSC_INDICATION\000"
+ 2226      455F4556 
+ 2226      545F4854 
+ 2226      53435F49 
+ 2226      4E444943 
+ 2227              	.LASF175:
+ 2228 217e 4359424C 		.ascii	"CYBLE_EVT_HIDSS_NOTIFICATION_ENABLED\000"
+ 2228      455F4556 
+ 2228      545F4849 
+ 2228      4453535F 
+ 2228      4E4F5449 
+ 2229              	.LASF199:
+ 2230 21a3 4359424C 		.ascii	"CYBLE_EVT_HTSS_INDICATION_CONFIRMED\000"
+ 2230      455F4556 
+ 2230      545F4854 
+ 2230      53535F49 
+ 2230      4E444943 
+ 2231              	.LASF189:
+ 2232 21c7 4359424C 		.ascii	"CYBLE_EVT_HRSS_NOTIFICATION_DISABLED\000"
+ 2232      455F4556 
+ 2232      545F4852 
+ 2232      53535F4E 
+ 2232      4F544946 
+ 2233              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

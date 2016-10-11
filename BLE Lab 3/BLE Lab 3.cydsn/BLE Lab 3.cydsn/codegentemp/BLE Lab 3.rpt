@@ -1,0 +1,25 @@
+Loading plugins phase: Elapsed time ==> 0s.379ms
+Initializing data phase: Elapsed time ==> 0s.000ms
+<CYPRESSTAG name="CyDsfit arguments...">
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\BLE Lab 3.cyprj -d CY8C4247LQI-BL483 -s C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+<CYPRESSTAG name="Design elaboration results...">
+ADD: sdb.M0012: error: Terminals "PWM_1.line_n" connected to signal "Net_1378" have mismatching types.
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1378)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_108)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_109)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_110)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (line_n)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_34.25)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_89.5)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Vplus)
+
+ADD: sdb.M0018: error: Multiple drivers on signal "Net_1378", bit(s) "0".
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1378)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_108)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_109)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_110)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_34.25)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_89.5)
+
+</CYPRESSTAG>
+Elaboration phase: Elapsed time ==> 4s.406ms

@@ -1,0 +1,190 @@
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/ADC.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/ADC_INT.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_INT.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_INT.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/ADC_IRQ.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_IRQ.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_IRQ.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_IRQ.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_IRQ.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/ADC_PM.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_PM.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_PM.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/ADC_intClock.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_intClock.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_intClock.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_intClock.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/ADC_intClock.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/BLE_1.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_HAL_PVT.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_STACK_PVT.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_Stack.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattClient.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattDb.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattServer.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackHostMain.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackL2cap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_bless_isr.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_dis.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_eventHandler.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_gatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_hrs.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_HAL_PVT.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_STACK_PVT.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_Stack.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGap.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGatt.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattClient.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattDb.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattServer.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackHostMain.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackL2cap.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_bless_isr.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_dis.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_eventHandler.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_gatt.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_hrs.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/BLE_1_HAL_INT.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_HAL_PVT.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_STACK_PVT.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_Stack.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattClient.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattDb.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattServer.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackHostMain.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackL2cap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_bless_isr.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_dis.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_eventHandler.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_gatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_hrs.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_HAL_INT.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_HAL_INT.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/BLE_1_HAL_PVT.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_HAL_PVT.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_STACK_PVT.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_Stack.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattClient.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattDb.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattServer.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackHostMain.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackL2cap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_bless_isr.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_dis.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_eventHandler.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_gatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_hrs.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_HAL_PVT.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_HAL_PVT.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/BLE_1_bless_isr.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_bless_isr.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_bless_isr.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_bless_isr.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/BLE_1_dis.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_Stack.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattClient.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattDb.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattServer.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackHostMain.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackL2cap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_dis.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_eventHandler.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_gatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_hrs.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_dis.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_dis.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/BLE_1_eventHandler.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_Stack.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattClient.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattDb.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattServer.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackHostMain.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackL2cap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_dis.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_eventHandler.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_gatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_hrs.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_eventHandler.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_eventHandler.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/BLE_1_gatt.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_Stack.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattClient.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattDb.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattServer.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackHostMain.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackL2cap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_dis.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_eventHandler.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_gatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_hrs.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_gatt.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_gatt.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/BLE_1_hrs.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_Stack.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattClient.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattDb.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackGattServer.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackHostMain.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_StackL2cap.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_dis.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_eventHandler.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_gatt.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_hrs.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_hrs.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/BLE_1_hrs.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/Button_output.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Button_output.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Button_output_aliases.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Button_output.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Button_output.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Button_output_aliases.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Button_output.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/Cm0Start.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Cm0Start.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Cm0Start.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/CyFlash.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyFlash.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/CyLib.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/Heart_Rate_input.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Heart_Rate_input.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Heart_Rate_input_aliases.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Heart_Rate_input.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Heart_Rate_input.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Heart_Rate_input_aliases.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Heart_Rate_input.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/Led_Advertising_Green.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Advertising_Green.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Advertising_Green_aliases.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Advertising_Green.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Advertising_Green.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Advertising_Green_aliases.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Advertising_Green.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/Led_Connected_Blue.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Connected_Blue.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Connected_Blue_aliases.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Connected_Blue.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Connected_Blue.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Connected_Blue_aliases.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Led_Connected_Blue.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/Opamp.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Opamp.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Opamp.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Opamp.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Opamp.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/Opamp_PM.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Opamp.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Opamp_PM.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Opamp_PM.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/SW2_Switch.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/SW2_Switch.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/SW2_Switch_aliases.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/SW2_Switch.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/SW2_Switch.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/SW2_Switch_aliases.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/SW2_Switch.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/Wakeup_ISR.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Wakeup_ISR.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Wakeup_ISR.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Wakeup_ISR.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/Wakeup_ISR.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/cyPm.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyPm.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyPm.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/cyfitter_cfg.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/cymetadata.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cymetadata.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cymetadata.c : 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/CortexM0/ARM_GCC_484/Debug/cyutils.o : C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyutils.c 
+
+C:/Users/Enes\ Dullovi/Desktop/BLE\ Lab\ 3/BLE\ Lab\ 3.cydsn/Generated_Source/PSoC4/cyutils.c : 
+

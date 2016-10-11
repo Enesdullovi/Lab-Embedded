@@ -1,0 +1,21 @@
+--------------- Build Started: 10/10/2016 16:16:06 Project: BLE Lab 3, Configuration: ARM GCC 4.8.4 Debug ---------------
+cydsfit.exe -.appdatapath "C:\Users\Enes Dullovi\AppData\Local\Cypress Semiconductor\PSoC Creator\3.1" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\BLE Lab 3.cyprj" -d CY8C4247LQI-BL483 -s "C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+ADD: sdb.M0012: error: Terminals "PWM_1.line_n" connected to signal "Net_1378" have mismatching types.
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1378)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_108)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_109)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_110)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (line_n)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_34.25)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_89.5)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Vplus)
+ADD: sdb.M0018: error: Multiple drivers on signal "Net_1378", bit(s) "0".
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1378)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_108)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_109)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_110)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_34.25)
+ * C:\Users\Enes Dullovi\Desktop\BLE Lab 3\BLE Lab 3.cydsn\BLE Lab 3.cydsn\TopDesign\TopDesign.cysch (Shape_89.5)
+Error: cdf.M0005: CyDsFit aborted due to errors, please address all errors and rerun CyDsFit. (App=cydsfit)
+--------------- Build Failed: 10/10/2016 16:16:13 ---------------

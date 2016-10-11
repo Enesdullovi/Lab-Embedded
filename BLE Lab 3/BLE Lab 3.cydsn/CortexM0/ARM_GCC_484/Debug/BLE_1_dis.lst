@@ -1,0 +1,2738 @@
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"BLE_1_dis.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.global	cyBle_diss
+  18              		.section	.rodata
+  19              		.align	2
+  20              		.type	cyBle_diss, %object
+  21              		.size	cyBle_diss, 20
+  22              	cyBle_diss:
+  23 0000 1400     		.short	20
+  24 0002 1600     		.short	22
+  25 0004 1800     		.short	24
+  26 0006 1A00     		.short	26
+  27 0008 1C00     		.short	28
+  28 000a 1E00     		.short	30
+  29 000c 2000     		.short	32
+  30 000e 2200     		.short	34
+  31 0010 2400     		.short	36
+  32 0012 2600     		.short	38
+  33              		.section	.text.CyBle_DisInit,"ax",%progbits
+  34              		.align	2
+  35              		.global	CyBle_DisInit
+  36              		.code	16
+  37              		.thumb_func
+  38              		.type	CyBle_DisInit, %function
+  39              	CyBle_DisInit:
+  40              	.LFB2:
+  41              		.file 1 ".\\Generated_Source\\PSoC4\\BLE_1_dis.c"
+   1:.\Generated_Source\PSoC4/BLE_1_dis.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/BLE_1_dis.c **** File Name: CYBLE_dis.c
+   3:.\Generated_Source\PSoC4/BLE_1_dis.c **** Version 1.10
+   4:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+   5:.\Generated_Source\PSoC4/BLE_1_dis.c **** Description:
+   6:.\Generated_Source\PSoC4/BLE_1_dis.c ****  Contains the source code for the Device Information Service.
+   7:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+   8:.\Generated_Source\PSoC4/BLE_1_dis.c **** ********************************************************************************
+   9:.\Generated_Source\PSoC4/BLE_1_dis.c **** Copyright 2014, Cypress Semiconductor Corporation.  All rights reserved.
+  10:.\Generated_Source\PSoC4/BLE_1_dis.c **** You may use this file only in accordance with the license, terms, conditions,
+  11:.\Generated_Source\PSoC4/BLE_1_dis.c **** disclaimers, and limitations in the end user license agreement accompanying
+  12:.\Generated_Source\PSoC4/BLE_1_dis.c **** the software package with which this file was provided.
+  13:.\Generated_Source\PSoC4/BLE_1_dis.c **** *******************************************************************************/
+  14:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  15:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  16:.\Generated_Source\PSoC4/BLE_1_dis.c **** #include "BLE_1_eventHandler.h"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 2
+
+
+  17:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  18:.\Generated_Source\PSoC4/BLE_1_dis.c **** #ifdef CYBLE_DIS_SERVER
+  19:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  20:.\Generated_Source\PSoC4/BLE_1_dis.c **** const CYBLE_DISS_T cyBle_diss =
+  21:.\Generated_Source\PSoC4/BLE_1_dis.c **** {
+  22:.\Generated_Source\PSoC4/BLE_1_dis.c ****     0x0014u,    /* Handle of the DIS service */
+  23:.\Generated_Source\PSoC4/BLE_1_dis.c ****     {
+  24:.\Generated_Source\PSoC4/BLE_1_dis.c ****         0x0016u, /* Handle of the Manufacturer Name String characteristic */ 
+  25:.\Generated_Source\PSoC4/BLE_1_dis.c ****         0x0018u, /* Handle of the Model Number String characteristic */ 
+  26:.\Generated_Source\PSoC4/BLE_1_dis.c ****         0x001Au, /* Handle of the Serial Number String characteristic */ 
+  27:.\Generated_Source\PSoC4/BLE_1_dis.c ****         0x001Cu, /* Handle of the Hardware Revision String characteristic */ 
+  28:.\Generated_Source\PSoC4/BLE_1_dis.c ****         0x001Eu, /* Handle of the Firmware Revision String characteristic */ 
+  29:.\Generated_Source\PSoC4/BLE_1_dis.c ****         0x0020u, /* Handle of the Software Revision String characteristic */ 
+  30:.\Generated_Source\PSoC4/BLE_1_dis.c ****         0x0022u, /* Handle of the System ID characteristic */ 
+  31:.\Generated_Source\PSoC4/BLE_1_dis.c ****         0x0024u, /* Handle of the IEEE 11073-20601 Regulatory Certification Data List characteristi
+  32:.\Generated_Source\PSoC4/BLE_1_dis.c ****         0x0026u, /* Handle of the PnP ID characteristic */ 
+  33:.\Generated_Source\PSoC4/BLE_1_dis.c ****     },
+  34:.\Generated_Source\PSoC4/BLE_1_dis.c **** };
+  35:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  36:.\Generated_Source\PSoC4/BLE_1_dis.c **** #endif /* CYBLE_DIS_SERVER */
+  37:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  38:.\Generated_Source\PSoC4/BLE_1_dis.c **** #ifdef CYBLE_DIS_CLIENT
+  39:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  40:.\Generated_Source\PSoC4/BLE_1_dis.c **** CYBLE_DISC_T cyBle_disc;
+  41:.\Generated_Source\PSoC4/BLE_1_dis.c **** static CYBLE_GATT_DB_ATTR_HANDLE_T cyBle_discReqHandle;
+  42:.\Generated_Source\PSoC4/BLE_1_dis.c **** static CYBLE_CALLBACK_T CyBle_DisApplCallback = NULL;
+  43:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  44:.\Generated_Source\PSoC4/BLE_1_dis.c **** #endif /* (CYBLE_DIS_CLIENT) */
+  45:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  46:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  47:.\Generated_Source\PSoC4/BLE_1_dis.c **** /****************************************************************************** 
+  48:.\Generated_Source\PSoC4/BLE_1_dis.c **** ##Function Name: CyBle_DisInit
+  49:.\Generated_Source\PSoC4/BLE_1_dis.c **** *******************************************************************************
+  50:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  51:.\Generated_Source\PSoC4/BLE_1_dis.c **** Summary:
+  52:.\Generated_Source\PSoC4/BLE_1_dis.c ****  This function initializes the DIS service.
+  53:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  54:.\Generated_Source\PSoC4/BLE_1_dis.c **** Parameters:
+  55:.\Generated_Source\PSoC4/BLE_1_dis.c ****  None
+  56:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  57:.\Generated_Source\PSoC4/BLE_1_dis.c **** Return:
+  58:.\Generated_Source\PSoC4/BLE_1_dis.c ****  None
+  59:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  60:.\Generated_Source\PSoC4/BLE_1_dis.c **** ******************************************************************************/
+  61:.\Generated_Source\PSoC4/BLE_1_dis.c **** void CyBle_DisInit(void)
+  62:.\Generated_Source\PSoC4/BLE_1_dis.c **** {
+  42              		.loc 1 62 0
+  43              		.cfi_startproc
+  44 0000 80B5     		push	{r7, lr}
+  45              		.cfi_def_cfa_offset 8
+  46              		.cfi_offset 7, -8
+  47              		.cfi_offset 14, -4
+  48 0002 00AF     		add	r7, sp, #0
+  49              		.cfi_def_cfa_register 7
+  63:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  64:.\Generated_Source\PSoC4/BLE_1_dis.c **** #ifdef CYBLE_DIS_CLIENT
+  65:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 3
+
+
+  66:.\Generated_Source\PSoC4/BLE_1_dis.c ****     (void)memset(&cyBle_disc, 0, sizeof(cyBle_disc));
+  67:.\Generated_Source\PSoC4/BLE_1_dis.c ****     cyBle_discReqHandle = CYBLE_GATT_INVALID_ATTR_HANDLE_VALUE;
+  68:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  69:.\Generated_Source\PSoC4/BLE_1_dis.c **** #endif /* CYBLE_DIS_CLIENT */
+  70:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  71:.\Generated_Source\PSoC4/BLE_1_dis.c **** }
+  50              		.loc 1 71 0
+  51 0004 BD46     		mov	sp, r7
+  52              		@ sp needed
+  53 0006 80BD     		pop	{r7, pc}
+  54              		.cfi_endproc
+  55              	.LFE2:
+  56              		.size	CyBle_DisInit, .-CyBle_DisInit
+  57              		.section	.text.CyBle_DisRegisterAttrCallback,"ax",%progbits
+  58              		.align	2
+  59              		.global	CyBle_DisRegisterAttrCallback
+  60              		.code	16
+  61              		.thumb_func
+  62              		.type	CyBle_DisRegisterAttrCallback, %function
+  63              	CyBle_DisRegisterAttrCallback:
+  64              	.LFB3:
+  72:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  73:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  74:.\Generated_Source\PSoC4/BLE_1_dis.c **** /****************************************************************************** 
+  75:.\Generated_Source\PSoC4/BLE_1_dis.c **** ##Function Name: CyBle_DisRegisterAttrCallback
+  76:.\Generated_Source\PSoC4/BLE_1_dis.c **** *******************************************************************************
+  77:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  78:.\Generated_Source\PSoC4/BLE_1_dis.c **** Summary:
+  79:.\Generated_Source\PSoC4/BLE_1_dis.c ****  Registers a callback function for service specific attribute operations.
+  80:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  81:.\Generated_Source\PSoC4/BLE_1_dis.c **** Parameters:
+  82:.\Generated_Source\PSoC4/BLE_1_dis.c ****  callbackFunc: An application layer event callback function to receive 
+  83:.\Generated_Source\PSoC4/BLE_1_dis.c ****                    events from the BLE Component. The definition of 
+  84:.\Generated_Source\PSoC4/BLE_1_dis.c ****                    CYBLE_CALLBACK_T for Device Information Service is,
+  85:.\Generated_Source\PSoC4/BLE_1_dis.c ****             
+  86:.\Generated_Source\PSoC4/BLE_1_dis.c ****                    typedef void (* CYBLE_CALLBACK_T) (uint32 eventCode, 
+  87:.\Generated_Source\PSoC4/BLE_1_dis.c ****                                                       void *eventParam)
+  88:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  89:.\Generated_Source\PSoC4/BLE_1_dis.c ****                    * eventCode indicates the event that triggered this 
+  90:.\Generated_Source\PSoC4/BLE_1_dis.c ****                      callback.
+  91:.\Generated_Source\PSoC4/BLE_1_dis.c ****                    * eventParam contains the parameters corresponding to the 
+  92:.\Generated_Source\PSoC4/BLE_1_dis.c ****                      current event.
+  93:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  94:.\Generated_Source\PSoC4/BLE_1_dis.c **** Return:
+  95:.\Generated_Source\PSoC4/BLE_1_dis.c ****  None
+  96:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+  97:.\Generated_Source\PSoC4/BLE_1_dis.c **** ******************************************************************************/
+  98:.\Generated_Source\PSoC4/BLE_1_dis.c **** void CyBle_DisRegisterAttrCallback(CYBLE_CALLBACK_T callbackFunc)
+  99:.\Generated_Source\PSoC4/BLE_1_dis.c **** {
+  65              		.loc 1 99 0
+  66              		.cfi_startproc
+  67 0000 80B5     		push	{r7, lr}
+  68              		.cfi_def_cfa_offset 8
+  69              		.cfi_offset 7, -8
+  70              		.cfi_offset 14, -4
+  71 0002 82B0     		sub	sp, sp, #8
+  72              		.cfi_def_cfa_offset 16
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 4
+
+
+  73 0004 00AF     		add	r7, sp, #0
+  74              		.cfi_def_cfa_register 7
+  75 0006 7860     		str	r0, [r7, #4]
+ 100:.\Generated_Source\PSoC4/BLE_1_dis.c ****     
+ 101:.\Generated_Source\PSoC4/BLE_1_dis.c **** #ifdef CYBLE_DIS_CLIENT
+ 102:.\Generated_Source\PSoC4/BLE_1_dis.c ****     CyBle_DisApplCallback = callbackFunc;
+ 103:.\Generated_Source\PSoC4/BLE_1_dis.c **** #else
+ 104:.\Generated_Source\PSoC4/BLE_1_dis.c ****     if(callbackFunc != NULL) /* Callback doesn't have events in server mode */
+ 105:.\Generated_Source\PSoC4/BLE_1_dis.c ****     {
+ 106:.\Generated_Source\PSoC4/BLE_1_dis.c ****     }
+ 107:.\Generated_Source\PSoC4/BLE_1_dis.c **** #endif /* CYBLE_DIS_CLIENT */
+ 108:.\Generated_Source\PSoC4/BLE_1_dis.c ****     
+ 109:.\Generated_Source\PSoC4/BLE_1_dis.c **** }
+  76              		.loc 1 109 0
+  77 0008 BD46     		mov	sp, r7
+  78 000a 02B0     		add	sp, sp, #8
+  79              		@ sp needed
+  80 000c 80BD     		pop	{r7, pc}
+  81              		.cfi_endproc
+  82              	.LFE3:
+  83              		.size	CyBle_DisRegisterAttrCallback, .-CyBle_DisRegisterAttrCallback
+  84 000e C046     		.section	.text.CyBle_DissSetCharacteristicValue,"ax",%progbits
+  85              		.align	2
+  86              		.global	CyBle_DissSetCharacteristicValue
+  87              		.code	16
+  88              		.thumb_func
+  89              		.type	CyBle_DissSetCharacteristicValue, %function
+  90              	CyBle_DissSetCharacteristicValue:
+  91              	.LFB4:
+ 110:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 111:.\Generated_Source\PSoC4/BLE_1_dis.c **** #ifdef CYBLE_DIS_SERVER
+ 112:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 113:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 114:.\Generated_Source\PSoC4/BLE_1_dis.c **** /******************************************************************************
+ 115:.\Generated_Source\PSoC4/BLE_1_dis.c **** ##Function Name: CyBle_DissSetCharacteristicValue
+ 116:.\Generated_Source\PSoC4/BLE_1_dis.c **** *******************************************************************************
+ 117:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 118:.\Generated_Source\PSoC4/BLE_1_dis.c **** Summary:
+ 119:.\Generated_Source\PSoC4/BLE_1_dis.c ****  Sets a characteristic value of the service, which is identified by charIndex,
+ 120:.\Generated_Source\PSoC4/BLE_1_dis.c ****  to the local database.
+ 121:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 122:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 123:.\Generated_Source\PSoC4/BLE_1_dis.c **** Parameters:
+ 124:.\Generated_Source\PSoC4/BLE_1_dis.c ****  charIndex: The index of a service characteristic.
+ 125:.\Generated_Source\PSoC4/BLE_1_dis.c ****  attrSize: The size of the characteristic value attribute.
+ 126:.\Generated_Source\PSoC4/BLE_1_dis.c ****  *attrValue: The pointer to the characteristic value data that should be
+ 127:.\Generated_Source\PSoC4/BLE_1_dis.c ****                   stored to the GATT database.
+ 128:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 129:.\Generated_Source\PSoC4/BLE_1_dis.c **** Return:
+ 130:.\Generated_Source\PSoC4/BLE_1_dis.c ****  Return value is of type CYBLE_API_RESULT_T.
+ 131:.\Generated_Source\PSoC4/BLE_1_dis.c ****  * CYBLE_ERROR_OK - The request handled successfully
+ 132:.\Generated_Source\PSoC4/BLE_1_dis.c ****  * CYBLE_ERROR_INVALID_PARAMETER - Validation of the input parameter failed
+ 133:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 134:.\Generated_Source\PSoC4/BLE_1_dis.c **** ******************************************************************************/
+ 135:.\Generated_Source\PSoC4/BLE_1_dis.c **** CYBLE_API_RESULT_T CyBle_DissSetCharacteristicValue(CYBLE_DIS_CHAR_INDEX_T charIndex, uint8 attrSiz
+ 136:.\Generated_Source\PSoC4/BLE_1_dis.c **** {
+  92              		.loc 1 136 0
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 5
+
+
+  93              		.cfi_startproc
+  94 0000 80B5     		push	{r7, lr}
+  95              		.cfi_def_cfa_offset 8
+  96              		.cfi_offset 7, -8
+  97              		.cfi_offset 14, -4
+  98 0002 86B0     		sub	sp, sp, #24
+  99              		.cfi_def_cfa_offset 32
+ 100 0004 00AF     		add	r7, sp, #0
+ 101              		.cfi_def_cfa_register 7
+ 102 0006 3A60     		str	r2, [r7]
+ 103 0008 FB1D     		add	r3, r7, #7
+ 104 000a 021C     		add	r2, r0, #0
+ 105 000c 1A70     		strb	r2, [r3]
+ 106 000e BB1D     		add	r3, r7, #6
+ 107 0010 0A1C     		add	r2, r1, #0
+ 108 0012 1A70     		strb	r2, [r3]
+ 137:.\Generated_Source\PSoC4/BLE_1_dis.c ****     CYBLE_API_RESULT_T apiResult = CYBLE_ERROR_OK;
+ 109              		.loc 1 137 0
+ 110 0014 3B1C     		mov	r3, r7
+ 111 0016 1633     		add	r3, r3, #22
+ 112 0018 0022     		mov	r2, #0
+ 113 001a 1A80     		strh	r2, [r3]
+ 138:.\Generated_Source\PSoC4/BLE_1_dis.c ****     CYBLE_GATT_HANDLE_VALUE_PAIR_T locHandleValuePair;
+ 139:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 140:.\Generated_Source\PSoC4/BLE_1_dis.c ****     if(charIndex >= CYBLE_DIS_CHAR_COUNT)
+ 114              		.loc 1 140 0
+ 115 001c FB1D     		add	r3, r7, #7
+ 116 001e 1B78     		ldrb	r3, [r3]
+ 117 0020 082B     		cmp	r3, #8
+ 118 0022 04D9     		bls	.L4
+ 141:.\Generated_Source\PSoC4/BLE_1_dis.c ****     {
+ 142:.\Generated_Source\PSoC4/BLE_1_dis.c ****         apiResult = CYBLE_ERROR_INVALID_PARAMETER;
+ 119              		.loc 1 142 0
+ 120 0024 3B1C     		mov	r3, r7
+ 121 0026 1633     		add	r3, r3, #22
+ 122 0028 0122     		mov	r2, #1
+ 123 002a 1A80     		strh	r2, [r3]
+ 124 002c 21E0     		b	.L5
+ 125              	.L4:
+ 143:.\Generated_Source\PSoC4/BLE_1_dis.c ****     }
+ 144:.\Generated_Source\PSoC4/BLE_1_dis.c ****     else
+ 145:.\Generated_Source\PSoC4/BLE_1_dis.c ****     {
+ 146:.\Generated_Source\PSoC4/BLE_1_dis.c ****         /* Store data in database */
+ 147:.\Generated_Source\PSoC4/BLE_1_dis.c ****         locHandleValuePair.attrHandle = cyBle_diss.charHandle[charIndex];
+ 126              		.loc 1 147 0
+ 127 002e FB1D     		add	r3, r7, #7
+ 128 0030 1B78     		ldrb	r3, [r3]
+ 129 0032 134A     		ldr	r2, .L7
+ 130 0034 5B00     		lsl	r3, r3, #1
+ 131 0036 D318     		add	r3, r2, r3
+ 132 0038 5A88     		ldrh	r2, [r3, #2]
+ 133 003a 3B1C     		mov	r3, r7
+ 134 003c 0833     		add	r3, r3, #8
+ 135 003e 1A81     		strh	r2, [r3, #8]
+ 148:.\Generated_Source\PSoC4/BLE_1_dis.c ****         locHandleValuePair.value.len = attrSize;
+ 136              		.loc 1 148 0
+ 137 0040 BB1D     		add	r3, r7, #6
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 6
+
+
+ 138 0042 1B78     		ldrb	r3, [r3]
+ 139 0044 9AB2     		uxth	r2, r3
+ 140 0046 3B1C     		mov	r3, r7
+ 141 0048 0833     		add	r3, r3, #8
+ 142 004a 9A80     		strh	r2, [r3, #4]
+ 149:.\Generated_Source\PSoC4/BLE_1_dis.c ****         locHandleValuePair.value.val = attrValue;
+ 143              		.loc 1 149 0
+ 144 004c 3B1C     		mov	r3, r7
+ 145 004e 0833     		add	r3, r3, #8
+ 146 0050 3A68     		ldr	r2, [r7]
+ 147 0052 1A60     		str	r2, [r3]
+ 150:.\Generated_Source\PSoC4/BLE_1_dis.c ****         if(CYBLE_GATT_ERR_NONE !=
+ 151:.\Generated_Source\PSoC4/BLE_1_dis.c ****             CyBle_GattsWriteAttributeValue(&locHandleValuePair, 0u, NULL, CYBLE_GATT_DB_LOCALLY_INI
+ 148              		.loc 1 151 0
+ 149 0054 3B1C     		mov	r3, r7
+ 150 0056 0833     		add	r3, r3, #8
+ 151 0058 181C     		mov	r0, r3
+ 152 005a 0021     		mov	r1, #0
+ 153 005c 0022     		mov	r2, #0
+ 154 005e 0023     		mov	r3, #0
+ 155 0060 FFF7FEFF 		bl	CyBle_GattsWriteAttributeValue
+ 156 0064 031C     		mov	r3, r0
+ 150:.\Generated_Source\PSoC4/BLE_1_dis.c ****         if(CYBLE_GATT_ERR_NONE !=
+ 157              		.loc 1 150 0
+ 158 0066 002B     		cmp	r3, #0
+ 159 0068 03D0     		beq	.L5
+ 152:.\Generated_Source\PSoC4/BLE_1_dis.c ****         {
+ 153:.\Generated_Source\PSoC4/BLE_1_dis.c ****             apiResult = CYBLE_ERROR_INVALID_PARAMETER;
+ 160              		.loc 1 153 0
+ 161 006a 3B1C     		mov	r3, r7
+ 162 006c 1633     		add	r3, r3, #22
+ 163 006e 0122     		mov	r2, #1
+ 164 0070 1A80     		strh	r2, [r3]
+ 165              	.L5:
+ 154:.\Generated_Source\PSoC4/BLE_1_dis.c ****         }
+ 155:.\Generated_Source\PSoC4/BLE_1_dis.c ****     }
+ 156:.\Generated_Source\PSoC4/BLE_1_dis.c ****     return (apiResult);
+ 166              		.loc 1 156 0
+ 167 0072 3B1C     		mov	r3, r7
+ 168 0074 1633     		add	r3, r3, #22
+ 169 0076 1B88     		ldrh	r3, [r3]
+ 157:.\Generated_Source\PSoC4/BLE_1_dis.c **** }
+ 170              		.loc 1 157 0
+ 171 0078 181C     		mov	r0, r3
+ 172 007a BD46     		mov	sp, r7
+ 173 007c 06B0     		add	sp, sp, #24
+ 174              		@ sp needed
+ 175 007e 80BD     		pop	{r7, pc}
+ 176              	.L8:
+ 177              		.align	2
+ 178              	.L7:
+ 179 0080 00000000 		.word	cyBle_diss
+ 180              		.cfi_endproc
+ 181              	.LFE4:
+ 182              		.size	CyBle_DissSetCharacteristicValue, .-CyBle_DissSetCharacteristicValue
+ 183              		.section	.text.CyBle_DissGetCharacteristicValue,"ax",%progbits
+ 184              		.align	2
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 7
+
+
+ 185              		.global	CyBle_DissGetCharacteristicValue
+ 186              		.code	16
+ 187              		.thumb_func
+ 188              		.type	CyBle_DissGetCharacteristicValue, %function
+ 189              	CyBle_DissGetCharacteristicValue:
+ 190              	.LFB5:
+ 158:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 159:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 160:.\Generated_Source\PSoC4/BLE_1_dis.c **** /******************************************************************************
+ 161:.\Generated_Source\PSoC4/BLE_1_dis.c **** ##Function Name: CyBle_DissGetCharacteristicValue
+ 162:.\Generated_Source\PSoC4/BLE_1_dis.c **** *******************************************************************************
+ 163:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 164:.\Generated_Source\PSoC4/BLE_1_dis.c **** Summary:
+ 165:.\Generated_Source\PSoC4/BLE_1_dis.c ****  Gets a characteristic value of the service, which is identified by charIndex,
+ 166:.\Generated_Source\PSoC4/BLE_1_dis.c ****  from the GATT database.
+ 167:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 168:.\Generated_Source\PSoC4/BLE_1_dis.c **** Parameters:
+ 169:.\Generated_Source\PSoC4/BLE_1_dis.c ****  charIndex: The index of a service characteristic.
+ 170:.\Generated_Source\PSoC4/BLE_1_dis.c ****  attrSize: The size of the characteristic value attribute.
+ 171:.\Generated_Source\PSoC4/BLE_1_dis.c ****  *attrValue: The pointer to the location where characteristic value data
+ 172:.\Generated_Source\PSoC4/BLE_1_dis.c ****               should be stored.
+ 173:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 174:.\Generated_Source\PSoC4/BLE_1_dis.c **** Return:
+ 175:.\Generated_Source\PSoC4/BLE_1_dis.c ****  Return value is of type CYBLE_API_RESULT_T.
+ 176:.\Generated_Source\PSoC4/BLE_1_dis.c ****  Return value is of type CYBLE_API_RESULT_T.
+ 177:.\Generated_Source\PSoC4/BLE_1_dis.c ****  * CYBLE_ERROR_OK - The request handled successfully
+ 178:.\Generated_Source\PSoC4/BLE_1_dis.c ****  * CYBLE_ERROR_INVALID_PARAMETER - Validation of the input parameter failed
+ 179:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 180:.\Generated_Source\PSoC4/BLE_1_dis.c **** ******************************************************************************/
+ 181:.\Generated_Source\PSoC4/BLE_1_dis.c **** CYBLE_API_RESULT_T CyBle_DissGetCharacteristicValue(CYBLE_DIS_CHAR_INDEX_T charIndex, uint8 attrSiz
+ 182:.\Generated_Source\PSoC4/BLE_1_dis.c **** {
+ 191              		.loc 1 182 0
+ 192              		.cfi_startproc
+ 193 0000 80B5     		push	{r7, lr}
+ 194              		.cfi_def_cfa_offset 8
+ 195              		.cfi_offset 7, -8
+ 196              		.cfi_offset 14, -4
+ 197 0002 86B0     		sub	sp, sp, #24
+ 198              		.cfi_def_cfa_offset 32
+ 199 0004 00AF     		add	r7, sp, #0
+ 200              		.cfi_def_cfa_register 7
+ 201 0006 3A60     		str	r2, [r7]
+ 202 0008 FB1D     		add	r3, r7, #7
+ 203 000a 021C     		add	r2, r0, #0
+ 204 000c 1A70     		strb	r2, [r3]
+ 205 000e BB1D     		add	r3, r7, #6
+ 206 0010 0A1C     		add	r2, r1, #0
+ 207 0012 1A70     		strb	r2, [r3]
+ 183:.\Generated_Source\PSoC4/BLE_1_dis.c ****     CYBLE_API_RESULT_T apiResult = CYBLE_ERROR_OK;
+ 208              		.loc 1 183 0
+ 209 0014 3B1C     		mov	r3, r7
+ 210 0016 1633     		add	r3, r3, #22
+ 211 0018 0022     		mov	r2, #0
+ 212 001a 1A80     		strh	r2, [r3]
+ 184:.\Generated_Source\PSoC4/BLE_1_dis.c ****     CYBLE_GATT_HANDLE_VALUE_PAIR_T locHandleValuePair;
+ 185:.\Generated_Source\PSoC4/BLE_1_dis.c **** 
+ 186:.\Generated_Source\PSoC4/BLE_1_dis.c ****     if(charIndex >= CYBLE_DIS_CHAR_COUNT)
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 8
+
+
+ 213              		.loc 1 186 0
+ 214 001c FB1D     		add	r3, r7, #7
+ 215 001e 1B78     		ldrb	r3, [r3]
+ 216 0020 082B     		cmp	r3, #8
+ 217 0022 04D9     		bls	.L10
+ 187:.\Generated_Source\PSoC4/BLE_1_dis.c ****     {
+ 188:.\Generated_Source\PSoC4/BLE_1_dis.c ****         apiResult = CYBLE_ERROR_INVALID_PARAMETER;
+ 218              		.loc 1 188 0
+ 219 0024 3B1C     		mov	r3, r7
+ 220 0026 1633     		add	r3, r3, #22
+ 221 0028 0122     		mov	r2, #1
+ 222 002a 1A80     		strh	r2, [r3]
+ 223 002c 20E0     		b	.L11
+ 224              	.L10:
+ 189:.\Generated_Source\PSoC4/BLE_1_dis.c ****     }
+ 190:.\Generated_Source\PSoC4/BLE_1_dis.c ****     else
+ 191:.\Generated_Source\PSoC4/BLE_1_dis.c ****     {
+ 192:.\Generated_Source\PSoC4/BLE_1_dis.c ****         /* Read characteristic value from database */
+ 193:.\Generated_Source\PSoC4/BLE_1_dis.c ****         locHandleValuePair.attrHandle = cyBle_diss.charHandle[charIndex];
+ 225              		.loc 1 193 0
+ 226 002e FB1D     		add	r3, r7, #7
+ 227 0030 1B78     		ldrb	r3, [r3]
+ 228 0032 134A     		ldr	r2, .L13
+ 229 0034 5B00     		lsl	r3, r3, #1
+ 230 0036 D318     		add	r3, r2, r3
+ 231 0038 5A88     		ldrh	r2, [r3, #2]
+ 232 003a 3B1C     		mov	r3, r7
+ 233 003c 0833     		add	r3, r3, #8
+ 234 003e 1A81     		strh	r2, [r3, #8]
+ 194:.\Generated_Source\PSoC4/BLE_1_dis.c ****         locHandleValuePair.value.len = attrSize;
+ 235              		.loc 1 194 0
+ 236 0040 BB1D     		add	r3, r7, #6
+ 237 0042 1B78     		ldrb	r3, [r3]
+ 238 0044 9AB2     		uxth	r2, r3
+ 239 0046 3B1C     		mov	r3, r7
+ 240 0048 0833     		add	r3, r3, #8
+ 241 004a 9A80     		strh	r2, [r3, #4]
+ 195:.\Generated_Source\PSoC4/BLE_1_dis.c ****         locHandleValuePair.value.val = attrValue;
+ 242              		.loc 1 195 0
+ 243 004c 3B1C     		mov	r3, r7
+ 244 004e 0833     		add	r3, r3, #8
+ 245 0050 3A68     		ldr	r2, [r7]
+ 246 0052 1A60     		str	r2, [r3]
+ 196:.\Generated_Source\PSoC4/BLE_1_dis.c ****         if(CYBLE_GATT_ERR_NONE !=
+ 197:.\Generated_Source\PSoC4/BLE_1_dis.c ****             CyBle_GattsReadAttributeValue(&locHandleValuePair, NULL, CYBLE_GATT_DB_LOCALLY_INITIATE
+ 247              		.loc 1 197 0
+ 248 0054 3B1C     		mov	r3, r7
+ 249 0056 0833     		add	r3, r3, #8
+ 250 0058 181C     		mov	r0, r3
+ 251 005a 0021     		mov	r1, #0
+ 252 005c 0022     		mov	r2, #0
+ 253 005e FFF7FEFF 		bl	CyBle_GattsReadAttributeValue
+ 254 0062 031C     		mov	r3, r0
+ 196:.\Generated_Source\PSoC4/BLE_1_dis.c ****         if(CYBLE_GATT_ERR_NONE !=
+ 255              		.loc 1 196 0
+ 256 0064 002B     		cmp	r3, #0
+ 257 0066 03D0     		beq	.L11
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 9
+
+
+ 198:.\Generated_Source\PSoC4/BLE_1_dis.c ****         {
+ 199:.\Generated_Source\PSoC4/BLE_1_dis.c ****             apiResult = CYBLE_ERROR_INVALID_PARAMETER;
+ 258              		.loc 1 199 0
+ 259 0068 3B1C     		mov	r3, r7
+ 260 006a 1633     		add	r3, r3, #22
+ 261 006c 0122     		mov	r2, #1
+ 262 006e 1A80     		strh	r2, [r3]
+ 263              	.L11:
+ 200:.\Generated_Source\PSoC4/BLE_1_dis.c ****         }
+ 201:.\Generated_Source\PSoC4/BLE_1_dis.c ****     }
+ 202:.\Generated_Source\PSoC4/BLE_1_dis.c ****     return (apiResult);
+ 264              		.loc 1 202 0
+ 265 0070 3B1C     		mov	r3, r7
+ 266 0072 1633     		add	r3, r3, #22
+ 267 0074 1B88     		ldrh	r3, [r3]
+ 203:.\Generated_Source\PSoC4/BLE_1_dis.c **** }
+ 268              		.loc 1 203 0
+ 269 0076 181C     		mov	r0, r3
+ 270 0078 BD46     		mov	sp, r7
+ 271 007a 06B0     		add	sp, sp, #24
+ 272              		@ sp needed
+ 273 007c 80BD     		pop	{r7, pc}
+ 274              	.L14:
+ 275 007e C046     		.align	2
+ 276              	.L13:
+ 277 0080 00000000 		.word	cyBle_diss
+ 278              		.cfi_endproc
+ 279              	.LFE5:
+ 280              		.size	CyBle_DissGetCharacteristicValue, .-CyBle_DissGetCharacteristicValue
+ 281              		.text
+ 282              	.Letext0:
+ 283              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 284              		.file 3 ".\\Generated_Source\\PSoC4\\BLE_1_Stack.h"
+ 285              		.file 4 ".\\Generated_Source\\PSoC4\\BLE_1_StackGatt.h"
+ 286              		.file 5 ".\\Generated_Source\\PSoC4\\BLE_1.h"
+ 287              		.file 6 ".\\Generated_Source\\PSoC4\\BLE_1_dis.h"
+ 288              		.file 7 ".\\Generated_Source\\PSoC4\\BLE_1_hrs.h"
+ 289              		.section	.debug_info,"",%progbits
+ 290              	.Ldebug_info0:
+ 291 0000 FA050000 		.4byte	0x5fa
+ 292 0004 0400     		.2byte	0x4
+ 293 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 294 000a 04       		.byte	0x4
+ 295 000b 01       		.uleb128 0x1
+ 296 000c FC0A0000 		.4byte	.LASF162
+ 297 0010 01       		.byte	0x1
+ 298 0011 970F0000 		.4byte	.LASF163
+ 299 0015 ED0D0000 		.4byte	.LASF164
+ 300 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 301 001d 00000000 		.4byte	0
+ 302 0021 00000000 		.4byte	.Ldebug_line0
+ 303 0025 02       		.uleb128 0x2
+ 304 0026 01       		.byte	0x1
+ 305 0027 06       		.byte	0x6
+ 306 0028 D0020000 		.4byte	.LASF0
+ 307 002c 02       		.uleb128 0x2
+ 308 002d 01       		.byte	0x1
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 10
+
+
+ 309 002e 08       		.byte	0x8
+ 310 002f FB0B0000 		.4byte	.LASF1
+ 311 0033 02       		.uleb128 0x2
+ 312 0034 02       		.byte	0x2
+ 313 0035 05       		.byte	0x5
+ 314 0036 1D080000 		.4byte	.LASF2
+ 315 003a 02       		.uleb128 0x2
+ 316 003b 02       		.byte	0x2
+ 317 003c 07       		.byte	0x7
+ 318 003d 840F0000 		.4byte	.LASF3
+ 319 0041 02       		.uleb128 0x2
+ 320 0042 04       		.byte	0x4
+ 321 0043 05       		.byte	0x5
+ 322 0044 D0010000 		.4byte	.LASF4
+ 323 0048 02       		.uleb128 0x2
+ 324 0049 04       		.byte	0x4
+ 325 004a 07       		.byte	0x7
+ 326 004b 7E060000 		.4byte	.LASF5
+ 327 004f 02       		.uleb128 0x2
+ 328 0050 08       		.byte	0x8
+ 329 0051 05       		.byte	0x5
+ 330 0052 C2020000 		.4byte	.LASF6
+ 331 0056 02       		.uleb128 0x2
+ 332 0057 08       		.byte	0x8
+ 333 0058 07       		.byte	0x7
+ 334 0059 A9050000 		.4byte	.LASF7
+ 335 005d 03       		.uleb128 0x3
+ 336 005e 04       		.byte	0x4
+ 337 005f 05       		.byte	0x5
+ 338 0060 696E7400 		.ascii	"int\000"
+ 339 0064 02       		.uleb128 0x2
+ 340 0065 04       		.byte	0x4
+ 341 0066 07       		.byte	0x7
+ 342 0067 830E0000 		.4byte	.LASF8
+ 343 006b 04       		.uleb128 0x4
+ 344 006c 41040000 		.4byte	.LASF9
+ 345 0070 02       		.byte	0x2
+ 346 0071 A1       		.byte	0xa1
+ 347 0072 2C000000 		.4byte	0x2c
+ 348 0076 04       		.uleb128 0x4
+ 349 0077 3F000000 		.4byte	.LASF10
+ 350 007b 02       		.byte	0x2
+ 351 007c A2       		.byte	0xa2
+ 352 007d 3A000000 		.4byte	0x3a
+ 353 0081 04       		.uleb128 0x4
+ 354 0082 C8040000 		.4byte	.LASF11
+ 355 0086 02       		.byte	0x2
+ 356 0087 A3       		.byte	0xa3
+ 357 0088 48000000 		.4byte	0x48
+ 358 008c 02       		.uleb128 0x2
+ 359 008d 04       		.byte	0x4
+ 360 008e 04       		.byte	0x4
+ 361 008f F60A0000 		.4byte	.LASF12
+ 362 0093 02       		.uleb128 0x2
+ 363 0094 08       		.byte	0x8
+ 364 0095 04       		.byte	0x4
+ 365 0096 66040000 		.4byte	.LASF13
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 11
+
+
+ 366 009a 02       		.uleb128 0x2
+ 367 009b 01       		.byte	0x1
+ 368 009c 08       		.byte	0x8
+ 369 009d 250E0000 		.4byte	.LASF14
+ 370 00a1 02       		.uleb128 0x2
+ 371 00a2 04       		.byte	0x4
+ 372 00a3 07       		.byte	0x7
+ 373 00a4 66090000 		.4byte	.LASF15
+ 374 00a8 05       		.uleb128 0x5
+ 375 00a9 04       		.byte	0x4
+ 376 00aa 06       		.uleb128 0x6
+ 377 00ab 01       		.byte	0x1
+ 378 00ac 03       		.byte	0x3
+ 379 00ad 52       		.byte	0x52
+ 380 00ae 1A020000 		.4byte	0x21a
+ 381 00b2 07       		.uleb128 0x7
+ 382 00b3 78070000 		.4byte	.LASF16
+ 383 00b7 00       		.sleb128 0
+ 384 00b8 07       		.uleb128 0x7
+ 385 00b9 DC020000 		.4byte	.LASF17
+ 386 00bd 01       		.sleb128 1
+ 387 00be 07       		.uleb128 0x7
+ 388 00bf BE010000 		.4byte	.LASF18
+ 389 00c3 02       		.sleb128 2
+ 390 00c4 07       		.uleb128 0x7
+ 391 00c5 6B0F0000 		.4byte	.LASF19
+ 392 00c9 03       		.sleb128 3
+ 393 00ca 07       		.uleb128 0x7
+ 394 00cb 11020000 		.4byte	.LASF20
+ 395 00cf 04       		.sleb128 4
+ 396 00d0 07       		.uleb128 0x7
+ 397 00d1 23000000 		.4byte	.LASF21
+ 398 00d5 05       		.sleb128 5
+ 399 00d6 07       		.uleb128 0x7
+ 400 00d7 C9080000 		.4byte	.LASF22
+ 401 00db 20       		.sleb128 32
+ 402 00dc 07       		.uleb128 0x7
+ 403 00dd 54030000 		.4byte	.LASF23
+ 404 00e1 21       		.sleb128 33
+ 405 00e2 07       		.uleb128 0x7
+ 406 00e3 74100000 		.4byte	.LASF24
+ 407 00e7 22       		.sleb128 34
+ 408 00e8 07       		.uleb128 0x7
+ 409 00e9 27080000 		.4byte	.LASF25
+ 410 00ed 23       		.sleb128 35
+ 411 00ee 07       		.uleb128 0x7
+ 412 00ef 070A0000 		.4byte	.LASF26
+ 413 00f3 24       		.sleb128 36
+ 414 00f4 07       		.uleb128 0x7
+ 415 00f5 94090000 		.4byte	.LASF27
+ 416 00f9 25       		.sleb128 37
+ 417 00fa 07       		.uleb128 0x7
+ 418 00fb F6030000 		.4byte	.LASF28
+ 419 00ff 26       		.sleb128 38
+ 420 0100 07       		.uleb128 0x7
+ 421 0101 E2070000 		.4byte	.LASF29
+ 422 0105 27       		.sleb128 39
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 12
+
+
+ 423 0106 07       		.uleb128 0x7
+ 424 0107 610E0000 		.4byte	.LASF30
+ 425 010b 28       		.sleb128 40
+ 426 010c 07       		.uleb128 0x7
+ 427 010d 7A020000 		.4byte	.LASF31
+ 428 0111 29       		.sleb128 41
+ 429 0112 07       		.uleb128 0x7
+ 430 0113 1D010000 		.4byte	.LASF32
+ 431 0117 2A       		.sleb128 42
+ 432 0118 07       		.uleb128 0x7
+ 433 0119 26020000 		.4byte	.LASF33
+ 434 011d 2B       		.sleb128 43
+ 435 011e 07       		.uleb128 0x7
+ 436 011f 49110000 		.4byte	.LASF34
+ 437 0123 2C       		.sleb128 44
+ 438 0124 07       		.uleb128 0x7
+ 439 0125 03050000 		.4byte	.LASF35
+ 440 0129 C000     		.sleb128 64
+ 441 012b 07       		.uleb128 0x7
+ 442 012c 5B080000 		.4byte	.LASF36
+ 443 0130 C100     		.sleb128 65
+ 444 0132 07       		.uleb128 0x7
+ 445 0133 09060000 		.4byte	.LASF37
+ 446 0137 C200     		.sleb128 66
+ 447 0139 07       		.uleb128 0x7
+ 448 013a 12100000 		.4byte	.LASF38
+ 449 013e C300     		.sleb128 67
+ 450 0140 07       		.uleb128 0x7
+ 451 0141 CD060000 		.4byte	.LASF39
+ 452 0145 C400     		.sleb128 68
+ 453 0147 07       		.uleb128 0x7
+ 454 0148 CF0A0000 		.4byte	.LASF40
+ 455 014c C500     		.sleb128 69
+ 456 014e 07       		.uleb128 0x7
+ 457 014f 45090000 		.4byte	.LASF41
+ 458 0153 C600     		.sleb128 70
+ 459 0155 07       		.uleb128 0x7
+ 460 0156 8F070000 		.4byte	.LASF42
+ 461 015a C700     		.sleb128 71
+ 462 015c 07       		.uleb128 0x7
+ 463 015d 15110000 		.4byte	.LASF43
+ 464 0161 C800     		.sleb128 72
+ 465 0163 07       		.uleb128 0x7
+ 466 0164 46000000 		.4byte	.LASF44
+ 467 0168 C900     		.sleb128 73
+ 468 016a 07       		.uleb128 0x7
+ 469 016b 98100000 		.4byte	.LASF45
+ 470 016f CA00     		.sleb128 74
+ 471 0171 07       		.uleb128 0x7
+ 472 0172 67010000 		.4byte	.LASF46
+ 473 0176 CB00     		.sleb128 75
+ 474 0178 07       		.uleb128 0x7
+ 475 0179 B3060000 		.4byte	.LASF47
+ 476 017d CC00     		.sleb128 76
+ 477 017f 07       		.uleb128 0x7
+ 478 0180 900E0000 		.4byte	.LASF48
+ 479 0184 CD00     		.sleb128 77
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 13
+
+
+ 480 0186 07       		.uleb128 0x7
+ 481 0187 C3030000 		.4byte	.LASF49
+ 482 018b CE00     		.sleb128 78
+ 483 018d 07       		.uleb128 0x7
+ 484 018e 350D0000 		.4byte	.LASF50
+ 485 0192 CF00     		.sleb128 79
+ 486 0194 07       		.uleb128 0x7
+ 487 0195 86010000 		.4byte	.LASF51
+ 488 0199 D000     		.sleb128 80
+ 489 019b 07       		.uleb128 0x7
+ 490 019c 47040000 		.4byte	.LASF52
+ 491 01a0 D100     		.sleb128 81
+ 492 01a2 07       		.uleb128 0x7
+ 493 01a3 400A0000 		.4byte	.LASF53
+ 494 01a7 D200     		.sleb128 82
+ 495 01a9 07       		.uleb128 0x7
+ 496 01aa BA0C0000 		.4byte	.LASF54
+ 497 01ae D300     		.sleb128 83
+ 498 01b0 07       		.uleb128 0x7
+ 499 01b1 5E0D0000 		.4byte	.LASF55
+ 500 01b5 D400     		.sleb128 84
+ 501 01b7 07       		.uleb128 0x7
+ 502 01b8 EB060000 		.4byte	.LASF56
+ 503 01bc D500     		.sleb128 85
+ 504 01be 07       		.uleb128 0x7
+ 505 01bf 1D050000 		.4byte	.LASF57
+ 506 01c3 F000     		.sleb128 112
+ 507 01c5 07       		.uleb128 0x7
+ 508 01c6 B6110000 		.4byte	.LASF58
+ 509 01ca F100     		.sleb128 113
+ 510 01cc 07       		.uleb128 0x7
+ 511 01cd 76080000 		.4byte	.LASF59
+ 512 01d1 F200     		.sleb128 114
+ 513 01d3 07       		.uleb128 0x7
+ 514 01d4 27090000 		.4byte	.LASF60
+ 515 01d8 F300     		.sleb128 115
+ 516 01da 07       		.uleb128 0x7
+ 517 01db B10A0000 		.4byte	.LASF61
+ 518 01df F400     		.sleb128 116
+ 519 01e1 07       		.uleb128 0x7
+ 520 01e2 80110000 		.4byte	.LASF62
+ 521 01e6 F500     		.sleb128 117
+ 522 01e8 07       		.uleb128 0x7
+ 523 01e9 46010000 		.4byte	.LASF63
+ 524 01ed F600     		.sleb128 118
+ 525 01ef 07       		.uleb128 0x7
+ 526 01f0 5F000000 		.4byte	.LASF64
+ 527 01f4 F700     		.sleb128 119
+ 528 01f6 07       		.uleb128 0x7
+ 529 01f7 00000000 		.4byte	.LASF65
+ 530 01fb F800     		.sleb128 120
+ 531 01fd 07       		.uleb128 0x7
+ 532 01fe AA0E0000 		.4byte	.LASF66
+ 533 0202 F900     		.sleb128 121
+ 534 0204 07       		.uleb128 0x7
+ 535 0205 65050000 		.4byte	.LASF67
+ 536 0209 FA00     		.sleb128 122
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 14
+
+
+ 537 020b 07       		.uleb128 0x7
+ 538 020c 45020000 		.4byte	.LASF68
+ 539 0210 FA01     		.sleb128 250
+ 540 0212 07       		.uleb128 0x7
+ 541 0213 E6040000 		.4byte	.LASF69
+ 542 0217 FF01     		.sleb128 255
+ 543 0219 00       		.byte	0
+ 544 021a 08       		.uleb128 0x8
+ 545 021b 02       		.byte	0x2
+ 546 021c 03       		.byte	0x3
+ 547 021d 8401     		.2byte	0x184
+ 548 021f EC020000 		.4byte	0x2ec
+ 549 0223 07       		.uleb128 0x7
+ 550 0224 F4040000 		.4byte	.LASF70
+ 551 0228 00       		.sleb128 0
+ 552 0229 07       		.uleb128 0x7
+ 553 022a 6D040000 		.4byte	.LASF71
+ 554 022e 01       		.sleb128 1
+ 555 022f 07       		.uleb128 0x7
+ 556 0230 BC0F0000 		.4byte	.LASF72
+ 557 0234 02       		.sleb128 2
+ 558 0235 07       		.uleb128 0x7
+ 559 0236 C6050000 		.4byte	.LASF73
+ 560 023a 03       		.sleb128 3
+ 561 023b 07       		.uleb128 0x7
+ 562 023c 51100000 		.4byte	.LASF74
+ 563 0240 04       		.sleb128 4
+ 564 0241 07       		.uleb128 0x7
+ 565 0242 EB050000 		.4byte	.LASF75
+ 566 0246 05       		.sleb128 5
+ 567 0247 07       		.uleb128 0x7
+ 568 0248 DB0C0000 		.4byte	.LASF76
+ 569 024c 06       		.sleb128 6
+ 570 024d 07       		.uleb128 0x7
+ 571 024e 2D030000 		.4byte	.LASF77
+ 572 0252 07       		.sleb128 7
+ 573 0253 07       		.uleb128 0x7
+ 574 0254 29120000 		.4byte	.LASF78
+ 575 0258 08       		.sleb128 8
+ 576 0259 07       		.uleb128 0x7
+ 577 025a 89050000 		.4byte	.LASF79
+ 578 025e 09       		.sleb128 9
+ 579 025f 07       		.uleb128 0x7
+ 580 0260 B80B0000 		.4byte	.LASF80
+ 581 0264 0A       		.sleb128 10
+ 582 0265 07       		.uleb128 0x7
+ 583 0266 410E0000 		.4byte	.LASF81
+ 584 026a 0B       		.sleb128 11
+ 585 026b 07       		.uleb128 0x7
+ 586 026c 63020000 		.4byte	.LASF82
+ 587 0270 0C       		.sleb128 12
+ 588 0271 07       		.uleb128 0x7
+ 589 0272 D9010000 		.4byte	.LASF83
+ 590 0276 0D       		.sleb128 13
+ 591 0277 07       		.uleb128 0x7
+ 592 0278 55060000 		.4byte	.LASF84
+ 593 027c 0E       		.sleb128 14
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 15
+
+
+ 594 027d 07       		.uleb128 0x7
+ 595 027e F0100000 		.4byte	.LASF85
+ 596 0282 0F       		.sleb128 15
+ 597 0283 07       		.uleb128 0x7
+ 598 0284 100F0000 		.4byte	.LASF86
+ 599 0288 10       		.sleb128 16
+ 600 0289 07       		.uleb128 0x7
+ 601 028a 0F070000 		.4byte	.LASF87
+ 602 028e 11       		.sleb128 17
+ 603 028f 07       		.uleb128 0x7
+ 604 0290 A7000000 		.4byte	.LASF88
+ 605 0294 12       		.sleb128 18
+ 606 0295 07       		.uleb128 0x7
+ 607 0296 1E040000 		.4byte	.LASF89
+ 608 029a 13       		.sleb128 19
+ 609 029b 07       		.uleb128 0x7
+ 610 029c 01120000 		.4byte	.LASF90
+ 611 02a0 14       		.sleb128 20
+ 612 02a1 07       		.uleb128 0x7
+ 613 02a2 0B030000 		.4byte	.LASF91
+ 614 02a6 27       		.sleb128 39
+ 615 02a7 07       		.uleb128 0x7
+ 616 02a8 EB0E0000 		.4byte	.LASF92
+ 617 02ac 28       		.sleb128 40
+ 618 02ad 07       		.uleb128 0x7
+ 619 02ae D4100000 		.4byte	.LASF93
+ 620 02b2 29       		.sleb128 41
+ 621 02b3 07       		.uleb128 0x7
+ 622 02b4 17090000 		.4byte	.LASF94
+ 623 02b8 FF01     		.sleb128 255
+ 624 02ba 07       		.uleb128 0x7
+ 625 02bb E1030000 		.4byte	.LASF95
+ 626 02bf 8002     		.sleb128 256
+ 627 02c1 07       		.uleb128 0x7
+ 628 02c2 A1110000 		.4byte	.LASF96
+ 629 02c6 8102     		.sleb128 257
+ 630 02c8 07       		.uleb128 0x7
+ 631 02c9 01090000 		.4byte	.LASF97
+ 632 02cd 8202     		.sleb128 258
+ 633 02cf 07       		.uleb128 0x7
+ 634 02d0 A5010000 		.4byte	.LASF98
+ 635 02d4 8302     		.sleb128 259
+ 636 02d6 07       		.uleb128 0x7
+ 637 02d7 610A0000 		.4byte	.LASF99
+ 638 02db 8402     		.sleb128 260
+ 639 02dd 07       		.uleb128 0x7
+ 640 02de 8C0C0000 		.4byte	.LASF100
+ 641 02e2 8502     		.sleb128 261
+ 642 02e4 07       		.uleb128 0x7
+ 643 02e5 A9030000 		.4byte	.LASF101
+ 644 02e9 8602     		.sleb128 262
+ 645 02eb 00       		.byte	0
+ 646 02ec 09       		.uleb128 0x9
+ 647 02ed 2D0A0000 		.4byte	.LASF102
+ 648 02f1 03       		.byte	0x3
+ 649 02f2 E101     		.2byte	0x1e1
+ 650 02f4 1A020000 		.4byte	0x21a
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 16
+
+
+ 651 02f8 0A       		.uleb128 0xa
+ 652 02f9 04       		.byte	0x4
+ 653 02fa 6B000000 		.4byte	0x6b
+ 654 02fe 06       		.uleb128 0x6
+ 655 02ff 01       		.byte	0x1
+ 656 0300 04       		.byte	0x4
+ 657 0301 A4       		.byte	0xa4
+ 658 0302 AB030000 		.4byte	0x3ab
+ 659 0306 07       		.uleb128 0x7
+ 660 0307 AD070000 		.4byte	.LASF103
+ 661 030b 00       		.sleb128 0
+ 662 030c 07       		.uleb128 0x7
+ 663 030d F1000000 		.4byte	.LASF104
+ 664 0311 01       		.sleb128 1
+ 665 0312 07       		.uleb128 0x7
+ 666 0313 43050000 		.4byte	.LASF105
+ 667 0317 02       		.sleb128 2
+ 668 0318 07       		.uleb128 0x7
+ 669 0319 33070000 		.4byte	.LASF106
+ 670 031d 03       		.sleb128 3
+ 671 031e 07       		.uleb128 0x7
+ 672 031f 8E030000 		.4byte	.LASF107
+ 673 0323 04       		.sleb128 4
+ 674 0324 07       		.uleb128 0x7
+ 675 0325 97020000 		.4byte	.LASF108
+ 676 0329 05       		.sleb128 5
+ 677 032a 07       		.uleb128 0x7
+ 678 032b CC000000 		.4byte	.LASF109
+ 679 032f 06       		.sleb128 6
+ 680 0330 07       		.uleb128 0x7
+ 681 0331 B6100000 		.4byte	.LASF110
+ 682 0335 07       		.sleb128 7
+ 683 0336 07       		.uleb128 0x7
+ 684 0337 DD090000 		.4byte	.LASF111
+ 685 033b 08       		.sleb128 8
+ 686 033c 07       		.uleb128 0x7
+ 687 033d 780B0000 		.4byte	.LASF112
+ 688 0341 09       		.sleb128 9
+ 689 0342 07       		.uleb128 0x7
+ 690 0343 90060000 		.4byte	.LASF113
+ 691 0347 0A       		.sleb128 10
+ 692 0348 07       		.uleb128 0x7
+ 693 0349 56070000 		.4byte	.LASF114
+ 694 034d 0B       		.sleb128 11
+ 695 034e 07       		.uleb128 0x7
+ 696 034f 7E000000 		.4byte	.LASF115
+ 697 0353 0C       		.sleb128 12
+ 698 0354 07       		.uleb128 0x7
+ 699 0355 1E0C0000 		.4byte	.LASF116
+ 700 0359 0D       		.sleb128 13
+ 701 035a 07       		.uleb128 0x7
+ 702 035b CD0E0000 		.4byte	.LASF117
+ 703 035f 0E       		.sleb128 14
+ 704 0360 07       		.uleb128 0x7
+ 705 0361 DA0F0000 		.4byte	.LASF118
+ 706 0365 0F       		.sleb128 15
+ 707 0366 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 17
+
+
+ 708 0367 8B040000 		.4byte	.LASF119
+ 709 036b 10       		.sleb128 16
+ 710 036c 07       		.uleb128 0x7
+ 711 036d 6F090000 		.4byte	.LASF120
+ 712 0371 11       		.sleb128 17
+ 713 0372 07       		.uleb128 0x7
+ 714 0373 B70D0000 		.4byte	.LASF121
+ 715 0377 8001     		.sleb128 128
+ 716 0379 07       		.uleb128 0x7
+ 717 037a 92080000 		.4byte	.LASF122
+ 718 037e 8001     		.sleb128 128
+ 719 0380 07       		.uleb128 0x7
+ 720 0381 27060000 		.4byte	.LASF123
+ 721 0385 8001     		.sleb128 128
+ 722 0387 07       		.uleb128 0x7
+ 723 0388 430C0000 		.4byte	.LASF124
+ 724 038c 8101     		.sleb128 129
+ 725 038e 07       		.uleb128 0x7
+ 726 038f 0C0D0000 		.4byte	.LASF125
+ 727 0393 A001     		.sleb128 160
+ 728 0395 07       		.uleb128 0x7
+ 729 0396 7F0D0000 		.4byte	.LASF126
+ 730 039a FD01     		.sleb128 253
+ 731 039c 07       		.uleb128 0x7
+ 732 039d 3E0F0000 		.4byte	.LASF127
+ 733 03a1 FE01     		.sleb128 254
+ 734 03a3 07       		.uleb128 0x7
+ 735 03a4 DF0B0000 		.4byte	.LASF128
+ 736 03a8 FF01     		.sleb128 255
+ 737 03aa 00       		.byte	0
+ 738 03ab 09       		.uleb128 0x9
+ 739 03ac EF020000 		.4byte	.LASF129
+ 740 03b0 04       		.byte	0x4
+ 741 03b1 4A01     		.2byte	0x14a
+ 742 03b3 76000000 		.4byte	0x76
+ 743 03b7 0B       		.uleb128 0xb
+ 744 03b8 08       		.byte	0x8
+ 745 03b9 04       		.byte	0x4
+ 746 03ba 6A01     		.2byte	0x16a
+ 747 03bc E8030000 		.4byte	0x3e8
+ 748 03c0 0C       		.uleb128 0xc
+ 749 03c1 76616C00 		.ascii	"val\000"
+ 750 03c5 04       		.byte	0x4
+ 751 03c6 6D01     		.2byte	0x16d
+ 752 03c8 F8020000 		.4byte	0x2f8
+ 753 03cc 00       		.byte	0
+ 754 03cd 0C       		.uleb128 0xc
+ 755 03ce 6C656E00 		.ascii	"len\000"
+ 756 03d2 04       		.byte	0x4
+ 757 03d3 7001     		.2byte	0x170
+ 758 03d5 76000000 		.4byte	0x76
+ 759 03d9 04       		.byte	0x4
+ 760 03da 0D       		.uleb128 0xd
+ 761 03db 4A030000 		.4byte	.LASF130
+ 762 03df 04       		.byte	0x4
+ 763 03e0 7401     		.2byte	0x174
+ 764 03e2 76000000 		.4byte	0x76
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 18
+
+
+ 765 03e6 06       		.byte	0x6
+ 766 03e7 00       		.byte	0
+ 767 03e8 09       		.uleb128 0x9
+ 768 03e9 FE010000 		.4byte	.LASF131
+ 769 03ed 04       		.byte	0x4
+ 770 03ee 7601     		.2byte	0x176
+ 771 03f0 B7030000 		.4byte	0x3b7
+ 772 03f4 0B       		.uleb128 0xb
+ 773 03f5 0C       		.byte	0xc
+ 774 03f6 04       		.byte	0x4
+ 775 03f7 7901     		.2byte	0x179
+ 776 03f9 18040000 		.4byte	0x418
+ 777 03fd 0D       		.uleb128 0xd
+ 778 03fe C0050000 		.4byte	.LASF132
+ 779 0402 04       		.byte	0x4
+ 780 0403 7C01     		.2byte	0x17c
+ 781 0405 E8030000 		.4byte	0x3e8
+ 782 0409 00       		.byte	0
+ 783 040a 0D       		.uleb128 0xd
+ 784 040b 9E050000 		.4byte	.LASF133
+ 785 040f 04       		.byte	0x4
+ 786 0410 7F01     		.2byte	0x17f
+ 787 0412 AB030000 		.4byte	0x3ab
+ 788 0416 08       		.byte	0x8
+ 789 0417 00       		.byte	0
+ 790 0418 09       		.uleb128 0x9
+ 791 0419 7A0A0000 		.4byte	.LASF134
+ 792 041d 04       		.byte	0x4
+ 793 041e 8101     		.2byte	0x181
+ 794 0420 F4030000 		.4byte	0x3f4
+ 795 0424 04       		.uleb128 0x4
+ 796 0425 01100000 		.4byte	.LASF135
+ 797 0429 05       		.byte	0x5
+ 798 042a F9       		.byte	0xf9
+ 799 042b 2F040000 		.4byte	0x42f
+ 800 042f 0A       		.uleb128 0xa
+ 801 0430 04       		.byte	0x4
+ 802 0431 35040000 		.4byte	0x435
+ 803 0435 0E       		.uleb128 0xe
+ 804 0436 45040000 		.4byte	0x445
+ 805 043a 0F       		.uleb128 0xf
+ 806 043b 81000000 		.4byte	0x81
+ 807 043f 0F       		.uleb128 0xf
+ 808 0440 A8000000 		.4byte	0xa8
+ 809 0444 00       		.byte	0
+ 810 0445 06       		.uleb128 0x6
+ 811 0446 01       		.byte	0x1
+ 812 0447 06       		.byte	0x6
+ 813 0448 1D       		.byte	0x1d
+ 814 0449 8A040000 		.4byte	0x48a
+ 815 044d 07       		.uleb128 0x7
+ 816 044e DC110000 		.4byte	.LASF136
+ 817 0452 00       		.sleb128 0
+ 818 0453 07       		.uleb128 0x7
+ 819 0454 2A0E0000 		.4byte	.LASF137
+ 820 0458 01       		.sleb128 1
+ 821 0459 07       		.uleb128 0x7
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 19
+
+
+ 822 045a A00B0000 		.4byte	.LASF138
+ 823 045e 02       		.sleb128 2
+ 824 045f 07       		.uleb128 0x7
+ 825 0460 CF040000 		.4byte	.LASF139
+ 826 0464 03       		.sleb128 3
+ 827 0465 07       		.uleb128 0x7
+ 828 0466 B1040000 		.4byte	.LASF140
+ 829 046a 04       		.sleb128 4
+ 830 046b 07       		.uleb128 0x7
+ 831 046c F50C0000 		.4byte	.LASF141
+ 832 0470 05       		.sleb128 5
+ 833 0471 07       		.uleb128 0x7
+ 834 0472 ED080000 		.4byte	.LASF142
+ 835 0476 06       		.sleb128 6
+ 836 0477 07       		.uleb128 0x7
+ 837 0478 990A0000 		.4byte	.LASF143
+ 838 047c 07       		.sleb128 7
+ 839 047d 07       		.uleb128 0x7
+ 840 047e 0C080000 		.4byte	.LASF144
+ 841 0482 08       		.sleb128 8
+ 842 0483 07       		.uleb128 0x7
+ 843 0484 090C0000 		.4byte	.LASF145
+ 844 0488 09       		.sleb128 9
+ 845 0489 00       		.byte	0
+ 846 048a 04       		.uleb128 0x4
+ 847 048b 30100000 		.4byte	.LASF146
+ 848 048f 06       		.byte	0x6
+ 849 0490 29       		.byte	0x29
+ 850 0491 45040000 		.4byte	0x445
+ 851 0495 10       		.uleb128 0x10
+ 852 0496 14       		.byte	0x14
+ 853 0497 06       		.byte	0x6
+ 854 0498 2E       		.byte	0x2e
+ 855 0499 B6040000 		.4byte	0x4b6
+ 856 049d 11       		.uleb128 0x11
+ 857 049e 4D080000 		.4byte	.LASF147
+ 858 04a2 06       		.byte	0x6
+ 859 04a3 31       		.byte	0x31
+ 860 04a4 AB030000 		.4byte	0x3ab
+ 861 04a8 00       		.byte	0
+ 862 04a9 11       		.uleb128 0x11
+ 863 04aa AF0C0000 		.4byte	.LASF148
+ 864 04ae 06       		.byte	0x6
+ 865 04af 34       		.byte	0x34
+ 866 04b0 B6040000 		.4byte	0x4b6
+ 867 04b4 02       		.byte	0x2
+ 868 04b5 00       		.byte	0
+ 869 04b6 12       		.uleb128 0x12
+ 870 04b7 AB030000 		.4byte	0x3ab
+ 871 04bb C6040000 		.4byte	0x4c6
+ 872 04bf 13       		.uleb128 0x13
+ 873 04c0 A1000000 		.4byte	0xa1
+ 874 04c4 08       		.byte	0x8
+ 875 04c5 00       		.byte	0
+ 876 04c6 04       		.uleb128 0x4
+ 877 04c7 3C110000 		.4byte	.LASF149
+ 878 04cb 06       		.byte	0x6
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 20
+
+
+ 879 04cc 35       		.byte	0x35
+ 880 04cd 95040000 		.4byte	0x495
+ 881 04d1 06       		.uleb128 0x6
+ 882 04d2 01       		.byte	0x1
+ 883 04d3 07       		.byte	0x7
+ 884 04d4 22       		.byte	0x22
+ 885 04d5 F2040000 		.4byte	0x4f2
+ 886 04d9 07       		.uleb128 0x7
+ 887 04da AE090000 		.4byte	.LASF150
+ 888 04de 00       		.sleb128 0
+ 889 04df 07       		.uleb128 0x7
+ 890 04e0 A90D0000 		.4byte	.LASF151
+ 891 04e4 01       		.sleb128 1
+ 892 04e5 07       		.uleb128 0x7
+ 893 04e6 80030000 		.4byte	.LASF152
+ 894 04ea 02       		.sleb128 2
+ 895 04eb 07       		.uleb128 0x7
+ 896 04ec 6B030000 		.4byte	.LASF153
+ 897 04f0 03       		.sleb128 3
+ 898 04f1 00       		.byte	0
+ 899 04f2 14       		.uleb128 0x14
+ 900 04f3 0F010000 		.4byte	.LASF165
+ 901 04f7 01       		.byte	0x1
+ 902 04f8 3D       		.byte	0x3d
+ 903 04f9 00000000 		.4byte	.LFB2
+ 904 04fd 08000000 		.4byte	.LFE2-.LFB2
+ 905 0501 01       		.uleb128 0x1
+ 906 0502 9C       		.byte	0x9c
+ 907 0503 15       		.uleb128 0x15
+ 908 0504 6E0C0000 		.4byte	.LASF166
+ 909 0508 01       		.byte	0x1
+ 910 0509 62       		.byte	0x62
+ 911 050a 00000000 		.4byte	.LFB3
+ 912 050e 0E000000 		.4byte	.LFE3-.LFB3
+ 913 0512 01       		.uleb128 0x1
+ 914 0513 9C       		.byte	0x9c
+ 915 0514 27050000 		.4byte	0x527
+ 916 0518 16       		.uleb128 0x16
+ 917 0519 D20B0000 		.4byte	.LASF154
+ 918 051d 01       		.byte	0x1
+ 919 051e 62       		.byte	0x62
+ 920 051f 24040000 		.4byte	0x424
+ 921 0523 02       		.uleb128 0x2
+ 922 0524 91       		.byte	0x91
+ 923 0525 74       		.sleb128 -12
+ 924 0526 00       		.byte	0
+ 925 0527 17       		.uleb128 0x17
+ 926 0528 C1070000 		.4byte	.LASF160
+ 927 052c 01       		.byte	0x1
+ 928 052d 87       		.byte	0x87
+ 929 052e EC020000 		.4byte	0x2ec
+ 930 0532 00000000 		.4byte	.LFB4
+ 931 0536 84000000 		.4byte	.LFE4-.LFB4
+ 932 053a 01       		.uleb128 0x1
+ 933 053b 9C       		.byte	0x9c
+ 934 053c 87050000 		.4byte	0x587
+ 935 0540 16       		.uleb128 0x16
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 21
+
+
+ 936 0541 47100000 		.4byte	.LASF155
+ 937 0545 01       		.byte	0x1
+ 938 0546 87       		.byte	0x87
+ 939 0547 8A040000 		.4byte	0x48a
+ 940 054b 02       		.uleb128 0x2
+ 941 054c 91       		.byte	0x91
+ 942 054d 67       		.sleb128 -25
+ 943 054e 16       		.uleb128 0x16
+ 944 054f F8110000 		.4byte	.LASF156
+ 945 0553 01       		.byte	0x1
+ 946 0554 87       		.byte	0x87
+ 947 0555 6B000000 		.4byte	0x6b
+ 948 0559 02       		.uleb128 0x2
+ 949 055a 91       		.byte	0x91
+ 950 055b 66       		.sleb128 -26
+ 951 055c 16       		.uleb128 0x16
+ 952 055d 540D0000 		.4byte	.LASF157
+ 953 0561 01       		.byte	0x1
+ 954 0562 87       		.byte	0x87
+ 955 0563 F8020000 		.4byte	0x2f8
+ 956 0567 02       		.uleb128 0x2
+ 957 0568 91       		.byte	0x91
+ 958 0569 60       		.sleb128 -32
+ 959 056a 18       		.uleb128 0x18
+ 960 056b 230A0000 		.4byte	.LASF158
+ 961 056f 01       		.byte	0x1
+ 962 0570 89       		.byte	0x89
+ 963 0571 EC020000 		.4byte	0x2ec
+ 964 0575 02       		.uleb128 0x2
+ 965 0576 91       		.byte	0x91
+ 966 0577 76       		.sleb128 -10
+ 967 0578 18       		.uleb128 0x18
+ 968 0579 6D110000 		.4byte	.LASF159
+ 969 057d 01       		.byte	0x1
+ 970 057e 8A       		.byte	0x8a
+ 971 057f 18040000 		.4byte	0x418
+ 972 0583 02       		.uleb128 0x2
+ 973 0584 91       		.byte	0x91
+ 974 0585 68       		.sleb128 -24
+ 975 0586 00       		.byte	0
+ 976 0587 17       		.uleb128 0x17
+ 977 0588 BC090000 		.4byte	.LASF161
+ 978 058c 01       		.byte	0x1
+ 979 058d B5       		.byte	0xb5
+ 980 058e EC020000 		.4byte	0x2ec
+ 981 0592 00000000 		.4byte	.LFB5
+ 982 0596 84000000 		.4byte	.LFE5-.LFB5
+ 983 059a 01       		.uleb128 0x1
+ 984 059b 9C       		.byte	0x9c
+ 985 059c E7050000 		.4byte	0x5e7
+ 986 05a0 16       		.uleb128 0x16
+ 987 05a1 47100000 		.4byte	.LASF155
+ 988 05a5 01       		.byte	0x1
+ 989 05a6 B5       		.byte	0xb5
+ 990 05a7 8A040000 		.4byte	0x48a
+ 991 05ab 02       		.uleb128 0x2
+ 992 05ac 91       		.byte	0x91
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 22
+
+
+ 993 05ad 67       		.sleb128 -25
+ 994 05ae 16       		.uleb128 0x16
+ 995 05af F8110000 		.4byte	.LASF156
+ 996 05b3 01       		.byte	0x1
+ 997 05b4 B5       		.byte	0xb5
+ 998 05b5 6B000000 		.4byte	0x6b
+ 999 05b9 02       		.uleb128 0x2
+ 1000 05ba 91       		.byte	0x91
+ 1001 05bb 66       		.sleb128 -26
+ 1002 05bc 16       		.uleb128 0x16
+ 1003 05bd 540D0000 		.4byte	.LASF157
+ 1004 05c1 01       		.byte	0x1
+ 1005 05c2 B5       		.byte	0xb5
+ 1006 05c3 F8020000 		.4byte	0x2f8
+ 1007 05c7 02       		.uleb128 0x2
+ 1008 05c8 91       		.byte	0x91
+ 1009 05c9 60       		.sleb128 -32
+ 1010 05ca 18       		.uleb128 0x18
+ 1011 05cb 230A0000 		.4byte	.LASF158
+ 1012 05cf 01       		.byte	0x1
+ 1013 05d0 B7       		.byte	0xb7
+ 1014 05d1 EC020000 		.4byte	0x2ec
+ 1015 05d5 02       		.uleb128 0x2
+ 1016 05d6 91       		.byte	0x91
+ 1017 05d7 76       		.sleb128 -10
+ 1018 05d8 18       		.uleb128 0x18
+ 1019 05d9 6D110000 		.4byte	.LASF159
+ 1020 05dd 01       		.byte	0x1
+ 1021 05de B8       		.byte	0xb8
+ 1022 05df 18040000 		.4byte	0x418
+ 1023 05e3 02       		.uleb128 0x2
+ 1024 05e4 91       		.byte	0x91
+ 1025 05e5 68       		.sleb128 -24
+ 1026 05e6 00       		.byte	0
+ 1027 05e7 19       		.uleb128 0x19
+ 1028 05e8 01080000 		.4byte	.LASF167
+ 1029 05ec 01       		.byte	0x1
+ 1030 05ed 14       		.byte	0x14
+ 1031 05ee F8050000 		.4byte	0x5f8
+ 1032 05f2 05       		.uleb128 0x5
+ 1033 05f3 03       		.byte	0x3
+ 1034 05f4 00000000 		.4byte	cyBle_diss
+ 1035 05f8 1A       		.uleb128 0x1a
+ 1036 05f9 C6040000 		.4byte	0x4c6
+ 1037 05fd 00       		.byte	0
+ 1038              		.section	.debug_abbrev,"",%progbits
+ 1039              	.Ldebug_abbrev0:
+ 1040 0000 01       		.uleb128 0x1
+ 1041 0001 11       		.uleb128 0x11
+ 1042 0002 01       		.byte	0x1
+ 1043 0003 25       		.uleb128 0x25
+ 1044 0004 0E       		.uleb128 0xe
+ 1045 0005 13       		.uleb128 0x13
+ 1046 0006 0B       		.uleb128 0xb
+ 1047 0007 03       		.uleb128 0x3
+ 1048 0008 0E       		.uleb128 0xe
+ 1049 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 23
+
+
+ 1050 000a 0E       		.uleb128 0xe
+ 1051 000b 55       		.uleb128 0x55
+ 1052 000c 17       		.uleb128 0x17
+ 1053 000d 11       		.uleb128 0x11
+ 1054 000e 01       		.uleb128 0x1
+ 1055 000f 10       		.uleb128 0x10
+ 1056 0010 17       		.uleb128 0x17
+ 1057 0011 00       		.byte	0
+ 1058 0012 00       		.byte	0
+ 1059 0013 02       		.uleb128 0x2
+ 1060 0014 24       		.uleb128 0x24
+ 1061 0015 00       		.byte	0
+ 1062 0016 0B       		.uleb128 0xb
+ 1063 0017 0B       		.uleb128 0xb
+ 1064 0018 3E       		.uleb128 0x3e
+ 1065 0019 0B       		.uleb128 0xb
+ 1066 001a 03       		.uleb128 0x3
+ 1067 001b 0E       		.uleb128 0xe
+ 1068 001c 00       		.byte	0
+ 1069 001d 00       		.byte	0
+ 1070 001e 03       		.uleb128 0x3
+ 1071 001f 24       		.uleb128 0x24
+ 1072 0020 00       		.byte	0
+ 1073 0021 0B       		.uleb128 0xb
+ 1074 0022 0B       		.uleb128 0xb
+ 1075 0023 3E       		.uleb128 0x3e
+ 1076 0024 0B       		.uleb128 0xb
+ 1077 0025 03       		.uleb128 0x3
+ 1078 0026 08       		.uleb128 0x8
+ 1079 0027 00       		.byte	0
+ 1080 0028 00       		.byte	0
+ 1081 0029 04       		.uleb128 0x4
+ 1082 002a 16       		.uleb128 0x16
+ 1083 002b 00       		.byte	0
+ 1084 002c 03       		.uleb128 0x3
+ 1085 002d 0E       		.uleb128 0xe
+ 1086 002e 3A       		.uleb128 0x3a
+ 1087 002f 0B       		.uleb128 0xb
+ 1088 0030 3B       		.uleb128 0x3b
+ 1089 0031 0B       		.uleb128 0xb
+ 1090 0032 49       		.uleb128 0x49
+ 1091 0033 13       		.uleb128 0x13
+ 1092 0034 00       		.byte	0
+ 1093 0035 00       		.byte	0
+ 1094 0036 05       		.uleb128 0x5
+ 1095 0037 0F       		.uleb128 0xf
+ 1096 0038 00       		.byte	0
+ 1097 0039 0B       		.uleb128 0xb
+ 1098 003a 0B       		.uleb128 0xb
+ 1099 003b 00       		.byte	0
+ 1100 003c 00       		.byte	0
+ 1101 003d 06       		.uleb128 0x6
+ 1102 003e 04       		.uleb128 0x4
+ 1103 003f 01       		.byte	0x1
+ 1104 0040 0B       		.uleb128 0xb
+ 1105 0041 0B       		.uleb128 0xb
+ 1106 0042 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 24
+
+
+ 1107 0043 0B       		.uleb128 0xb
+ 1108 0044 3B       		.uleb128 0x3b
+ 1109 0045 0B       		.uleb128 0xb
+ 1110 0046 01       		.uleb128 0x1
+ 1111 0047 13       		.uleb128 0x13
+ 1112 0048 00       		.byte	0
+ 1113 0049 00       		.byte	0
+ 1114 004a 07       		.uleb128 0x7
+ 1115 004b 28       		.uleb128 0x28
+ 1116 004c 00       		.byte	0
+ 1117 004d 03       		.uleb128 0x3
+ 1118 004e 0E       		.uleb128 0xe
+ 1119 004f 1C       		.uleb128 0x1c
+ 1120 0050 0D       		.uleb128 0xd
+ 1121 0051 00       		.byte	0
+ 1122 0052 00       		.byte	0
+ 1123 0053 08       		.uleb128 0x8
+ 1124 0054 04       		.uleb128 0x4
+ 1125 0055 01       		.byte	0x1
+ 1126 0056 0B       		.uleb128 0xb
+ 1127 0057 0B       		.uleb128 0xb
+ 1128 0058 3A       		.uleb128 0x3a
+ 1129 0059 0B       		.uleb128 0xb
+ 1130 005a 3B       		.uleb128 0x3b
+ 1131 005b 05       		.uleb128 0x5
+ 1132 005c 01       		.uleb128 0x1
+ 1133 005d 13       		.uleb128 0x13
+ 1134 005e 00       		.byte	0
+ 1135 005f 00       		.byte	0
+ 1136 0060 09       		.uleb128 0x9
+ 1137 0061 16       		.uleb128 0x16
+ 1138 0062 00       		.byte	0
+ 1139 0063 03       		.uleb128 0x3
+ 1140 0064 0E       		.uleb128 0xe
+ 1141 0065 3A       		.uleb128 0x3a
+ 1142 0066 0B       		.uleb128 0xb
+ 1143 0067 3B       		.uleb128 0x3b
+ 1144 0068 05       		.uleb128 0x5
+ 1145 0069 49       		.uleb128 0x49
+ 1146 006a 13       		.uleb128 0x13
+ 1147 006b 00       		.byte	0
+ 1148 006c 00       		.byte	0
+ 1149 006d 0A       		.uleb128 0xa
+ 1150 006e 0F       		.uleb128 0xf
+ 1151 006f 00       		.byte	0
+ 1152 0070 0B       		.uleb128 0xb
+ 1153 0071 0B       		.uleb128 0xb
+ 1154 0072 49       		.uleb128 0x49
+ 1155 0073 13       		.uleb128 0x13
+ 1156 0074 00       		.byte	0
+ 1157 0075 00       		.byte	0
+ 1158 0076 0B       		.uleb128 0xb
+ 1159 0077 13       		.uleb128 0x13
+ 1160 0078 01       		.byte	0x1
+ 1161 0079 0B       		.uleb128 0xb
+ 1162 007a 0B       		.uleb128 0xb
+ 1163 007b 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 25
+
+
+ 1164 007c 0B       		.uleb128 0xb
+ 1165 007d 3B       		.uleb128 0x3b
+ 1166 007e 05       		.uleb128 0x5
+ 1167 007f 01       		.uleb128 0x1
+ 1168 0080 13       		.uleb128 0x13
+ 1169 0081 00       		.byte	0
+ 1170 0082 00       		.byte	0
+ 1171 0083 0C       		.uleb128 0xc
+ 1172 0084 0D       		.uleb128 0xd
+ 1173 0085 00       		.byte	0
+ 1174 0086 03       		.uleb128 0x3
+ 1175 0087 08       		.uleb128 0x8
+ 1176 0088 3A       		.uleb128 0x3a
+ 1177 0089 0B       		.uleb128 0xb
+ 1178 008a 3B       		.uleb128 0x3b
+ 1179 008b 05       		.uleb128 0x5
+ 1180 008c 49       		.uleb128 0x49
+ 1181 008d 13       		.uleb128 0x13
+ 1182 008e 38       		.uleb128 0x38
+ 1183 008f 0B       		.uleb128 0xb
+ 1184 0090 00       		.byte	0
+ 1185 0091 00       		.byte	0
+ 1186 0092 0D       		.uleb128 0xd
+ 1187 0093 0D       		.uleb128 0xd
+ 1188 0094 00       		.byte	0
+ 1189 0095 03       		.uleb128 0x3
+ 1190 0096 0E       		.uleb128 0xe
+ 1191 0097 3A       		.uleb128 0x3a
+ 1192 0098 0B       		.uleb128 0xb
+ 1193 0099 3B       		.uleb128 0x3b
+ 1194 009a 05       		.uleb128 0x5
+ 1195 009b 49       		.uleb128 0x49
+ 1196 009c 13       		.uleb128 0x13
+ 1197 009d 38       		.uleb128 0x38
+ 1198 009e 0B       		.uleb128 0xb
+ 1199 009f 00       		.byte	0
+ 1200 00a0 00       		.byte	0
+ 1201 00a1 0E       		.uleb128 0xe
+ 1202 00a2 15       		.uleb128 0x15
+ 1203 00a3 01       		.byte	0x1
+ 1204 00a4 27       		.uleb128 0x27
+ 1205 00a5 19       		.uleb128 0x19
+ 1206 00a6 01       		.uleb128 0x1
+ 1207 00a7 13       		.uleb128 0x13
+ 1208 00a8 00       		.byte	0
+ 1209 00a9 00       		.byte	0
+ 1210 00aa 0F       		.uleb128 0xf
+ 1211 00ab 05       		.uleb128 0x5
+ 1212 00ac 00       		.byte	0
+ 1213 00ad 49       		.uleb128 0x49
+ 1214 00ae 13       		.uleb128 0x13
+ 1215 00af 00       		.byte	0
+ 1216 00b0 00       		.byte	0
+ 1217 00b1 10       		.uleb128 0x10
+ 1218 00b2 13       		.uleb128 0x13
+ 1219 00b3 01       		.byte	0x1
+ 1220 00b4 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 26
+
+
+ 1221 00b5 0B       		.uleb128 0xb
+ 1222 00b6 3A       		.uleb128 0x3a
+ 1223 00b7 0B       		.uleb128 0xb
+ 1224 00b8 3B       		.uleb128 0x3b
+ 1225 00b9 0B       		.uleb128 0xb
+ 1226 00ba 01       		.uleb128 0x1
+ 1227 00bb 13       		.uleb128 0x13
+ 1228 00bc 00       		.byte	0
+ 1229 00bd 00       		.byte	0
+ 1230 00be 11       		.uleb128 0x11
+ 1231 00bf 0D       		.uleb128 0xd
+ 1232 00c0 00       		.byte	0
+ 1233 00c1 03       		.uleb128 0x3
+ 1234 00c2 0E       		.uleb128 0xe
+ 1235 00c3 3A       		.uleb128 0x3a
+ 1236 00c4 0B       		.uleb128 0xb
+ 1237 00c5 3B       		.uleb128 0x3b
+ 1238 00c6 0B       		.uleb128 0xb
+ 1239 00c7 49       		.uleb128 0x49
+ 1240 00c8 13       		.uleb128 0x13
+ 1241 00c9 38       		.uleb128 0x38
+ 1242 00ca 0B       		.uleb128 0xb
+ 1243 00cb 00       		.byte	0
+ 1244 00cc 00       		.byte	0
+ 1245 00cd 12       		.uleb128 0x12
+ 1246 00ce 01       		.uleb128 0x1
+ 1247 00cf 01       		.byte	0x1
+ 1248 00d0 49       		.uleb128 0x49
+ 1249 00d1 13       		.uleb128 0x13
+ 1250 00d2 01       		.uleb128 0x1
+ 1251 00d3 13       		.uleb128 0x13
+ 1252 00d4 00       		.byte	0
+ 1253 00d5 00       		.byte	0
+ 1254 00d6 13       		.uleb128 0x13
+ 1255 00d7 21       		.uleb128 0x21
+ 1256 00d8 00       		.byte	0
+ 1257 00d9 49       		.uleb128 0x49
+ 1258 00da 13       		.uleb128 0x13
+ 1259 00db 2F       		.uleb128 0x2f
+ 1260 00dc 0B       		.uleb128 0xb
+ 1261 00dd 00       		.byte	0
+ 1262 00de 00       		.byte	0
+ 1263 00df 14       		.uleb128 0x14
+ 1264 00e0 2E       		.uleb128 0x2e
+ 1265 00e1 00       		.byte	0
+ 1266 00e2 3F       		.uleb128 0x3f
+ 1267 00e3 19       		.uleb128 0x19
+ 1268 00e4 03       		.uleb128 0x3
+ 1269 00e5 0E       		.uleb128 0xe
+ 1270 00e6 3A       		.uleb128 0x3a
+ 1271 00e7 0B       		.uleb128 0xb
+ 1272 00e8 3B       		.uleb128 0x3b
+ 1273 00e9 0B       		.uleb128 0xb
+ 1274 00ea 27       		.uleb128 0x27
+ 1275 00eb 19       		.uleb128 0x19
+ 1276 00ec 11       		.uleb128 0x11
+ 1277 00ed 01       		.uleb128 0x1
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 27
+
+
+ 1278 00ee 12       		.uleb128 0x12
+ 1279 00ef 06       		.uleb128 0x6
+ 1280 00f0 40       		.uleb128 0x40
+ 1281 00f1 18       		.uleb128 0x18
+ 1282 00f2 9742     		.uleb128 0x2117
+ 1283 00f4 19       		.uleb128 0x19
+ 1284 00f5 00       		.byte	0
+ 1285 00f6 00       		.byte	0
+ 1286 00f7 15       		.uleb128 0x15
+ 1287 00f8 2E       		.uleb128 0x2e
+ 1288 00f9 01       		.byte	0x1
+ 1289 00fa 3F       		.uleb128 0x3f
+ 1290 00fb 19       		.uleb128 0x19
+ 1291 00fc 03       		.uleb128 0x3
+ 1292 00fd 0E       		.uleb128 0xe
+ 1293 00fe 3A       		.uleb128 0x3a
+ 1294 00ff 0B       		.uleb128 0xb
+ 1295 0100 3B       		.uleb128 0x3b
+ 1296 0101 0B       		.uleb128 0xb
+ 1297 0102 27       		.uleb128 0x27
+ 1298 0103 19       		.uleb128 0x19
+ 1299 0104 11       		.uleb128 0x11
+ 1300 0105 01       		.uleb128 0x1
+ 1301 0106 12       		.uleb128 0x12
+ 1302 0107 06       		.uleb128 0x6
+ 1303 0108 40       		.uleb128 0x40
+ 1304 0109 18       		.uleb128 0x18
+ 1305 010a 9742     		.uleb128 0x2117
+ 1306 010c 19       		.uleb128 0x19
+ 1307 010d 01       		.uleb128 0x1
+ 1308 010e 13       		.uleb128 0x13
+ 1309 010f 00       		.byte	0
+ 1310 0110 00       		.byte	0
+ 1311 0111 16       		.uleb128 0x16
+ 1312 0112 05       		.uleb128 0x5
+ 1313 0113 00       		.byte	0
+ 1314 0114 03       		.uleb128 0x3
+ 1315 0115 0E       		.uleb128 0xe
+ 1316 0116 3A       		.uleb128 0x3a
+ 1317 0117 0B       		.uleb128 0xb
+ 1318 0118 3B       		.uleb128 0x3b
+ 1319 0119 0B       		.uleb128 0xb
+ 1320 011a 49       		.uleb128 0x49
+ 1321 011b 13       		.uleb128 0x13
+ 1322 011c 02       		.uleb128 0x2
+ 1323 011d 18       		.uleb128 0x18
+ 1324 011e 00       		.byte	0
+ 1325 011f 00       		.byte	0
+ 1326 0120 17       		.uleb128 0x17
+ 1327 0121 2E       		.uleb128 0x2e
+ 1328 0122 01       		.byte	0x1
+ 1329 0123 3F       		.uleb128 0x3f
+ 1330 0124 19       		.uleb128 0x19
+ 1331 0125 03       		.uleb128 0x3
+ 1332 0126 0E       		.uleb128 0xe
+ 1333 0127 3A       		.uleb128 0x3a
+ 1334 0128 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 28
+
+
+ 1335 0129 3B       		.uleb128 0x3b
+ 1336 012a 0B       		.uleb128 0xb
+ 1337 012b 27       		.uleb128 0x27
+ 1338 012c 19       		.uleb128 0x19
+ 1339 012d 49       		.uleb128 0x49
+ 1340 012e 13       		.uleb128 0x13
+ 1341 012f 11       		.uleb128 0x11
+ 1342 0130 01       		.uleb128 0x1
+ 1343 0131 12       		.uleb128 0x12
+ 1344 0132 06       		.uleb128 0x6
+ 1345 0133 40       		.uleb128 0x40
+ 1346 0134 18       		.uleb128 0x18
+ 1347 0135 9642     		.uleb128 0x2116
+ 1348 0137 19       		.uleb128 0x19
+ 1349 0138 01       		.uleb128 0x1
+ 1350 0139 13       		.uleb128 0x13
+ 1351 013a 00       		.byte	0
+ 1352 013b 00       		.byte	0
+ 1353 013c 18       		.uleb128 0x18
+ 1354 013d 34       		.uleb128 0x34
+ 1355 013e 00       		.byte	0
+ 1356 013f 03       		.uleb128 0x3
+ 1357 0140 0E       		.uleb128 0xe
+ 1358 0141 3A       		.uleb128 0x3a
+ 1359 0142 0B       		.uleb128 0xb
+ 1360 0143 3B       		.uleb128 0x3b
+ 1361 0144 0B       		.uleb128 0xb
+ 1362 0145 49       		.uleb128 0x49
+ 1363 0146 13       		.uleb128 0x13
+ 1364 0147 02       		.uleb128 0x2
+ 1365 0148 18       		.uleb128 0x18
+ 1366 0149 00       		.byte	0
+ 1367 014a 00       		.byte	0
+ 1368 014b 19       		.uleb128 0x19
+ 1369 014c 34       		.uleb128 0x34
+ 1370 014d 00       		.byte	0
+ 1371 014e 03       		.uleb128 0x3
+ 1372 014f 0E       		.uleb128 0xe
+ 1373 0150 3A       		.uleb128 0x3a
+ 1374 0151 0B       		.uleb128 0xb
+ 1375 0152 3B       		.uleb128 0x3b
+ 1376 0153 0B       		.uleb128 0xb
+ 1377 0154 49       		.uleb128 0x49
+ 1378 0155 13       		.uleb128 0x13
+ 1379 0156 3F       		.uleb128 0x3f
+ 1380 0157 19       		.uleb128 0x19
+ 1381 0158 02       		.uleb128 0x2
+ 1382 0159 18       		.uleb128 0x18
+ 1383 015a 00       		.byte	0
+ 1384 015b 00       		.byte	0
+ 1385 015c 1A       		.uleb128 0x1a
+ 1386 015d 26       		.uleb128 0x26
+ 1387 015e 00       		.byte	0
+ 1388 015f 49       		.uleb128 0x49
+ 1389 0160 13       		.uleb128 0x13
+ 1390 0161 00       		.byte	0
+ 1391 0162 00       		.byte	0
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 29
+
+
+ 1392 0163 00       		.byte	0
+ 1393              		.section	.debug_aranges,"",%progbits
+ 1394 0000 34000000 		.4byte	0x34
+ 1395 0004 0200     		.2byte	0x2
+ 1396 0006 00000000 		.4byte	.Ldebug_info0
+ 1397 000a 04       		.byte	0x4
+ 1398 000b 00       		.byte	0
+ 1399 000c 0000     		.2byte	0
+ 1400 000e 0000     		.2byte	0
+ 1401 0010 00000000 		.4byte	.LFB2
+ 1402 0014 08000000 		.4byte	.LFE2-.LFB2
+ 1403 0018 00000000 		.4byte	.LFB3
+ 1404 001c 0E000000 		.4byte	.LFE3-.LFB3
+ 1405 0020 00000000 		.4byte	.LFB4
+ 1406 0024 84000000 		.4byte	.LFE4-.LFB4
+ 1407 0028 00000000 		.4byte	.LFB5
+ 1408 002c 84000000 		.4byte	.LFE5-.LFB5
+ 1409 0030 00000000 		.4byte	0
+ 1410 0034 00000000 		.4byte	0
+ 1411              		.section	.debug_ranges,"",%progbits
+ 1412              	.Ldebug_ranges0:
+ 1413 0000 00000000 		.4byte	.LFB2
+ 1414 0004 08000000 		.4byte	.LFE2
+ 1415 0008 00000000 		.4byte	.LFB3
+ 1416 000c 0E000000 		.4byte	.LFE3
+ 1417 0010 00000000 		.4byte	.LFB4
+ 1418 0014 84000000 		.4byte	.LFE4
+ 1419 0018 00000000 		.4byte	.LFB5
+ 1420 001c 84000000 		.4byte	.LFE5
+ 1421 0020 00000000 		.4byte	0
+ 1422 0024 00000000 		.4byte	0
+ 1423              		.section	.debug_line,"",%progbits
+ 1424              	.Ldebug_line0:
+ 1425 0000 F8000000 		.section	.debug_str,"MS",%progbits,1
+ 1425      02009700 
+ 1425      00000201 
+ 1425      FB0E0D00 
+ 1425      01010101 
+ 1426              	.LASF65:
+ 1427 0000 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
+ 1427      455F4556 
+ 1427      545F4C32 
+ 1427      4341505F 
+ 1427      43424643 
+ 1428              	.LASF21:
+ 1429 0023 4359424C 		.ascii	"CYBLE_EVT_STACK_BUSY_STATUS\000"
+ 1429      455F4556 
+ 1429      545F5354 
+ 1429      41434B5F 
+ 1429      42555359 
+ 1430              	.LASF10:
+ 1431 003f 75696E74 		.ascii	"uint16\000"
+ 1431      313600
+ 1432              	.LASF44:
+ 1433 0046 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_RSP\000"
+ 1433      455F4556 
+ 1433      545F4741 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 30
+
+
+ 1433      5454435F 
+ 1433      52454144 
+ 1434              	.LASF64:
+ 1435 005f 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 1435      455F4556 
+ 1435      545F4C32 
+ 1435      4341505F 
+ 1435      43424643 
+ 1436              	.LASF115:
+ 1437 007e 4359424C 		.ascii	"CYBLE_GATT_ERR_INSUFFICIENT_ENC_KEY_SIZE\000"
+ 1437      455F4741 
+ 1437      54545F45 
+ 1437      52525F49 
+ 1437      4E535546 
+ 1438              	.LASF88:
+ 1439 00a7 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_NOT_ENOUGH_CREDITS\000"
+ 1439      455F4552 
+ 1439      524F525F 
+ 1439      4C324341 
+ 1439      505F4E4F 
+ 1440              	.LASF109:
+ 1441 00cc 4359424C 		.ascii	"CYBLE_GATT_ERR_REQUEST_NOT_SUPPORTED\000"
+ 1441      455F4741 
+ 1441      54545F45 
+ 1441      52525F52 
+ 1441      45515545 
+ 1442              	.LASF104:
+ 1443 00f1 4359424C 		.ascii	"CYBLE_GATT_ERR_INVALID_HANDLE\000"
+ 1443      455F4741 
+ 1443      54545F45 
+ 1443      52525F49 
+ 1443      4E56414C 
+ 1444              	.LASF165:
+ 1445 010f 4379426C 		.ascii	"CyBle_DisInit\000"
+ 1445      655F4469 
+ 1445      73496E69 
+ 1445      7400
+ 1446              	.LASF32:
+ 1447 011d 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 1447      455F4556 
+ 1447      545F4741 
+ 1447      505F434F 
+ 1447      4E4E4543 
+ 1448              	.LASF63:
+ 1449 0146 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
+ 1449      455F4556 
+ 1449      545F4C32 
+ 1449      4341505F 
+ 1449      43424643 
+ 1450              	.LASF46:
+ 1451 0167 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_MULTI_RSP\000"
+ 1451      455F4556 
+ 1451      545F4741 
+ 1451      5454435F 
+ 1451      52454144 
+ 1452              	.LASF51:
+ 1453 0186 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 31
+
+
+ 1453      455F4556 
+ 1453      545F4741 
+ 1453      5454535F 
+ 1453      45584543 
+ 1454              	.LASF98:
+ 1455 01a5 4359424C 		.ascii	"CYBLE_ERROR_NTF_DISABLED\000"
+ 1455      455F4552 
+ 1455      524F525F 
+ 1455      4E54465F 
+ 1455      44495341 
+ 1456              	.LASF18:
+ 1457 01be 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
+ 1457      455F4556 
+ 1457      545F5449 
+ 1457      4D454F55 
+ 1457      5400
+ 1458              	.LASF4:
+ 1459 01d0 6C6F6E67 		.ascii	"long int\000"
+ 1459      20696E74 
+ 1459      00
+ 1460              	.LASF83:
+ 1461 01d9 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_WRONG_ENCODING\000"
+ 1461      455F4552 
+ 1461      524F525F 
+ 1461      4C324341 
+ 1461      505F5053 
+ 1462              	.LASF131:
+ 1463 01fe 4359424C 		.ascii	"CYBLE_GATT_VALUE_T\000"
+ 1463      455F4741 
+ 1463      54545F56 
+ 1463      414C5545 
+ 1463      5F5400
+ 1464              	.LASF20:
+ 1465 0211 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
+ 1465      455F4556 
+ 1465      545F4843 
+ 1465      495F5354 
+ 1465      41545553 
+ 1466              	.LASF33:
+ 1467 0226 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ 1467      455F4556 
+ 1467      545F4741 
+ 1467      50435F53 
+ 1467      43414E5F 
+ 1468              	.LASF68:
+ 1469 0245 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
+ 1469      455F4556 
+ 1469      545F5045 
+ 1469      4E44494E 
+ 1469      475F464C 
+ 1470              	.LASF82:
+ 1471 0263 4359424C 		.ascii	"CYBLE_ERROR_SEC_FAILED\000"
+ 1471      455F4552 
+ 1471      524F525F 
+ 1471      5345435F 
+ 1471      4641494C 
+ 1472              	.LASF31:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 32
+
+
+ 1473 027a 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 1473      455F4556 
+ 1473      545F4741 
+ 1473      505F454E 
+ 1473      43525950 
+ 1474              	.LASF108:
+ 1475 0297 4359424C 		.ascii	"CYBLE_GATT_ERR_INSUFFICIENT_AUTHENTICATION\000"
+ 1475      455F4741 
+ 1475      54545F45 
+ 1475      52525F49 
+ 1475      4E535546 
+ 1476              	.LASF6:
+ 1477 02c2 6C6F6E67 		.ascii	"long long int\000"
+ 1477      206C6F6E 
+ 1477      6720696E 
+ 1477      7400
+ 1478              	.LASF0:
+ 1479 02d0 7369676E 		.ascii	"signed char\000"
+ 1479      65642063 
+ 1479      68617200 
+ 1480              	.LASF17:
+ 1481 02dc 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
+ 1481      455F4556 
+ 1481      545F5354 
+ 1481      41434B5F 
+ 1481      4F4E00
+ 1482              	.LASF129:
+ 1483 02ef 4359424C 		.ascii	"CYBLE_GATT_DB_ATTR_HANDLE_T\000"
+ 1483      455F4741 
+ 1483      54545F44 
+ 1483      425F4154 
+ 1483      54525F48 
+ 1484              	.LASF91:
+ 1485 030b 4359424C 		.ascii	"CYBLE_ERROR_DEVICE_ALREADY_EXISTS\000"
+ 1485      455F4552 
+ 1485      524F525F 
+ 1485      44455649 
+ 1485      43455F41 
+ 1486              	.LASF77:
+ 1487 032d 4359424C 		.ascii	"CYBLE_ERROR_NO_DEVICE_ENTITY\000"
+ 1487      455F4552 
+ 1487      524F525F 
+ 1487      4E4F5F44 
+ 1487      45564943 
+ 1488              	.LASF130:
+ 1489 034a 61637475 		.ascii	"actualLen\000"
+ 1489      616C4C65 
+ 1489      6E00
+ 1490              	.LASF23:
+ 1491 0354 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
+ 1491      455F4556 
+ 1491      545F4741 
+ 1491      505F4155 
+ 1491      54485F52 
+ 1492              	.LASF153:
+ 1493 036b 4359424C 		.ascii	"CYBLE_HRS_CHAR_COUNT\000"
+ 1493      455F4852 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 33
+
+
+ 1493      535F4348 
+ 1493      41525F43 
+ 1493      4F554E54 
+ 1494              	.LASF152:
+ 1495 0380 4359424C 		.ascii	"CYBLE_HRS_CPT\000"
+ 1495      455F4852 
+ 1495      535F4350 
+ 1495      5400
+ 1496              	.LASF107:
+ 1497 038e 4359424C 		.ascii	"CYBLE_GATT_ERR_INVALID_PDU\000"
+ 1497      455F4741 
+ 1497      54545F45 
+ 1497      52525F49 
+ 1497      4E56414C 
+ 1498              	.LASF101:
+ 1499 03a9 4359424C 		.ascii	"CYBLE_ERROR_INVALID_STATE\000"
+ 1499      455F4552 
+ 1499      524F525F 
+ 1499      494E5641 
+ 1499      4C49445F 
+ 1500              	.LASF49:
+ 1501 03c3 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 1501      455F4556 
+ 1501      545F4741 
+ 1501      5454535F 
+ 1501      57524954 
+ 1502              	.LASF95:
+ 1503 03e1 4359424C 		.ascii	"CYBLE_INCL_DISC_DONE\000"
+ 1503      455F494E 
+ 1503      434C5F44 
+ 1503      4953435F 
+ 1503      444F4E45 
+ 1504              	.LASF28:
+ 1505 03f6 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
+ 1505      455F4556 
+ 1505      545F4741 
+ 1505      50505F41 
+ 1505      44564552 
+ 1506              	.LASF89:
+ 1507 041e 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_NOT_IN_RANGE\000"
+ 1507      455F4552 
+ 1507      524F525F 
+ 1507      4C324341 
+ 1507      505F5053 
+ 1508              	.LASF9:
+ 1509 0441 75696E74 		.ascii	"uint8\000"
+ 1509      3800
+ 1510              	.LASF52:
+ 1511 0447 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
+ 1511      455F4556 
+ 1511      545F4741 
+ 1511      5454435F 
+ 1511      45584543 
+ 1512              	.LASF13:
+ 1513 0466 646F7562 		.ascii	"double\000"
+ 1513      6C6500
+ 1514              	.LASF71:
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 34
+
+
+ 1515 046d 4359424C 		.ascii	"CYBLE_ERROR_INVALID_PARAMETER\000"
+ 1515      455F4552 
+ 1515      524F525F 
+ 1515      494E5641 
+ 1515      4C49445F 
+ 1516              	.LASF119:
+ 1517 048b 4359424C 		.ascii	"CYBLE_GATT_ERR_UNSUPPORTED_GROUP_TYPE\000"
+ 1517      455F4741 
+ 1517      54545F45 
+ 1517      52525F55 
+ 1517      4E535550 
+ 1518              	.LASF140:
+ 1519 04b1 4359424C 		.ascii	"CYBLE_DIS_FIRMWARE_REV\000"
+ 1519      455F4449 
+ 1519      535F4649 
+ 1519      524D5741 
+ 1519      52455F52 
+ 1520              	.LASF11:
+ 1521 04c8 75696E74 		.ascii	"uint32\000"
+ 1521      333200
+ 1522              	.LASF139:
+ 1523 04cf 4359424C 		.ascii	"CYBLE_DIS_HARDWARE_REV\000"
+ 1523      455F4449 
+ 1523      535F4841 
+ 1523      52445741 
+ 1523      52455F52 
+ 1524              	.LASF69:
+ 1525 04e6 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
+ 1525      455F4556 
+ 1525      545F4D41 
+ 1525      5800
+ 1526              	.LASF70:
+ 1527 04f4 4359424C 		.ascii	"CYBLE_ERROR_OK\000"
+ 1527      455F4552 
+ 1527      524F525F 
+ 1527      4F4B00
+ 1528              	.LASF35:
+ 1529 0503 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
+ 1529      455F4556 
+ 1529      545F4741 
+ 1529      5454435F 
+ 1529      4552524F 
+ 1530              	.LASF57:
+ 1531 051d 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
+ 1531      455F4556 
+ 1531      545F4C32 
+ 1531      4341505F 
+ 1531      434F4E4E 
+ 1532              	.LASF105:
+ 1533 0543 4359424C 		.ascii	"CYBLE_GATT_ERR_READ_NOT_PERMITTED\000"
+ 1533      455F4741 
+ 1533      54545F45 
+ 1533      52525F52 
+ 1533      4541445F 
+ 1534              	.LASF67:
+ 1535 0565 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 1535      455F4556 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 35
+
+
+ 1535      545F4C32 
+ 1535      4341505F 
+ 1535      43424643 
+ 1536              	.LASF79:
+ 1537 0589 4359424C 		.ascii	"CYBLE_ERROR_GAP_ROLE\000"
+ 1537      455F4552 
+ 1537      524F525F 
+ 1537      4741505F 
+ 1537      524F4C45 
+ 1538              	.LASF133:
+ 1539 059e 61747472 		.ascii	"attrHandle\000"
+ 1539      48616E64 
+ 1539      6C6500
+ 1540              	.LASF7:
+ 1541 05a9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1541      206C6F6E 
+ 1541      6720756E 
+ 1541      7369676E 
+ 1541      65642069 
+ 1542              	.LASF132:
+ 1543 05c0 76616C75 		.ascii	"value\000"
+ 1543      6500
+ 1544              	.LASF73:
+ 1545 05c6 4359424C 		.ascii	"CYBLE_ERROR_MEMORY_ALLOCATION_FAILED\000"
+ 1545      455F4552 
+ 1545      524F525F 
+ 1545      4D454D4F 
+ 1545      52595F41 
+ 1546              	.LASF75:
+ 1547 05eb 4359424C 		.ascii	"CYBLE_ERROR_OOB_NOT_AVAILABLE\000"
+ 1547      455F4552 
+ 1547      524F525F 
+ 1547      4F4F425F 
+ 1547      4E4F545F 
+ 1548              	.LASF37:
+ 1549 0609 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
+ 1549      455F4556 
+ 1549      545F4741 
+ 1549      54545F44 
+ 1549      4953434F 
+ 1550              	.LASF123:
+ 1551 0627 4359424C 		.ascii	"CYBLE_GATTS_ERR_PROCEDURE_ALREADY_IN_PROGRESS\000"
+ 1551      455F4741 
+ 1551      5454535F 
+ 1551      4552525F 
+ 1551      50524F43 
+ 1552              	.LASF84:
+ 1553 0655 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_ALREADY_REGISTERED\000"
+ 1553      455F4552 
+ 1553      524F525F 
+ 1553      4C324341 
+ 1553      505F5053 
+ 1554              	.LASF5:
+ 1555 067e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1555      20756E73 
+ 1555      69676E65 
+ 1555      6420696E 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 36
+
+
+ 1555      7400
+ 1556              	.LASF113:
+ 1557 0690 4359424C 		.ascii	"CYBLE_GATT_ERR_ATTRIBUTE_NOT_FOUND\000"
+ 1557      455F4741 
+ 1557      54545F45 
+ 1557      52525F41 
+ 1557      54545249 
+ 1558              	.LASF47:
+ 1559 06b3 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 1559      455F4556 
+ 1559      545F4741 
+ 1559      5454535F 
+ 1559      57524954 
+ 1560              	.LASF39:
+ 1561 06cd 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 1561      455F4556 
+ 1561      545F4741 
+ 1561      5454435F 
+ 1561      5843484E 
+ 1562              	.LASF56:
+ 1563 06eb 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ 1563      455F4556 
+ 1563      545F4741 
+ 1563      5454535F 
+ 1563      44415441 
+ 1564              	.LASF87:
+ 1565 070f 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_CHANNEL_NOT_FOUND\000"
+ 1565      455F4552 
+ 1565      524F525F 
+ 1565      4C324341 
+ 1565      505F4348 
+ 1566              	.LASF106:
+ 1567 0733 4359424C 		.ascii	"CYBLE_GATT_ERR_WRITE_NOT_PERMITTED\000"
+ 1567      455F4741 
+ 1567      54545F45 
+ 1567      52525F57 
+ 1567      52495445 
+ 1568              	.LASF114:
+ 1569 0756 4359424C 		.ascii	"CYBLE_GATT_ERR_ATTRIBUTE_NOT_LONG\000"
+ 1569      455F4741 
+ 1569      54545F45 
+ 1569      52525F41 
+ 1569      54545249 
+ 1570              	.LASF16:
+ 1571 0778 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
+ 1571      455F4556 
+ 1571      545F484F 
+ 1571      53545F49 
+ 1571      4E56414C 
+ 1572              	.LASF42:
+ 1573 078f 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 1573      455F4556 
+ 1573      545F4741 
+ 1573      5454435F 
+ 1573      46494E44 
+ 1574              	.LASF103:
+ 1575 07ad 4359424C 		.ascii	"CYBLE_GATT_ERR_NONE\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 37
+
+
+ 1575      455F4741 
+ 1575      54545F45 
+ 1575      52525F4E 
+ 1575      4F4E4500 
+ 1576              	.LASF160:
+ 1577 07c1 4379426C 		.ascii	"CyBle_DissSetCharacteristicValue\000"
+ 1577      655F4469 
+ 1577      73735365 
+ 1577      74436861 
+ 1577      72616374 
+ 1578              	.LASF29:
+ 1579 07e2 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
+ 1579      455F4556 
+ 1579      545F4741 
+ 1579      505F4445 
+ 1579      56494345 
+ 1580              	.LASF167:
+ 1581 0801 6379426C 		.ascii	"cyBle_diss\000"
+ 1581      655F6469 
+ 1581      737300
+ 1582              	.LASF144:
+ 1583 080c 4359424C 		.ascii	"CYBLE_DIS_PNP_ID\000"
+ 1583      455F4449 
+ 1583      535F504E 
+ 1583      505F4944 
+ 1583      00
+ 1584              	.LASF2:
+ 1585 081d 73686F72 		.ascii	"short int\000"
+ 1585      7420696E 
+ 1585      7400
+ 1586              	.LASF25:
+ 1587 0827 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 1587      455F4556 
+ 1587      545F4741 
+ 1587      505F5041 
+ 1587      53534B45 
+ 1588              	.LASF147:
+ 1589 084d 73657276 		.ascii	"serviceHandle\000"
+ 1589      69636548 
+ 1589      616E646C 
+ 1589      6500
+ 1590              	.LASF36:
+ 1591 085b 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
+ 1591      455F4556 
+ 1591      545F4741 
+ 1591      54545F43 
+ 1591      4F4E4E45 
+ 1592              	.LASF59:
+ 1593 0876 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
+ 1593      455F4556 
+ 1593      545F4C32 
+ 1593      4341505F 
+ 1593      434F4D4D 
+ 1594              	.LASF122:
+ 1595 0892 4359424C 		.ascii	"CYBLE_GATT_ERR_CPS_INAPPROPRIATE_CONNECTION_PARAMET"
+ 1595      455F4741 
+ 1595      54545F45 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 38
+
+
+ 1595      52525F43 
+ 1595      50535F49 
+ 1596 08c5 45525300 		.ascii	"ERS\000"
+ 1597              	.LASF22:
+ 1598 08c9 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
+ 1598      455F4556 
+ 1598      545F4741 
+ 1598      50435F53 
+ 1598      43414E5F 
+ 1599              	.LASF142:
+ 1600 08ed 4359424C 		.ascii	"CYBLE_DIS_SYSTEM_ID\000"
+ 1600      455F4449 
+ 1600      535F5359 
+ 1600      5354454D 
+ 1600      5F494400 
+ 1601              	.LASF97:
+ 1602 0901 4359424C 		.ascii	"CYBLE_DESCR_DISC_DONE\000"
+ 1602      455F4445 
+ 1602      5343525F 
+ 1602      44495343 
+ 1602      5F444F4E 
+ 1603              	.LASF94:
+ 1604 0917 4359424C 		.ascii	"CYBLE_ERROR_MAX\000"
+ 1604      455F4552 
+ 1604      524F525F 
+ 1604      4D415800 
+ 1605              	.LASF60:
+ 1606 0927 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
+ 1606      455F4556 
+ 1606      545F4C32 
+ 1606      4341505F 
+ 1606      43424643 
+ 1607              	.LASF41:
+ 1608 0945 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
+ 1608      455F4556 
+ 1608      545F4741 
+ 1608      5454435F 
+ 1608      52454144 
+ 1609              	.LASF15:
+ 1610 0966 73697A65 		.ascii	"sizetype\000"
+ 1610      74797065 
+ 1610      00
+ 1611              	.LASF120:
+ 1612 096f 4359424C 		.ascii	"CYBLE_GATT_ERR_INSUFFICIENT_RESOURCE\000"
+ 1612      455F4741 
+ 1612      54545F45 
+ 1612      52525F49 
+ 1612      4E535546 
+ 1613              	.LASF27:
+ 1614 0994 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
+ 1614      455F4556 
+ 1614      545F4741 
+ 1614      505F4155 
+ 1614      54485F46 
+ 1615              	.LASF150:
+ 1616 09ae 4359424C 		.ascii	"CYBLE_HRS_HRM\000"
+ 1616      455F4852 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 39
+
+
+ 1616      535F4852 
+ 1616      4D00
+ 1617              	.LASF161:
+ 1618 09bc 4379426C 		.ascii	"CyBle_DissGetCharacteristicValue\000"
+ 1618      655F4469 
+ 1618      73734765 
+ 1618      74436861 
+ 1618      72616374 
+ 1619              	.LASF111:
+ 1620 09dd 4359424C 		.ascii	"CYBLE_GATT_ERR_INSUFFICIENT_AUTHORIZATION\000"
+ 1620      455F4741 
+ 1620      54545F45 
+ 1620      52525F49 
+ 1620      4E535546 
+ 1621              	.LASF26:
+ 1622 0a07 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
+ 1622      455F4556 
+ 1622      545F4741 
+ 1622      505F4155 
+ 1622      54485F43 
+ 1623              	.LASF158:
+ 1624 0a23 61706952 		.ascii	"apiResult\000"
+ 1624      6573756C 
+ 1624      7400
+ 1625              	.LASF102:
+ 1626 0a2d 4359424C 		.ascii	"CYBLE_API_RESULT_T\000"
+ 1626      455F4150 
+ 1626      495F5245 
+ 1626      53554C54 
+ 1626      5F5400
+ 1627              	.LASF53:
+ 1628 0a40 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
+ 1628      455F4556 
+ 1628      545F4741 
+ 1628      5454435F 
+ 1628      48414E44 
+ 1629              	.LASF99:
+ 1630 0a61 4359424C 		.ascii	"CYBLE_ERROR_IND_DISABLED\000"
+ 1630      455F4552 
+ 1630      524F525F 
+ 1630      494E445F 
+ 1630      44495341 
+ 1631              	.LASF134:
+ 1632 0a7a 4359424C 		.ascii	"CYBLE_GATT_HANDLE_VALUE_PAIR_T\000"
+ 1632      455F4741 
+ 1632      54545F48 
+ 1632      414E444C 
+ 1632      455F5641 
+ 1633              	.LASF143:
+ 1634 0a99 4359424C 		.ascii	"CYBLE_DIS_REG_CERT_DATA\000"
+ 1634      455F4449 
+ 1634      535F5245 
+ 1634      475F4345 
+ 1634      52545F44 
+ 1635              	.LASF61:
+ 1636 0ab1 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
+ 1636      455F4556 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 40
+
+
+ 1636      545F4C32 
+ 1636      4341505F 
+ 1636      43424643 
+ 1637              	.LASF40:
+ 1638 0acf 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 1638      455F4556 
+ 1638      545F4741 
+ 1638      5454435F 
+ 1638      52454144 
+ 1639              	.LASF12:
+ 1640 0af6 666C6F61 		.ascii	"float\000"
+ 1640      7400
+ 1641              	.LASF162:
+ 1642 0afc 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1642      4320342E 
+ 1642      382E3420 
+ 1642      32303134 
+ 1642      30353236 
+ 1643 0b2f 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1643      20726576 
+ 1643      6973696F 
+ 1643      6E203231 
+ 1643      31333538 
+ 1644 0b62 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 1644      66756E63 
+ 1644      74696F6E 
+ 1644      2D736563 
+ 1644      74696F6E 
+ 1645              	.LASF112:
+ 1646 0b78 4359424C 		.ascii	"CYBLE_GATT_ERR_PREPARE_WRITE_QUEUE_FULL\000"
+ 1646      455F4741 
+ 1646      54545F45 
+ 1646      52525F50 
+ 1646      52455041 
+ 1647              	.LASF138:
+ 1648 0ba0 4359424C 		.ascii	"CYBLE_DIS_SERIAL_NUMBER\000"
+ 1648      455F4449 
+ 1648      535F5345 
+ 1648      5249414C 
+ 1648      5F4E554D 
+ 1649              	.LASF80:
+ 1650 0bb8 4359424C 		.ascii	"CYBLE_ERROR_TX_POWER_READ\000"
+ 1650      455F4552 
+ 1650      524F525F 
+ 1650      54585F50 
+ 1650      4F574552 
+ 1651              	.LASF154:
+ 1652 0bd2 63616C6C 		.ascii	"callbackFunc\000"
+ 1652      6261636B 
+ 1652      46756E63 
+ 1652      00
+ 1653              	.LASF128:
+ 1654 0bdf 4359424C 		.ascii	"CYBLE_GATT_ERR_OUT_OF_RANGE\000"
+ 1654      455F4741 
+ 1654      54545F45 
+ 1654      52525F4F 
+ 1654      55545F4F 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 41
+
+
+ 1655              	.LASF1:
+ 1656 0bfb 756E7369 		.ascii	"unsigned char\000"
+ 1656      676E6564 
+ 1656      20636861 
+ 1656      7200
+ 1657              	.LASF145:
+ 1658 0c09 4359424C 		.ascii	"CYBLE_DIS_CHAR_COUNT\000"
+ 1658      455F4449 
+ 1658      535F4348 
+ 1658      41525F43 
+ 1658      4F554E54 
+ 1659              	.LASF116:
+ 1660 0c1e 4359424C 		.ascii	"CYBLE_GATT_ERR_INVALID_ATTRIBUTE_LEN\000"
+ 1660      455F4741 
+ 1660      54545F45 
+ 1660      52525F49 
+ 1660      4E56414C 
+ 1661              	.LASF124:
+ 1662 0c43 4359424C 		.ascii	"CYBLE_GATTS_ERR_CCCD_IMPROPERLY_CONFIGURED\000"
+ 1662      455F4741 
+ 1662      5454535F 
+ 1662      4552525F 
+ 1662      43434344 
+ 1663              	.LASF166:
+ 1664 0c6e 4379426C 		.ascii	"CyBle_DisRegisterAttrCallback\000"
+ 1664      655F4469 
+ 1664      73526567 
+ 1664      69737465 
+ 1664      72417474 
+ 1665              	.LASF100:
+ 1666 0c8c 4359424C 		.ascii	"CYBLE_ERROR_CHAR_IS_NOT_DISCOVERED\000"
+ 1666      455F4552 
+ 1666      524F525F 
+ 1666      43484152 
+ 1666      5F49535F 
+ 1667              	.LASF148:
+ 1668 0caf 63686172 		.ascii	"charHandle\000"
+ 1668      48616E64 
+ 1668      6C6500
+ 1669              	.LASF54:
+ 1670 0cba 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 1670      455F4556 
+ 1670      545F4741 
+ 1670      5454435F 
+ 1670      48414E44 
+ 1671              	.LASF76:
+ 1672 0cdb 4359424C 		.ascii	"CYBLE_ERROR_NO_CONNECTION\000"
+ 1672      455F4552 
+ 1672      524F525F 
+ 1672      4E4F5F43 
+ 1672      4F4E4E45 
+ 1673              	.LASF141:
+ 1674 0cf5 4359424C 		.ascii	"CYBLE_DIS_SOFTWARE_REV\000"
+ 1674      455F4449 
+ 1674      535F534F 
+ 1674      46545741 
+ 1674      52455F52 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 42
+
+
+ 1675              	.LASF125:
+ 1676 0d0c 4359424C 		.ascii	"CYBLE_GATT_ERR_ANS_COMMAND_NOT_SUPPORTED\000"
+ 1676      455F4741 
+ 1676      54545F45 
+ 1676      52525F41 
+ 1676      4E535F43 
+ 1677              	.LASF50:
+ 1678 0d35 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
+ 1678      455F4556 
+ 1678      545F4741 
+ 1678      5454535F 
+ 1678      50524550 
+ 1679              	.LASF157:
+ 1680 0d54 61747472 		.ascii	"attrValue\000"
+ 1680      56616C75 
+ 1680      6500
+ 1681              	.LASF55:
+ 1682 0d5e 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
+ 1682      455F4556 
+ 1682      545F4741 
+ 1682      5454535F 
+ 1682      48414E44 
+ 1683              	.LASF126:
+ 1684 0d7f 4359424C 		.ascii	"CYBLE_GATT_ERR_CCCD_IMPROPERLY_CONFIGURED\000"
+ 1684      455F4741 
+ 1684      54545F45 
+ 1684      52525F43 
+ 1684      4343445F 
+ 1685              	.LASF151:
+ 1686 0da9 4359424C 		.ascii	"CYBLE_HRS_BSL\000"
+ 1686      455F4852 
+ 1686      535F4253 
+ 1686      4C00
+ 1687              	.LASF121:
+ 1688 0db7 4359424C 		.ascii	"CYBLE_GATT_ERR_HEART_RATE_CONTROL_POINT_NOT_SUPPORT"
+ 1688      455F4741 
+ 1688      54545F45 
+ 1688      52525F48 
+ 1688      45415254 
+ 1689 0dea 454400   		.ascii	"ED\000"
+ 1690              	.LASF164:
+ 1691 0ded 433A5C55 		.ascii	"C:\\Users\\Enes Dullovi\\Desktop\\BLE Lab 3\\BLE La"
+ 1691      73657273 
+ 1691      5C456E65 
+ 1691      73204475 
+ 1691      6C6C6F76 
+ 1692 0e1b 6220332E 		.ascii	"b 3.cydsn\000"
+ 1692      63796473 
+ 1692      6E00
+ 1693              	.LASF14:
+ 1694 0e25 63686172 		.ascii	"char\000"
+ 1694      00
+ 1695              	.LASF137:
+ 1696 0e2a 4359424C 		.ascii	"CYBLE_DIS_MODEL_NUMBER\000"
+ 1696      455F4449 
+ 1696      535F4D4F 
+ 1696      44454C5F 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 43
+
+
+ 1696      4E554D42 
+ 1697              	.LASF81:
+ 1698 0e41 4359424C 		.ascii	"CYBLE_ERROR_BT_ON_NOT_COMPLETED\000"
+ 1698      455F4552 
+ 1698      524F525F 
+ 1698      42545F4F 
+ 1698      4E5F4E4F 
+ 1699              	.LASF30:
+ 1700 0e61 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
+ 1700      455F4556 
+ 1700      545F4741 
+ 1700      505F4445 
+ 1700      56494345 
+ 1701              	.LASF8:
+ 1702 0e83 756E7369 		.ascii	"unsigned int\000"
+ 1702      676E6564 
+ 1702      20696E74 
+ 1702      00
+ 1703              	.LASF48:
+ 1704 0e90 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
+ 1704      455F4556 
+ 1704      545F4741 
+ 1704      5454435F 
+ 1704      57524954 
+ 1705              	.LASF66:
+ 1706 0eaa 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
+ 1706      455F4556 
+ 1706      545F4C32 
+ 1706      4341505F 
+ 1706      43424643 
+ 1707              	.LASF117:
+ 1708 0ecd 4359424C 		.ascii	"CYBLE_GATT_ERR_UNLIKELY_ERROR\000"
+ 1708      455F4741 
+ 1708      54545F45 
+ 1708      52525F55 
+ 1708      4E4C494B 
+ 1709              	.LASF92:
+ 1710 0eeb 4359424C 		.ascii	"CYBLE_ERROR_FLASH_WRITE_NOT_PERMITED\000"
+ 1710      455F4552 
+ 1710      524F525F 
+ 1710      464C4153 
+ 1710      485F5752 
+ 1711              	.LASF86:
+ 1712 0f10 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_CONNECTION_ENTITY_NOT_FOUND\000"
+ 1712      455F4552 
+ 1712      524F525F 
+ 1712      4C324341 
+ 1712      505F434F 
+ 1713              	.LASF127:
+ 1714 0f3e 4359424C 		.ascii	"CYBLE_GATT_ERR_PROCEDURE_ALREADY_IN_PROGRESS\000"
+ 1714      455F4741 
+ 1714      54545F45 
+ 1714      52525F50 
+ 1714      524F4345 
+ 1715              	.LASF19:
+ 1716 0f6b 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
+ 1716      455F4556 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 44
+
+
+ 1716      545F4841 
+ 1716      52445741 
+ 1716      52455F45 
+ 1717              	.LASF3:
+ 1718 0f84 73686F72 		.ascii	"short unsigned int\000"
+ 1718      7420756E 
+ 1718      7369676E 
+ 1718      65642069 
+ 1718      6E7400
+ 1719              	.LASF163:
+ 1720 0f97 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\BLE_1_dis.c\000"
+ 1720      6E657261 
+ 1720      7465645F 
+ 1720      536F7572 
+ 1720      63655C50 
+ 1721              	.LASF72:
+ 1722 0fbc 4359424C 		.ascii	"CYBLE_ERROR_INVALID_OPERATION\000"
+ 1722      455F4552 
+ 1722      524F525F 
+ 1722      494E5641 
+ 1722      4C49445F 
+ 1723              	.LASF118:
+ 1724 0fda 4359424C 		.ascii	"CYBLE_GATT_ERR_INSUFFICIENT_ENCRYPTION\000"
+ 1724      455F4741 
+ 1724      54545F45 
+ 1724      52525F49 
+ 1724      4E535546 
+ 1725              	.LASF135:
+ 1726 1001 4359424C 		.ascii	"CYBLE_CALLBACK_T\000"
+ 1726      455F4341 
+ 1726      4C4C4241 
+ 1726      434B5F54 
+ 1726      00
+ 1727              	.LASF38:
+ 1728 1012 4359424C 		.ascii	"CYBLE_EVT_GATTS_XCNHG_MTU_REQ\000"
+ 1728      455F4556 
+ 1728      545F4741 
+ 1728      5454535F 
+ 1728      58434E48 
+ 1729              	.LASF146:
+ 1730 1030 4359424C 		.ascii	"CYBLE_DIS_CHAR_INDEX_T\000"
+ 1730      455F4449 
+ 1730      535F4348 
+ 1730      41525F49 
+ 1730      4E444558 
+ 1731              	.LASF155:
+ 1732 1047 63686172 		.ascii	"charIndex\000"
+ 1732      496E6465 
+ 1732      7800
+ 1733              	.LASF74:
+ 1734 1051 4359424C 		.ascii	"CYBLE_ERROR_INSUFFICIENT_RESOURCES\000"
+ 1734      455F4552 
+ 1734      524F525F 
+ 1734      494E5355 
+ 1734      46464943 
+ 1735              	.LASF24:
+ 1736 1074 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 45
+
+
+ 1736      455F4556 
+ 1736      545F4741 
+ 1736      505F5041 
+ 1736      53534B45 
+ 1737              	.LASF45:
+ 1738 1098 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 1738      455F4556 
+ 1738      545F4741 
+ 1738      5454435F 
+ 1738      52454144 
+ 1739              	.LASF110:
+ 1740 10b6 4359424C 		.ascii	"CYBLE_GATT_ERR_INVALID_OFFSET\000"
+ 1740      455F4741 
+ 1740      54545F45 
+ 1740      52525F49 
+ 1740      4E56414C 
+ 1741              	.LASF93:
+ 1742 10d4 4359424C 		.ascii	"CYBLE_ERROR_MIC_AUTH_FAILED\000"
+ 1742      455F4552 
+ 1742      524F525F 
+ 1742      4D49435F 
+ 1742      41555448 
+ 1743              	.LASF85:
+ 1744 10f0 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_NOT_REGISTERED\000"
+ 1744      455F4552 
+ 1744      524F525F 
+ 1744      4C324341 
+ 1744      505F5053 
+ 1745              	.LASF43:
+ 1746 1115 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
+ 1746      455F4556 
+ 1746      545F4741 
+ 1746      5454435F 
+ 1746      46494E44 
+ 1747              	.LASF149:
+ 1748 113c 4359424C 		.ascii	"CYBLE_DISS_T\000"
+ 1748      455F4449 
+ 1748      53535F54 
+ 1748      00
+ 1749              	.LASF34:
+ 1750 1149 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
+ 1750      455F4556 
+ 1750      545F4741 
+ 1750      505F4B45 
+ 1750      59494E46 
+ 1751              	.LASF159:
+ 1752 116d 6C6F6348 		.ascii	"locHandleValuePair\000"
+ 1752      616E646C 
+ 1752      6556616C 
+ 1752      75655061 
+ 1752      697200
+ 1753              	.LASF62:
+ 1754 1180 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 1754      455F4556 
+ 1754      545F4C32 
+ 1754      4341505F 
+ 1754      43424643 
+ARM GAS  C:\Users\ENESDU~1\AppData\Local\Temp\cc0g0jWe.s 			page 46
+
+
+ 1755              	.LASF96:
+ 1756 11a1 4359424C 		.ascii	"CYBLE_CHAR_DISC_DONE\000"
+ 1756      455F4348 
+ 1756      41525F44 
+ 1756      4953435F 
+ 1756      444F4E45 
+ 1757              	.LASF58:
+ 1758 11b6 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ 1758      455F4556 
+ 1758      545F4C32 
+ 1758      4341505F 
+ 1758      434F4E4E 
+ 1759              	.LASF136:
+ 1760 11dc 4359424C 		.ascii	"CYBLE_DIS_MANUFACTURER_NAME\000"
+ 1760      455F4449 
+ 1760      535F4D41 
+ 1760      4E554641 
+ 1760      43545552 
+ 1761              	.LASF156:
+ 1762 11f8 61747472 		.ascii	"attrSize\000"
+ 1762      53697A65 
+ 1762      00
+ 1763              	.LASF90:
+ 1764 1201 4359424C 		.ascii	"CYBLE_ERROR_GATT_DB_INVALID_ATTR_HANDLE\000"
+ 1764      455F4552 
+ 1764      524F525F 
+ 1764      47415454 
+ 1764      5F44425F 
+ 1765              	.LASF78:
+ 1766 1229 4359424C 		.ascii	"CYBLE_ERROR_REPEATED_ATTEMPTS\000"
+ 1766      455F4552 
+ 1766      524F525F 
+ 1766      52455045 
+ 1766      41544544 
+ 1767              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
